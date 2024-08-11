@@ -1,7 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.accf37f1.js",
-    "static/js/395.581e6fba.chunk.js": "/static/js/395.581e6fba.chunk.js",
+    "main.js": "/static/js/main.f0a15529.js",
     "static/js/453.8c8d5fe1.chunk.js": "/static/js/453.8c8d5fe1.chunk.js",
     "static/media/emoticon.png": "/static/media/emoticon.f745f2b92da267d81cc3.png",
     "static/media/naprawa-ekspresow.webp": "/static/media/naprawa-ekspresow.959e0e5ba4cbc9e6f78c.webp",
@@ -15,11 +14,10 @@
     "static/media/phone.svg": "/static/media/phone.d37696f81df68533b4aac94848b6ac53.svg",
     "static/media/facebook.svg": "/static/media/facebook.4334b10756ac7b81275725bb2a620c59.svg",
     "static/media/envelope.svg": "/static/media/envelope.ab11e705408a27da262bcf133e6d101c.svg",
-    "main.accf37f1.js.map": "/static/js/main.accf37f1.js.map",
-    "395.581e6fba.chunk.js.map": "/static/js/395.581e6fba.chunk.js.map",
+    "main.f0a15529.js.map": "/static/js/main.f0a15529.js.map",
     "453.8c8d5fe1.chunk.js.map": "/static/js/453.8c8d5fe1.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.accf37f1.js"
+    "static/js/main.f0a15529.js"
   ]
 }
