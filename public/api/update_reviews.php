@@ -1,7 +1,9 @@
 <?php
 header('Content-Type: application/json');
-$apiKey = getenv('GOOGLE_API_KEY'); 
-$placeId = getenv('PLACE_ID');
+// $apiKey = getenv('GOOGLE_API_KEY'); 
+// $placeId = getenv('PLACE_ID');
+$apiKey = "AIzaSyC7DY9bQbNlKdeBV0XCubQNApWCOrMzVPg"; 
+$placeId = "ChIJrWDpGyR_O0cRpvj4OFLVPPw";
 
 if (!$apiKey || !$placeId) {
   echo json_encode(['error' => 'Missing API key or Place ID']);
@@ -41,8 +43,8 @@ $data = [
   'reviews' => array_values($newReviews),
   'current_time' => date('Y-m-d H:i:s')
 ];
-file_put_contents('reviews.json', json_encode($data));
 
+file_put_contents('reviews.json', json_encode($data));
 echo json_encode([
   'message' => 'Reviews updated successfully',
   'data' => $data,

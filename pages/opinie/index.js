@@ -5,7 +5,6 @@ import ReviewsItem from "./ReviewsItem";
 import { serwis } from "../../utils/serwis";
 import { StyledButtonLink } from "../../components/common/Buttons";
 import HelmetForReviews from "./HelmetForReviews";
-import axios from 'axios';
 
 const Reviews = ({ reviews, status }) => {
   return (
@@ -33,8 +32,9 @@ export async function getStaticProps() {
   const url = 'https://naprawaprzemysl.pl/api/reviews.json';
 
   try {
-    const response = await axios(url)
-    const reviews = response.data?.reviews || [];
+    const response = await fetch(url);
+    const data = await response.json();
+    const reviews = data?.reviews || [];
 
     console.log(response.data);
 
@@ -43,16 +43,16 @@ export async function getStaticProps() {
     };
 
     let newReviews = [...reviews];
-    if (reviews.length < 5) {
-      let reserveReviews = serwis.reviews.filter((item) =>
-        !newReviews.find((review) => review.text === item.text));
-      let reserveReviewsIndex = 0;
+    // if (reviews.length < 5) {
+    //   let reserveReviews = serwis.reviews.filter((item) =>
+    //     !newReviews.find((review) => review.text === item.text));
+    //   let reserveReviewsIndex = 0;
 
-      while (newReviews.length < 5 && reserveReviewsIndex < reserveReviews.length) {
-        newReviews = [...newReviews, reserveReviews[reserveReviewsIndex]];
-        reserveReviewsIndex++;
-      };
-    }
+    //   while (newReviews.length < 5 && reserveReviewsIndex < reserveReviews.length) {
+    //     newReviews = [...newReviews, reserveReviews[reserveReviewsIndex]];
+    //     reserveReviewsIndex++;
+    //   };
+    // }
 
     return {
       props: {
