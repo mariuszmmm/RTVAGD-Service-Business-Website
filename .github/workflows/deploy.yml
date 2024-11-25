@@ -47,12 +47,24 @@ jobs:
           quit
           "
 
+      - name: Define dynamic folder name
+        run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
+
       - name: Copy .htaccess to /public_html/serwis_/api
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           cd /public_html/env/serwis
           get .htaccess -o .htaccess
-          put .htaccess -o /public_html/serwis_/api/.htaccess
+          put .htaccess -o /public_html/serwis/api/.htaccess
+          quit
+          "
+
+      - name: Deploy to FTP (copy)
+        run: |
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          lcd ./out
+          mirror -R . /public_html/${{ env.COPY_FOLDER_NAME }}
           quit
           "
