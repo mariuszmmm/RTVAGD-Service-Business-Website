@@ -50,8 +50,6 @@ jobs:
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          lcd ./out
-          mirror -R ./ /public_html/serwis_
           cd /public_html/_env/serwis
           get .htaccess -o /public_html/serwis_/api/.htaccess
           quit
