@@ -38,11 +38,20 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: sudo apt-get install -y lftp
 
+      - name: Deploy to FTP
+        run: |
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          lcd ./out
+          mirror -R . /public_html/serwis_
+          quit
+          "
+
       - name: Copy .htaccess to /public_html/serwis_/api
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          cd /public_html/env
+          cd /public_html/env/serwis
           get .htaccess -o .htaccess
           put .htaccess -o /public_html/serwis_/api/.htaccess
           quit
