@@ -47,7 +47,7 @@ jobs:
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           lcd ./out
           mirror -R . /public_html/serwis
-          # mirror -R . /public_html/${{ env.COPY_FOLDER_NAME }}
+          mirror -R . /public_html/${{ env.COPY_FOLDER_NAME }}
           quit
           "
 
@@ -58,6 +58,6 @@ jobs:
           cd /public_html/env/serwis
           get .htaccess -o .htaccess
           put .htaccess -o /public_html/serwis/api/.htaccess
-          # put .htaccess -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/.htaccess
+          put .htaccess -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/.htaccess
           quit
           "
