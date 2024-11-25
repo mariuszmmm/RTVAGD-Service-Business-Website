@@ -43,8 +43,8 @@ jobs:
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           lcd ./out
-          mirror -R ./ /public_html/serwis_
-          lcd ../../_env/serwis_
+
+          lcd ../_env/serwis_
           mirror -R .htaccess /public_html/serwis_/api/
           quit
           "
