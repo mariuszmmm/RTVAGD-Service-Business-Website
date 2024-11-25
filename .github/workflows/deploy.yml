@@ -42,7 +42,7 @@ jobs:
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          ls /public_html/serwis_
+          ls /public_html
           quit
           "
 
