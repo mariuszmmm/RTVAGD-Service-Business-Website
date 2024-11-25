@@ -38,6 +38,14 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: sudo apt-get install -y lftp
 
+      - name: List files in /public_html/_env/serwis
+        run: |
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          ls /public_html/serwis_
+          quit
+          "
+
       - name: Deploy to FTP
         run: |
           lftp -f "
