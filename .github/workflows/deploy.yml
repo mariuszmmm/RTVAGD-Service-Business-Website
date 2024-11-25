@@ -52,9 +52,8 @@ jobs:
 
           lcd ../../../_env/serwis_
 
-
-          - name: Show current directory
-          run: pwd
+      - name: Show current directory
+        run: pwd
 
       - name: List files in current directory
         run: ls -la
