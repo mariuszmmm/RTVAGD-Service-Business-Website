@@ -31,6 +31,12 @@ jobs:
           NEXT_PUBLIC_PLACE_ID: ${{ secrets.PLACE_ID }}
         run: npm run build
 
+      - name: Show current directory
+        run: pwd
+
+      - name: List files in current directory
+        run: ls -la
+
       - name: Install lftp
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
@@ -44,7 +50,15 @@ jobs:
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           lcd ./out
 
-          lcd ../_env/serwis_
+          lcd ../../../_env/serwis_
+
+
+          - name: Show current directory
+          run: pwd
+
+      - name: List files in current directory
+        run: ls -la
+
           mirror -R .htaccess /public_html/serwis_/api/
           quit
           "
