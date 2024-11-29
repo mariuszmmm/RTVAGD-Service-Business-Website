@@ -6,11 +6,18 @@ import React from 'react';
 import Background from '../components/Background';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google';
+import Script from 'next/script';
+
 
 function App({ Component, pageProps }) {
   return (
     <>
+
+      <Script
+        src="https://www.googletagmanager.com/gtm.js?id=GTM-P52JLLB7"
+        strategy="afterInteractive"
+      />
       <React.StrictMode>
         <ThemeProvider theme={theme}>
           <Normalize />
@@ -18,11 +25,10 @@ function App({ Component, pageProps }) {
           <Background />
           <Header />
           <Component {...pageProps} />
-          <GoogleTagManager gtmId="GTM-P52JLLB7" />
+          {/* <GoogleTagManager gtmId="GTM-P52JLLB7" /> */}
           <Footer />
         </ThemeProvider>
       </React.StrictMode>
-      <GoogleTagManager gtmId="GTM-P52JLLB7" />
     </>
   );
 }
