@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import Script from 'next/script';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -30,11 +31,20 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="pl-PL">
+      <Html >
         <Head>
-          <meta charSet="UTF-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="theme-color" content="#000000" />
+
+          {/* Google Tag Manager */}
+          <Script
+            id="google-tag-manager"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P52JLLB7');`,
+            }}
+          />
+          {/* End Google Tag Manager */}
+
+
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -52,6 +62,11 @@ export default class MyDocument extends Document {
           <meta property="fb:app_id" content="100063811592941" />
         </Head>
         <body>
+          {/* Google Tag Manager (noscript) */}
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P52JLLB7"
+            height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
+          {/* End Google Tag Manager (noscript) */}
+
           <Main />
           <NextScript />
         </body>

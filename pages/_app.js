@@ -21,7 +21,7 @@ function App({ Component, pageProps }) {
           <Footer />
         </ThemeProvider>
       </React.StrictMode>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID} />
+      <GoogleTagManager gtmId="GTM-P52JLLB7" />
     </>
   );
 }

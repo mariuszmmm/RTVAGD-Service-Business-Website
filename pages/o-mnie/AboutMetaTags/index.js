@@ -3,7 +3,6 @@ import Head from "next/head";
 const AboutMetaTags = () => {
   return (
     <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       <title>Informacje o serwisie | ✔️ Serwis RTV AGD w Przemyślu</title>
 
       <link rel="canonical" href="https://naprawaprzemysl.pl/o-mnie/" />
