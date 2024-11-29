@@ -4,7 +4,7 @@ const DishwasherServiceMetaTags = () => (
   <Head>
     <title>Naprawa zmywarek 📞 790258612 | Serwis w Przemyślu</title>
 
-    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-zmywarek/" />
+    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-zmywarek" />
 
     <meta
       name="description"
@@ -21,7 +21,7 @@ const DishwasherServiceMetaTags = () => (
       property="og:description"
       content="Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!"
     />
-    <meta property="og:url" content="https://naprawaprzemysl.pl/naprawa-zmywarek/" />
+    <meta property="og:url" content="https://naprawaprzemysl.pl/naprawa-zmywarek" />
     <meta property="og:site_name" content="Serwis RTV i AGD - naprawa zmywarek" />
     <meta property="og:updated_time" content="2024-11-27T03:38:11+01:00" />
     <meta property="og:image" content="https://naprawaprzemysl.pl/share.png" />
@@ -45,7 +45,7 @@ const DishwasherServiceMetaTags = () => (
         "name": "Naprawa pralek i sprzętu RTV",
         "alternateName": "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
         "@id": "https://naprawaprzemysl.pl",
-        "url": "https://naprawaprzemysl.pl/",
+        "url": "https://naprawaprzemysl.pl",
         "telephone": "790258612",
         "email": "piotrek_serwis@wp.pl",
         "address": {
@@ -182,13 +182,13 @@ const DishwasherServiceMetaTags = () => (
             "@type": "ListItem",
             "position": 1,
             "name": "Strona Główna",
-            "item": "https://naprawaprzemysl.pl/"
+            "item": "https://naprawaprzemysl.pl"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa zmywarek",
-            "item": "https://naprawaprzemysl.pl/naprawa-zmywarek/"
+            "item": "https://naprawaprzemysl.pl/naprawa-zmywarek"
           }
         ]
       })}

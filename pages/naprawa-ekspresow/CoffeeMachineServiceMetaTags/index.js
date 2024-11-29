@@ -4,7 +4,7 @@ const CoffeeMachineServiceMetaTags = () => (
   <Head>
     <title>Naprawa ekspresów do kawy 📞 790258612 | Serwis w Przemyślu</title>
 
-    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-ekspresow/" />
+    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-ekspresow" />
 
     <meta
       name="description"
@@ -21,7 +21,7 @@ const CoffeeMachineServiceMetaTags = () => (
       property="og:description"
       content="Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś."
     />
-    <meta property="og:url" content="https://naprawaprzemysl.pl/naprawa-ekspresow/" />
+    <meta property="og:url" content="https://naprawaprzemysl.pl/naprawa-ekspresow" />
     <meta property="og:site_name" content="Serwis RTV i AGD - naprawa ekspresów" />
     <meta property="og:updated_time" content="2024-11-27T03:38:11+01:00" />
     <meta property="og:image" content="https://naprawaprzemysl.pl/share.png" />
@@ -45,7 +45,7 @@ const CoffeeMachineServiceMetaTags = () => (
         "name": "Naprawa pralek i sprzętu RTV",
         "alternateName": "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
         "@id": "https://naprawaprzemysl.pl",
-        "url": "https://naprawaprzemysl.pl/",
+        "url": "https://naprawaprzemysl.pl",
         "telephone": "790258612",
         "email": "piotrek_serwis@wp.pl",
         "address": {
@@ -182,13 +182,13 @@ const CoffeeMachineServiceMetaTags = () => (
             "@type": "ListItem",
             "position": 1,
             "name": "Strona Główna",
-            "item": "https://naprawaprzemysl.pl/"
+            "item": "https://naprawaprzemysl.pl"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa ekspresów do kawy",
-            "item": "https://naprawaprzemysl.pl/naprawa-ekspresow/"
+            "item": "https://naprawaprzemysl.pl/naprawa-ekspresow"
           }
         ]
       })}
