@@ -18,6 +18,7 @@ function App({ Component, pageProps }) {
           <Background />
           <Header />
           <Component {...pageProps} />
+          <GoogleTagManager gtmId="GTM-P52JLLB7" />
           <Footer />
         </ThemeProvider>
       </React.StrictMode>
