@@ -17,6 +17,8 @@ function App({ Component, pageProps }) {
       <Script
         src="https://www.googletagmanager.com/gtm.js?id=GTM-P52JLLB7"
         strategy="afterInteractive"
+        onLoad={() => console.log('GTM script loaded successfully')}
+        onError={(e) => console.error('Error loading GTM script', e)}
       />
       <React.StrictMode>
         <ThemeProvider theme={theme}>
