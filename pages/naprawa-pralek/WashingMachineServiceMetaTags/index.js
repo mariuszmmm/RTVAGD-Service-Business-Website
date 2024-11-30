@@ -98,9 +98,7 @@ const WashingMachineServiceMetaTags = () => (
               "priceSpecification": {
                 "@type": "PriceSpecification",
                 "price": "100",
-                "priceCurrency": "PLN",
-                "priceType": "Starting from",
-                "priceRange": "100-*"
+                "priceCurrency": "PLN"
               }
             },
             {
@@ -118,9 +116,7 @@ const WashingMachineServiceMetaTags = () => (
               "priceSpecification": {
                 "@type": "PriceSpecification",
                 "price": "100",
-                "priceCurrency": "PLN",
-                "priceType": "Starting from",
-                "priceRange": "100-*"
+                "priceCurrency": "PLN"
               }
             },
             {
@@ -138,9 +134,7 @@ const WashingMachineServiceMetaTags = () => (
               "priceSpecification": {
                 "@type": "PriceSpecification",
                 "price": "120",
-                "priceCurrency": "PLN",
-                "priceType": "Starting from",
-                "priceRange": "120-*"
+                "priceCurrency": "PLN"
               }
             },
             {
@@ -158,9 +152,7 @@ const WashingMachineServiceMetaTags = () => (
               "priceSpecification": {
                 "@type": "PriceSpecification",
                 "price": "150",
-                "priceCurrency": "PLN",
-                "priceType": "Starting from",
-                "priceRange": "150-*"
+                "priceCurrency": "PLN"
               }
             }
           ],
