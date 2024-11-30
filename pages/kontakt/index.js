@@ -12,42 +12,52 @@ import { imageUrls } from "../../utils/urls";
 const Iframe = React.lazy(() => import("./Iframe"));
 
 const Contact = () => (
-  <ContactSection>
-    <ConatctMetaTags />
-    <ContactContainer>
-      <Title>Kontakt</Title>
-      <ContactForm />
-      <ContactInfo>
-        <SubTitle>{serwis.name}</SubTitle>
-        <ContactText>
-          adres:{"  "}
-          <StyledLink href={serwis.url.mapaGoogle} title={serwis.adres}>{serwis.adres}</StyledLink>
-        </ContactText>
-        <ContactText>
-          e-mail:{" "}
-          <StyledLink href={`mailto:${serwis.email}`} title={serwis.email}>{serwis.email}</StyledLink>
-        </ContactText>
-        <ContactText>
-          telefon:{" "}
-          <StyledLink href={`tel:${serwis.phone}`} title={(serwis.phone).replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3')}>{serwis.phone}</StyledLink>
-        </ContactText>
-        <br />
-        <ContactText>NIP: 7952257951</ContactText>
-        <br />
-        <ContactText>Zapraszamy od poniedziałku do piątku</ContactText>
-        <ContactText>
-          w godzinach <>9.30-17.00</>
-        </ContactText>
-        <ImageContainer>
-          <Suspense fallback={
-            <Image src={imageUrls.mapa} alt={serwis.name} />
-          }>
-            <Iframe />
-          </Suspense>
-        </ImageContainer>
-      </ContactInfo>
-    </ContactContainer>
-  </ContactSection>
+  <>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P52JLLB7"
+        height="0"
+        width="0"
+        style={{ display: 'none', visibility: 'hidden' }}
+      ></iframe>
+    </noscript>
+    <ContactSection>
+      <ConatctMetaTags />
+      <ContactContainer>
+        <Title>Kontakt</Title>
+        <ContactForm />
+        <ContactInfo>
+          <SubTitle>{serwis.name}</SubTitle>
+          <ContactText>
+            adres:{"  "}
+            <StyledLink href={serwis.url.mapaGoogle} title={serwis.adres}>{serwis.adres}</StyledLink>
+          </ContactText>
+          <ContactText>
+            e-mail:{" "}
+            <StyledLink href={`mailto:${serwis.email}`} title={serwis.email}>{serwis.email}</StyledLink>
+          </ContactText>
+          <ContactText>
+            telefon:{" "}
+            <StyledLink href={`tel:${serwis.phone}`} title={(serwis.phone).replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3')}>{serwis.phone}</StyledLink>
+          </ContactText>
+          <br />
+          <ContactText>NIP: 7952257951</ContactText>
+          <br />
+          <ContactText>Zapraszamy od poniedziałku do piątku</ContactText>
+          <ContactText>
+            w godzinach <>9.30-17.00</>
+          </ContactText>
+          <ImageContainer>
+            <Suspense fallback={
+              <Image src={imageUrls.mapa} alt={serwis.name} />
+            }>
+              <Iframe />
+            </Suspense>
+          </ImageContainer>
+        </ContactInfo>
+      </ContactContainer>
+    </ContactSection>
+  </>
 );
 
 export default Contact;

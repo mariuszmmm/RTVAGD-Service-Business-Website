@@ -35,7 +35,7 @@ const ReviewsItem = ({ item }) => {
         <meta itemProp="name" content={getContentForReview(contentForReview)} />
         <meta itemProp="serviceType" content={`Profesjonalna ${getContentForReview(item.text)} - Szybko i solidnie`} />
       </div>
-      <Header itemProp="author" itemScope itemType="https://schema.org/Person">
+      <Header>
         <Photo
           itemProp="image"
           src={item.profile_photo_url}
@@ -43,7 +43,7 @@ const ReviewsItem = ({ item }) => {
           loading="lazy"
         />
         <Data >
-          <Author itemProp="name">{item.author_name}</Author>
+          <Author>{item.author_name}</Author>
           <Time time={item.time} />
         </Data>
       </Header>

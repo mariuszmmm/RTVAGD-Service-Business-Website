@@ -42,9 +42,6 @@ export default class MyDocument extends Document {
             }}
           />
 
-
-
-
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:200,400,400italic,600&display=swap" as="style" />
@@ -61,14 +58,8 @@ export default class MyDocument extends Document {
           <meta property="fb:app_id" content="100063811592941" />
         </Head>
         <body>
-
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P52JLLB7"
-            height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
-
-
           <Main />
           <NextScript />
-
 
           <Script
             id="google-maps"
