@@ -2,9 +2,9 @@ import Head from "next/head";
 
 const CoffeeMachineServiceMetaTags = () => (
   <Head>
-    <title>Naprawa ekspresów do kawy 📞 790258612 | Serwis w Przemyślu</title>
+    <title>Naprawa ekspresów ✔️ Serwis w Przemyślu 📞 790-258-612</title>
 
-    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-ekspresow" />
+    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-ekspresow/" />
 
     <meta
       name="description"
@@ -15,7 +15,7 @@ const CoffeeMachineServiceMetaTags = () => (
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Naprawa ekspresów do kawy 📞 790258612 | Serwis w Przemyślu"
+      content="Naprawa ekspresów ✔️ Serwis w Przemyślu 📞 790-258-612"
     />
     <meta
       property="og:description"
@@ -32,7 +32,7 @@ const CoffeeMachineServiceMetaTags = () => (
     <meta property="og:image:type" content="image/png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Naprawa ekspresów do kawy 📞 790258612 | Serwis w Przemyślu" />
+    <meta name="twitter:title" content="Naprawa ekspresów ✔️ Serwis w Przemyślu 📞 790-258-612" />
     <meta name="twitter:description" content="Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś." />
     <meta name="twitter:image" content="https://naprawaprzemysl.pl/share.png" />
 

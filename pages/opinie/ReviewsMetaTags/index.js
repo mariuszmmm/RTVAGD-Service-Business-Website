@@ -2,9 +2,9 @@ import Head from "next/head";
 
 const ReviewsMetaTags = () => (
   <Head>
-    <title>Poznaj opinie klientów | ✔️ Serwis RTV AGD w Przemyślu</title>
+    <title>Poznaj opinie klientów ✔️ Serwis RTV AGD w Przemyślu</title>
 
-    <link rel="canonical" href="https://naprawaprzemysl.pl/opinie" />
+    <link rel="canonical" href="https://naprawaprzemysl.pl/opinie/" />
 
     <meta
       name="description"
@@ -15,7 +15,7 @@ const ReviewsMetaTags = () => (
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Poznaj opinie klientów | ✔️ Serwis RTV AGD w Przemyślu"
+      content="Poznaj opinie klientów ✔️ Serwis RTV AGD w Przemyślu"
     />
     <meta
       property="og:description"
@@ -32,7 +32,7 @@ const ReviewsMetaTags = () => (
     <meta property="og:image:type" content="image/png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Poznaj opinie klientów | ✔️ Serwis RTV AGD w Przemyślu" />
+    <meta name="twitter:title" content="Poznaj opinie klientów ✔️ Serwis RTV AGD w Przemyślu" />
     <meta name="twitter:description" content="Sprawdź opinie klientów o naprawach sprzętu RTV i AGD w Przemyślu. Dowiedz się, dlaczego tak wielu poleca moje usługi." />
     <meta name="twitter:image" content="https://naprawaprzemysl.pl/share.png" />
 

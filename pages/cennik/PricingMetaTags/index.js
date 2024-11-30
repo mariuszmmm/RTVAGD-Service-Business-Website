@@ -3,24 +3,24 @@ import Head from 'next/head';
 const PricingMetaTags = () => (
   <Head>
 
-    <title>Ceny napraw | ✔️ Serwis RTV AGD w Przemyślu</title>
+    <title>Ceny napraw ✔️ Serwis RTV AGD w Przemyślu</title>
 
-    <link rel="canonical" href="https://naprawaprzemysl.pl/cennik" />
+    <link rel="canonical" href="https://naprawaprzemysl.pl/cennik/" />
 
     <meta
       name="description"
-      content="Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu! Oferujemy konkurencyjne cenSprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów."
+      content="Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów."
     />
 
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Ceny napraw | ✔️ Serwis RTV AGD w Przemyślu"
+      content="Ceny napraw ✔️ Serwis RTV AGD w Przemyślu"
     />
     <meta
       property="og:description"
-      content="Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu! Oferujemy konkurencyjne cenSprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów."
+      content="Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów."
     />
     <meta property="og:url" content="https://naprawaprzemysl.pl/cennik" />
     <meta property="og:site_name" content="Serwis RTV i AGD - cennik" />
@@ -33,8 +33,8 @@ const PricingMetaTags = () => (
     <meta property="og:image:type" content="image/png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ceny napraw | ✔️ Serwis RTV AGD w Przemyślu" />
-    <meta name="twitter:description" content="Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu! Oferujemy konkurencyjne cenSprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów." />
+    <meta name="twitter:title" content="Ceny napraw ✔️ Serwis RTV AGD w Przemyślu" />
+    <meta name="twitter:description" content="Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów." />
     <meta name="twitter:image" content="https://naprawaprzemysl.pl/share.png" />
 
     <meta name="keywords" content="cennik naprawa AGD, ceny naprawy pralek, cennik naprawy RTV, naprawa ekspresów ceny, cennik serwis sprzętu AGD, ceny serwis RTV, naprawa zmywarek cennik, cennik naprawy telewizorów" />
@@ -81,7 +81,7 @@ const PricingMetaTags = () => (
         "logo": "https://naprawaprzemysl.pl/share.png",
         "image": { "@type": "ImageObject", "url": "https://naprawaprzemysl.pl/share.png", "width": 931, "height": 497 },
         "priceRange": "$$$",
-        "description": "Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu! Oferujemy konkurencyjne cenSprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów.",
+        "description": "Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów.",
         "offers": [
           {
             "@type": "Offer",

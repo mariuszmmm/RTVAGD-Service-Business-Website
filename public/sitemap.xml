@@ -11,71 +11,71 @@
     </image:image>
   </url>
   <url>
-    <loc>https://naprawaprzemysl.pl/o-mnie</loc>
+    <loc>https://naprawaprzemysl.pl/o-mnie/</loc>
     <lastmod>2024-11-28</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis</image:loc>
-      <image:caption>Informacje o serwisie | ✔️ Serwis RTV AGD w Przemyślu</image:caption>
+      <image:caption>Informacje o serwisie RTV i AGD w Przemyślu, ul. Sowińskiego 2.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://naprawaprzemysl.pl/cennik</loc>
+    <loc>https://naprawaprzemysl.pl/cennik/</loc>
     <lastmod>2024-11-28</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://naprawaprzemysl.pl/opinie</loc>
+    <loc>https://naprawaprzemysl.pl/opinie/</loc>
     <lastmod>2024-11-28</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/logoGoogle</image:loc>
-      <image:caption>Poznaj opinie klientów | ✔️ Serwis RTV AGD w Przemyślu</image:caption>
+      <image:caption>Poznaj opinie klientów ✔️ Serwis RTV AGD w Przemyślu</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://naprawaprzemysl.pl/kontakt</loc>
+    <loc>https://naprawaprzemysl.pl/kontakt/</loc>
     <lastmod>2024-11-28</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/mapa.png</image:loc>
-      <image:caption>Kontakt | ✔️ Serwis RTV AGD w Przemyślu</image:caption>
+      <image:caption>Kontakt ✔️ Serwis RTV AGD w Przemyślu</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://naprawaprzemysl.pl/naprawa-pralek</loc>
+    <loc>https://naprawaprzemysl.pl/naprawa-pralek/</loc>
     <lastmod>2024-11-28</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-pralki</image:loc>
-      <image:caption>Naprawa pralek 📞 790258612 | Serwis w Przemyślu</image:caption>
+      <image:caption>Naprawa pralek ✔️ Serwis w Przemyślu 📞 790-258-612</image:caption>
     </image:image>
   </url>
     <url>
-    <loc>https://naprawaprzemysl.pl/naprawa-zmywarek</loc>
+    <loc>https://naprawaprzemysl.pl/naprawa-zmywarek/</loc>
     <lastmod>2024-11-28</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis-zmywarek</image:loc>
-      <image:caption>Naprawa zmywarek 📞 790258612 | Serwis w Przemyślu</image:caption>
+      <image:caption>Naprawa zmywarek ✔️ Serwis w Przemyślu 📞 790-258-612</image:caption>
     </image:image>    
   </url>
     <url>
-    <loc>https://naprawaprzemysl.pl/naprawa-ekspresow</loc>
+    <loc>https://naprawaprzemysl.pl/naprawa-ekspresow/</loc>
     <lastmod>2024-11-28</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-ekspresow</image:loc>
-      <image:caption>Naprawa ekspresów do kawy 📞 790258612 | Serwis w Przemyślu</image:caption>
+      <image:caption>Naprawa ekspresów ✔️ Serwis w Przemyślu 📞 790-258-612</image:caption>
     </image:image>  
   </url>
     <url>
-    <loc>https://naprawaprzemysl.pl/naprawa-telewizorow</loc>
+    <loc>https://naprawaprzemysl.pl/naprawa-telewizorow/</loc>
     <lastmod>2024-11-28</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis-telewizorow</image:loc>
-      <image:caption>Naprawa telewizorów 📞 790258612 | Serwis w Przemyślu</image:caption>
+      <image:caption>Naprawa telewizorów ✔️ Serwis w Przemyślu 📞 790-258-612</image:caption>
     </image:image>  
   </url>
 </urlset>

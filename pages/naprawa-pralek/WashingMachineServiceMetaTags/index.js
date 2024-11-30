@@ -2,9 +2,9 @@ import Head from 'next/head';
 
 const WashingMachineServiceMetaTags = () => (
   <Head>
-    <title>Naprawa pralek 📞 790258612 | Serwis w Przemyślu</title>
+    <title>Naprawa pralek ✔️ Serwis w Przemyślu 📞 790-258-612</title>
 
-    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-pralek" />
+    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-pralek/" />
 
     <meta
       name="description"
@@ -15,7 +15,7 @@ const WashingMachineServiceMetaTags = () => (
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Naprawa pralek 📞 790258612 | Serwis w Przemyślu"
+      content="Naprawa pralek ✔️ Serwis w Przemyślu 📞 790-258-612"
     />
     <meta
       property="og:description"
@@ -32,7 +32,7 @@ const WashingMachineServiceMetaTags = () => (
     <meta property="og:image:type" content="image/png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Naprawa pralek 📞 790258612 | Serwis w Przemyślu" />
+    <meta name="twitter:title" content="Naprawa pralek ✔️ Serwis w Przemyślu 📞 790-258-612" />
     <meta name="twitter:description" content="Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś." />
     <meta name="twitter:image" content="https://naprawaprzemysl.pl/share.png" />
 

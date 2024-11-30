@@ -2,9 +2,9 @@ import Head from "next/head";
 
 const TelevisionServiceMetaTags = () => (
   <Head>
-    <title>Naprawa telewizorów 📞 790258612 | Serwis w Przemyślu</title>
+    <title>Naprawa telewizorów ✔️ Serwis w Przemyślu 📞 790-258-612</title>
 
-    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-telewizorow" />
+    <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-telewizorow/" />
 
     <meta
       name="description"
@@ -15,7 +15,7 @@ const TelevisionServiceMetaTags = () => (
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Naprawa telewizorów 📞 790258612 | Serwis w Przemyślu"
+      content="Naprawa telewizorów ✔️ Serwis w Przemyślu 📞 790-258-612"
     />
     <meta
       property="og:description"
@@ -32,7 +32,7 @@ const TelevisionServiceMetaTags = () => (
     <meta property="og:image:type" content="image/png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Naprawa telewizorów 📞 790258612 | Serwis w Przemyślu" />
+    <meta name="twitter:title" content="Naprawa telewizorów ✔️ Serwis w Przemyślu 📞 790-258-612" />
     <meta name="twitter:description" content="Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!" />
     <meta name="twitter:image" content="https://naprawaprzemysl.pl/share.png" />
 

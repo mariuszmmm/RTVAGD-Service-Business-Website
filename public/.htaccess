@@ -15,9 +15,5 @@
   RewriteCond %{HTTP_HOST} ^www\.naprawaprzemysl\.pl$ [NC]
   RewriteRule ^(.*)$ https://naprawaprzemysl.pl/$1 [R=301,L]
 
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^/?$ /index.html [L]
-  RewriteRule ^(.+)/$ /$1 [R=301,L]
-
   ErrorDocument 404 /404.html
 </IfModule>
