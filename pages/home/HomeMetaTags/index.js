@@ -41,157 +41,161 @@ const HomeMetaTags = () => (
 
     <meta name="apple-mobile-web-app-title" content="Serwis RTV i AGD" />
 
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Naprawa pralek i sprzętu RTV",
-        "alternateName": "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
-        "@id": "https://naprawaprzemysl.pl/",
-        "url": "https://naprawaprzemysl.pl/",
-        "telephone": "790258612",
-        "email": "piotrek_serwis@wp.pl",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Generała Józefa Sowińskiego 2",
-          "addressLocality": "Przemyśl",
-          "addressRegion": "Podkarpackie",
-          "postalCode": "37-700",
-          "addressCountry": "PL"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 49.782778,
-          "longitude": 22.776028
-        },
-        "hasMap": "https://maps.app.goo.gl/SffrLxVf7prQ6Fn46",
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
-            "opens": "09:30",
-            "closes": "17:00"
-          }
-        ],
-        "sameAs": [
-          "https://www.facebook.com/profile.php?id=100063811592941"
-        ],
-        "logo": "https://naprawaprzemysl.pl/share.png",
-        "image": { "@type": "ImageObject", "url": "https://naprawaprzemysl.pl/share.png", "width": 931, "height": 497 },
-        "priceRange": "$$$",
-        "description": "Kompleksowy serwis telewizorów, pralek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
-        "offers": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "serviceType": "Naprawa pralek"
-            },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Przemyśl"
-            },
-            "priceCurrency": "PLN",
-            "price": "100",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "100",
-              "priceCurrency": "PLN",
-              "priceType": "Starting from",
-              "priceRange": "100-*"
-            }
+    <script type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Naprawa pralek i sprzętu RTV",
+          "alternateName": "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
+          "@id": "https://naprawaprzemysl.pl/",
+          "url": "https://naprawaprzemysl.pl/",
+          "telephone": "790258612",
+          "email": "piotrek_serwis@wp.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Generała Józefa Sowińskiego 2",
+            "addressLocality": "Przemyśl",
+            "addressRegion": "Podkarpackie",
+            "postalCode": "37-700",
+            "addressCountry": "PL"
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "serviceType": "Naprawa zmywarek"
-            },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Przemyśl"
-            },
-            "priceCurrency": "PLN",
-            "price": "100",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "100",
-              "priceCurrency": "PLN",
-              "priceType": "Starting from",
-              "priceRange": "100-*"
-            }
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 49.782778,
+            "longitude": 22.776028
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "serviceType": "Naprawa ekspresów do kawy"
+          "hasMap": "https://maps.app.goo.gl/SffrLxVf7prQ6Fn46",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:30",
+              "closes": "17:00"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=100063811592941"
+          ],
+          "logo": "https://naprawaprzemysl.pl/share.png",
+          "image": { "@type": "ImageObject", "url": "https://naprawaprzemysl.pl/share.png", "width": 931, "height": 497 },
+          "priceRange": "$$$",
+          "description": "Kompleksowy serwis telewizorów, pralek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "serviceType": "Naprawa pralek"
+              },
+              "areaServed": {
+                "@type": "Place",
+                "name": "Przemyśl"
+              },
+              "priceCurrency": "PLN",
+              "price": "100",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "100",
+                "priceCurrency": "PLN",
+                "priceType": "Starting from",
+                "priceRange": "100-*"
+              }
             },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Przemyśl"
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "serviceType": "Naprawa zmywarek"
+              },
+              "areaServed": {
+                "@type": "Place",
+                "name": "Przemyśl"
+              },
+              "priceCurrency": "PLN",
+              "price": "100",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "100",
+                "priceCurrency": "PLN",
+                "priceType": "Starting from",
+                "priceRange": "100-*"
+              }
             },
-            "priceCurrency": "PLN",
-            "price": "120",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "serviceType": "Naprawa ekspresów do kawy"
+              },
+              "areaServed": {
+                "@type": "Place",
+                "name": "Przemyśl"
+              },
+              "priceCurrency": "PLN",
               "price": "120",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "120",
+                "priceCurrency": "PLN",
+                "priceType": "Starting from",
+                "priceRange": "120-*"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "serviceType": "Naprawa telewizorów"
+              },
+              "areaServed": {
+                "@type": "Place",
+                "name": "Przemyśl"
+              },
               "priceCurrency": "PLN",
-              "priceType": "Starting from",
-              "priceRange": "120-*"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "serviceType": "Naprawa telewizorów"
-            },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Przemyśl"
-            },
-            "priceCurrency": "PLN",
-            "price": "150",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
               "price": "150",
-              "priceCurrency": "PLN",
-              "priceType": "Starting from",
-              "priceRange": "150-*"
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "150",
+                "priceCurrency": "PLN",
+                "priceType": "Starting from",
+                "priceRange": "150-*"
+              }
             }
+          ],
+          "paymentAccepted": "Cash",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "62",
+            "bestRating": "5",
+            "worstRating": "1"
           }
-        ],
-        "paymentAccepted": "Cash",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.6",
-          "reviewCount": "62",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
-      })}
-    </script>
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Strona Główna",
-            "item": "https://naprawaprzemysl.pl/"
-          }
-        ]
-      })}
-    </script>
+        })
+      }}
+    />
+    <script type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona Główna",
+              "item": "https://naprawaprzemysl.pl/"
+            }
+          ]
+        })
+      }}
+    />
   </Head>
 );
 
