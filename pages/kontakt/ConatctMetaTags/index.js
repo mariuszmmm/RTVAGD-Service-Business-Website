@@ -22,7 +22,7 @@ const ConatctMetaTags = () => (
       property="og:description"
       content="Skontaktuj się pod numerem 790-258-612 lub odwiedź nas w Przemyślu, ul. Generała Sowińskiego 2. Szybkie, fachowe usługi naprawy sprzętu RTV i AGD."
     />
-    <meta property="og:url" content="https://naprawaprzemysl.pl/kontakt" />
+    <meta property="og:url" content="https://naprawaprzemysl.pl/kontakt/" />
     <meta property="og:site_name" content="Serwis RTV i AGD - kontakt" />
     <meta property="og:updated_time" content="2024-11-27T03:38:11+01:00" />
     <meta property="og:image" content="https://naprawaprzemysl.pl/share.png" />
@@ -189,7 +189,7 @@ const ConatctMetaTags = () => (
             "@type": "ListItem",
             "position": 2,
             "name": "Kontakt",
-            "item": "https://naprawaprzemysl.pl/kontakt"
+            "item": "https://naprawaprzemysl.pl/kontakt/"
           }
         ]
       })}

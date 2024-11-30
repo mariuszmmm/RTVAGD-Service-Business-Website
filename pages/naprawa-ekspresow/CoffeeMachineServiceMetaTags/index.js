@@ -21,7 +21,7 @@ const CoffeeMachineServiceMetaTags = () => (
       property="og:description"
       content="Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś."
     />
-    <meta property="og:url" content="https://naprawaprzemysl.pl/naprawa-ekspresow" />
+    <meta property="og:url" content="https://naprawaprzemysl.pl/naprawa-ekspresow/" />
     <meta property="og:site_name" content="Serwis RTV i AGD - naprawa ekspresów" />
     <meta property="og:updated_time" content="2024-11-27T03:38:11+01:00" />
     <meta property="og:image" content="https://naprawaprzemysl.pl/share.png" />
@@ -188,7 +188,7 @@ const CoffeeMachineServiceMetaTags = () => (
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa ekspresów do kawy",
-            "item": "https://naprawaprzemysl.pl/naprawa-ekspresow"
+            "item": "https://naprawaprzemysl.pl/naprawa-ekspresow/"
           }
         ]
       })}

@@ -21,7 +21,7 @@ const ReviewsMetaTags = () => (
       property="og:description"
       content="Sprawdź opinie klientów o naprawach sprzętu RTV i AGD w Przemyślu. Dowiedz się, dlaczego tak wielu poleca moje usługi."
     />
-    <meta property="og:url" content="https://naprawaprzemysl.pl/opinie" />
+    <meta property="og:url" content="https://naprawaprzemysl.pl/opinie/" />
     <meta property="og:site_name" content="Serwis RTV i AGD - opinie" />
     <meta property="og:updated_time" content="2024-11-27T03:38:11+01:00" />
     <meta property="og:image" content="https://naprawaprzemysl.pl/share.png" />
@@ -188,7 +188,7 @@ const ReviewsMetaTags = () => (
             "@type": "ListItem",
             "position": 2,
             "name": "Opinie",
-            "item": "https://naprawaprzemysl.pl/opinie"
+            "item": "https://naprawaprzemysl.pl/opinie/"
           }
         ]
       })}

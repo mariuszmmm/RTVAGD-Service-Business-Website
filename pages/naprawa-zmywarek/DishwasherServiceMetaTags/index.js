@@ -21,7 +21,7 @@ const DishwasherServiceMetaTags = () => (
       property="og:description"
       content="Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!"
     />
-    <meta property="og:url" content="https://naprawaprzemysl.pl/naprawa-zmywarek" />
+    <meta property="og:url" content="https://naprawaprzemysl.pl/naprawa-zmywarek/" />
     <meta property="og:site_name" content="Serwis RTV i AGD - naprawa zmywarek" />
     <meta property="og:updated_time" content="2024-11-27T03:38:11+01:00" />
     <meta property="og:image" content="https://naprawaprzemysl.pl/share.png" />
@@ -188,7 +188,7 @@ const DishwasherServiceMetaTags = () => (
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa zmywarek",
-            "item": "https://naprawaprzemysl.pl/naprawa-zmywarek"
+            "item": "https://naprawaprzemysl.pl/naprawa-zmywarek/"
           }
         ]
       })}
