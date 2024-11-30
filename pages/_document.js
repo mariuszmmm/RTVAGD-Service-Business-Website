@@ -29,12 +29,11 @@ export default class MyDocument extends Document {
   }
 
 
+
   render() {
     return (
-      <Html >
+      <Html lang='pl-PL'>
         <Head>
-
-
           <Script
             id="google-tag-manager"
             strategy="afterInteractive"

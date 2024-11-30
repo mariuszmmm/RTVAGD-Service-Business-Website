@@ -44,8 +44,8 @@ const DishwasherServiceMetaTags = () => (
         "@type": "ProfessionalService",
         "name": "Naprawa pralek i sprzętu RTV",
         "alternateName": "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
-        "@id": "https://naprawaprzemysl.pl",
-        "url": "https://naprawaprzemysl.pl",
+        "@id": "https://naprawaprzemysl.pl/",
+        "url": "https://naprawaprzemysl.pl/",
         "telephone": "790258612",
         "email": "piotrek_serwis@wp.pl",
         "address": {
@@ -182,7 +182,7 @@ const DishwasherServiceMetaTags = () => (
             "@type": "ListItem",
             "position": 1,
             "name": "Strona Główna",
-            "item": "https://naprawaprzemysl.pl"
+            "item": "https://naprawaprzemysl.pl/"
           },
           {
             "@type": "ListItem",

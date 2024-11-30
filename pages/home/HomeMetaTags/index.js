@@ -5,7 +5,7 @@ const HomeMetaTags = () => (
 
     <title>Naprawa telewizorów, pralek, zmywarek, ekspresów do kawy</title>
 
-    <link rel="canonical" href="https://naprawaprzemysl.pl" />
+    <link rel="canonical" href="https://naprawaprzemysl.pl/" />
 
     <meta
       name="description"
@@ -22,7 +22,7 @@ const HomeMetaTags = () => (
       property="og:description"
       content="Kompleksowy serwis telewizorów, pralek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy."
     />
-    <meta property="og:url" content="https://naprawaprzemysl.pl" />
+    <meta property="og:url" content="https://naprawaprzemysl.pl/" />
     <meta property="og:site_name" content="Serwis RTV i AGD" />
     <meta property="og:updated_time" content="2024-11-27T03:38:11+01:00" />
     <meta property="og:image" content="https://naprawaprzemysl.pl/share.png" />
@@ -47,8 +47,8 @@ const HomeMetaTags = () => (
         "@type": "ProfessionalService",
         "name": "Naprawa pralek i sprzętu RTV",
         "alternateName": "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
-        "@id": "https://naprawaprzemysl.pl",
-        "url": "https://naprawaprzemysl.pl",
+        "@id": "https://naprawaprzemysl.pl/",
+        "url": "https://naprawaprzemysl.pl/",
         "telephone": "790258612",
         "email": "piotrek_serwis@wp.pl",
         "address": {
@@ -187,7 +187,7 @@ const HomeMetaTags = () => (
             "@type": "ListItem",
             "position": 1,
             "name": "Strona Główna",
-            "item": "https://naprawaprzemysl.pl"
+            "item": "https://naprawaprzemysl.pl/"
           }
         ]
       })}
