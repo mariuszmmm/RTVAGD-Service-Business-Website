@@ -3,7 +3,7 @@ import Head from 'next/head';
 const PricingMetaTags = () => (
   <Head>
 
-    <title>Podstawowy cennik ✔️ Serwis RTV AGD w Przemyślu.</title>
+    <title>Cennik napraw w serwisie RTV i AGD w Przemyślu.</title>
 
     <link rel="canonical" href="https://naprawaprzemysl.pl/cennik/" />
 
@@ -16,7 +16,7 @@ const PricingMetaTags = () => (
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Podstawowy cennik ✔️ Serwis RTV AGD w Przemyślu."
+      content="Cennik napraw w serwisie RTV i AGD w Przemyślu."
     />
     <meta
       property="og:description"
@@ -33,7 +33,7 @@ const PricingMetaTags = () => (
     <meta property="og:image:type" content="image/png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Podstawowy cennik ✔️ Serwis RTV AGD w Przemyślu." />
+    <meta name="twitter:title" content="Cennik napraw w serwisie RTV i AGD w Przemyślu." />
     <meta name="twitter:description" content="Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów." />
     <meta name="twitter:image" content="https://naprawaprzemysl.pl/share.png" />
 
@@ -83,80 +83,6 @@ const PricingMetaTags = () => (
           "image": { "@type": "ImageObject", "url": "https://naprawaprzemysl.pl/share.png", "width": 931, "height": 497 },
           "priceRange": "$$$",
           "description": "Sprawdź cennik za naprawę sprzętu RTV i AGD w serwisie w Przemyślu. Konkurencyjne ceny na naprawy telewizorów, pralek, zmywarek i ekspresów.",
-          "offers": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "serviceType": "Naprawa pralek"
-              },
-              "areaServed": {
-                "@type": "Place",
-                "name": "Przemyśl"
-              },
-              "priceCurrency": "PLN",
-              "price": "100",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "100",
-                "priceCurrency": "PLN"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "serviceType": "Naprawa zmywarek"
-              },
-              "areaServed": {
-                "@type": "Place",
-                "name": "Przemyśl"
-              },
-              "priceCurrency": "PLN",
-              "price": "100",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "100",
-                "priceCurrency": "PLN"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "serviceType": "Naprawa ekspresów do kawy"
-              },
-              "areaServed": {
-                "@type": "Place",
-                "name": "Przemyśl"
-              },
-              "priceCurrency": "PLN",
-              "price": "120",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "120",
-                "priceCurrency": "PLN"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "serviceType": "Naprawa telewizorów"
-              },
-              "areaServed": {
-                "@type": "Place",
-                "name": "Przemyśl"
-              },
-              "priceCurrency": "PLN",
-              "price": "150",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "150",
-                "priceCurrency": "PLN"
-              }
-            }
-          ],
           "paymentAccepted": "Cash",
           "aggregateRating": {
             "@type": "AggregateRating",
