@@ -13,12 +13,12 @@ import { GoogleTagManager } from '@next/third-parties/google';
 function App({ Component, pageProps }) {
   return (
     <>
-      {/* <Script
+      <Script
         src="https://www.googletagmanager.com/gtm.js?id=GTM-P52JLLB7"
         strategy="afterInteractive"
         onLoad={() => console.log('GTM script loaded successfully')}
         onError={(e) => console.error('Error loading GTM script', e)}
-      /> */}
+      />
 
       <React.StrictMode>
         <ThemeProvider theme={theme}>
