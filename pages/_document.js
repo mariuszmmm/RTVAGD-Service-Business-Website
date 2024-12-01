@@ -50,24 +50,10 @@ export default class MyDocument extends Document {
           <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
 
           <meta property="fb:app_id" content="100063811592941" />
-          <Script
-            id="Cookiebot"
-            src="https://consent.cookiebot.com/uc.js"
-            data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc"
-            data-blockingmode="auto"
-            type="text/javascript"
-            strategy="afterInteractive"
-          />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <Script
-            id="CookieDeclaration"
-            src="https://consent.cookiebot.com/3b999804-26b5-40e7-93bc-f82624a559cc/cd.js"
-            type="text/javascript"
-            strategy="afterInteractive"
-            async />
           <Script
             id="google-maps"
             strategy="afterInteractive"
