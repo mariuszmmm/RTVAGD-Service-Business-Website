@@ -35,6 +35,9 @@ const ReviewsItem = ({ item }) => {
         <meta itemProp="name" content={getContentForReview(contentForReview)} />
         <meta itemProp="serviceType" content={`Profesjonalna ${getContentForReview(item.text)} - Szybko i solidnie`} />
       </div>
+      <div itemProp="author" itemScope itemType="https://schema.org/Person">
+        <meta itemProp="name" content={item.author_name} />
+      </div>
       <Header>
         <Photo
           itemProp="image"
