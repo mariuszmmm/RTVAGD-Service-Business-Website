@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://naprawaprzemysl.pl/</loc>
-    <lastmod>2024-11-28</lastmod>
+    <loc>https://naprawaprzemysl.pl</loc>
+    <lastmod>2024-12-01</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis</image:loc>
@@ -20,8 +20,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://naprawaprzemysl.pl/cennik/</loc>
-    <lastmod>2024-11-28</lastmod>
+    <loc>https://naprawaprzemysl.pl/cennik</loc>
+    <lastmod>2024-12-01</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
