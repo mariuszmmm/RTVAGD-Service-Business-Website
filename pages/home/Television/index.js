@@ -1,4 +1,4 @@
-import { Image, TelevisionWrapper } from "../../../test/styles/home/Television/TelevisionStyled";
+import { Image, TelevisionWrapper } from "../../../styles/home/Television/TelevisionStyled";
 import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 

@@ -1,4 +1,4 @@
-import { Hero, HeroContainer, HeroText, HeroTitle, } from '../../test/styles/home/HomeStyled';
+import { Hero, HeroContainer, HeroText, HeroTitle, } from '../../styles/home/HomeStyled';
 import { StyledButtonLink } from '../../components/common/Buttons';
 import { Container } from '../../components/common/Container';
 import { SubTitle } from '../../components/common/SubTitle';
