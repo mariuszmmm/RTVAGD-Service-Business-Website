@@ -13,10 +13,10 @@ import { GoogleTagManager } from '@next/third-parties/google';
 function App({ Component, pageProps }) {
   return (
     <>
-      <Script
+      {/* <Script
         src="https://www.googletagmanager.com/gtm.js?id=GTM-P52JLLB7"
         strategy="afterInteractive"
-      />
+      /> */}
 
       <React.StrictMode>
         <ThemeProvider theme={theme}>
