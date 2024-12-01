@@ -12,17 +12,17 @@ import Footer from '../components/Footer';
 function App({ Component, pageProps }) {
   return (
     <>
-      <React.StrictMode>
-        <ThemeProvider theme={theme}>
-          <Normalize />
+      {/* <React.StrictMode> */}
+      <ThemeProvider theme={theme}>
+        {/* <Normalize />
           <GlobalStyle />
           <Background />
-          <Header />
-          <Component {...pageProps} />
-          {/* <GoogleTagManager gtmId="GTM-P52JLLB7" /> */}
-          <Footer />
-        </ThemeProvider>
-      </React.StrictMode>
+          <Header /> */}
+        <Component {...pageProps} />
+        {/* <GoogleTagManager gtmId="GTM-P52JLLB7" /> */}
+        {/* <Footer /> */}
+      </ThemeProvider>
+      {/* </React.StrictMode> */}
     </>
   );
 }
