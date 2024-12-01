@@ -1,4 +1,4 @@
-import { DishwasherWrapper, Image } from "../../../styles/home/Dishwasher/DishwasherStyled";
+import { DishwasherWrapper, Image } from "../../../test/styles/home/Dishwasher/DishwasherStyled";
 import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 

@@ -1,4 +1,4 @@
-import { CoffeeMachineWrapper, Image } from "../../../styles/home/CoffeeMachine/CoffeeMachineStyled";
+import { CoffeeMachineWrapper, Image } from "../../../test/styles/home/CoffeeMachine/CoffeeMachineStyled";
 import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 

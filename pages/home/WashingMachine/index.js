@@ -1,4 +1,4 @@
-import { Image, WashingMachineWrapper } from "../../../styles/home/WashingMachine/WashingMachineStyled";
+import { Image, WashingMachineWrapper } from "../../../test/styles/home/WashingMachine/WashingMachineStyled";
 import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 
