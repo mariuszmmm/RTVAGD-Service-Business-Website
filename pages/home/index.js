@@ -78,7 +78,7 @@ const Home = () => {
 
   return (
     <Hero>
-      <HomeMetaTags />
+      {/* <HomeMetaTags /> */}
       <HeroContainer>
         <HeroTitle>
           Profesjonalna naprawa<br />
