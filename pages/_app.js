@@ -18,16 +18,10 @@ function App({ Component, pageProps }) {
         strategy="afterInteractive"
       /> */}
 
-      {/* <Script id="CookieDeclaration"
-        src="https://consent.cookiebot.com/3b999804-26b5-40e7-93bc-f82624a559cc/cd.js"
-        type="text/javascript"
-        strategy="afterInteractive"
-
-      /> */}
-      <Script
+      {/* <Script
         src={`https://cdn-cookieyes.com/client_data/342ecae5a1aa8ee84189bffe/script.js`}
 
-      />
+      /> */}
       <React.StrictMode>
         <ThemeProvider theme={theme}>
           <Normalize />
@@ -35,7 +29,7 @@ function App({ Component, pageProps }) {
           <Background />
           <Header />
           <Component {...pageProps} />
-          {/* <GoogleTagManager gtmId="GTM-P52JLLB7" /> */}
+          <GoogleTagManager gtmId="GTM-P52JLLB7" />
           <Footer />
         </ThemeProvider>
       </React.StrictMode>
