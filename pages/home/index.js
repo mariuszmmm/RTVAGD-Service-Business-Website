@@ -15,66 +15,66 @@ import HomeMetaTags from './HomeMetaTags';
 import { sendGTMEvent } from '@next/third-parties/google'
 
 const Home = () => {
-  // const [isPortrait, setIsPortrait] = useState(
-  //   typeof window !== 'undefined' ? window.innerHeight > window.innerWidth : true
-  // );
-  // const [activeScene, setActiveScene] = useState({
-  //   reset: true,
-  //   number: 0,
-  //   content: mobileScene[0],
-  // });
-  // const [hold, setHold] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(
+    typeof window !== 'undefined' ? window.innerHeight > window.innerWidth : true
+  );
+  const [activeScene, setActiveScene] = useState({
+    reset: true,
+    number: 0,
+    content: mobileScene[0],
+  });
+  const [hold, setHold] = useState(false);
 
-  // useEffect(() => {
-  //   const initialIsPortrait = window.innerHeight > window.innerWidth;
-  //   setIsPortrait(initialIsPortrait);
-  //   setActiveScene({
-  //     reset: false,
-  //     number: 0,
-  //     content: initialIsPortrait ? mobileScene[0] : scene[0],
-  //   });
+  useEffect(() => {
+    const initialIsPortrait = window.innerHeight > window.innerWidth;
+    setIsPortrait(initialIsPortrait);
+    setActiveScene({
+      reset: false,
+      number: 0,
+      content: initialIsPortrait ? mobileScene[0] : scene[0],
+    });
 
-  //   const handleResize = () => {
-  //     const actualState = window.innerHeight > window.innerWidth;
-  //     if (isPortrait === actualState) return;
-  //     setActiveScene({
-  //       ...activeScene,
-  //       reset: true,
-  //       number: 0,
-  //       content: actualState ? mobileScene[0] : scene[0],
-  //     });
-  //     setIsPortrait(actualState);
-  //   };
+    const handleResize = () => {
+      const actualState = window.innerHeight > window.innerWidth;
+      if (isPortrait === actualState) return;
+      setActiveScene({
+        ...activeScene,
+        reset: true,
+        number: 0,
+        content: actualState ? mobileScene[0] : scene[0],
+      });
+      setIsPortrait(actualState);
+    };
 
-  //   window.addEventListener('resize', handleResize);
-  //   return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
 
-  //   // eslint-disable-next-line
-  // }, [isPortrait]);
+    // eslint-disable-next-line
+  }, [isPortrait]);
 
-  // const sceneNumberRef = useRef(activeScene.number);
+  const sceneNumberRef = useRef(activeScene.number);
 
-  // useEffect(() => {
-  //   if (hold) return;
+  useEffect(() => {
+    if (hold) return;
 
-  //   const updateScene = () => {
-  //     let sceneNumber = sceneNumberRef.current >= 8 ? 1 : sceneNumberRef.current + 1;
-  //     setActiveScene({
-  //       reset: false,
-  //       number: sceneNumber,
-  //       content: isPortrait ? mobileScene[sceneNumber] : scene[sceneNumber],
-  //     });
-  //     sceneNumberRef.current = sceneNumber;
+    const updateScene = () => {
+      let sceneNumber = sceneNumberRef.current >= 8 ? 1 : sceneNumberRef.current + 1;
+      setActiveScene({
+        reset: false,
+        number: sceneNumber,
+        content: isPortrait ? mobileScene[sceneNumber] : scene[sceneNumber],
+      });
+      sceneNumberRef.current = sceneNumber;
 
-  //     const intervalDuration = sceneNumber % 2 !== 0 ? 3000 : 800;
-  //     clearInterval(interval);
-  //     interval = setInterval(updateScene, intervalDuration);
-  //   };
+      const intervalDuration = sceneNumber % 2 !== 0 ? 3000 : 800;
+      clearInterval(interval);
+      interval = setInterval(updateScene, intervalDuration);
+    };
 
-  //   let interval = setInterval(updateScene, 300);
+    let interval = setInterval(updateScene, 300);
 
-  //   return () => clearInterval(interval);
-  // }, [hold, isPortrait]);
+    return () => clearInterval(interval);
+  }, [hold, isPortrait]);
 
   return (
     <Hero>
@@ -89,12 +89,12 @@ const Home = () => {
         <HeroText> Rzetelnie, szybko i&nbsp;skutecznie!</HeroText>
         <StyledButtonLink
           href={`tel:${serwis.phone}`}
-        // onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'callNow' })}
+          onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'callNow' })}
         >
           Zadzwoń teraz
         </StyledButtonLink>
       </HeroContainer>
-      {/* {<WashingMachine
+      {<WashingMachine
         show={activeScene.content[0]}
         center={isPortrait}
         setHold={setHold}
@@ -113,7 +113,7 @@ const Home = () => {
         show={activeScene.content[3]}
         center={isPortrait}
         setHold={setHold}
-      />} */}
+      />}
       <Container>
         <SubTitle>
           Serwisuję wszystkie marki telewizorów, pralek, zmywarek i&nbsp;ekspresów&nbsp;do&nbsp;kawy
