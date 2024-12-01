@@ -56,15 +56,17 @@ export default class MyDocument extends Document {
             data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc"
             data-blockingmode="auto"
             type="text/javascript"
+            strategy="afterInteractive"
           />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script
+          <Script
             id="CookieDeclaration"
             src="https://consent.cookiebot.com/3b999804-26b5-40e7-93bc-f82624a559cc/cd.js"
             type="text/javascript"
+            strategy="afterInteractive"
             async />
           <Script
             id="google-maps"
