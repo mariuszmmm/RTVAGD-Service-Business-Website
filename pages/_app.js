@@ -14,7 +14,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Script
-        src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXX"
+        src="https://www.googletagmanager.com/gtm.js?id=GTM-P52JLLB7"
         strategy="afterInteractive"
       />
       <React.StrictMode>
