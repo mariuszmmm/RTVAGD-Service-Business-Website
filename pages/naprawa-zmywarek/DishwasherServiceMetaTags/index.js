@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 const DishwasherServiceMetaTags = () => (
   <Head>
-    <title>Naprawa zmywarek ✔️ Serwis w Przemyślu 📞 790-258-612</title>
+    <title>Serwis ✔️ Naprawa zmywarek Przemyśl 📞790-258-612</title>
 
     <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-zmywarek/" />
 
