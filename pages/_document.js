@@ -32,8 +32,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang='pl'>
         <Head>
-          <meta charset="utf-8" />
-
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
