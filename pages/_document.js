@@ -30,10 +30,9 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='pl-PL'>
+      <Html lang='pl'>
         <Head>
-          <meta charSet='UTF-8' />
-          <meta name="language" content="pl" />
+          <meta charset="utf-8" />
 
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
