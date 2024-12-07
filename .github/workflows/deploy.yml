@@ -22,7 +22,7 @@ jobs:
       - name: Porównaj update_time w JSON
         id: compare-json
         run: |
-          if [ -f updatedReviews.json ]; then
+          if [ -f updatedReviews.json ] && [ -f reviews.json ]; then
             UPDATED_TIME=$(jq -r '.update_time' updatedReviews.json)
             REVIEWS_TIME=$(jq -r '.update_time' reviews.json)
 
