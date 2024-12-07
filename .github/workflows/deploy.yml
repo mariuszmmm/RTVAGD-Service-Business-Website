@@ -48,7 +48,7 @@ jobs:
           echo "Updated Reviews update_time: $UPDATED_TIME"
           echo "Reviews update_time: $REVIEWS_TIME"
 
-          if [ "$UPDATED_TIME" != "$REVIEWS_TIME" ] && [ -n "$UPDATED_TIME" ] && [ -n "$REVIEWS_TIME" ]; then
+          if { [ "$UPDATED_TIME" != "$REVIEWS_TIME" ] || { [ -z "$UPDATED_TIME" ] && [ -z "$REVIEWS_TIME" ]; } }; then
               echo "Files differ. Triggering build and deploy."
               echo "changes=true" >> $GITHUB_ENV
 
