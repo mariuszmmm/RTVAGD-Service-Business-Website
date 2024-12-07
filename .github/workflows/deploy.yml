@@ -23,7 +23,7 @@ jobs:
         id: compare-json
         run: |
           if [ -f updatedReviews.json ] && [ -f reviews.json ]; then
-           if jq empty updatedReviews.json >/dev/null 2>&1; then
+            if jq empty updatedReviews.json >/dev/null 2>&1 && jq empty reviews.json >/dev/null 2>&1; then
             UPDATED_TIME=$(jq -r '.update_time' updatedReviews.json)
             REVIEWS_TIME=$(jq -r '.update_time' reviews.json)
 
@@ -38,6 +38,10 @@ jobs:
               curl -o /public_html/serwis/api/reviews.json https://naprawaprzemysl.pl/api/updatedReviews.json
             else
               echo "Files are identical. Skipping build."
+              echo "changes=false" >> $GITHUB_ENV
+            fi
+          else
+              echo "Jeden z plików nie jest poprawnym JSON-em."
               echo "changes=false" >> $GITHUB_ENV
             fi
           else
