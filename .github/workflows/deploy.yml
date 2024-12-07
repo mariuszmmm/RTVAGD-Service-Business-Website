@@ -22,15 +22,33 @@ jobs:
       - name: Porównaj update_time w JSON
         id: compare-json
         run: |
-          if [ -f updatedReviews.json ] && [ -f reviews.json ]; then
-            if jq empty updatedReviews.json >/dev/null 2>&1 && jq empty reviews.json >/dev/null 2>&1; then
-            UPDATED_TIME=$(jq -r '.update_time' updatedReviews.json)
-            REVIEWS_TIME=$(jq -r '.update_time' reviews.json)
+          UPDATED_TIME=""
+          REVIEWS_TIME=""
 
-            echo "Updated Reviews update_time: $UPDATED_TIME"
-            echo "Reviews update_time: $REVIEWS_TIME"
+          if [ -f updatedReviews.json ]; then
+            if jq empty updatedReviews.json >/dev/null 2>&1; then
+              UPDATED_TIME=$(jq -r '.update_time' updatedReviews.json)
+            else
+              echo "Plik updatedReviews.json nie jest poprawnym JSON-em."
+            fi
+          else
+            echo "Brak pliku updatedReviews.json, ustawiam UPDATED_TIME na pusty ciąg."
+          fi
 
-            if [ "$UPDATED_TIME" != "$REVIEWS_TIME" ]; then
+          if [ -f reviews.json ]; then
+            if jq empty reviews.json >/dev/null 2>&1; then
+              REVIEWS_TIME=$(jq -r '.update_time' reviews.json)
+            else
+              echo "Plik reviews.json nie jest poprawnym JSON-em."
+            fi
+          else
+            echo "Brak pliku reviews.json, ustawiam REVIEWS_TIME na pusty ciąg."
+          fi
+
+          echo "Updated Reviews update_time: $UPDATED_TIME"
+          echo "Reviews update_time: $REVIEWS_TIME"
+
+          if [ "$UPDATED_TIME" != "$REVIEWS_TIME" ] && [ -n "$UPDATED_TIME" ] && [ -n "$REVIEWS_TIME" ]; then
               echo "Files differ. Triggering build and deploy."
               echo "changes=true" >> $GITHUB_ENV
 
