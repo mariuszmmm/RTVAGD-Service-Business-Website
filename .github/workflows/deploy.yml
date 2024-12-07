@@ -23,10 +23,10 @@ jobs:
         id: compare-json
         run: |
           if [ -f updatedReviews.json ] && [ -f reviews.json ]; then
+           if jq empty updatedReviews.json >/dev/null 2>&1; then
             UPDATED_TIME=$(jq -r '.update_time' updatedReviews.json)
             REVIEWS_TIME=$(jq -r '.update_time' reviews.json)
-            
-            if jq empty updatedReviews.json >/dev/null 2>&1; then
+
             echo "Updated Reviews update_time: $UPDATED_TIME"
             echo "Reviews update_time: $REVIEWS_TIME"
 
