@@ -41,6 +41,6 @@ const DryerService = () => (
   </Section>
 );
 
-export const getStaticProps = getSharedStaticProps;
+// export const getStaticProps = getSharedStaticProps;
 
 export default DryerService;

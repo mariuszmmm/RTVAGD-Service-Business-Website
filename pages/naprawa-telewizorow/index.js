@@ -40,6 +40,6 @@ const TelevisionService = () => (
   </Section>
 );
 
-export const getStaticProps = getSharedStaticProps;
+// export const getStaticProps = getSharedStaticProps;
 
 export default TelevisionService;
