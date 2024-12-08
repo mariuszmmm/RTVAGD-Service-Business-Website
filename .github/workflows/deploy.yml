@@ -149,4 +149,3 @@ jobs:
           put reviews.json -o /public_html/serwis/api/reviews.json
           quit
           "
-          
