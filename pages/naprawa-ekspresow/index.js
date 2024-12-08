@@ -14,7 +14,7 @@ const CoffeeMachineService = () => (
     <CoffeeMachineServiceMetaTags />
     <Container>
       <Title>
-        <span>✔ </span>Naprawa ekspresów do kawy
+        <span>✔ </span>Naprawa ekspresów do&nbsp;kawy
         <Emoticon
           src={imageUrls.emoticon}
           alt="emoticon"
