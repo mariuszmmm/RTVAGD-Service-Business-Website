@@ -1,4 +1,4 @@
-oname: Build and Deploy
+⁸oname: Build and Deploy
 
 on:
   push:
@@ -58,6 +58,15 @@ jobs:
             echo "Czas aktualizacji jest taki sam lub brak danych. Ustawiono UPDATE_NEEDED=false."
           fi
 
+      - name: Install lftp
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: sudo apt-get install -y lftp
+
+
       - name: Copy reviews.json
         if: env.UPDATE_NEEDED == 'true'
         run: |
@@ -93,14 +102,6 @@ jobs:
           NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
           NEXT_PUBLIC_PLACE_ID: ${{ secrets.PLACE_ID }}
         run: npm run build
-
-      - name: Install lftp
-        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        run: sudo apt-get install -y lftp
 
       - name: Define dynamic folder name
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
