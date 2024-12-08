@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "10 0 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -37,10 +37,13 @@ jobs:
           if [ -f reviewsCopy.json ]; then
             if jq empty reviewsCopy.json >/dev/null 2>&1; then
               COPY_TIME=$(jq -r '.update_time' reviewsCopy.json)
+              echo "REVIEWS_COPY=true" >> $GITHUB_ENV
             else
+              echo "REVIEWS_COPY=false" >> $GITHUB_ENV
               echo "Plik reviewsCopy.json nie jest poprawnym JSON-em."
             fi
           else
+            echo "REVIEWS_COPY=false" >> $GITHUB_ENV
             echo "Brak pliku reviewsCopy.json, ustawiam COPY_TIME na pusty ciąg."
           fi
 
@@ -116,12 +119,23 @@ jobs:
           "
 
       - name: Copy reviews.json
-        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        if: env.UPDATE_NEEDED == 'true'
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           cd /public_html/serwis/api
           get reviews.json -o reviewsCopy.json
           put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
+          quit
+          "
+
+      - name: Copy reviewsCopy.json
+        if: github.event_name == 'push' && env.REVIEWS_COPY == 'true'
+        run: |
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          cd /public_html/serwis/api
+          get reviewsCopy.json -o reviews.json
+          put reviews.json -o /public_html/serwis/api/reviews.json
           quit
           "
