@@ -22,7 +22,7 @@ jobs:
       - name: Sprawdź zawartość plików JSON
         run: |
           REVIEWS_TIME=""
-          COPY_TIME=""
+          COPY_TIME="" 
 
           if [ -f reviews.json ]; then
             if jq empty reviews.json >/dev/null 2>&1; then
