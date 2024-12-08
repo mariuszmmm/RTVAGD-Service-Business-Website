@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -11,23 +14,63 @@ jobs:
 
     steps:
       - name: Pobierz pierwszy plik JSON
-        run: curl -o updatedReviews.json https://naprawaprzemysl.pl/api/updatedReviews.json
-
-      - name: Pobierz drugi plik JSON
         run: curl -o reviews.json https://naprawaprzemysl.pl/api/reviews.json
 
+      - name: Pobierz drugi plik JSON
+        run: curl -o reviewsCopy.json https://naprawaprzemysl.pl/api/reviewsCopy.json
+
+      - name: Sprawdź zawartość plików JSON
+        run: |
+          REVIEWS_TIME=""
+          COPY_TIME=""
+
+          if [ -f reviews.json ]; then
+            if jq empty reviews.json >/dev/null 2>&1; then
+              REVIEWS_TIME=$(jq -r '.update_time' reviews.json)
+            else
+              echo "Plik reviews.json nie jest poprawnym JSON-em."
+            fi
+          else
+            echo "Brak pliku reviews.json, ustawiam REVIEWS_TIME na pusty ciąg."
+          fi
+
+          if [ -f reviewsCopy.json ]; then
+            if jq empty reviewsCopy.json >/dev/null 2>&1; then
+              COPY_TIME=$(jq -r '.update_time' reviewsCopy.json)
+            else
+              echo "Plik reviewsCopy.json nie jest poprawnym JSON-em."
+            fi
+          else
+            echo "Brak pliku reviewsCopy.json, ustawiam COPY_TIME na pusty ciąg."
+          fi
+
+          echo "REVIEWS_TIME=$REVIEWS_TIME" >> $GITHUB_ENV
+          echo "COPY_TIME=$COPY_TIME" >> $GITHUB_ENV
+
+          if [ "$REVIEWS_TIME" != "$COPY_TIME" ] && [ -n "$REVIEWS_TIME" ]; then
+            echo "UPDATE_NEEDED=true" >> $GITHUB_ENV
+            echo "Czas aktualizacji jest różny. Ustawiono UPDATE_NEEDED=true."
+          else
+            echo "UPDATE_NEEDED=false" >> $GITHUB_ENV
+            echo "Czas aktualizacji jest taki sam lub brak danych. Ustawiono UPDATE_NEEDED=false."
+          fi
+
       - name: Checkout repository
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         uses: actions/checkout@v2
 
       - name: Set up Node.js
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         uses: actions/setup-node@v2
         with:
           node-version: "20"
 
       - name: Install dependencies
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: npm install
 
       - name: Build the application
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         env:
           NEXT_PUBLIC_SERVICE_ID: ${{ secrets.SERVICE_ID }}
           NEXT_PUBLIC_TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
@@ -38,6 +81,7 @@ jobs:
         run: npm run build
 
       - name: Install lftp
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -45,9 +89,11 @@ jobs:
         run: sudo apt-get install -y lftp
 
       - name: Define dynamic folder name
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
 
       - name: Deploy to FTP
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
@@ -58,6 +104,7 @@ jobs:
           "
 
       - name: Copy .htaccess
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
@@ -69,16 +116,12 @@ jobs:
           "
 
       - name: Copy updatedReviews.json
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           cd /public_html/serwis/api
-          if [ -f updatedReviews.json ]; then
-            get updatedReviews.json -o reviews.json
-            put reviews.json -o /public_html/serwis/api/reviews.json
-            put reviews.json -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/reviews.json
-          else
-            echo 'File updatedReviews.json does not exist. Skipping upload.'
-          fi
+          get reviews.json -o reviewsCopy.json
+          put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
           quit
           "

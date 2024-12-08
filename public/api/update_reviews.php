@@ -49,4 +49,4 @@ file_put_contents('reviews.json', json_encode($data));
 echo json_encode([
   'message' => 'Reviews updated successfully',
   ]);
-?>
+?> 
