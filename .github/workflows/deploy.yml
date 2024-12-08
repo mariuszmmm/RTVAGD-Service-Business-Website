@@ -67,14 +67,3 @@ jobs:
           put .htaccess -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/.htaccess
           quit
           "
-
-      - name: Copy updatedReviews.json
-        run: |
-          lftp -f "
-          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          cd /public_html/serwis/api
-          get updatedReviews.json -o reviews.json
-          put reviews.json -o /public_html/serwis/api/reviews.json
-          put reviews.json -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/reviews.json
-          quit
-          "
