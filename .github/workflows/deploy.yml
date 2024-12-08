@@ -1,4 +1,4 @@
-name: Build and Deploy
+oname: Build and Deploy
 
 on:
   push:
@@ -58,6 +58,17 @@ jobs:
             echo "Czas aktualizacji jest taki sam lub brak danych. Ustawiono UPDATE_NEEDED=false."
           fi
 
+      - name: Copy reviews.json
+        if: env.UPDATE_NEEDED == 'true'
+        run: |
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          cd /public_html/serwis/api
+          get reviews.json -o reviewsCopy.json
+          put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
+          quit
+          "
+
       - name: Checkout repository
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         uses: actions/checkout@v2
@@ -115,17 +126,6 @@ jobs:
           get .htaccess -o .htaccess
           put .htaccess -o /public_html/serwis/api/.htaccess
           put .htaccess -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/.htaccess
-          quit
-          "
-
-      - name: Copy reviews.json
-        if: env.UPDATE_NEEDED == 'true'
-        run: |
-          lftp -f "
-          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          cd /public_html/serwis/api
-          get reviews.json -o reviewsCopy.json
-          put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
           quit
           "
 
