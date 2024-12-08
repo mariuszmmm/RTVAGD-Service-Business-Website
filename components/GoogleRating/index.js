@@ -8,7 +8,7 @@ export const GoogleRating = ({ rating, hidden }) => (
     <StyledLink href="/opinie/">
       <ImageWrapper>
         <Image
-          src={imageUrls.google}
+          src={imageUrls.logoGoogle}
           alt="google logo"
           loading="lazy"
           fill
