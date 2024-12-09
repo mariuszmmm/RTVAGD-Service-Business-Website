@@ -66,13 +66,16 @@ jobs:
 
       - name: Czy potrzebna aktualizacja?
         run: |
+          UPDATE_NEEDED=false
+
           if [ "$REVIEWS_TIME" != "$REVIEWS_COPY_TIME" ] && [ "$REVIEWS" = "true" ] && [ "$REVIEWS_COPY" = "true" ]; then
-            echo "UPDATE_NEEDED=true" >> $GITHUB_ENV
+            UPDATE_NEEDED=true
             echo "Czas aktualizacji jest różny. Ustawiono UPDATE_NEEDED=true."
           else
-            echo "UPDATE_NEEDED=false" >> $GITHUB_ENV
             echo "Czas aktualizacji jest taki sam lub brak danych. Ustawiono UPDATE_NEEDED=false."
           fi
+
+          echo "UPDATE_NEEDED=$UPDATE_NEEDED" >> $GITHUB_ENV
 
           echo "REVIEWS_TIME: $REVIEWS_TIME"
           echo "REVIEWS_COPY_TIME: $REVIEWS_COPY_TIME"
