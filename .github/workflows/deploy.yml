@@ -23,6 +23,9 @@ jobs:
       - name: Pobierz pierwszy plik JSON
         run: curl -o reviews.json https://naprawaprzemysl.pl/api/reviews.json
 
+      - name: Pobierz drugi plik JSON
+        run: curl -o reviewsCopy.json https://naprawaprzemysl.pl/api/reviewsCopy.json
+
       - name: Sprawdź zawartość pierwszego pliku JSON
         run: |
           REVIEWS_TIME=""
@@ -41,9 +44,6 @@ jobs:
           fi
 
           echo "REVIEWS_TIME=$REVIEWS_TIME" >> $GITHUB_ENV
-
-      - name: Pobierz drugi plik JSON
-        run: curl -o reviewsCopy.json https://naprawaprzemysl.pl/api/reviewsCopy.json
 
       - name: Sprawdź zawartość drugiego pliku JSON
         run: |
