@@ -13,51 +13,78 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install lftp
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: sudo apt-get install -y lftp
+
       - name: Pobierz pierwszy plik JSON
         run: curl -o reviews.json https://naprawaprzemysl.pl/api/reviews.json
+
+      - name: Sprawdź zawartość pierwszego pliku JSON
+        run: |
+          REVIEWS_TIME=""
+
+          if [ -f reviews.json ]; then
+            if jq empty reviews.json >/dev/null 2>&1; then
+              REVIEWS_TIME=$(jq -r '.update_time' reviews.json)            
+              echo "REVIEWS=true" >> $GITHUB_ENV
+            else
+              echo "Plik reviews.json nie jest poprawnym JSON-em."
+              echo "REVIEWS=false" >> $GITHUB_ENV
+            fi
+          else
+            echo "Brak pliku reviews.json, ustawiam REVIEWS_TIME na pusty ciąg."
+            echo "REVIEWS=false" >> $GITHUB_ENV
+          fi
+
+          echo "REVIEWS_TIME=$REVIEWS_TIME" >> $GITHUB_ENV
 
       - name: Pobierz drugi plik JSON
         run: curl -o reviewsCopy.json https://naprawaprzemysl.pl/api/reviewsCopy.json
 
-      - name: Sprawdź zawartość plików JSON
+      - name: Sprawdź zawartość drugiego pliku JSON
         run: |
-          REVIEWS_TIME=""
-          COPY_TIME="" 
-
-          if [ -f reviews.json ]; then
-            if jq empty reviews.json >/dev/null 2>&1; then
-              REVIEWS_TIME=$(jq -r '.update_time' reviews.json)
-            else
-              echo "Plik reviews.json nie jest poprawnym JSON-em."
-            fi
-          else
-            echo "Brak pliku reviews.json, ustawiam REVIEWS_TIME na pusty ciąg."
-          fi
+          REVIEWS_COPY_TIME="" 
 
           if [ -f reviewsCopy.json ]; then
             if jq empty reviewsCopy.json >/dev/null 2>&1; then
-              COPY_TIME=$(jq -r '.update_time' reviewsCopy.json)
+              REVIEWS_COPY_TIME=$(jq -r '.update_time' reviewsCopy.json)
               echo "REVIEWS_COPY=true" >> $GITHUB_ENV
             else
-              echo "REVIEWS_COPY=false" >> $GITHUB_ENV
               echo "Plik reviewsCopy.json nie jest poprawnym JSON-em."
+              echo "REVIEWS_COPY=false" >> $GITHUB_ENV
             fi
           else
+            echo "Brak pliku reviewsCopy.json, ustawiam REVIEWS_COPY_TIME na pusty ciąg."
             echo "REVIEWS_COPY=false" >> $GITHUB_ENV
-            echo "Brak pliku reviewsCopy.json, ustawiam COPY_TIME na pusty ciąg."
           fi
 
-          echo "REVIEWS_TIME=$REVIEWS_TIME" >> $GITHUB_ENV
-          echo "COPY_TIME=$COPY_TIME" >> $GITHUB_ENV
+          echo "REVIEWS_COPY_TIME=$REVIEWS_COPY_TIME" >> $GITHUB_ENV
 
-          if [ "$REVIEWS_TIME" != "$COPY_TIME" ] && [ -n "$REVIEWS_TIME" ] && [ -n "$COPY_TIME" ]; then
+      - name: Czy potrzebna aktualizacja?
+        run: |
+          if [ "$REVIEWS_TIME" != "$REVIEWS_COPY_TIME" ] && [ "REVIEWS" == "true" ] && [ "REVIEWS_COPY" == "true" ]; then
             echo "UPDATE_NEEDED=true" >> $GITHUB_ENV
             echo "Czas aktualizacji jest różny. Ustawiono UPDATE_NEEDED=true."
           else
             echo "UPDATE_NEEDED=false" >> $GITHUB_ENV
             echo "Czas aktualizacji jest taki sam lub brak danych. Ustawiono UPDATE_NEEDED=false."
           fi
-          
+
+      - name: Copy reviews.json
+        if: env.REVIEWS == 'true'
+        run: |
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          cd /public_html/serwis/api
+          get reviews.json -o reviewsCopy.json
+          put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
+          quit
+          "
+
       - name: Checkout repository
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         uses: actions/checkout@v2
@@ -67,7 +94,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "20"
-          
+
       - name: Cache npm dependencies
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         uses: actions/cache@v2
@@ -80,27 +107,8 @@ jobs:
       - name: Install dependencies
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: |
-          npm ci || npm install 
+          npm ci || npm install
 
-      - name: Install lftp
-        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        run: sudo apt-get install -y lftp
-
-      - name: Copy reviews.json
-        if: env.UPDATE_NEEDED == 'true'
-        run: |
-          lftp -f "
-          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          cd /public_html/serwis/api
-          get reviews.json -o reviewsCopy.json
-          put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
-          quit
-          "
-          
       - name: Build the application
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         env:
@@ -149,5 +157,3 @@ jobs:
           put reviews.json -o /public_html/serwis/api/reviews.json
           quit
           "
-
-          
