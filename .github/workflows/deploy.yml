@@ -74,6 +74,12 @@ jobs:
             echo "Czas aktualizacji jest taki sam lub brak danych. Ustawiono UPDATE_NEEDED=false."
           fi
 
+          echo "REVIEWS_TIME: $REVIEWS_TIME"
+          echo "REVIEWS_COPY_TIME: $REVIEWS_COPY_TIME"
+          echo "REVIEWS: $REVIEWS"
+          echo "REVIEWS_COPY: $REVIEWS_COPY"
+          echo "UPDATE_NEEDED: $UPDATE_NEEDED"
+
       - name: Copy reviews.json
         if: env.REVIEWS == 'true'
         run: |
