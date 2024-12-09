@@ -45,7 +45,7 @@ jobs:
 
           echo "REVIEWS_TIME=$REVIEWS_TIME" >> $GITHUB_ENV
 
-      - name: Sprawdź zawartość drugiego pliku reviewsCopy.json
+      - name: Sprawdź zawartość drugiego pliku reviewsCopy.json.
         run: |
           REVIEWS_COPY_TIME="" 
 
