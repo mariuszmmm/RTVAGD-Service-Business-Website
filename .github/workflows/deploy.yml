@@ -26,7 +26,7 @@ jobs:
       - name: Pobierz drugi plik JSON
         run: curl -o reviewsCopy.json https://naprawaprzemysl.pl/api/reviewsCopy.json
 
-      - name: Sprawdź zawartość pierwszego pliku JSON.
+      - name: Sprawdź zawartość pierwszego pliku reviews.json.
         run: |
           REVIEWS_TIME=""
 
