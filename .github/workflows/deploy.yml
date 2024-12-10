@@ -138,12 +138,22 @@ jobs:
           "
           if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
             echo "Pliku reviews.json został stworzony i jest poprawny"
-            echo "Ponowny build i deploy" 
+            echo "Ponowny build" 
             npm run build
+            echo "Ponowny deploy" 
             lftp -f "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
             lcd ./out
             mirror -R . /public_html/serwis
+            quit
+            "
+            echo "Tworzenie reviewsCopy.json" 
+            lftp -f "
+            open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+            set xfer:clobber on
+            cd /public_html/serwis/api
+            get reviews.json -o reviewsCopy.json
+            put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
             quit
             "
           else
@@ -167,6 +177,7 @@ jobs:
       - name: Copy .htaccess
         if: github.event_name == 'push'
         run: |
+          echo "Kopiowanie .htaccess"
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           cd /public_html/env/serwis
@@ -179,6 +190,7 @@ jobs:
       - name: Copy reviews.json
         if: env.UPDATE_NEEDED == 'true'
         run: |
+          echo "Tworzenie reviewsCopy.json" 
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           cd /public_html/serwis/api
