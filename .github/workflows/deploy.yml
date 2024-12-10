@@ -20,13 +20,10 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: sudo apt-get install -y lftp
 
-      - name: Pobierz pierwszy plik JSON
+      - name: Pobierz plik reviews.json
         run: curl -o reviews.json https://naprawaprzemysl.pl/api/reviews.json
 
-      - name: Pobierz drugi plik JSON
-        run: curl -o reviewsCopy.json https://naprawaprzemysl.pl/api/reviewsCopy.json
-
-      - name: Sprawdź zawartość pierwszego pliku reviews.json
+      - name: Sprawdź zawartość pliku reviews.json
         run: |
           REVIEWS=false
           REVIEWS_TIME=""
@@ -42,7 +39,10 @@ jobs:
           echo "REVIEWS=$REVIEWS" >> $GITHUB_ENV
           echo "REVIEWS_TIME=$REVIEWS_TIME" >> $GITHUB_ENV
 
-      - name: Sprawdź zawartość drugiego pliku reviewsCopy.json
+      - name: Pobierz plik reviewsCopy.json
+        run: curl -o reviewsCopy.json https://naprawaprzemysl.pl/api/reviewsCopy.json
+
+      - name: Sprawdź zawartość pliku reviewsCopy.json
         run: |
           REVIEWS_COPY=false
           REVIEWS_COPY_TIME="" 
@@ -123,7 +123,7 @@ jobs:
           quit
           "
 
-      - name: If need to new build and deploy
+      - name: If need to renew build and deploy
         if: github.event_name == 'push' && env.REVIEWS == false
         run: |
           echo "Tworzenie pliku reviews.json z default_reviews.json"
@@ -137,32 +137,32 @@ jobs:
           quit
           "
           if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
-              echo "Pliku reviews.json został stworzony i jest poprawny"
-              echo "Ponowny build i deploy" 
-
-              npm run build
-              lftp -f "
-              open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-              lcd ./out
-              mirror -R . /public_html/serwis
-              quit
-              "
+            echo "Pliku reviews.json został stworzony i jest poprawny"
+            echo "Ponowny build i deploy" 
+            npm run build
+            lftp -f "
+            open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+            lcd ./out
+            mirror -R . /public_html/serwis
+            quit
+            "
           else
-              echo "Błąd przy tworzeniu pliku reviews.json"
-              echo "Przerwanie procesu"
-              exit 1
+            echo "Błąd przy tworzeniu pliku reviews.json"
           fi
 
-      - name: Deploy copy to FTP
-        if: github.event_name == 'push'
-        run: |
-          echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
-          lftp -f "
-          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          lcd ./out
-          mirror -R . /public_html/${{ env.COPY_FOLDER_NAME }}
-          quit
-          "
+      # - name: Set copy folder name
+      #   if: github.event_name == 'push'
+      #   run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
+
+      # - name: Deploy copy to FTP
+      #   if: github.event_name == 'push'
+      #   run: |
+      #     lftp -f "
+      #     open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+      #     lcd ./out
+      #     mirror -R . /public_html/${{ env.COPY_FOLDER_NAME }}
+      #     quit
+      #     "
 
       - name: Copy .htaccess
         if: github.event_name == 'push'
@@ -172,7 +172,7 @@ jobs:
           cd /public_html/env/serwis
           get .htaccess -o .htaccess
           put .htaccess -o /public_html/serwis/api/.htaccess
-          put .htaccess -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/.htaccess
+          # put .htaccess -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/.htaccess
           quit
           "
 
