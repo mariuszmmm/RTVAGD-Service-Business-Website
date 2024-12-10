@@ -28,41 +28,50 @@ jobs:
 
       - name: Sprawdź zawartość pierwszego pliku reviews.json
         run: |
+          REVIEWS=false
           REVIEWS_TIME=""
 
-          if [ -f reviews.json ]; then
-            if jq empty reviews.json >/dev/null 2>&1; then
-              REVIEWS_TIME=$(jq -r '.update_time' reviews.json)            
-              echo "REVIEWS=true" >> $GITHUB_ENV
-            else
-              echo "Plik reviews.json nie jest poprawnym JSON-em."
-              echo "REVIEWS=false" >> $GITHUB_ENV
-            fi
+          if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
+            REVIEWS=true
+            REVIEWS_TIME=$(jq -r '.update_time' reviews.json)   
+            echo "Brak pliku reviews.json lub jest on niepoprawny"
           else
-            echo "Brak pliku reviews.json, ustawiam REVIEWS_TIME na pusty ciąg."
-            echo "REVIEWS=false" >> $GITHUB_ENV
-          fi
+            echo "Tworzenie pliku reviews.json z default_reviews.json"
+            
+            lftp -f "
+            open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+            cd /public_html/data
+            get default_reviews.json -o reviews.json
+            put reviews.json -o /public_html/serwis/api/reviews.json
+            quit
+            "
+            if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
+                REVIEWS=true
+                REVIEWS_TIME=$(jq -r '.update_time' reviews.json)   
+                echo "Pliku reviews.json został stworzony i jest poprawny"
+            else
+                echo "Błąd przy tworzeniu pliku reviews.json"
+            fi
+          fi  
 
+          echo "REVIEWS=$REVIEWS" >> $GITHUB_ENV
           echo "REVIEWS_TIME=$REVIEWS_TIME" >> $GITHUB_ENV
 
       - name: Sprawdź zawartość drugiego pliku reviewsCopy.json
         run: |
+          REVIEWS_COPY=false
           REVIEWS_COPY_TIME="" 
 
-          if [ -f reviewsCopy.json ]; then
-            if jq empty reviewsCopy.json >/dev/null 2>&1; then
-              REVIEWS_COPY_TIME=$(jq -r '.update_time' reviewsCopy.json)
-              echo "REVIEWS_COPY=true" >> $GITHUB_ENV
-            else
-              echo "Plik reviewsCopy.json nie jest poprawnym JSON-em."
-              echo "REVIEWS_COPY=false" >> $GITHUB_ENV
-            fi
+          if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
+            REVIEWS_COPY=true
+            REVIEWS_COPY_TIME=$(jq -r '.update_time' reviewsCopy.json)
+            echo "REVIEWS_COPY=true" >> $GITHUB_ENV
           else
-            echo "Brak pliku reviewsCopy.json, ustawiam REVIEWS_COPY_TIME na pusty ciąg."
-            echo "REVIEWS_COPY=false" >> $GITHUB_ENV
+            echo "Brak pliku reviewsCopy.json lub jest on niepoprawny"
           fi
 
-          echo "REVIEWS_COPY_TIME=$REVIEWS_COPY_TIME" >> $GITHUB_ENV
+          echo "REVIEWS_COPY=$REVIEWS_COPY" >> $GITHUB_ENV
+          echo "REVIEWS_TIME=$REVIEWS_TIME" >> $GITHUB_ENV
 
       - name: Czy potrzebna aktualizacja?
         run: |
@@ -82,18 +91,6 @@ jobs:
           echo "REVIEWS: $REVIEWS"
           echo "REVIEWS_COPY: $REVIEWS_COPY"
           echo "UPDATE_NEEDED: $UPDATE_NEEDED"
-
-      - name: Copy reviews.json
-        if: env.REVIEWS == 'true'
-        run: |
-          lftp -f "
-          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          set xfer:clobber on
-          cd /public_html/serwis/api
-          get reviews.json -o reviewsCopy.json
-          put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
-          quit
-          "
 
       - name: Checkout repository
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
@@ -130,10 +127,6 @@ jobs:
           NEXT_PUBLIC_PLACE_ID: ${{ secrets.PLACE_ID }}
         run: npm run build
 
-      - name: Define dynamic folder name
-        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-        run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
-
       - name: Deploy to FTP
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: |
@@ -141,12 +134,22 @@ jobs:
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           lcd ./out
           mirror -R . /public_html/serwis
+          quit
+          "
+
+      - name: Deploy copy to FTP
+        if: github.event_name == 'push'
+        run: |
+          echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          lcd ./out
           mirror -R . /public_html/${{ env.COPY_FOLDER_NAME }}
           quit
           "
 
       - name: Copy .htaccess
-        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        if: github.event_name == 'push'
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
@@ -157,13 +160,13 @@ jobs:
           quit
           "
 
-      - name: Copy reviewsCopy.json
-        if: github.event_name == 'push' && env.REVIEWS_COPY == 'true'
+      - name: Copy reviews.json
+        if: env.UPDATE_NEEDED == 'true'
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           cd /public_html/serwis/api
-          get reviewsCopy.json -o reviews.json
-          put reviews.json -o /public_html/serwis/api/reviews.json
+          get reviews.json -o reviewsCopy.json
+          put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
           quit
           "
