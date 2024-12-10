@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "5 * * * *"
+    - cron: "5 21 * * *"
   workflow_dispatch:
 
 jobs:
@@ -173,7 +173,7 @@ jobs:
           quit
           "
 
-     - name: Copy .htaccess
+      - name: Copy .htaccess
         if: github.event_name == 'push'
         run: |
           echo "Kopiowanie .htaccess"
@@ -199,4 +199,3 @@ jobs:
           mirror -R ./local_copy /public_html/${{ env.COPY_FOLDER_NAME }}
           quit
           "
-
