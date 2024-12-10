@@ -133,6 +133,7 @@ jobs:
                 echo "Przerwanie procesu"
                 exit 1
             fi
+          fi
 
       - name: Deploy to FTP
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
