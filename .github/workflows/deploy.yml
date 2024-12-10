@@ -34,25 +34,9 @@ jobs:
           if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
             REVIEWS=true
             REVIEWS_TIME=$(jq -r '.update_time' reviews.json)   
-            echo "Brak pliku reviews.json lub jest on niepoprawny"
+            echo "Pliku reviews.json jest poprawny"
           else
-            echo "Tworzenie pliku reviews.json z default_reviews.json"
-            
-            lftp -f "
-            open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-            set xfer:clobber on
-            cd /public_html/data/serwis
-            get default_reviews.json -o reviews.json
-            put reviews.json -o /public_html/serwis/api/reviews.json
-            quit
-            "
-            if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
-                REVIEWS=true
-                REVIEWS_TIME=$(jq -r '.update_time' reviews.json)   
-                echo "Pliku reviews.json został stworzony i jest poprawny"
-            else
-                echo "Błąd przy tworzeniu pliku reviews.json"
-            fi
+            echo "Brak pliku reviews.json lub jest on niepoprawny"
           fi  
 
           echo "REVIEWS=$REVIEWS" >> $GITHUB_ENV
@@ -67,6 +51,7 @@ jobs:
             REVIEWS_COPY=true
             REVIEWS_COPY_TIME=$(jq -r '.update_time' reviewsCopy.json)
             echo "REVIEWS_COPY=true" >> $GITHUB_ENV
+            echo "Pliku reviewsCopy.json jest poprawny"
           else
             echo "Brak pliku reviewsCopy.json lub jest on niepoprawny"
           fi
@@ -126,7 +111,28 @@ jobs:
           NEXT_PUBLIC_GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
           NEXT_PUBLIC_PLACE_ID: ${{ secrets.PLACE_ID }}
-        run: npm run build
+        run: |
+          npm run build
+          if [ "$REVIEWS" = "false" ]; then
+            echo "Tworzenie pliku reviews.json z default_reviews.json i ponowny build"
+            
+            lftp -f "
+            open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+            set xfer:clobber on
+            cd /public_html/data/serwis
+            get default_reviews.json -o reviews.json
+            put reviews.json -o /public_html/serwis/api/reviews_1.json
+            quit
+            "
+            if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
+                echo "Pliku reviews.json został stworzony i jest poprawny"
+                echo "Ponowny build" 
+                npm run build
+            else
+                echo "Błąd przy tworzeniu pliku reviews.json"
+                echo "Przerwanie procesu"
+                exit 1
+            fi
 
       - name: Deploy to FTP
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
