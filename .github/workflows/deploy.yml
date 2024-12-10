@@ -173,19 +173,6 @@ jobs:
           quit
           "
 
-    - name: Copy .htaccess
-        if: github.event_name == 'push'
-        run: |
-          echo "Kopiowanie .htaccess"
-          lftp -f "
-          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          set xfer:clobber on
-          cd /public_html/env/serwis
-          get .htaccess -o .htaccess
-          put .htaccess -o /public_html/serwis/api/.htaccess
-          quit
-          "
-
       - name: Set copy folder name
         if: github.event_name == 'push'
         run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
@@ -200,4 +187,16 @@ jobs:
           quit
           "
 
+      - name: Copy .htaccess
+        if: github.event_name == 'push'
+        run: |
+          echo "Kopiowanie .htaccess"
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          set xfer:clobber on
+          cd /public_html/env/serwis
+          get .htaccess -o .htaccess
+          put .htaccess -o /public_html/serwis/api/.htaccess
+          quit
+          "
   
