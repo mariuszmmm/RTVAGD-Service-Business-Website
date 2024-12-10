@@ -120,8 +120,8 @@ jobs:
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
             set xfer:clobber on
             cd /public_html/data/serwis
-            get default_reviews.json -o reviews.json
-            put reviews.json -o /public_html/serwis/api/reviews_1.json
+            get default_reviews.json -o reviews_1.json
+            put reviews_1.json -o /public_html/serwis/api/reviews_1.json
             quit
             "
             if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
