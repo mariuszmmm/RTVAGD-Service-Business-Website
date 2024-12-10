@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "5 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -123,7 +123,7 @@ jobs:
           quit
           "
 
-      - name: If need to renew build and deploy
+      - name: Renewing build and deployment
         if: github.event_name == 'push' && env.REVIEWS == 'false'
         run: |
           echo "Tworzenie pliku reviews.json z default_reviews.json"
@@ -169,8 +169,8 @@ jobs:
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          lcd ./out
-          mirror -R . /public_html/${{ env.COPY_FOLDER_NAME }}
+          mirror /public_html/serwis ./local_copy
+          mirror -R ./local_copy /public_html/${{ env.COPY_FOLDER_NAME }}
           quit
           "
 
@@ -180,10 +180,11 @@ jobs:
           echo "Kopiowanie .htaccess"
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          set xfer:clobber on
           cd /public_html/env/serwis
           get .htaccess -o .htaccess
           put .htaccess -o /public_html/serwis/api/.htaccess
-          # put .htaccess -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/.htaccess
+          put .htaccess -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/.htaccess
           quit
           "
 
@@ -193,8 +194,10 @@ jobs:
           echo "Tworzenie reviewsCopy.json" 
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          set xfer:clobber on
           cd /public_html/serwis/api
           get reviews.json -o reviewsCopy.json
           put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
+          put reviewsCopy.json -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/reviewsCopy.json
           quit
           "
