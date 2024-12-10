@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Emoticon = styled.img`
-  width: clamp(2.8rem, 5vw, 4.8rem);
-  height: clamp(2.8rem, 5vw, 4.8rem);
+  width: clamp(1.5rem, 3vw, 2rem);
+  height: clamp(1.5rem, 3vw, 2rem);
   display: inline-block;
   vertical-align: middle;
-  margin-left: 10px ;
-  margin-bottom: 10px;
+  margin-left: 20px ;
+  margin-bottom: 4px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
     opacity: 0;
