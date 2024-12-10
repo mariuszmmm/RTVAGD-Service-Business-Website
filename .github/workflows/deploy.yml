@@ -124,7 +124,7 @@ jobs:
           "
 
       - name: If need to renew build and deploy
-        if: github.event_name == 'push' && env.REVIEWS == false
+        if: github.event_name == 'push' && env.REVIEWS == 'false'
         run: |
           echo "Tworzenie pliku reviews.json z default_reviews.json"
 
