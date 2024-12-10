@@ -40,7 +40,7 @@ jobs:
             
             lftp -f "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-            cd /public_html/data
+            cd /public_html/data/serwis
             get default_reviews.json -o reviews.json
             put reviews.json -o /public_html/serwis/api/reviews.json
             quit
