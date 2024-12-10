@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "5 0 * * *"
+    - cron: "5 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -160,6 +160,19 @@ jobs:
             echo "Błąd przy tworzeniu pliku reviews.json"
           fi
 
+      - name: Copy reviews.json
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        run: |
+          echo "Tworzenie reviewsCopy.json" 
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          set xfer:clobber on
+          cd /public_html/serwis/api
+          get reviews.json -o reviewsCopy.json
+          put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
+          quit
+          "
+
       - name: Set copy folder name
         if: github.event_name == 'push'
         run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
@@ -185,19 +198,5 @@ jobs:
           get .htaccess -o .htaccess
           put .htaccess -o /public_html/serwis/api/.htaccess
           put .htaccess -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/.htaccess
-          quit
-          "
-
-      - name: Copy reviews.json
-        if: env.UPDATE_NEEDED == 'true'
-        run: |
-          echo "Tworzenie reviewsCopy.json" 
-          lftp -f "
-          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          set xfer:clobber on
-          cd /public_html/serwis/api
-          get reviews.json -o reviewsCopy.json
-          put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
-          put reviewsCopy.json -o /public_html/${{ env.COPY_FOLDER_NAME }}/api/reviewsCopy.json
           quit
           "
