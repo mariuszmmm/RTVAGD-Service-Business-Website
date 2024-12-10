@@ -47,7 +47,7 @@ jobs:
           REVIEWS_COPY=false
           REVIEWS_COPY_TIME="" 
 
-          if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
+          if [ -f reviewsCopy.json ] && jq empty reviewsCopy.json >/dev/null 2>&1; then
             REVIEWS_COPY=true
             REVIEWS_COPY_TIME=$(jq -r '.update_time' reviewsCopy.json)
             echo "REVIEWS_COPY=true" >> $GITHUB_ENV
