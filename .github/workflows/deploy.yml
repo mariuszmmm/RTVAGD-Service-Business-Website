@@ -111,8 +111,18 @@ jobs:
           NEXT_PUBLIC_GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
           NEXT_PUBLIC_PLACE_ID: ${{ secrets.PLACE_ID }}
+        run: npm run build
+
+      - name: Deploy to FTP
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: |
-          npm run build
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          lcd ./out
+          mirror -R . /public_html/serwis
+          quit
+          "
+
           if [ "$REVIEWS" = "false" ]; then
             echo "Tworzenie pliku reviews.json z default_reviews.json i ponowny build"
             
@@ -126,24 +136,20 @@ jobs:
             "
             if [ -f reviews.json ] && jq empty reviews.json >/dev/null 2>&1; then
                 echo "Pliku reviews.json został stworzony i jest poprawny"
-                echo "Ponowny build" 
-                npm run build
+                echo "Ponowny deploy" 
+
+                lftp -f "
+                open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+                lcd ./out
+                mirror -R . /public_html/serwis
+                quit
+                "
             else
                 echo "Błąd przy tworzeniu pliku reviews.json"
                 echo "Przerwanie procesu"
                 exit 1
             fi
           fi
-
-      - name: Deploy to FTP
-        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-        run: |
-          lftp -f "
-          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          lcd ./out
-          mirror -R . /public_html/serwis
-          quit
-          "
 
       - name: Deploy copy to FTP
         if: github.event_name == 'push'
