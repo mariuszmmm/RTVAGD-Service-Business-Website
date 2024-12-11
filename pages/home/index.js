@@ -14,7 +14,6 @@ import { StyledLink } from '../../components/common/StyledLink';
 import { useState, useEffect, useRef } from 'react';
 import { mobileScene, scene } from "../../utils/scenes";
 import HomeMetaTags from './HomeMetaTags';
-import { sendGTMEvent } from '@next/third-parties/google'
 
 const Home = ({ rating }) => {
   const [isPortrait, setIsPortrait] = useState(

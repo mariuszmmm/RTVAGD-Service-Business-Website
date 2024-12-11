@@ -11,7 +11,6 @@ import { ButtonLink } from "../common/ButtonLink";
 import { useEffect, useState } from "react";
 import SubNav from "./SubNav";
 import { usePathname } from 'next/navigation';
-import { sendGTMEvent } from '@next/third-parties/google';
 import { GoogleRating } from '../GoogleRating';
 
 const Header = ({ rating }) => {
@@ -72,7 +71,6 @@ const Header = ({ rating }) => {
               <StyledLink
                 href="/kontakt"
                 $active={pathname === "/kontakt/"}
-                onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'contact' })}
               >
                 Kontakt
               </StyledLink>

@@ -1,7 +1,6 @@
 import { ListItem, NavList, StyledLink } from "../styled";
 import { SubNavWrapper } from "./styled";
 import { usePathname } from 'next/navigation';
-import { sendGTMEvent } from '@next/third-parties/google';
 
 const SubNav = ({ showSubNav, setShowSubNav }) => {
   const pathname = usePathname()
@@ -14,7 +13,6 @@ const SubNav = ({ showSubNav, setShowSubNav }) => {
             href="/naprawa-pralek"
             $active={pathname === "/naprawa-pralek/"}
             $subNav
-            onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'naprawa-pralek' })}
           >
             Naprawa pralek
           </StyledLink>
@@ -24,7 +22,6 @@ const SubNav = ({ showSubNav, setShowSubNav }) => {
             href="/naprawa-suszarek"
             $active={pathname === "/naprawa-suszarek/"}
             $subNav
-            onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'naprawa-suszarek' })}
           >
             Naprawa suszarek
           </StyledLink>
@@ -34,7 +31,6 @@ const SubNav = ({ showSubNav, setShowSubNav }) => {
             href="/naprawa-zmywarek"
             $active={pathname === "/naprawa-zmywarek/"}
             $subNav
-            onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'naprawa-zmywarek' })}
           >
             Naprawa zmywarek
           </StyledLink>
@@ -44,7 +40,6 @@ const SubNav = ({ showSubNav, setShowSubNav }) => {
             href="/naprawa-ekspresow"
             $active={pathname === "/naprawa-ekspresow/"}
             $subNav
-            onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'naprawa-ekspresow' })}
           >
             Naprawa ekspresów
           </StyledLink>
@@ -54,7 +49,6 @@ const SubNav = ({ showSubNav, setShowSubNav }) => {
             href="/naprawa-telewizorow"
             $active={pathname === "/naprawa-telewizorow/"}
             $subNav
-            onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'naprawa-telewizorow' })}
           >
             Naprawa telewizorów
           </StyledLink>

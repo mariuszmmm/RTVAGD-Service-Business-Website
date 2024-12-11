@@ -88,15 +88,6 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Cache npm dependencies
-        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       - name: Install dependencies
         if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: |

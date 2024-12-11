@@ -18,7 +18,10 @@ function App({ Component, pageProps }) {
           <Background />
           <Header {...pageProps} />
           <Component {...pageProps} />
-          <GoogleTagManager gtmId="GTM-P52JLLB7" />
+          <GoogleTagManager gtmId="GTM-P52JLLB7"
+            afterInteractive
+            lazyOnload
+          />
           <Footer />
         </ThemeProvider>
       </React.StrictMode>
