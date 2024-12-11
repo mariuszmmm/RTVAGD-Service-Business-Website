@@ -13,13 +13,13 @@ function App({ Component, pageProps }) {
     <>
       <React.StrictMode>
         <ThemeProvider theme={theme}>
-          <Normalize />
+          {/* <Normalize />
           <GlobalStyle />
-          <Background />
-          <Header {...pageProps} />
+          <Background /> */}
+          {/* <Header {...pageProps} /> */}
           <Component {...pageProps} />
           {/* <GoogleTagManager gtmId="GTM-P52JLLB7" /> */}
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </React.StrictMode>
     </>

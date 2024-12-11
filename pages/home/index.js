@@ -15,7 +15,7 @@ import { useState, useEffect, useRef } from 'react';
 import { mobileScene, scene } from "../../utils/scenes";
 import HomeMetaTags from './HomeMetaTags';
 
-const Home = ({ rating }) => {
+const Home = () => {
   const [isPortrait, setIsPortrait] = useState(
     typeof window !== 'undefined' ? window.innerHeight > window.innerWidth : true
   );
