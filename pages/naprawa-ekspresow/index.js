@@ -1,9 +1,10 @@
 import { Section } from '../../components/common/Section';
 import { Container } from '../../components/common/Container';
 import { Title } from '../../components/common/Title';
-import { ServiceItem, Photo } from '../../styles/naprawa-ekspresow/NaprawaEkspresowStyled';
 import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
+import { Photo } from '../../components/common/Photo';
+import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
 import CoffeeMachineServiceMetaTags from "./CoffeeMachineServiceMetaTags"
 import { getSharedStaticProps } from '../../utils/getSharedStaticProps';
@@ -22,7 +23,7 @@ const CoffeeMachineService = () => (
         />
       </Title>
       <main>
-        <ServiceItem>
+        <ServiceOffer>
           <SubTitle>Profesjonalna naprawa ekspresów do&nbsp;kawy,<br />niezależnie od&nbsp;marki i&nbsp;modelu.</SubTitle>
           <Photo src={imageUrls.ekspres} alt="naprawa ekspresow" loading='lazy' />
           <Text>
@@ -32,7 +33,7 @@ const CoffeeMachineService = () => (
             Moim celem jest umożliwienie&nbsp;Ci cieszenia&nbsp;się ulubioną kawą bez&nbsp;przerw.
             Dzięki wieloletniemu doświadczeniu oraz&nbsp;dostępowi do&nbsp;oryginalnych części zamiennych, oferuję kompleksową obsługę, dbając o&nbsp;każdy detal.
           </Text>
-        </ServiceItem>
+        </ServiceOffer>
         <SubTitle as="h3">Dlaczego warto skorzystać z&nbsp;moich usług?</SubTitle>
         <Text as="ul">
           <li><h3>Szybka diagnostyka: </h3>Zidentyfikuję problem w&nbsp;krótkim czasie, abyś mógł jak&nbsp;najszybciej cieszyć&nbsp;się swoją kawą.</li>

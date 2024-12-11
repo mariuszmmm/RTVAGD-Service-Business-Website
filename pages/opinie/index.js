@@ -3,7 +3,7 @@ import { Title } from "../../components/common/Title";
 import { ReviewsContainer } from "../../styles/opinie/OpinieStyled";
 import ReviewsItem from "../../components/ReviewsItem";
 import { serwis } from "../../utils/serwis";
-import { StyledButtonLink } from "../../components/common/Buttons";
+import { ButtonLink } from "../../components/common/ButtonLink";
 import ReviewsMetaTags from "./ReviewsMetaTags";
 import axios from 'axios';
 import { reviewUrl } from "../../utils/urls";
@@ -28,9 +28,9 @@ const Reviews = ({ status, reviews }) => (
         </>
       }
     </ReviewsContainer>
-    {status === "success" && <StyledButtonLink href={serwis.url.addTestimonial}>
+    {status === "success" && <ButtonLink href={serwis.url.addTestimonial}>
       Wystaw opinię
-    </StyledButtonLink>}
+    </ButtonLink>}
   </Section>
 );
 

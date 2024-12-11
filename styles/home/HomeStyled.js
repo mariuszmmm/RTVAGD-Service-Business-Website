@@ -30,7 +30,7 @@ export const HeroContainer = styled.header`
 `;
 
 export const HeroTitle = styled.h1`
-  margin-bottom: 50px;
+  margin: 50px 0;
   font-size: clamp(1.5rem, 3vw, 3rem);
   line-height: 1.2;
 
@@ -46,7 +46,6 @@ export const HeroTitle = styled.h1`
 `;
 
 export const HeroText = styled.p`
-  opacity: ${({ $notShow }) => ($notShow ? 0 : 1)};
   margin-bottom: 36px;
   font-size: clamp(0.8rem, 2.3vw, 1.3rem);
   line-height: 1.5;

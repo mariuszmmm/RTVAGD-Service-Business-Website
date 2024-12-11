@@ -1,5 +1,5 @@
 import { Hero, HeroContainer, HeroText, HeroTitle, } from '../../styles/home/HomeStyled';
-import { StyledButtonLink } from '../../components/common/Buttons';
+import { ButtonLink } from '../../components/common/ButtonLink';
 import { Container } from '../../components/common/Container';
 import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
@@ -89,9 +89,9 @@ const Home = ({ rating }) => {
           w&nbsp;Przemyślu
         </HeroTitle>
         <HeroText> Rzetelnie, szybko i&nbsp;skutecznie!</HeroText>
-        <StyledButtonLink href={`tel:${serwis.phone}`}        >
+        <ButtonLink href={`tel:${serwis.phone}`}        >
           Zadzwoń teraz
-        </StyledButtonLink>
+        </ButtonLink>
       </HeroContainer>
       {!activeScene.reset && <WashingMachine
         show={activeScene.content[0]}

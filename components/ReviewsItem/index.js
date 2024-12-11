@@ -3,10 +3,10 @@ import { Stars } from "../common/Stars";
 import {
   ItemWrapper,
   Header,
-  Photo,
   Author,
   Data,
-} from "../../styles/opinie/ReviewsItem/ReviewsItemStyled";
+  Avatar,
+} from "./styled";
 import { Text } from "../common/Text";
 import getContentForReview from "./getContentForReview";
 
@@ -39,7 +39,7 @@ const ReviewsItem = ({ item }) => {
         <meta itemProp="name" content={item.author_name} />
       </div>
       <Header>
-        <Photo
+        <Avatar
           itemProp="image"
           src={item.profile_photo_url}
           alt="Foto"

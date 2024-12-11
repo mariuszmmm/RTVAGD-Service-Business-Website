@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { imageUrls } from "../../../utils/urls";
+import { imageUrls } from "../../utils/urls";
 
 export const ItemWrapper = styled.blockquote`
   margin: 0 0 20px;
@@ -13,7 +13,7 @@ export const Header = styled.div`
   display: flex;
 `;
 
-export const Photo = styled.img`
+export const Avatar = styled.img`
   width: clamp(2.5rem, 6vw, 4rem);;
   height: clamp(2.5rem, 6vw, 4rem);
   margin-right: 15px;

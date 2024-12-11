@@ -3,7 +3,7 @@ import { Form, Label, Input, Textarea } from "../../../styles/kontakt/ContactFor
 import emailjs from "@emailjs/browser";
 import SendInfo from "./SendInfo";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "../../../utils/emailjs";
-import { Button } from "../../../components/common/Buttons";
+import { Button } from "../../../components/common/Button";
 
 const ContactForm = () => {
   const [name, setName] = useState("");

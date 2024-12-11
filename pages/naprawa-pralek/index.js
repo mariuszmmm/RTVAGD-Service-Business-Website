@@ -1,9 +1,10 @@
 import { Section } from '../../components/common/Section';
 import { Container } from '../../components/common/Container';
 import { Title } from '../../components/common/Title';
-import { ServiceItem, Photo } from '../../styles/naprawa-pralek/NaprawaPralekStyled';
 import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
+import { Photo } from '../../components/common/Photo';
+import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
 import WashingMachineServiceMetaTags from "./WashingMachineServiceMetaTags"
 import { getSharedStaticProps } from '../../utils/getSharedStaticProps';
@@ -22,7 +23,7 @@ const WashingMachineService = () => (
         />
       </Title>
       <main>
-        <ServiceItem>
+        <ServiceOffer>
           <Photo src={imageUrls.pralka} alt="naprawa pralek" loading='lazy' />
           <SubTitle>Kompleksowe usługi naprawy pralek wszystkich marek.</SubTitle>
           <Text>
@@ -32,7 +33,7 @@ const WashingMachineService = () => (
             Dzięki nowoczesnym narzędziom diagnostycznym oraz&nbsp;oryginalnym częściom zamiennym zapewniam trwałość i&nbsp;niezawodność każdej naprawy.
             Moje doświadczenie oraz zaawansowane techniki naprawcze pozwalają&nbsp;mi przywrócić pełną funkcjonalność Twojej pralki w&nbsp;możliwie najkrótszym czasie.
           </Text>
-        </ServiceItem>
+        </ServiceOffer>
         <SubTitle as="h3">Dlaczego warto skorzystać z&nbsp;moich usług?</SubTitle>
         <Text as="ul">
           <li><h3>Szybka diagnoza: </h3>Zgłoś problem, a&nbsp;natychmiast zidentyfikuję przyczynę awarii, abyś mógł szybko wrócić do&nbsp;swoich codziennych obowiązków.</li>

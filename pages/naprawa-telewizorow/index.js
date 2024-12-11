@@ -1,9 +1,10 @@
 import { Section } from '../../components/common/Section';
 import { Container } from '../../components/common/Container';
 import { Title } from '../../components/common/Title';
-import { ServiceItem, Photo } from '../../styles/naprawa-telewizorow/NaprawaTelewizorowStyled';
 import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
+import { Photo } from '../../components/common/Photo';
+import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
 import TelevisionServiceMetaTags from "./TelevisionServiceMetaTags"
 import { getSharedStaticProps } from '../../utils/getSharedStaticProps';
@@ -22,7 +23,7 @@ const TelevisionService = () => (
         />
       </Title>
       <main>
-        <ServiceItem>
+        <ServiceOffer>
           <SubTitle>Fachowa naprawa telewizorów wszystkich typów i&nbsp;marek.</SubTitle>
           <Photo src={imageUrls.telewizor} alt="naprawa telewizorow" loading='lazy' />
           <Text>
@@ -32,7 +33,7 @@ const TelevisionService = () => (
             Dzięki dostępowi do&nbsp;oryginalnych części zamiennych oraz&nbsp;nowoczesnemu sprzętowi diagnostycznemu, potrafię szybko zidentyfikować i&nbsp;skutecznie usunąć usterki.
             Moim celem jest, abyś mógł cieszyć się ulubionymi programami bez zakłóceń.
           </Text>
-        </ServiceItem>
+        </ServiceOffer>
         <SubTitle as="h3">Dlaczego warto skorzystać z&nbsp;moich usług?</SubTitle>
         <Text as="ul">
           <li><h3>Szybka diagnoza: </h3>Zidentyfikuję problem w&nbsp;krótkim czasie, abyś jak najszybciej mógł wrócić do oglądania ulubionych filmów i&nbsp;programów.</li>

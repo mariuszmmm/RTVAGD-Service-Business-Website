@@ -7,7 +7,7 @@ import {
   StyledLink,
 } from "./styled";
 import { serwis } from "../../utils/serwis";
-import { StyledButtonLink } from "../common/Buttons";
+import { ButtonLink } from "../common/ButtonLink";
 import { useEffect, useState } from "react";
 import SubNav from "./SubNav";
 import { usePathname } from 'next/navigation';
@@ -79,9 +79,9 @@ const Header = ({ rating }) => {
             </ListItem>
           </NavList>
         </nav>
-        <StyledButtonLink href={serwis.url.addTestimonial} $opinia $hidden={scrolled}>
+        <ButtonLink href={serwis.url.addTestimonial} $opinia $hidden={scrolled}>
           Wystaw opinię
-        </StyledButtonLink>
+        </ButtonLink>
         {rating && <GoogleRating rating={rating} hidden={scrolled} />}
       </HeaderContainer>
     </HeaderWrapper>

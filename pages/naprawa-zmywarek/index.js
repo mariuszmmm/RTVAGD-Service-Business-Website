@@ -1,9 +1,10 @@
 import { Section } from '../../components/common/Section';
 import { Container } from '../../components/common/Container';
 import { Title } from '../../components/common/Title';
-import { ServiceItem, Photo } from '../../styles/naprawa-zmywarek/NaprawaZmywarekStyled';
 import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
+import { Photo } from '../../components/common/Photo';
+import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
 import DishwasherServiceMetaTags from './DishwasherServiceMetaTags';
 import { getSharedStaticProps } from '../../utils/getSharedStaticProps';
@@ -22,7 +23,7 @@ const DishwasherService = () => (
         />
       </Title>
       <main>
-        <ServiceItem>
+        <ServiceOffer>
           <Photo src={imageUrls.zmywarka} alt="naprawa zmywarek" loading='lazy' />
           <SubTitle>Specjalistyczna naprawa zmywarek różnych marek.</SubTitle>
           <Text>
@@ -34,7 +35,7 @@ const DishwasherService = () => (
             Dzięki nowoczesnym narzędziom diagnostycznym oraz&nbsp;oryginalnym częściom zamiennym zapewniam trwałość i&nbsp;niezawodność każdej naprawy.
             Moje doświadczenie oraz zaawansowane techniki naprawcze pozwalają&nbsp;mi przywrócić pełną funkcjonalność Twojej zmywarki w&nbsp;możliwie najkrótszym czasie.
           </Text>
-        </ServiceItem>
+        </ServiceOffer>
         <SubTitle as="h3">Dlaczego warto skorzystać z&nbsp;moich usług?</SubTitle>
         <Text as="ul">
           <li><h3>Szybka reakcja: </h3>Zgłoś usterkę, a&nbsp;natychmiast zajmę się jej naprawą, ponieważ rozumiem, jak ważna jest dla Ciebie wygoda.</li>
