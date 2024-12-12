@@ -8,7 +8,7 @@ if (!$apiKey || !$placeId) {
   exit;
 }
 
-$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$placeId&fields=reviews,rating,userRatingCount,googleMapsLinks&language=pl&key=$apiKey";
+$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$placeId&fields=reviews,rating,user_ratings_total,url&language=pl&key=$apiKey";
 
 $response = file_get_contents($url);
 $jsonResponse = json_decode($response, true);
