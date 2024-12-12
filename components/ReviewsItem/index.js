@@ -18,7 +18,7 @@ const ReviewsItem = ({ item }) => (
         alt="Foto"
         loading="lazy"
       />
-      <Data >
+      <Data>
         <Author>{item?.author_name}</Author>
         <Time time={item?.time} />
       </Data>

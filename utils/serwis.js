@@ -2,7 +2,8 @@ export const serwis = {
   url: {
     facebook: "https://www.facebook.com/100063811592941",
     google: "https://g.co/kgs/XdcEw7o",
-    mapaGoogle: "https://www.google.com/maps?cid=18175636745280354470",
+    mapaGoogle: "https://maps.google.com/?cid=18175636745280354470",
+
     addTestimonial: "https://search.google.com/local/writereview?placeid=ChIJrWDpGyR_O0cRpvj4OFLVPPw",
   },
   name: "Naprawa pralek i sprzętu RTV",
