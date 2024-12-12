@@ -4,10 +4,13 @@ export const getSharedStaticProps = async () => {
   try {
     const response = await axios(reviewUrl)
     const rating = response.data?.rating || null;
+    const ratingAceptable = rating >= 4 ? rating : null
+    const test = response.data?.test || null;
     return {
       props: {
         status: 'success',
-        rating
+        rating: ratingAceptable,
+        test
       },
     };
   } catch (error) {

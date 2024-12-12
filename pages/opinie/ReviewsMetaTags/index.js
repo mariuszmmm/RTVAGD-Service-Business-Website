@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const ReviewsMetaTags = () => (
+const ReviewsMetaTags = ({ rating }) => (
   <Head>
     <title>Poznaj opinie klientów ✔️ Serwis RTV AGD w Przemyślu</title>
 

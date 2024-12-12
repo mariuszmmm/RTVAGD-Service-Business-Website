@@ -9,30 +9,33 @@ import axios from 'axios';
 import { reviewUrl } from "../../utils/urls";
 import { getSharedStaticProps } from "../../utils/getSharedStaticProps";
 
-const Reviews = ({ status, reviews }) => (
-  <Section>
-    <ReviewsMetaTags />
-    <ReviewsContainer>
-      <Title>Opinie Klientów</Title>
-      {status === "loading" && <p>Ładowanie opinii z google...</p>}
-      {status === "success" && reviews.map((item, index) => (
-        <ReviewsItem
-          item={item}
-          key={index}
-        />
-      ))}
-      {status === "error" &&
-        <>
-          <p>Wystąpił błąd podczas ładowania opinii.</p>
-          <p> Proszę spróbować ponownie później.</p>
-        </>
-      }
-    </ReviewsContainer>
-    {status === "success" && <ButtonLink href={serwis.url.addTestimonial}>
-      Wystaw opinię
-    </ButtonLink>}
-  </Section>
-);
+const Reviews = ({ status, reviews, rating, test }) => {
+  console.log(test)
+  return (
+    <Section>
+      <ReviewsMetaTags rating={rating} />
+      <ReviewsContainer>
+        <Title>Opinie Klientów</Title>
+        {status === "loading" && <p>Ładowanie opinii z google...</p>}
+        {status === "success" && reviews.map((item, index) => (
+          <ReviewsItem
+            item={item}
+            key={index}
+          />
+        ))}
+        {status === "error" &&
+          <>
+            <p>Wystąpił błąd podczas ładowania opinii.</p>
+            <p> Proszę spróbować ponownie później.</p>
+          </>
+        }
+      </ReviewsContainer>
+      {status === "success" && <ButtonLink href={serwis.url.addTestimonial}>
+        Wystaw opinię
+      </ButtonLink>}
+    </Section>
+  );
+};
 
 export async function getStaticProps() {
   const sharedProps = await getSharedStaticProps();

@@ -41,7 +41,8 @@ $newReviews = array_filter(array_map(function($item) {
 $data = [
   'reviews' => array_values($newReviews),
   'rating' => $rating,
-  'update_time' => date('Y-m-d H:i:s')
+  'update_time' => date('Y-m-d H:i:s'),
+  'test' => $jsonResponse
 ];
 
 file_put_contents('reviews.json', json_encode($data));
