@@ -8,36 +8,15 @@ import {
   Avatar,
 } from "./styled";
 import { Text } from "../common/Text";
-import getContentForReview from "./getContentForReview";
 
 const ReviewsItem = ({ item }) => {
-  if (typeof item !== 'object') {
-    console.error('Expected an object but got:', typeof item);
-    return null;
-  }
-
-  const contentForReview = item?.text.toString() || "";
+  // if (typeof item !== 'object') {
+  //   console.error('Expected an object but got:', typeof item);
+  //   return null;
+  // }
 
   return (
-    <ItemWrapper
-      itemScope
-      itemType="https://schema.org/Review"
-    >
-      <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
-        <meta itemProp="ratingValue" content={item.rating} />
-        <meta itemProp="bestRating" content="5" />
-      </div>
-      <div itemProp="itemReviewed" itemScope itemType="https://schema.org/LocalBusiness">
-        <meta itemProp="name" content="Serwis RTV i AGD" />
-        <meta itemProp="description" content="Naprawa pralek, zmywarek, ekspresów do kawy oraz telewizorów" />
-      </div>
-      <div itemProp="service" itemScope itemType="https://schema.org/Service">
-        <meta itemProp="name" content={getContentForReview(contentForReview)} />
-        <meta itemProp="serviceType" content={`Profesjonalna ${getContentForReview(item.text)} - Szybko i solidnie`} />
-      </div>
-      <div itemProp="author" itemScope itemType="https://schema.org/Person">
-        <meta itemProp="name" content={item.author_name} />
-      </div>
+    <ItemWrapper>
       <Header>
         <Avatar
           itemProp="image"
