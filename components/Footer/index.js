@@ -39,7 +39,7 @@ const Footer = () => (
         </StyledLink>
       </FooterInfo>
       <FooterCopy>
-        &copy; 2024 {serwis.name}. Wszelkie prawa zastrzeżone.
+        &copy; 2024 Serwis RTV i AGD. Wszelkie prawa zastrzeżone.
       </FooterCopy>
     </FooterContainer>
   </FooterWrapper>
