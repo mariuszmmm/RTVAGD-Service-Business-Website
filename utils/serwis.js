@@ -3,13 +3,12 @@ export const serwis = {
     facebook: "https://www.facebook.com/100063811592941",
     google: "https://g.co/kgs/XdcEw7o",
     mapaGoogle: "https://maps.google.com/?cid=18175636745280354470",
-
     addTestimonial: "https://search.google.com/local/writereview?placeid=ChIJrWDpGyR_O0cRpvj4OFLVPPw",
   },
-  name: "Naprawa pralek i sprzętu RTV",
+  name: "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
   subName: "Serwis RTV i AGD",
   email: "piotrek_serwis@wp.pl",
-  phone: "790-258-612",
+  phone: "+48 790 258 612",
   adres: "Generała Józefa Sowińskiego 2, 37-700 Przemyśl",
   reviews: [
     {
@@ -47,5 +46,9 @@ export const serwis = {
       "text": "Bardzo rzetelny serwis, polecam! Miałem problem z pralką, Pan znalazł termin w zasadzie od ręki, w dniu naprawy na miejscu znalazł i usunął usterkę, jestem bardzo zadowolony.",
       "time": 1671176883,
     }
+  ],
+  types: [
+    "point_of_interest",
+    "establishment"
   ],
 };

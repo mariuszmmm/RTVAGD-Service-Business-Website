@@ -3,14 +3,14 @@ import { reviewUrl } from "../utils/urls";
 export const getSharedStaticProps = async () => {
   try {
     const response = await axios(reviewUrl)
+    const ratingsTotal = response.data?.user_ratings_total || null;
     const rating = response.data?.rating || null;
     const ratingAceptable = rating >= 4 ? rating : null
-    const test = response.data?.test || null;
     return {
       props: {
         status: 'success',
-        rating: ratingAceptable,
-        test
+        ratingsTotal,
+        rating: ratingAceptable
       },
     };
   } catch (error) {
@@ -19,6 +19,7 @@ export const getSharedStaticProps = async () => {
       props: {
         status: 'error',
         error: error.message,
+        ratingsTotal: null,
         rating: null
       },
     };

@@ -1,8 +1,8 @@
 import Head from "next/head";
 
-const TelevisionServiceMetaTags = () => (
+const TelevisionServiceMetaTags = ({ rating, ratingsTotal }) => (
   <Head>
-    <title>Naprawa telewizorów ✔️ Serwis Przemyśl ☎️790-258-612</title>
+    <title>Naprawa telewizorów ✔️ Serwis Przemyśl ☎️ 790-258-612</title>
 
     <link rel="canonical" href="https://naprawaprzemysl.pl/naprawa-telewizorow/" />
 
@@ -15,7 +15,7 @@ const TelevisionServiceMetaTags = () => (
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Naprawa telewizorów ✔️ Serwis Przemyśl ☎️790-258-612"
+      content="Naprawa telewizorów ✔️ Serwis Przemyśl ☎️ 790-258-612"
     />
     <meta
       property="og:description"
@@ -32,7 +32,7 @@ const TelevisionServiceMetaTags = () => (
     <meta property="og:image:type" content="image/webp" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Naprawa telewizorów ✔️ Serwis Przemyśl ☎️790-258-612" />
+    <meta name="twitter:title" content="Naprawa telewizorów ✔️ Serwis Przemyśl ☎️ 790-258-612" />
     <meta name="twitter:description" content="Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!" />
     <meta name="twitter:image" content="https://res.cloudinary.com/difc0i71u/image/upload/v1731168332/Serwis/serwis-telewizorow.webp" />
 
@@ -45,8 +45,7 @@ const TelevisionServiceMetaTags = () => (
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          "name": "Naprawa pralek i sprzętu RTV",
-          "alternateName": "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
+          "name": "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
           "@id": "https://naprawaprzemysl.pl/",
           "url": "https://naprawaprzemysl.pl/",
           "telephone": "790258612",
@@ -60,8 +59,8 @@ const TelevisionServiceMetaTags = () => (
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 49.782778,
-            "longitude": 22.776028
+            "latitude": 49.7827725,
+            "longitude": 22.7760291
           },
           "openingHoursSpecification": [
             {
@@ -87,8 +86,8 @@ const TelevisionServiceMetaTags = () => (
           "paymentAccepted": "Cash",
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "reviewCount": "62",
+            "ratingValue": rating,
+            "reviewCount": ratingsTotal,
             "bestRating": "5",
             "worstRating": "1"
           }

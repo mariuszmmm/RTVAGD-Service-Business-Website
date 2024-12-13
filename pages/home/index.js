@@ -13,9 +13,12 @@ import CoffeeMachine_2 from './CoffeeMachine_2';
 import { StyledLink } from '../../components/common/StyledLink';
 import { useState, useEffect, useRef } from 'react';
 import { mobileScene, scene } from "../../utils/scenes";
-import HomeMetaTags from './HomeMetaTags';
+import MetaTags from '../../components/common/MetaTags';
+import { dataForMetaTags } from '../../utils/dataForMetaTags';
+import { useRouter } from 'next/router';
 
-const Home = () => {
+const Home = ({ rating, ratingsTotal }) => {
+  const path = useRouter().asPath;
   const [isPortrait, setIsPortrait] = useState(
     typeof window !== 'undefined' ? window.innerHeight > window.innerWidth : true
   );
@@ -79,7 +82,12 @@ const Home = () => {
 
   return (
     <Hero>
-      <HomeMetaTags />
+      <MetaTags
+        path={path}
+        page={dataForMetaTags.home}
+        rating={rating}
+        ratingsTotal={ratingsTotal}
+      />
       <HeroContainer>
         <HeroTitle>
           Profesjonalna naprawa<br />

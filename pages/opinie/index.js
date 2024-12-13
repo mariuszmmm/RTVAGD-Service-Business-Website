@@ -4,16 +4,25 @@ import { ReviewsContainer } from "../../styles/opinie/OpinieStyled";
 import ReviewsItem from "../../components/ReviewsItem";
 import { serwis } from "../../utils/serwis";
 import { ButtonLink } from "../../components/common/ButtonLink";
-import ReviewsMetaTags from "./ReviewsMetaTags";
 import axios from 'axios';
 import { reviewUrl } from "../../utils/urls";
 import { getSharedStaticProps } from "../../utils/getSharedStaticProps";
+import MetaTags from "../../components/common/MetaTags";
+import { dataForMetaTags } from "../../utils/dataForMetaTags";
+import { useRouter } from "next/router";
 
-const Reviews = ({ status, reviews, rating, test }) => {
-  console.log(test)
+const Reviews = ({ status, reviews, rating, ratingsTotal }) => {
+  const path = useRouter().asPath;
+
   return (
     <Section>
-      <ReviewsMetaTags rating={rating} />
+      <MetaTags
+        path={path}
+        page={dataForMetaTags.opinie}
+        rating={rating}
+        ratingsTotal={ratingsTotal}
+        reviews={reviews}
+      />
       <ReviewsContainer>
         <Title>Opinie Klientów</Title>
         {status === "loading" && <p>Ładowanie opinii z google...</p>}

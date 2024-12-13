@@ -8,7 +8,7 @@ if (!$apiKey || !$placeId) {
   exit;
 }
 
-$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$placeId&fields=reviews,rating,user_ratings_total,address_components,adr_address,business_status,formatted_address,geometry/location,geometry/viewport,icon,photos,type,name,formatted_phone_number,photos&language=pl&key=$apiKey";
+$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$placeId&fields=reviews,rating,user_ratings_total&language=pl&key=$apiKey";
 
 $response = file_get_contents($url);
 $jsonResponse = json_decode($response, true);
@@ -20,6 +20,7 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 
 $reviews = $jsonResponse['result']['reviews'] ?? [];
 $rating = $jsonResponse['result']['rating'] ?? null;
+$user_ratings_total = $jsonResponse['result']['user_ratings_total'] ?? null;
 
 if (!is_array($reviews)) {
   echo json_encode(['error' => 'Invalid response from Google Places API']);
@@ -41,8 +42,8 @@ $newReviews = array_filter(array_map(function($item) {
 $data = [
   'reviews' => array_values($newReviews),
   'rating' => $rating,
+  'user_ratings_total' => $user_ratings_total,
   'update_time' => date('Y-m-d H:i:s'),
-  'test' => $jsonResponse
 ];
 
 file_put_contents('reviews.json', json_encode($data));
