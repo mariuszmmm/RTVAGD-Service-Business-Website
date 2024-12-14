@@ -32,8 +32,17 @@ const TelevisionService = () => {
         <main>
           <ServiceOffer>
             <SubTitle>Fachowa naprawa telewizorów wszystkich typów i&nbsp;marek.</SubTitle>
-            <Photo src={imageUrls.telewizor} alt="naprawa telewizorow" loading='lazy' />
-            <Text>
+            <Photo
+              src={imageUrls.telewizor}
+              alt="naprawa telewizorów"
+              loading='lazy'
+              width={dataForMetaTags.naprawa_telewizorow.metaTags.imageWidth}
+              height={dataForMetaTags.naprawa_telewizorow.metaTags.imageHeight}
+              crop={{
+                type: 'auto',
+                source: true
+              }}
+            />            <Text>
               Czy Twój telewizor przestał działać? Niezależnie od&nbsp;tego, czy&nbsp;to&nbsp;brak&nbsp;obrazu, brak&nbsp;dźwięku, problemy z&nbsp;zasilaniem czy&nbsp;uszkodzone matryca -&nbsp;jestem tutaj, aby&nbsp;przywrócić Twój telewizor do&nbsp;pełnej sprawności.
               Specjalizuję&nbsp;się w&nbsp;naprawach zarówno tradycyjnych, jak i&nbsp;nowoczesnych modeli, oferując szybką i&nbsp;profesjonalną obsługę.
               <br />

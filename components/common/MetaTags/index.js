@@ -6,12 +6,12 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     title,
     canonical,
     description,
-    ogSiteName,
-    ogImage,
-    ogImageWidth,
-    ogImageHeight,
-    ogImageAlt,
-    ogImageType,
+    siteName,
+    image,
+    imageWidth,
+    imageHeight,
+    imageAlt,
+    imageType,
     keywords,
     appleMobileWebAppTitle,
   } = page.metaTags;
@@ -66,18 +66,18 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
-      <meta property="og:site_name" content={ogSiteName} />
+      <meta property="og:site_name" content={siteName} />
       <meta property="og:updated_time" content="2024-11-27T03:38:11+01:00" />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:secure_url" content={ogImage} />
-      <meta property="og:image:width" content={ogImageWidth} />
-      <meta property="og:image:height" content={ogImageHeight} />
-      <meta property="og:image:alt" content={ogImageAlt} />
-      <meta property="og:image:type" content={ogImageType} />
+      <meta property="og:image" content={image} />
+      <meta property="og:image:secure_url" content={image} />
+      <meta property="og:image:width" content={imageWidth} />
+      <meta property="og:image:height" content={imageHeight} />
+      <meta property="og:image:alt" content={imageAlt} />
+      <meta property="og:image:type" content={imageType} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content={image} />
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
 

@@ -7,8 +7,8 @@ export const imageUrls = {
   pralka: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-pralki",
   suszarka: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-suszarki",
   logoGoogle: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/logoGoogle",
-  emoticon: "https://res.cloudinary.com/difc0i71u/image/upload/v1733813310/Serwis/emoticon.png",
-  mapa: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/mapa.png"
+  emoticon: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/emoticon",
+  mapa: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/mapa"
 };
 
 export const reviewUrl = "https://naprawaprzemysl.pl/api/reviews.json"; 

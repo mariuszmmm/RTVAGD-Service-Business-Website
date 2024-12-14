@@ -12,7 +12,7 @@ import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 
-const DishwasherService = ({ rating, ratingsTotal }) => {
+const DishwasherService = () => {
   const path = useRouter().asPath;
 
   return (
@@ -32,7 +32,17 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
         </Title>
         <main>
           <ServiceOffer>
-            <Photo src={imageUrls.zmywarka} alt="naprawa zmywarek" loading='lazy' />
+            <Photo
+              src={imageUrls.zmywarka}
+              alt="naprawa zmywarek"
+              loading='lazy'
+              width={dataForMetaTags.naprawa_zmywarek.metaTags.imageWidth}
+              height={dataForMetaTags.naprawa_zmywarek.metaTags.imageHeight}
+              crop={{
+                type: 'auto',
+                source: true
+              }}
+            />
             <SubTitle>Specjalistyczna naprawa zmywarek różnych marek.</SubTitle>
             <Text>
               Zmywarka to jedno z&nbsp;najważniejszych urządzeń w&nbsp;każdej kuchni,

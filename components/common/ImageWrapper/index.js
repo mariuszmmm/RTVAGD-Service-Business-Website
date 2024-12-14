@@ -22,7 +22,7 @@ position: absolute;
 @media(orientation: portrait) {
   width: 50vw;
   height: 50vw;
-  top: clamp(400px, 60vw, 500px);
+  top: clamp(400px, 82vw, 480px);
   transform: translateX(-50%);
 }
 `;

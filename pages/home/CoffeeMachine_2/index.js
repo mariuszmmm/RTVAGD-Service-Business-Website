@@ -14,6 +14,12 @@ const CoffeeMachine_2 = ({ show, setHold }) => (
         src={imageUrls.ekspres_2}
         alt="Naprawa ekspresów do kawy w Przemyślu"
         loading="lazy"
+        width="276"
+        height="350"
+        crop={{
+          type: 'auto',
+          source: true
+        }}
       />
     </Link>
   </ImageWrapper>

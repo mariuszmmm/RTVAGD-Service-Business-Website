@@ -8,6 +8,12 @@ const Background = () => {
         src={imageUrls.serwis}
         alt="Background image"
         loading="lazy"
+        width="255"
+        height="177"
+        crop={{
+          type: 'auto',
+          source: true
+        }}
       />
       <Rotating>
         <Circle $top={"0"} $left={"0"}></Circle>

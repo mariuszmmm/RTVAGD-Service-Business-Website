@@ -32,7 +32,17 @@ const DryerService = () => {
         </Title>
         <main>
           <ServiceOffer>
-            <Photo src={imageUrls.suszarka} alt="naprawa suszarek" loading='lazy' />
+            <Photo
+              src={imageUrls.suszarka}
+              alt="naprawa suszarek"
+              loading='lazy'
+              width={dataForMetaTags.naprawa_suszarek.metaTags.imageWidth}
+              height={dataForMetaTags.naprawa_suszarek.metaTags.imageHeight}
+              crop={{
+                type: 'auto',
+                source: true
+              }}
+            />
             <SubTitle>Fachowa naprawa suszarek wszystkich marek i&nbsp;modeli.</SubTitle>
             <Text>
               Czy Twoja suszarka do&nbsp;prania przestała działać? A&nbsp;może nie suszy ubrań tak skutecznie jak dawniej, wydaje dziwne dźwięki lub&nbsp;wyświetla błędy?

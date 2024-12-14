@@ -33,7 +33,17 @@ const CoffeeMachineService = () => {
         <main>
           <ServiceOffer>
             <SubTitle>Profesjonalna naprawa ekspresów do&nbsp;kawy, niezależnie od&nbsp;marki i&nbsp;modelu.</SubTitle>
-            <Photo src={imageUrls.ekspres} alt="naprawa ekspresow" loading='lazy' />
+            <Photo
+              src={imageUrls.ekspres}
+              alt="naprawa ekspresow"
+              loading='lazy'
+              width={dataForMetaTags.naprawa_ekspresow.metaTags.imageWidth}
+              height={dataForMetaTags.naprawa_ekspresow.metaTags.imageHeight}
+              crop={{
+                type: 'auto',
+                source: true
+              }}
+            />
             <Text>
               Czy Twój ekspres do&nbsp;kawy przestał działać? A&nbsp;może nie&nbsp;zaparza kawy tak, jak&nbsp;dawniej, wyświetla błędy lub&nbsp;ma&nbsp;inne&nbsp;problemy? Jestem tutaj, aby&nbsp;Ci&nbsp;pomóc.
               Specjalizuję się w&nbsp;naprawie zarówno domowych, jak&nbsp;i&nbsp;profesjonalnych ekspresów do&nbsp;kawy, oferując precyzyjną diagnostykę oraz&nbsp;szybkie i&nbsp;skuteczne naprawy.

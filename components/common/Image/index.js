@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { CldImage } from 'next-cloudinary';
 
-export const Image = styled.img`
+export const Image = styled(CldImage)`
   width: 100%;
   height: 100%;
   object-fit: contain; 

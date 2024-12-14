@@ -32,7 +32,17 @@ const WashingMachineService = () => {
         </Title>
         <main>
           <ServiceOffer>
-            <Photo src={imageUrls.pralka} alt="naprawa pralek" loading='lazy' />
+            <Photo
+              src={imageUrls.pralka}
+              alt="naprawa pralek"
+              loading='lazy'
+              width={dataForMetaTags.naprawa_pralek.metaTags.imageWidth}
+              height={dataForMetaTags.naprawa_pralek.metaTags.imageHeight}
+              crop={{
+                type: 'auto',
+                source: true
+              }}
+            />
             <SubTitle>Kompleksowe usługi naprawy pralek wszystkich marek.</SubTitle>
             <Text>
               Zepsuta pralka? Nie&nbsp;martw&nbsp;się! Oferuję fachową diagnostykę i&nbsp;naprawę pralek, które przestały działać.

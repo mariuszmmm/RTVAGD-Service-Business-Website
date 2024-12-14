@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { CldImage } from 'next-cloudinary';
 
-export const Photo = styled.img`
+export const Photo = styled(CldImage)`
   grid-area: photo;
   width: 20vw;
+  height: auto;
   max-width: 80%;
   margin: clamp(20px, 1vw, 40px);
   margin-top: 40px;

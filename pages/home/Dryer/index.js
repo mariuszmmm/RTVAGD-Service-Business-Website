@@ -2,6 +2,7 @@ import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 import { ImageWrapper } from "../../../components/common/ImageWrapper";
 import { Image } from "../../../components/common/Image";
+import { dataForMetaTags } from "../../../utils/dataForMetaTags";
 
 const Dryer = ({ show, left, setHold }) => {
   return (
@@ -16,6 +17,12 @@ const Dryer = ({ show, left, setHold }) => {
           src={imageUrls.suszarka}
           alt="Naprawa suszarek w Przemyślu"
           loading="lazy"
+          width={dataForMetaTags.naprawa_suszarek.metaTags.imageWidth}
+          height={dataForMetaTags.naprawa_suszarek.metaTags.imageHeight}
+          crop={{
+            type: 'auto',
+            source: true
+          }}
         />
       </Link>
     </ImageWrapper>
