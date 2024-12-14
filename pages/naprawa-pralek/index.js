@@ -43,24 +43,34 @@ const WashingMachineService = () => {
                 source: true
               }}
             />
-            <SubTitle>Kompleksowe usługi naprawy pralek wszystkich marek.</SubTitle>
+            <SubTitle>Specjalistyczne usługi naprawy pralek wszystkich marek i modeli</SubTitle>
             <Text>
-              Zepsuta pralka? Nie&nbsp;martw&nbsp;się! Oferuję fachową diagnostykę i&nbsp;naprawę pralek, które przestały działać.
-              Niezależnie od&nbsp;problemu problem - czy to brak poboru wody, wycieki, usterki bębna czy niepokojące dźwięki - szybko zidentyfikuję i&nbsp;naprawię usterkę.
+              Zepsuta pralka? Nie pozwól, by awaria utrudniła Twoje codzienne obowiązki. Oferuję kompleksową diagnostykę i naprawę pralek w Przemyślu i okolicach, zapewniając szybkie i trwałe rozwiązanie każdego problemu.
+<h3>Najczęstsze problemy z pralkami, które naprawiam:</h3>
+             
+<b>Pralka nie pobiera wody</b> – problem z elektrozaworem, zatkany filtr lub uszkodzona pompa wody.
+
+<b>Wycieki wody podczas prania</b> – nieszczelne uszczelki, pęknięty wąż odpływowy lub zużycie zbiornika.
+
+<b>Pralka hałasuje lub wibruje</b> – uszkodzone łożyska bębna, zużyte amortyzatory lub niewyważony wsad.
+
+<b>Problemy z wirowaniem</b> – usterki silnika, modułu sterującego lub paska napędowego.
+
+<b>Pralka nie uruchamia się</b> – awarie elektryczne, uszkodzone przyciski lub błędy w oprogramowaniu.
               <br />
-              Dzięki nowoczesnym narzędziom diagnostycznym oraz&nbsp;oryginalnym częściom zamiennym zapewniam trwałość i&nbsp;niezawodność każdej naprawy.
-              Moje doświadczenie oraz zaawansowane techniki naprawcze pozwalają&nbsp;mi przywrócić pełną funkcjonalność Twojej pralki w&nbsp;możliwie najkrótszym czasie.
+              Dzięki nowoczesnym narzędziom diagnostycznym oraz dostępowi do oryginalnych części zamiennych naprawiam pralki szybko i skutecznie, przywracając ich pełną funkcjonalność.
             </Text>
           </ServiceOffer>
-          <SubTitle as="h3">Dlaczego warto skorzystać z&nbsp;moich usług?</SubTitle>
+          <SubTitle as="h3">Dlaczego warto wybrać moje usługi?</SubTitle>
           <Text as="ul">
-            <li><h3>Szybka diagnoza: </h3>Zgłoś problem, a&nbsp;natychmiast zidentyfikuję przyczynę awarii, abyś mógł szybko wrócić do&nbsp;swoich codziennych obowiązków.</li>
-            <li><h3>Wysoka jakość naprawy: </h3>Używam tylko oryginalnych części, co&nbsp;zapewnia długotrwałą sprawność i&nbsp;niezawodność Twojego urządzenia.</li>
-            <li><h3>Zadowolenie klientów: </h3> Rzetelność i&nbsp;terminowość to&nbsp;moje priorytety, co&nbsp;przekłada&nbsp;się na&nbsp;pozytywne opinie oraz&nbsp;zaufanie moich klientów.</li>
-            <li><h3>Elastyczność: </h3>Oferuję zarówno naprawy w&nbsp;warsztacie, jak&nbsp;i&nbsp;dojazd do&nbsp;klienta w&nbsp;dogodnych godzinach.</li>
+            <li><h3>Szybka i trafna diagnoza: </h3>Wykrywam przyczyny problemu już podczas pierwszej wizyty, co pozwala skrócić czas naprawy do minimum.</li>
+            <li><h3>Gwarancja trwałości napraw: </h3>Stosuję wyłącznie sprawdzone i oryginalne części, co zapewnia niezawodność urządzenia na długie lata.</li>
+            <li><h3>Wieloletnie doświadczenie: </h3>Od ponad 20 lat zajmuję się naprawą pralek – to wiedza, której możesz zaufać.</li>
+            <li><h3>Elastyczność i wygoda: </h3>Naprawy wykonuję na miejscu u klienta lub w warsztacie, dostosowując się do Twojego harmonogramu.</li>
           </Text>
           <Text>
-            Nie pozwól, aby&nbsp;awaria pralki zakłóciła Twój dzień. Skontaktuj się ze&nbsp;mną już&nbsp;dziś, a&nbsp;szybko przywrócę pełną sprawność Twojego urządzenia!
+            <b>Nie trać czasu na pranie ręczne!</b>
+Zadzwoń lub napisz już teraz, a szybko i skutecznie rozwiążę problem z Twoją pralką. Profesjonalizm, uczciwość i rzetelność – to moje priorytety.
           </Text>
         </main>
       </Container>
