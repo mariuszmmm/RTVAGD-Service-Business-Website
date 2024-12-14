@@ -46,24 +46,23 @@ const WashingMachineService = () => {
             <SubTitle>Specjalistyczne usługi naprawy pralek wszystkich marek i modeli</SubTitle>
             <Text>
               Zepsuta pralka? Nie pozwól, by awaria utrudniła Twoje codzienne obowiązki. Oferuję kompleksową diagnostykę i naprawę pralek w Przemyślu i okolicach, zapewniając szybkie i trwałe rozwiązanie każdego problemu.
+</Text> 
 <SubTitle as="h3">Najczęstsze problemy z pralkami, które naprawiam: </SubTitle>
-</Text>             
+            
 <Text as="ul">
-<li><h3>Pralka nie pobiera wody – </h3>
+<li><h3>Pralka nie pobiera wody</h3>
 problem z elektrozaworem, zatkany filtr lub uszkodzona pompa wody.</li>
 
-<li><h3>Wycieki wody podczas prania – 
-</h3>
+<li><h3>Wycieki wody podczas prania</h3>
 nieszczelne uszczelki, pęknięty wąż odpływowy lub zużycie zbiornika.</li>
 
-<li><h3>Pralka hałasuje lub wibruje – 
-</h3>
+<li><h3>Pralka hałasuje lub wibruje</h3>
 uszkodzone łożyska bębna, zużyte amortyzatory lub niewyważony wsad.</li>
 
-<li><h3>Problemy z wirowaniem – </h3>
+<li><h3>Problemy z wirowaniem</h3>
 usterki silnika, modułu sterującego lub paska napędowego.</li>
 
-<li><h3>Pralka nie uruchamia się – </h3>
+<li><h3>Pralka nie uruchamia się</h3>
 awarie elektryczne, uszkodzone przyciski lub błędy w oprogramowaniu.</li>
               </Text>
               <Text>Dzięki nowoczesnym narzędziom diagnostycznym oraz dostępowi do oryginalnych części zamiennych naprawiam pralki szybko i skutecznie, przywracając ich pełną funkcjonalność.
