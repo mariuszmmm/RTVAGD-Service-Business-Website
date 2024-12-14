@@ -32,7 +32,7 @@ const CoffeeMachineService = () => {
         </Title>
         <main>
           <ServiceOffer>
-            <SubTitle>Profesjonalna naprawa ekspresów do&nbsp;kawy,<br />niezależnie od&nbsp;marki i&nbsp;modelu.</SubTitle>
+            <SubTitle>Profesjonalna naprawa ekspresów do&nbsp;kawy, niezależnie od&nbsp;marki i&nbsp;modelu.</SubTitle>
             <Photo src={imageUrls.ekspres} alt="naprawa ekspresow" loading='lazy' />
             <Text>
               Czy Twój ekspres do&nbsp;kawy przestał działać? A&nbsp;może nie&nbsp;zaparza kawy tak, jak&nbsp;dawniej, wyświetla błędy lub&nbsp;ma&nbsp;inne&nbsp;problemy? Jestem tutaj, aby&nbsp;Ci&nbsp;pomóc.

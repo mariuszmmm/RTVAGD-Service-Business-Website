@@ -13,10 +13,6 @@ export const Text = styled.p`
     font-style: italic;
   `}
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
-    text-align: left; 
-  }
-
   h3 {
     margin-top: 1rem;
     margin-bottom: 0;

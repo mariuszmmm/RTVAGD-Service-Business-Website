@@ -5,8 +5,15 @@ export const Title = styled.h1`
   font-size: clamp(1.5rem, 3vw, 3rem);
   text-align: center;
 
-  span{
+  span {
     color: ${({ theme }) => theme.color.check};
     margin-right: 15px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
+    margin-right: 0;
+    span {
+      display: none; 
+    }
   }
 `;

@@ -5,10 +5,17 @@ export const ServiceOffer = styled.div`
   margin: 0 0 60px;
   display: grid;
   grid-template-areas:
-    "header header"
+    "header empty"
     "text photo";  
  
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
     margin: 0 0 20px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
+    grid-template-areas:
+    "header"
+    "text"
+    "photo";
+  } 
 `;

@@ -9,6 +9,6 @@ export const Emoticon = styled.img`
   margin-bottom: 4px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
-    opacity: 0;
+    display: none;
   }
 `;

@@ -36,6 +36,7 @@ export const FooterInfo = styled.div`
   align-content: center;
   width: 100%;
   gap: 5px clamp(10px, 0.9vw, 200px);
+  margin-bottom: 10px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
     grid-template-columns: repeat(2, auto);
