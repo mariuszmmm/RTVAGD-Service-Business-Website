@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 import { ImageWrapper } from "../../../components/common/ImageWrapper";
-import { Image } from "../../../components/common/Image";
+
+import Image from "next/image";
 import { dataForMetaTags } from "../../../utils/dataForMetaTags";
 
 const WashingMachine = ({ show, left, setHold }) => {
