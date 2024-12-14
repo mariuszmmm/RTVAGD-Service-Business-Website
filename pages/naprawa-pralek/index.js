@@ -31,7 +31,13 @@ const WashingMachineService = () => {
           />
         </Title>
         <main>
-          <ServiceOffer>
+         
+            <SubTitle>Specjalistyczne usługi naprawy pralek wszystkich marek i modeli</SubTitle>
+            <Text>
+              Zepsuta pralka? Nie pozwól, by awaria utrudniła Twoje codzienne obowiązki. Oferuję kompleksową diagnostykę i naprawę pralek w Przemyślu i okolicach, zapewniając szybkie i trwałe rozwiązanie każdego problemu.
+</Text> 
+
+ <ServiceOffer>
             <Photo
               src={imageUrls.pralka}
               alt="naprawa pralek"
@@ -43,11 +49,6 @@ const WashingMachineService = () => {
                 source: true
               }}
             />
-            <SubTitle>Specjalistyczne usługi naprawy pralek wszystkich marek i modeli</SubTitle>
-            <Text>
-              Zepsuta pralka? Nie pozwól, by awaria utrudniła Twoje codzienne obowiązki. Oferuję kompleksową diagnostykę i naprawę pralek w Przemyślu i okolicach, zapewniając szybkie i trwałe rozwiązanie każdego problemu.
-</Text> 
-</ServiceOffer>
 <SubTitle as="h3">Najczęstsze problemy z pralkami, które naprawiam: </SubTitle>
             
 <Text as="ul">
@@ -66,6 +67,7 @@ usterki silnika, modułu sterującego lub paska napędowego.</li>
 <li><h3>Pralka nie uruchamia się</h3>
 awarie elektryczne, uszkodzone przyciski lub błędy w oprogramowaniu.</li>
               </Text>
+</ServiceOffer>
               <Text>Dzięki nowoczesnym narzędziom diagnostycznym oraz dostępowi do oryginalnych części zamiennych naprawiam pralki szybko i skutecznie, przywracając ich pełną funkcjonalność.
             </Text>
           
