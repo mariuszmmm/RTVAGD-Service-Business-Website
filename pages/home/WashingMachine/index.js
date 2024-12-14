@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 import { ImageWrapper } from "../../../components/common/ImageWrapper";
-
-import Image from "next/image";
+import { Image } from "../../../components/common/Image";
 import { dataForMetaTags } from "../../../utils/dataForMetaTags";
 
 const WashingMachine = ({ show, left, setHold }) => {
@@ -18,7 +17,12 @@ const WashingMachine = ({ show, left, setHold }) => {
           src={imageUrls.pralka}
           alt="naprawa pralek"
           loading='lazy'
-          fill
+width={dataForMetaTags.naprawa_pralek.metaTags.imageWidth}
+height={dataForMetaTags.naprawa_pralek.metaTags.imageHeight}
+          crop={{
+            type: 'auto',
+            source: true
+          }}
         />
       </Link>
     </ImageWrapper>
