@@ -17,12 +17,7 @@ const WashingMachine = ({ show, left, setHold }) => {
           src={imageUrls.pralka}
           alt="naprawa pralek"
           loading='lazy'
-          width={dataForMetaTags.naprawa_pralek.metaTags.imageWidth}
-          height={dataForMetaTags.naprawa_pralek.metaTags.imageHeight}
-          crop={{
-            type: 'auto',
-            source: true
-          }}
+          fill
         />
       </Link>
     </ImageWrapper>
