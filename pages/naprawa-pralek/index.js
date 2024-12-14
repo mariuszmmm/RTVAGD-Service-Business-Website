@@ -60,11 +60,11 @@ const WashingMachineService = () => {
 <li><b>Problemy z wirowaniem</b> - usterki silnika, modułu sterującego lub paska napędowego.</li>
 
 <li><b>Pralka nie uruchamia się</b> - awarie elektryczne, uszkodzone przyciski lub błędy w oprogramowaniu.</li>
+
+Dzięki nowoczesnym narzędziom diagnostycznym oraz dostępowi do oryginalnych części zamiennych naprawiam pralki szybko i skutecznie, przywracając ich pełną funkcjonalność.
               </Text>
 </ServiceOffer>
-              <Text>Dzięki nowoczesnym narzędziom diagnostycznym oraz dostępowi do oryginalnych części zamiennych naprawiam pralki szybko i skutecznie, przywracając ich pełną funkcjonalność.
-            </Text>
-          
+
           <SubTitle as="h3">Dlaczego warto wybrać moje usługi?</SubTitle>
           <Text as="ul">
             <li><h3>Szybka i trafna diagnoza: </h3>Wykrywam przyczyny problemu już podczas pierwszej wizyty, co pozwala skrócić czas naprawy do minimum.</li>
