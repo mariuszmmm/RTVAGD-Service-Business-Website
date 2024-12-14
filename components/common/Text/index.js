@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Text = styled.p`
-  grid-area: text;
+  grid-area: ${({$subArea}) => $subArea ? "text_2" : "text"};
   line-height: 1.8;
   margin-bottom: 20px;
   font-size: clamp(0.9rem, 2.5vw, 1.2rem);
