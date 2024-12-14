@@ -5,8 +5,9 @@ export const ServiceOffer = styled.div`
   margin: 0 0 60px;
   display: grid;
   grid-template-areas:
-    "header empty"
-    "text photo";  
+    "header header"
+    "text photo"
+    "text_2 text_2";  
  
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
     margin: 0 0 20px;
@@ -16,6 +17,7 @@ export const ServiceOffer = styled.div`
     grid-template-areas:
     "header"
     "text"
-    "photo";
+    "photo"
+    "text_2";
   } 
 `;
