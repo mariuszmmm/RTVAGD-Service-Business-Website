@@ -9,8 +9,8 @@ import {
 } from "./styled";
 import { Text } from "../common/Text";
 
-const ReviewsItem = ({ item }) => (
-  <ItemWrapper>
+const ReviewsItem = ({ key, item }) => (
+  <ItemWrapper id=`review${key}`>
     <Header>
       <Avatar
         itemProp="image"
