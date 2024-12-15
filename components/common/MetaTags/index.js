@@ -41,9 +41,10 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   const getReviews = () => {
     if (!["/opinie/"].includes(path)) return null;
 
-    const reviewsArray = reviews.map((review) => (
+    const reviewsArray = reviews.map((review, index) => (
       {
         "@type": "Review",
+        "@id": `https://naprawaprzemysl.pl/opinie#review${index+1}`,
         "author": {
           "@type": "Person",
           "name": review.author_name,
