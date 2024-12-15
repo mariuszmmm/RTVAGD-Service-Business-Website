@@ -1,7 +1,10 @@
 import Head from 'next/head';
 import { formattedDate } from '../../../utils/formattedDate';
+import { getCurrentDateTimeISOWithOffset } from '../../../utils/formatDateToISOWithOffset';
+import { useState } from 'react';
 
 const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
+  const [ogTime, setOgTime] = useState(getCurrentDateTimeISOWithOffset());
   const {
     title,
     canonical,
@@ -67,7 +70,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:updated_time" content="2024-11-27T03:38:11+01:00" />
+      <meta property="og:updated_time" content={ogTime} />
       <meta property="og:image" content={image} />
       <meta property="og:image:secure_url" content={image} />
       <meta property="og:image:width" content={imageWidth} />
