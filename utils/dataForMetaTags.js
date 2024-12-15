@@ -100,7 +100,7 @@ export const dataForMetaTags = {
           "width": 931,
           "height": 497
         },
-        "serviceType": "Naprawa pralek, zmywarek, suszarek, telewizorów i ekspresów do kawy",
+        "serviceType": "Naprawa sprzętu RTV i AGD",
         "priceRange": "$$$",
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
         "paymentAccepted": "Cash",
