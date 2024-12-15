@@ -45,6 +45,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       {
         "@type": "Review",
         "@id": `https://naprawaprzemysl.pl/opinie#review${index+1}`,
+        "url": `https://naprawaprzemysl.pl/opinie#review${index+1}`,
         "author": {
           "@type": "Person",
           "name": review.author_name,
