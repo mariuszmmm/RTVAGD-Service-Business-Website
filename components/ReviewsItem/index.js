@@ -10,7 +10,7 @@ import {
 import { Text } from "../common/Text";
 
 const ReviewsItem = ({ key, item }) => (
-  <ItemWrapper id=`review${key}`>
+  <ItemWrapper id={`review${key}`}>
     <Header>
       <Avatar
         itemProp="image"
