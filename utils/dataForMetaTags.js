@@ -45,7 +45,7 @@ const openingHoursSpecification = [
 ];
 
 const provider = {
-  "@type": "ProfessionalService",
+  "@type": "LocalBusiness",
   "name": serwis.name,
   "telephone": serwis.phone,
   "email": serwis.email,
@@ -83,7 +83,7 @@ export const dataForMetaTags = {
     schema: {
       organization: {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "LocalBusiness",
         "name": serwis.name,
         "@id": urls.home,
         "url": urls.home,
@@ -100,6 +100,7 @@ export const dataForMetaTags = {
           "width": 931,
           "height": 497
         },
+        "serviceType": "Naprawa pralek, zmywarek, suszarek, telewizorów i ekspresów do kawy",
         "priceRange": "$$$",
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
         "paymentAccepted": "Cash",
@@ -127,21 +128,23 @@ export const dataForMetaTags = {
         "@type": "ContactPage",
         "name": `Kontakt - ${serwis.name}`,
         "url": urls.kontakt,
-        "telephone": serwis.phone,
-        "email": serwis.email,
-        "address": address,
-        "geo": geo,
-        "hasMap": serwis.url.mapaGoogle,
-        "openingHoursSpecification": openingHoursSpecification,
-        "sameAs": [serwis.url.facebook],
-        "image": {
-          "@type": "ImageObject",
-          "url": `${urls.home}share.png`,
-          "width": 931,
-          "height": 497
-        },
         "description": "Skontaktuj się pod numerem 790-258-612 lub odwiedź nas w Przemyślu, ul. Generała Sowińskiego 2. Szybkie, fachowe usługi naprawy sprzętu RTV i AGD.",
-
+        "contactOption": [
+    {
+      "@type": "ContactPoint",
+      "telephone": serwis.phone,
+      "contactType": "customer service",
+      "areaServed": "PL",
+      "availableLanguage": "Polski"
+    },
+    {
+      "@type": "ContactPoint",
+      "email": serwis.email,
+      "contactType": "customer service",
+      "areaServed": "PL",
+      "availableLanguage": "Polski"
+    },
+]
       },
       breadcrumbList: {
         ...breadcrumbList,
@@ -174,7 +177,7 @@ export const dataForMetaTags = {
     schema: {
       organization: {
         "@context": "https://schema.org",
-        "@type": "AboutPage",
+        "@type": "WebPage",
         "name": `O mnie - ${serwis.name}`,
         "url": urls.o_mnie,
         "description": "Dowiedz się o moim doświadczeniu w naprawie sprzętu RTV i AGD oraz zaangażowaniu w najwyższej jakości usługi serwisowe w Przemyślu.",
