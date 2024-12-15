@@ -88,7 +88,7 @@ const Home = ({ rating, ratingsTotal }) => {
         rating={rating}
         ratingsTotal={ratingsTotal}
       />
-      <HeroContainer>
+      <HeroContainer id="business">
         <HeroTitle>
           Profesjonalna naprawa<br />
           pralek, suszarek, zmywarek,<br />
