@@ -211,9 +211,10 @@ export const dataForMetaTags = {
     schema: {
       organization: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": `Opinie - ${serwis.name}`,
-        "url": urls.opinie,
+        "@type": "LocalBusiness",
+        "@id": "https://naprawaprzemysl.pl#business",
+        "name": serwis.name,
+        "url": urls.home,
         "description": "Sprawdź opinie klientów o naprawach sprzętu RTV i AGD w Przemyślu. Dowiedz się, dlaczego tak wielu poleca moje usługi.",
       },
       breadcrumbList: {
