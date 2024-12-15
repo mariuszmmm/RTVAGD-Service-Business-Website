@@ -29,11 +29,6 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         "reviewCount": ratingsTotal,
         "bestRating": "5",
         "worstRating": "1",
-        "itemReviewed": {
-          "@type": "ProfessionalService",
-          "name": serwis.name,
-          "@id": "https://naprawaprzemysl.pl/"
-        }
       }
     } : null
   };
