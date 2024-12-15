@@ -23,16 +23,23 @@ const CoffeeMachineService = () => {
       />
       <Container>
         <Title>
-          <span>✔ </span>Naprawa ekspresów do&nbsp;kawy
+          Naprawa ekspresów do&nbsp;kawy
           <Emoticon
             src={imageUrls.emoticon}
             alt="emoticon"
             loading="lazy"
           />
         </Title>
+
         <main>
+          <SubTitle>
+            Profesjonalna naprawa ekspresów każdej marki i modelu
+          </SubTitle>
+          <Text>
+            Awaria ekspresu do kawy może skutecznie zepsuć poranek lub uniemożliwić sprawne działanie kawiarni. Oferuję kompleksowe usługi naprawcze, które pozwolą Ci ponownie cieszyć się aromatyczną kawą. Specjalizuję się zarówno w naprawach domowych ekspresów automatycznych, jak i profesjonalnych urządzeń stosowanych w gastronomii.
+          </Text>
+
           <ServiceOffer>
-            <SubTitle>Profesjonalna naprawa ekspresów do&nbsp;kawy, niezależnie od&nbsp;marki i&nbsp;modelu.</SubTitle>
             <Photo
               src={imageUrls.ekspres}
               alt="naprawa ekspresow"
@@ -44,23 +51,33 @@ const CoffeeMachineService = () => {
                 source: true
               }}
             />
-            <Text>
-              Czy Twój ekspres do&nbsp;kawy przestał działać? A&nbsp;może nie&nbsp;zaparza kawy tak, jak&nbsp;dawniej, wyświetla błędy lub&nbsp;ma&nbsp;inne&nbsp;problemy? Jestem tutaj, aby&nbsp;Ci&nbsp;pomóc.
-              Specjalizuję się w&nbsp;naprawie zarówno domowych, jak&nbsp;i&nbsp;profesjonalnych ekspresów do&nbsp;kawy, oferując precyzyjną diagnostykę oraz&nbsp;szybkie i&nbsp;skuteczne naprawy.
-              <br />
-              Moim celem jest umożliwienie&nbsp;Ci cieszenia&nbsp;się ulubioną kawą bez&nbsp;przerw.
-              Dzięki wieloletniemu doświadczeniu oraz&nbsp;dostępowi do&nbsp;oryginalnych części zamiennych, oferuję kompleksową obsługę, dbając o&nbsp;każdy detal.
+            <SubTitle as="h3">
+              Najczęstsze problemy z ekspresami do kawy, które naprawiam:
+            </SubTitle>
+            <Text as="ul">
+              <li><b>ekspres nie zaparza kawy</b> - problem z układem zaparzania, zatkane dysze lub uszkodzenie pompy.</li>
+              <li><b>wycieki wody podczas pracy</b> - uszkodzone uszczelki, pęknięte przewody lub nieszczelny bojler.</li>
+              <li><b>ekspres wyświetla błędy</b> - usterki elektroniki, czujników lub niewłaściwa konfiguracja urządzenia.</li>
+              <li><b>słabe spienianie mleka</b> - problem z dyszą spieniającą, kamień w układzie lub uszkodzona pompa pary.</li>
+              <li><b>kawa ma inny smak niż zwykle</b> - konieczność konserwacji, wymiany filtra wody lub odkamieniania.</li>
+            </Text>
+            <Text $subArea>
+              Dzięki nowoczesnym narzędziom diagnostycznym oraz dostępowi do oryginalnych części zamiennych oferuję naprawy, które są nie tylko skuteczne, ale również trwałe.
             </Text>
           </ServiceOffer>
-          <SubTitle as="h3">Dlaczego warto skorzystać z&nbsp;moich usług?</SubTitle>
-          <Text as="ul">
-            <li><h3>Szybka diagnostyka: </h3>Zidentyfikuję problem w&nbsp;krótkim czasie, abyś mógł jak&nbsp;najszybciej cieszyć&nbsp;się swoją kawą.</li>
-            <li><h3>Wysoka jakość naprawy: </h3>Pracuję na&nbsp;oryginalnych częściach oraz sprawdzonych rozwiązaniach, co&nbsp;zapewnia długotrwałe efekty.</li>
-            <li><h3>Zadowolenie klientów: </h3>Moje usługi są&nbsp;rekomendowane przez wielu zadowolonych klientów, którzy wracają z&nbsp;kolejnymi zleceniami.</li>
-            <li><h3>Elastyczność: </h3>Oferuję naprawy zarówno w warsztacie, jak&nbsp;i&nbsp;dojazd do&nbsp;klienta w&nbsp;dogodnych godzinach.</li>
+
+          <SubTitle as="h3">
+            Dlaczego warto wybrać moje usługi?
+          </SubTitle>
+          <Text as="ul" $check>
+            <li><h3>Szybka diagnostyka i naprawa</h3>Rozumiem, jak ważna jest kawa w codziennym życiu, dlatego szybko zidentyfikuję usterkę i przywrócę sprawność urządzenia.</li>
+            <li><h3>Gwarancja wysokiej jakości usług</h3>Używam wyłącznie oryginalnych części zamiennych, co gwarantuje niezawodność naprawy i dłuższą żywotność ekspresu.</li>
+            <li><h3>Wieloletnie doświadczenie</h3>Naprawiam ekspresy do kawy od ponad 20 lat, doskonale rozumiejąc specyfikę różnych marek i modeli.</li>
+            <li><h3>Elastyczność i wygoda klienta</h3>Oferuję możliwość naprawy zarówno w warsztacie, jak i w domu lub miejscu pracy klienta.</li>
           </Text>
           <Text>
-            Nie pozwól, aby&nbsp;uszkodzony ekspres zepsuł Twój poranek. Skontaktuj&nbsp;się ze&nbsp;mną już&nbsp;dziś, a&nbsp;szybko przywrócę pełną funkcjonalność Twojego ekspresu do&nbsp;kawy!
+            <b>Nie pozwól, aby awaria ekspresu popsuła Twój dzień! </b>
+            Skontaktuj się ze mną, a sprawnie przywrócę pełną funkcjonalność Twojego urządzenia, abyś mógł cieszyć się ulubioną kawą każdego dnia.
           </Text>
         </main>
       </Container>

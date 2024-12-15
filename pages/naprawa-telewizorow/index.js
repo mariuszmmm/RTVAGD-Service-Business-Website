@@ -22,16 +22,23 @@ const TelevisionService = () => {
         page={dataForMetaTags.naprawa_telewizorow}
       />    <Container>
         <Title>
-          <span>✔ </span>Naprawa telewizorów
+          Naprawa telewizorów
           <Emoticon
             src={imageUrls.emoticon}
             alt="emoticon"
             loading="lazy"
           />
         </Title>
+
         <main>
+          <SubTitle>
+            Fachowa naprawa telewizorów wszystkich typów i marek
+          </SubTitle>
+          <Text>
+            Zepsuty telewizor to problem, który może zakłócić Twoją rozrywkę i dostęp do informacji. Niezależnie od tego, czy Twój sprzęt to starszy model LCD, nowoczesny OLED, czy zaawansowany telewizor Smart TV, jestem tutaj, aby pomóc. Oferuję profesjonalną naprawę telewizorów, niezależnie od marki i typu urządzenia, zapewniając szybką i skuteczną obsługę.
+          </Text>
+
           <ServiceOffer>
-            <SubTitle>Fachowa naprawa telewizorów wszystkich typów i&nbsp;marek.</SubTitle>
             <Photo
               src={imageUrls.telewizor}
               alt="naprawa telewizorów"
@@ -42,23 +49,35 @@ const TelevisionService = () => {
                 type: 'auto',
                 source: true
               }}
-            />            <Text>
-              Czy Twój telewizor przestał działać? Niezależnie od&nbsp;tego, czy&nbsp;to&nbsp;brak&nbsp;obrazu, brak&nbsp;dźwięku, problemy z&nbsp;zasilaniem czy&nbsp;uszkodzone matryca -&nbsp;jestem tutaj, aby&nbsp;przywrócić Twój telewizor do&nbsp;pełnej sprawności.
-              Specjalizuję&nbsp;się w&nbsp;naprawach zarówno tradycyjnych, jak i&nbsp;nowoczesnych modeli, oferując szybką i&nbsp;profesjonalną obsługę.
-              <br />
-              Dzięki dostępowi do&nbsp;oryginalnych części zamiennych oraz&nbsp;nowoczesnemu sprzętowi diagnostycznemu, potrafię szybko zidentyfikować i&nbsp;skutecznie usunąć usterki.
-              Moim celem jest, abyś mógł cieszyć się ulubionymi programami bez zakłóceń.
+            />
+            <SubTitle as="h3">
+              Najczęstsze problemy z telewizorami, które naprawiam:
+            </SubTitle>
+            <Text as="ul">
+              <li><b>brak obrazu lub problemy z jakością wyświetlania</b> - usterki matrycy, uszkodzenia podświetlenia LED, błędy w układzie sterowania.</li>
+              <li><b>brak dźwięku</b> - awarie układów audio, problemy z głośnikami lub oprogramowaniem.</li>
+              <li><b>problemy z zasilaniem</b> -  telewizor nie włącza się, wyłącza samoczynnie lub występują nieregularności w działaniu zasilacza.</li>
+              <li><b>uszkodzona matryca</b> - pęknięcia, przebarwienia lub martwe piksele.</li>
+              <li><b>awaria funkcji Smart TV</b> - problemy z połączeniem internetowym, aplikacjami lub oprogramowaniem.</li>
+              <li><b>zakłócenia obrazu lub dźwięku</b> - linie na ekranie, zniekształcony obraz, trzaski w dźwięku.</li>
+            </Text>
+            <Text $subArea>
+              Dzięki nowoczesnym narzędziom diagnostycznym i dostępowi do oryginalnych części zamiennych gwarantuję trwałość i niezawodność każdej naprawy.
             </Text>
           </ServiceOffer>
-          <SubTitle as="h3">Dlaczego warto skorzystać z&nbsp;moich usług?</SubTitle>
-          <Text as="ul">
-            <li><h3>Szybka diagnoza: </h3>Zidentyfikuję problem w&nbsp;krótkim czasie, abyś jak najszybciej mógł wrócić do oglądania ulubionych filmów i&nbsp;programów.</li>
-            <li><h3>Wysoka jakość naprawy: </h3>Używam tylko oryginalnych części, co zapewnia długotrwałą sprawność Twojego telewizora.</li>
-            <li><h3>Zadowolenie klientów: </h3>Klienci doceniają moją rzetelność, terminowość i&nbsp;jakość świadczonych usług, co potwierdzają pozytywne opinie.</li>
-            <li><h3>Elastyczność: </h3>Oferuję naprawy w warsztacie oraz dojazd do&nbsp;klienta w&nbsp;dogodnych godzinach.</li>
+
+          <SubTitle as="h3">
+            Dlaczego warto wybrać moje usługi?
+          </SubTitle>
+          <Text as="ul" $check>
+            <li><h3>Szybka i trafna diagnostyka</h3>Zidentyfikuję przyczynę usterki w krótkim czasie, dzięki czemu Twój telewizor szybko wróci do pełnej sprawności.</li>
+            <li><h3>Profesjonalna jakość naprawy</h3>Korzystam wyłącznie z oryginalnych części zamiennych oraz zaawansowanych technik naprawczych, co zapewnia długotrwałą niezawodność urządzenia.</li>
+            <li><h3>20 lat doświadczenia</h3>Specjalizuję się w naprawach telewizorów od ponad dwóch dekad, zdobywając zaufanie wielu klientów.</li>
+            <li><h3>Wygoda i elastyczność</h3>Oferuję zarówno naprawy w warsztacie, jak i dojazd do klienta. Dopasowuję terminy do Twoich potrzeb.</li>
           </Text>
           <Text>
-            Nie pozwól, aby&nbsp;zepsuty telewizor przeszkodził&nbsp;Ci w&nbsp;oglądaniu ulubionych programów. Skontaktuj&nbsp;się ze&nbsp;mną już&nbsp;dziś, a&nbsp;szybko przywrócę Twój telewizor do&nbsp;życia!
+            <b>Nie pozwól, aby usterka telewizora popsuła Twój czas wolny! </b>
+            Skontaktuj się ze mną już dziś, a sprawnie przywrócę Twój telewizor do pełnej funkcjonalności, byś mógł znów cieszyć się ulubionymi programami i filmami.
           </Text>
         </main>
       </Container>

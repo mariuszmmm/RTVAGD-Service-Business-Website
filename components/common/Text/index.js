@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Text = styled.p`
-  grid-area: ${({$subArea}) => $subArea ? "text_2" : "text"};
+  grid-area: ${({ $subArea }) => $subArea ? "text_2" : "text"};
   line-height: 1.8;
   margin-bottom: 20px;
   font-size: clamp(0.9rem, 2.5vw, 1.2rem);
@@ -9,6 +9,24 @@ export const Text = styled.p`
   text-align: justify;
   text-justify: inter-word;
 
+  ${({ $check }) => $check && css`
+    list-style: none;  
+    padding-left: 12px;
+    
+    li {
+      position: relative;
+      padding-left: 28px; 
+    }
+
+    li::before {
+      content: "✔"; 
+      position: absolute;
+      left: 0;
+      color: ${({ theme }) => theme.color.check};
+      font-size: 1.2em; 
+    }
+  `};
+  
   ${({ $forReviews }) => $forReviews && css`
     font-style: italic;
   `}
@@ -16,5 +34,5 @@ export const Text = styled.p`
   h3 {
     margin-top: 1rem;
     margin-bottom: 0;
-  }
+  } 
 `;

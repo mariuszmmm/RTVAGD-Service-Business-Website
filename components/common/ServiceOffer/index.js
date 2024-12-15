@@ -4,6 +4,7 @@ export const ServiceOffer = styled.div`
   scroll-margin-top: clamp(4rem, 7vw, 5.5rem);
   margin: 0 0 60px;
   display: grid;
+  grid-template-columns: 1fr auto;
   grid-template-areas:
     "header header"
     "text photo"

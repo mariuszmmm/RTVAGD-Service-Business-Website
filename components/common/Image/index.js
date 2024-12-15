@@ -4,6 +4,7 @@ import { CldImage } from 'next-cloudinary';
 export const Image = styled(CldImage)`
   width: 100%;
   height: 100%;
+  max-width: 300px;
   object-fit: contain; 
  
   filter: drop-shadow(10px 10px 15px rgba(40, 40, 40, 0.7))

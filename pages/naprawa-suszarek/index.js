@@ -23,21 +23,24 @@ const DryerService = () => {
       />
       <Container>
         <Title>
-          <span>✔ </span>Naprawa suszarek
+          Naprawa suszarek
           <Emoticon
             src={imageUrls.emoticon}
             alt="emoticon"
             loading="lazy"
           />
         </Title>
-      <main>
-            <SubTitle>Profesjonalna naprawa suszarek wszystkich marek i modeli – szybko i skutecznie</SubTitle>
-            <Text>
-              Twoja suszarka do prania odmówiła posłuszeństwa? A może działa, ale nie suszy tak dobrze, jak powinna? Niezależnie od rodzaju usterki – od awarii grzałki po błędy elektroniczne – jestem tutaj, aby pomóc! Oferuję kompleksowe usługi naprawcze dla suszarek kondensacyjnych, wentylacyjnych oraz modeli z pompą ciepła.
-</Text> 
 
- <ServiceOffer>
-             <Photo
+        <main>
+          <SubTitle>
+            Profesjonalna naprawa suszarek wszystkich marek i modeli <br />– szybko i skutecznie
+          </SubTitle>
+          <Text>
+            Twoja suszarka do prania odmówiła posłuszeństwa? A może działa, ale nie suszy tak dobrze, jak powinna? Niezależnie od rodzaju usterki – od awarii grzałki po błędy elektroniczne – jestem tutaj, aby pomóc! Oferuję kompleksowe usługi naprawcze dla suszarek kondensacyjnych, wentylacyjnych oraz modeli z pompą ciepła.
+          </Text>
+
+          <ServiceOffer>
+            <Photo
               src={imageUrls.suszarka}
               alt="naprawa suszarek"
               loading='lazy'
@@ -48,37 +51,35 @@ const DryerService = () => {
                 source: true
               }}
             />
-<SubTitle as="h3">Najczęstsze problemy z suszarkami, które naprawiam: </SubTitle>
-<Text as="ul">
-<li><b>Suszarka nie nagrzewa powietrza</b> - uszkodzona grzałka, czujnik temperatury lub termostat.</li>
+            <SubTitle as="h3">
+              Najczęstsze problemy z suszarkami, które naprawiam:
+            </SubTitle>
+            <Text as="ul">
+              <li><b>suszarka nie nagrzewa powietrza</b> - uszkodzona grzałka, czujnik temperatury lub termostat.</li>
+              <li><b>problemy z wentylacją</b> - zatkane filtry, awarie wentylatora lub drożności przewodów.</li>
+              <li><b>ubrania nadal mokre po zakończeniu cyklu</b> - usterki w układzie kondensacyjnym lub nieprawidłowa praca pompy ciepła.</li>
+              <li><b>niepokojące dźwięki podczas pracy</b> - uszkodzone łożyska, pasek napędowy lub mechanizm bębna.</li>
+              <li><b>wyświetlanie kodów błędów</b> - problemy z elektroniką, modułem sterującym lub czujnikami.</li>
+            </Text>
+            <Text $subArea>
+              Dzięki nowoczesnym narzędziom diagnostycznym szybko i precyzyjnie identyfikuję przyczynę awarii, a następnie usuwam ją, korzystając z wysokiej jakości części zamiennych.
+            </Text>
+          </ServiceOffer>
 
-<li><b>Problemy z wentylacją</b> - zatkane filtry, awarie wentylatora lub drożności przewodów.</li>
-
-<li><b>Ubrania nadal mokre po zakończeniu cyklu</b> - usterki w układzie kondensacyjnym lub nieprawidłowa praca pompy ciepła.</li>
-
-<li><b>Niepokojące dźwięki podczas pracy</b> - uszkodzone łożyska, pasek napędowy lub mechanizm bębna.</li>
-
-<li><b>Wyświetlanie kodów błędów</b> - problemy z elektroniką, modułem sterującym lub czujnikami.</li>
-              </Text>
-
-<Text $subArea>
-Dzięki nowoczesnym narzędziom diagnostycznym szybko i precyzyjnie identyfikuję przyczynę awarii, a następnie usuwam ją, korzystając z wysokiej jakości części zamiennych.
-</Text>
-</ServiceOffer>
-
-          <SubTitle as="h3">Dlaczego warto skorzystać z moich usług?</SubTitle>
-          <Text as="ul">
-            <li><h3>Szybka diagnoza i naprawa: </h3>Cenię Twój czas – dokładnie diagnozuję problem już podczas pierwszej wizyty, a naprawy wykonuję w możliwie najkrótszym czasie.</li>
-            <li><h3>Trwałe efekty naprawy: </h3>Stosuję tylko sprawdzone i oryginalne części zamienne, co zapewnia długotrwałą sprawność Twojej suszarki.</li>
-            <li><h3>Ponad 20 lat doświadczenia: </h3>Moja wiedza i umiejętności to efekt wieloletniej pracy z urządzeniami AGD różnych marek i technologii.</li>
-            <li><h3>Indywidualne podejście: </h3>Oferuję naprawy zarówno w warsztacie, jak i z dojazdem do klienta, dostosowując się do Twojego harmonogramu.</li>
+          <SubTitle as="h3">
+            Dlaczego warto skorzystać z moich usług?
+          </SubTitle>
+          <Text as="ul" $check>
+            <li><h3>Szybka diagnoza i naprawa</h3>Cenię Twój czas – dokładnie diagnozuję problem już podczas pierwszej wizyty, a naprawy wykonuję w możliwie najkrótszym czasie.</li>
+            <li><h3>Trwałe efekty naprawy</h3>Stosuję tylko sprawdzone i oryginalne części zamienne, co zapewnia długotrwałą sprawność Twojej suszarki.</li>
+            <li><h3>Ponad 20 lat doświadczenia</h3>Moja wiedza i umiejętności to efekt wieloletniej pracy z urządzeniami AGD różnych marek i technologii.</li>
+            <li><h3>Indywidualne podejście</h3>Oferuję naprawy zarówno w warsztacie, jak i z dojazdem do klienta, dostosowując się do Twojego harmonogramu.</li>
           </Text>
           <Text>
             <b>Nie pozwól, aby awaria suszarki wpłynęła na Twoją codzienność! </b>
-Zadzwoń lub napisz już dziś, a szybko przywrócę Twoje urządzenie do pełnej sprawności. Gwarantuję rzetelność, profesjonalizm i satysfakcję z wykonanej usługi.
+            Zadzwoń lub napisz już dziś, a szybko przywrócę Twoje urządzenie do pełnej sprawności. Gwarantuję rzetelność, profesjonalizm i satysfakcję z wykonanej usługi.
           </Text>
         </main>
-
       </Container>
     </Section>
   );

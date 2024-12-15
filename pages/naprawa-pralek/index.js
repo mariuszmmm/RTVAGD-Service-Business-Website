@@ -23,21 +23,23 @@ const WashingMachineService = () => {
       />
       <Container>
         <Title>
-          <span>✔ </span>Naprawa pralek
+          Naprawa pralek
           <Emoticon
             src={imageUrls.emoticon}
             alt="emoticon"
             loading="lazy"
           />
         </Title>
-        <main>
-         
-            <SubTitle>Specjalistyczne usługi naprawy pralek wszystkich marek i modeli</SubTitle>
-            <Text>
-              Zepsuta pralka? Nie pozwól, by awaria utrudniła Twoje codzienne obowiązki. Oferuję kompleksową diagnostykę i naprawę pralek w Przemyślu i okolicach, zapewniając szybkie i trwałe rozwiązanie każdego problemu.
-</Text> 
 
- <ServiceOffer>
+        <main>
+          <SubTitle>
+            Specjalistyczne usługi naprawy pralek wszystkich marek i modeli
+          </SubTitle>
+          <Text>
+            Zepsuta pralka? Nie pozwól, by awaria utrudniła Twoje codzienne obowiązki. Oferuję kompleksową diagnostykę i naprawę pralek w Przemyślu i okolicach, zapewniając szybkie i trwałe rozwiązanie każdego problemu.
+          </Text>
+
+          <ServiceOffer>
             <Photo
               src={imageUrls.pralka}
               alt="naprawa pralek"
@@ -49,34 +51,33 @@ const WashingMachineService = () => {
                 source: true
               }}
             />
-<SubTitle as="h3">Najczęstsze problemy z pralkami, które naprawiam: </SubTitle>
-<Text as="ul">
-<li><b>Pralka nie pobiera wody</b> - problem z elektrozaworem, zatkany filtr lub uszkodzona pompa wody.</li>
+            <SubTitle as="h3">
+              Najczęstsze problemy z pralkami, które naprawiam:
+            </SubTitle>
+            <Text as="ul">
+              <li><b>pralka nie pobiera wody</b> - problem z elektrozaworem, zatkany filtr lub uszkodzona pompa wody.</li>
+              <li><b>wycieki wody podczas prania</b> - nieszczelne uszczelki, pęknięty wąż odpływowy lub zużycie zbiornika.</li>
+              <li><b>pralka hałasuje lub wibruje</b> - uszkodzone łożyska bębna, zużyte amortyzatory lub niewyważony wsad.</li>
+              <li><b>problemy z wirowaniem</b> - usterki silnika, modułu sterującego lub paska napędowego.</li>
+              <li><b>pralka nie uruchamia się</b> - awarie elektryczne, uszkodzone przyciski lub błędy w oprogramowaniu.</li>
+            </Text>
+            <Text $subArea>
+              Dzięki nowoczesnym narzędziom diagnostycznym oraz dostępowi do oryginalnych części zamiennych naprawiam pralki szybko i skutecznie, przywracając ich pełną funkcjonalność.
+            </Text>
+          </ServiceOffer>
 
-<li><b>Wycieki wody podczas prania</b> - nieszczelne uszczelki, pęknięty wąż odpływowy lub zużycie zbiornika.</li>
-
-<li><b>Pralka hałasuje lub wibruje</b> - uszkodzone łożyska bębna, zużyte amortyzatory lub niewyważony wsad.</li>
-
-<li><b>Problemy z wirowaniem</b> - usterki silnika, modułu sterującego lub paska napędowego.</li>
-
-<li><b>Pralka nie uruchamia się</b> - awarie elektryczne, uszkodzone przyciski lub błędy w oprogramowaniu.</li>
-              </Text>
-
-<Text $subArea>
-Dzięki nowoczesnym narzędziom diagnostycznym oraz dostępowi do oryginalnych części zamiennych naprawiam pralki szybko i skutecznie, przywracając ich pełną funkcjonalność.
-</Text>
-</ServiceOffer>
-
-          <SubTitle as="h3">Dlaczego warto wybrać moje usługi?</SubTitle>
-          <Text as="ul">
-            <li><h3>Szybka i trafna diagnoza: </h3>Wykrywam przyczyny problemu już podczas pierwszej wizyty, co pozwala skrócić czas naprawy do minimum.</li>
-            <li><h3>Gwarancja trwałości napraw: </h3>Stosuję wyłącznie sprawdzone i oryginalne części, co zapewnia niezawodność urządzenia na długie lata.</li>
-            <li><h3>Wieloletnie doświadczenie: </h3>Od ponad 20 lat zajmuję się naprawą pralek – to wiedza, której możesz zaufać.</li>
-            <li><h3>Elastyczność i wygoda: </h3>Naprawy wykonuję na miejscu u klienta lub w warsztacie, dostosowując się do Twojego harmonogramu.</li>
+          <SubTitle as="h3">
+            Dlaczego warto wybrać moje usługi?
+          </SubTitle>
+          <Text as="ul" $check>
+            <li><h3>Szybka i trafna diagnoza</h3>Wykrywam przyczyny problemu już podczas pierwszej wizyty, co pozwala skrócić czas naprawy do minimum.</li>
+            <li><h3>Gwarancja trwałości napraw</h3>Stosuję wyłącznie sprawdzone i oryginalne części, co zapewnia niezawodność urządzenia na długie lata.</li>
+            <li><h3>Wieloletnie doświadczenie</h3>Od ponad 20 lat zajmuję się naprawą pralek – to wiedza, której możesz zaufać.</li>
+            <li><h3>Elastyczność i wygoda</h3>Naprawy wykonuję na miejscu u klienta lub w warsztacie, dostosowując się do Twojego harmonogramu.</li>
           </Text>
           <Text>
             <b>Nie trać czasu na pranie ręczne! </b>
-Zadzwoń lub napisz już teraz, a szybko i skutecznie rozwiążę problem z Twoją pralką. Profesjonalizm, uczciwość i rzetelność – to moje priorytety.
+            Zadzwoń lub napisz już teraz, a szybko i skutecznie rozwiążę problem z Twoją pralką. Profesjonalizm, uczciwość i rzetelność – to moje priorytety.
           </Text>
         </main>
       </Container>
