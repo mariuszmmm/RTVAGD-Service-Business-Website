@@ -124,7 +124,7 @@ export const dataForMetaTags = {
     schema: {
       organization: {
         "@context": "https://schema.org",
-        "@type": "ContactPage",
+        "@type": "WebPage",
         "name": `Kontakt - ${serwis.name}`,
         "url": urls.kontakt,
         "description": "Skontaktuj się pod numerem 790-258-612 lub odwiedź nas w Przemyślu, ul. Generała Sowińskiego 2. Szybkie, fachowe usługi naprawy sprzętu RTV i AGD.",
