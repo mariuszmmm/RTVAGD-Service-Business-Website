@@ -29,7 +29,7 @@ const Reviews = ({ status, reviews, rating, ratingsTotal }) => {
         {status === "success" && reviews.map((item, index) => (
           <ReviewsItem
             item={item}
-            key={index}
+            key={index+1}
           />
         ))}
         {status === "error" &&
