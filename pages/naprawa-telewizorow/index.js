@@ -32,7 +32,7 @@ const TelevisionService = () => {
 
         <main>
           <SubTitle>
-            Fachowa naprawa telewizorów wszystkich typów i marek
+            Fachowa naprawa telewizorów wszystkich typów i&nbsp;marek
           </SubTitle>
           <Text>
             Zepsuty telewizor to problem, który może zakłócić Twoją rozrywkę i dostęp do informacji. Niezależnie od tego, czy Twój sprzęt to starszy model LCD, nowoczesny OLED, czy zaawansowany telewizor Smart TV, jestem tutaj, aby pomóc. Oferuję profesjonalną naprawę telewizorów, niezależnie od marki i typu urządzenia, zapewniając szybką i skuteczną obsługę.
@@ -54,12 +54,12 @@ const TelevisionService = () => {
               Najczęstsze problemy z telewizorami, które naprawiam:
             </SubTitle>
             <Text as="ul">
-              <li><b>brak obrazu lub problemy z jakością wyświetlania</b> - usterki matrycy, uszkodzenia podświetlenia LED, błędy w układzie sterowania.</li>
-              <li><b>brak dźwięku</b> - awarie układów audio, problemy z głośnikami lub oprogramowaniem.</li>
-              <li><b>problemy z zasilaniem</b> -  telewizor nie włącza się, wyłącza samoczynnie lub występują nieregularności w działaniu zasilacza.</li>
-              <li><b>uszkodzona matryca</b> - pęknięcia, przebarwienia lub martwe piksele.</li>
-              <li><b>awaria funkcji Smart TV</b> - problemy z połączeniem internetowym, aplikacjami lub oprogramowaniem.</li>
-              <li><b>zakłócenia obrazu lub dźwięku</b> - linie na ekranie, zniekształcony obraz, trzaski w dźwięku.</li>
+              <li><b>brak obrazu lub problemy z&nbsp;jakością wyświetlania</b> -&nbsp;usterki matrycy, uszkodzenia podświetlenia LED, błędy w&nbsp;układzie sterowania.</li>
+              <li><b>brak dźwięku</b> -&nbsp;awarie układów audio, problemy z&nbsp;głośnikami lub oprogramowaniem.</li>
+              <li><b>problemy z&nbsp;zasilaniem</b> -&nbsp;telewizor nie włącza się, wyłącza samoczynnie lub występują nieregularności w&nbsp;działaniu zasilacza.</li>
+              <li><b>uszkodzona matryca</b> -&nbsp;pęknięcia, przebarwienia lub martwe piksele.</li>
+              <li><b>awaria funkcji Smart&nbsp;TV</b> -&nbsp;problemy z&nbsp;połączeniem internetowym, aplikacjami lub oprogramowaniem.</li>
+              <li><b>zakłócenia obrazu lub dźwięku</b> -&nbsp;linie na ekranie, zniekształcony obraz, trzaski w&nbsp;dźwięku.</li>
             </Text>
             <Text $subArea>
               Dzięki nowoczesnym narzędziom diagnostycznym i dostępowi do oryginalnych części zamiennych gwarantuję trwałość i niezawodność każdej naprawy.
@@ -70,10 +70,10 @@ const TelevisionService = () => {
             Dlaczego warto wybrać moje usługi?
           </SubTitle>
           <Text as="ul" $check>
-            <li><h3>Szybka i trafna diagnostyka</h3>Zidentyfikuję przyczynę usterki w krótkim czasie, dzięki czemu Twój telewizor szybko wróci do pełnej sprawności.</li>
-            <li><h3>Profesjonalna jakość naprawy</h3>Korzystam wyłącznie z oryginalnych części zamiennych oraz zaawansowanych technik naprawczych, co zapewnia długotrwałą niezawodność urządzenia.</li>
-            <li><h3>20 lat doświadczenia</h3>Specjalizuję się w naprawach telewizorów od ponad dwóch dekad, zdobywając zaufanie wielu klientów.</li>
-            <li><h3>Wygoda i elastyczność</h3>Oferuję zarówno naprawy w warsztacie, jak i dojazd do klienta. Dopasowuję terminy do Twoich potrzeb.</li>
+            <li><h3>Szybka i&nbsp;trafna diagnostyka</h3>Zidentyfikuję przyczynę usterki w&nbsp;krótkim czasie, dzięki czemu Twój telewizor szybko wróci do&nbsp;pełnej sprawności.</li>
+            <li><h3>Profesjonalna jakość naprawy</h3>Korzystam wyłącznie z&nbsp;oryginalnych części zamiennych oraz zaawansowanych technik naprawczych, co&nbsp;zapewnia długotrwałą niezawodność urządzenia.</li>
+            <li><h3>20 lat doświadczenia</h3>Specjalizuję się w&nbsp;naprawach telewizorów od&nbsp;ponad dwóch dekad, zdobywając zaufanie wielu klientów.</li>
+            <li><h3>Wygoda i &nbsp;elastyczność</h3>Oferuję zarówno naprawy w warsztacie, jak i&nbsp;dojazd do&nbsp;klienta. Dopasowuję terminy do&nbsp;Twoich potrzeb.</li>
           </Text>
           <Text>
             <b>Nie pozwól, aby usterka telewizora popsuła Twój czas wolny! </b>

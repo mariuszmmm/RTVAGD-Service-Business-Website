@@ -132,7 +132,7 @@ const Home = ({ rating, ratingsTotal }) => {
           Serwisuję wszystkie marki telewizorów, pralek, suszarek, zmywarek i&nbsp;ekspresów&nbsp;do&nbsp;kawy
         </SubTitle>
         <Text>
-          Specjalizuję się w&nbsp;naprawie urządzeń RTV&nbsp;i&nbsp;AGD różnych marek, oferując profesjonalną obsługę zarówno dla&nbsp;popularnych, jak&nbsp;i&nbsp;mniej znanych producentów.<br />
+          Specjalizuję się w naprawie urządzeń RTV i AGD różnych marek, oferując profesjonalną obsługę zarówno dla popularnych, jak i mniej znanych producentów.<br />
           Naprawiam urządzenia marek takich jak:
         </Text>
         <Text as="ul">
@@ -167,7 +167,7 @@ const Home = ({ rating, ratingsTotal }) => {
           </li>
         </Text>
         <Text>
-          Dzięki doświadczeniu oraz dostępowi do&nbsp;oryginalnych części zamiennych, możesz mieć pewność, że&nbsp;Twoje urządzenie zostanie naprawione szybko i&nbsp;solidnie.
+          Dzięki doświadczeniu oraz dostępowi do oryginalnych części zamiennych, możesz mieć pewność, że Twoje urządzenie zostanie naprawione szybko i solidnie.
         </Text>
         <br />
         <br />
@@ -175,12 +175,12 @@ const Home = ({ rating, ratingsTotal }) => {
           Naprawy realizuję w&nbsp;Przemyślu i&nbsp;okolicach
         </SubTitle>
         <Text>
-          Działam na&nbsp;terenie Przemyśla i&nbsp;oferuję usługi również w&nbsp;pobliskich miejscowościach.
-          Jeśli mieszkasz w&nbsp;jednym z&nbsp;poniższych miejsc lub w&nbsp;ich&nbsp;sąsiedztwie, chętnie przyjadę do&nbsp;Ciebie i&nbsp;naprawię Twoje urządzenie:
+          Działam na terenie Przemyśla i oferuję usługi również w pobliskich miejscowościach.
+          Jeśli mieszkasz w jednym z poniższych miejsc lub w ich sąsiedztwie, chętnie przyjadę do Ciebie i naprawię Twoje urządzenie:
           Przemyśl, Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce, Ostrów, Pikulice, Prałkowce, Wyszatyce, Żurawica.
         </Text>
         <Text>
-          Zaufaj profesjonalnemu serwisowi, który codziennie dba o&nbsp;niezawodność Twoich urządzeń RTV&nbsp;i&nbsp;AGD!
+          Zaufaj profesjonalnemu serwisowi, który codziennie dba o niezawodność Twoich urządzeń RTV i AGD!
         </Text>
       </Container>
     </Hero>

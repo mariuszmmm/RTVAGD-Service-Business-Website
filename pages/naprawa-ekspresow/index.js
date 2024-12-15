@@ -33,7 +33,7 @@ const CoffeeMachineService = () => {
 
         <main>
           <SubTitle>
-            Profesjonalna naprawa ekspresów każdej marki i modelu
+            Profesjonalna naprawa ekspresów każdej marki i&nbsp;modelu
           </SubTitle>
           <Text>
             Awaria ekspresu do kawy może skutecznie zepsuć poranek lub uniemożliwić sprawne działanie kawiarni. Oferuję kompleksowe usługi naprawcze, które pozwolą Ci ponownie cieszyć się aromatyczną kawą. Specjalizuję się zarówno w naprawach domowych ekspresów automatycznych, jak i profesjonalnych urządzeń stosowanych w gastronomii.
@@ -52,14 +52,14 @@ const CoffeeMachineService = () => {
               }}
             />
             <SubTitle as="h3">
-              Najczęstsze problemy z ekspresami do kawy, które naprawiam:
+              Najczęstsze problemy z&nbsp;ekspresami do&nbsp;kawy, które naprawiam:
             </SubTitle>
             <Text as="ul">
-              <li><b>ekspres nie zaparza kawy</b> - problem z układem zaparzania, zatkane dysze lub uszkodzenie pompy.</li>
-              <li><b>wycieki wody podczas pracy</b> - uszkodzone uszczelki, pęknięte przewody lub nieszczelny bojler.</li>
-              <li><b>ekspres wyświetla błędy</b> - usterki elektroniki, czujników lub niewłaściwa konfiguracja urządzenia.</li>
-              <li><b>słabe spienianie mleka</b> - problem z dyszą spieniającą, kamień w układzie lub uszkodzona pompa pary.</li>
-              <li><b>kawa ma inny smak niż zwykle</b> - konieczność konserwacji, wymiany filtra wody lub odkamieniania.</li>
+              <li><b>ekspres nie zaparza kawy</b> -&nbsp;problem z&nbsp;układem zaparzania, zatkane dysze lub uszkodzenie pompy.</li>
+              <li><b>wycieki wody podczas pracy</b> -&nbsp;uszkodzone uszczelki, pęknięte przewody lub nieszczelny bojler.</li>
+              <li><b>ekspres wyświetla błędy</b> -&nbsp;usterki elektroniki, czujników lub niewłaściwa konfiguracja urządzenia.</li>
+              <li><b>słabe spienianie mleka</b> -&nbsp;problem z&nbsp;dyszą spieniającą, kamień w układzie lub uszkodzona pompa pary.</li>
+              <li><b>kawa ma inny smak niż zwykle</b> -&nbsp;konieczność konserwacji, wymiany filtra wody lub odkamieniania.</li>
             </Text>
             <Text $subArea>
               Dzięki nowoczesnym narzędziom diagnostycznym oraz dostępowi do oryginalnych części zamiennych oferuję naprawy, które są nie tylko skuteczne, ale również trwałe.
@@ -70,10 +70,10 @@ const CoffeeMachineService = () => {
             Dlaczego warto wybrać moje usługi?
           </SubTitle>
           <Text as="ul" $check>
-            <li><h3>Szybka diagnostyka i naprawa</h3>Rozumiem, jak ważna jest kawa w codziennym życiu, dlatego szybko zidentyfikuję usterkę i przywrócę sprawność urządzenia.</li>
-            <li><h3>Gwarancja wysokiej jakości usług</h3>Używam wyłącznie oryginalnych części zamiennych, co gwarantuje niezawodność naprawy i dłuższą żywotność ekspresu.</li>
-            <li><h3>Wieloletnie doświadczenie</h3>Naprawiam ekspresy do kawy od ponad 20 lat, doskonale rozumiejąc specyfikę różnych marek i modeli.</li>
-            <li><h3>Elastyczność i wygoda klienta</h3>Oferuję możliwość naprawy zarówno w warsztacie, jak i w domu lub miejscu pracy klienta.</li>
+            <li><h3>Szybka diagnostyka i&nbsp;naprawa</h3>Rozumiem, jak ważna jest kawa w codziennym życiu, dlatego szybko zidentyfikuję usterkę i&nbsp;przywrócę sprawność urządzenia.</li>
+            <li><h3>Gwarancja wysokiej jakości usług</h3>Używam wyłącznie oryginalnych części zamiennych, co gwarantuje niezawodność naprawy i&nbsp;dłuższą żywotność ekspresu.</li>
+            <li><h3>Wieloletnie doświadczenie</h3>Naprawiam ekspresy do kawy od ponad 20 lat, doskonale rozumiejąc specyfikę różnych marek i&nbsp;modeli.</li>
+            <li><h3>Elastyczność i&nbsp;wygoda klienta</h3>Oferuję możliwość naprawy zarówno w warsztacie, jak i&nbsp;w&nbsp;domu lub miejscu pracy klienta.</li>
           </Text>
           <Text>
             <b>Nie pozwól, aby awaria ekspresu popsuła Twój dzień! </b>

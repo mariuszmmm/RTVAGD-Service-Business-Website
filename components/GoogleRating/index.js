@@ -4,18 +4,20 @@ import { ImageWrapper, StyledLink, Text, Wrpper } from "./styled";
 import Image from "next/image";
 
 export const GoogleRating = ({ rating, hidden }) => (
-  <Wrpper $hidden={hidden}>
-    <StyledLink href="/opinie/">
-      <ImageWrapper>
-        <Image
-          src={imageUrls.logoGoogle}
-          alt="google logo"
-          loading="lazy"
-          fill
-        />
-      </ImageWrapper>
-      <Text>Google Rating {rating}</Text >
-      <Stars rating={5} center />
-    </StyledLink>
-  </Wrpper>
+  <>
+    {rating > 4 && <Wrpper $hidden={hidden}>
+      <StyledLink href="/opinie/">
+        <ImageWrapper>
+          <Image
+            src={imageUrls.logoGoogle}
+            alt="google logo"
+            loading="lazy"
+            fill
+          />
+        </ImageWrapper>
+        <Text>Google Rating {rating}</Text >
+        <Stars rating={5} center />
+      </StyledLink>
+    </Wrpper>}
+  </>
 );

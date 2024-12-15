@@ -33,7 +33,7 @@ const DishwasherService = () => {
 
         <main>
           <SubTitle>
-            Fachowe usługi naprawy zmywarek wszystkich marek i modeli
+            Fachowe usługi naprawy zmywarek wszystkich marek i&nbsp;modeli
           </SubTitle>
           <Text>
             Awaria zmywarki potrafi skutecznie zakłócić codzienny rytm życia w domu. Rozumiem, jak ważne jest szybkie i skuteczne rozwiązanie problemu, dlatego oferuję kompleksowe usługi diagnostyki i naprawy zmywarek w Przemyślu i okolicach.
@@ -55,11 +55,11 @@ const DishwasherService = () => {
               Najczęstsze problemy z zmywarkami, które naprawiam:
             </SubTitle>
             <Text as="ul">
-              <li><b>zmywarka nie podgrzewa wody</b> - problem z grzałką, czujnikiem temperatury lub modułem sterującym.</li>
-              <li><b>wycieki wody podczas pracy</b> - uszkodzone uszczelki drzwi, pęknięte węże doprowadzające wodę lub problemy z pompą odpływową.</li>
-              <li><b>naczynia pozostają mokre po cyklu suszenia</b> - awaria wentylatora, grzałki suszącej lub uszkodzenie modułu sterującego.</li>
-              <li><b>zmywarka nie uruchamia się</b> - problemy z zasilaniem, uszkodzone przyciski lub awaria elektroniki sterującej.</li>
-              <li><b>niedokładne mycie naczyń</b> - zapchane dysze spryskujące, zatkany filtr wody lub zużyte ramię natryskowe.</li>
+              <li><b>zmywarka nie podgrzewa wody</b> -&nbsp;problem z&nbsp;grzałką, czujnikiem temperatury lub modułem sterującym.</li>
+              <li><b>wycieki wody podczas pracy</b> -&nbsp;uszkodzone uszczelki drzwi, pęknięte węże doprowadzające wodę lub problemy z &nbsp;pompą odpływową.</li>
+              <li><b>naczynia pozostają mokre po cyklu suszenia</b> -&nbsp;awaria wentylatora, grzałki suszącej lub uszkodzenie modułu sterującego.</li>
+              <li><b>zmywarka nie uruchamia się</b> -&nbsp;problemy z&nbsp;zasilaniem, uszkodzone przyciski lub awaria elektroniki sterującej.</li>
+              <li><b>niedokładne mycie naczyń</b> -&nbsp;zapchane dysze spryskujące, zatkany filtr wody lub zużyte ramię natryskowe.</li>
             </Text>
             <Text $subArea>
               Dzięki wykorzystaniu zaawansowanych narzędzi diagnostycznych oraz dostępowi do oryginalnych części zamiennych każda naprawa przebiega sprawnie, a jej efekty są trwałe i niezawodne.
@@ -70,14 +70,14 @@ const DishwasherService = () => {
             Dlaczego warto wybrać moje usługi?
           </SubTitle>
           <Text as="ul" $check>
-            <li><h3>Szybka reakcja na zgłoszenia</h3>Zdaję sobie sprawę, jak kłopotliwe są awarie zmywarki, dlatego oferuję krótkie terminy realizacji napraw.</li>
-            <li><h3>Gwarancja wysokiej jakości napraw</h3>Stosuję wyłącznie sprawdzone, oryginalne części zamienne, co zapewnia długotrwałą sprawność Twojej zmywarki.</li>
-            <li><h3>Wieloletnie doświadczenie</h3>Od ponad 20 lat zajmuję się naprawą zmywarek, rozwiązując problemy niezależnie od marki czy modelu urządzenia.</li>
-            <li><h3>Elastyczność i wygoda</h3>Naprawy realizuję zarówno w warsztacie, jak i na miejscu u klienta, dostosowując się do Twoich potrzeb i harmonogramu.</li>
+            <li><h3>Szybka reakcja na&nbsp;zgłoszenia</h3>Zdaję sobie sprawę, jak kłopotliwe są awarie zmywarki, dlatego oferuję krótkie terminy realizacji napraw.</li>
+            <li><h3>Gwarancja wysokiej jakości napraw</h3>Stosuję wyłącznie sprawdzone, oryginalne części zamienne, co&nbsp;zapewnia długotrwałą sprawność Twojej zmywarki.</li>
+            <li><h3>Wieloletnie doświadczenie</h3>Od&nbsp;ponad 20 lat zajmuję się naprawą zmywarek, rozwiązując problemy niezależnie od&nbsp;marki czy modelu urządzenia.</li>
+            <li><h3>Elastyczność i&nbsp;wygoda</h3>Naprawy realizuję zarówno w&nbsp;warsztacie, jak i&nbsp;na miejscu u&nbsp;klienta, dostosowując się do Twoich potrzeb i&nbsp;harmonogramu.</li>
           </Text>
           <Text>
             <b>Nie pozwól, aby zepsuta zmywarka psuła Twój dzień! </b>
-            Skontaktuj się ze mną, a przywrócę pełną funkcjonalność Twojego urządzenia szybko, profesjonalnie i w atrakcyjnej cenie.
+            Skontaktuj się ze mną, a przywrócę pełną funkcjonalność Twojego urządzenia szybko, profesjonalnie i watrakcyjnej cenie.
           </Text>
         </main>
       </Container>

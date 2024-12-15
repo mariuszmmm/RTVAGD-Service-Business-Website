@@ -33,7 +33,7 @@ const DryerService = () => {
 
         <main>
           <SubTitle>
-            Profesjonalna naprawa suszarek wszystkich marek i modeli <br />– szybko i skutecznie
+            Profesjonalna naprawa suszarek wszystkich marek i&nbsp;modeli <br />– szybko i&nbsp;skutecznie
           </SubTitle>
           <Text>
             Twoja suszarka do prania odmówiła posłuszeństwa? A może działa, ale nie suszy tak dobrze, jak powinna? Niezależnie od rodzaju usterki – od awarii grzałki po błędy elektroniczne – jestem tutaj, aby pomóc! Oferuję kompleksowe usługi naprawcze dla suszarek kondensacyjnych, wentylacyjnych oraz modeli z pompą ciepła.
@@ -55,11 +55,11 @@ const DryerService = () => {
               Najczęstsze problemy z suszarkami, które naprawiam:
             </SubTitle>
             <Text as="ul">
-              <li><b>suszarka nie nagrzewa powietrza</b> - uszkodzona grzałka, czujnik temperatury lub termostat.</li>
-              <li><b>problemy z wentylacją</b> - zatkane filtry, awarie wentylatora lub drożności przewodów.</li>
-              <li><b>ubrania nadal mokre po zakończeniu cyklu</b> - usterki w układzie kondensacyjnym lub nieprawidłowa praca pompy ciepła.</li>
-              <li><b>niepokojące dźwięki podczas pracy</b> - uszkodzone łożyska, pasek napędowy lub mechanizm bębna.</li>
-              <li><b>wyświetlanie kodów błędów</b> - problemy z elektroniką, modułem sterującym lub czujnikami.</li>
+              <li><b>suszarka nie nagrzewa powietrza</b> -&nbsp;uszkodzona grzałka, czujnik temperatury lub termostat.</li>
+              <li><b>problemy z&nbsp;wentylacją</b> -&nbsp;zatkane filtry, awarie wentylatora lub drożności przewodów.</li>
+              <li><b>ubrania nadal mokre po&nbsp;zakończeniu cyklu</b> -&nbsp;usterki w&nbsp;układzie kondensacyjnym lub nieprawidłowa praca pompy ciepła.</li>
+              <li><b>niepokojące dźwięki podczas pracy</b> -&nbsp;uszkodzone łożyska, pasek napędowy lub mechanizm bębna.</li>
+              <li><b>wyświetlanie kodów błędów</b> -&nbsp;problemy z&nbsp;elektroniką, modułem sterującym lub czujnikami.</li>
             </Text>
             <Text $subArea>
               Dzięki nowoczesnym narzędziom diagnostycznym szybko i precyzyjnie identyfikuję przyczynę awarii, a następnie usuwam ją, korzystając z wysokiej jakości części zamiennych.
@@ -67,13 +67,13 @@ const DryerService = () => {
           </ServiceOffer>
 
           <SubTitle as="h3">
-            Dlaczego warto skorzystać z moich usług?
+            Dlaczego warto skorzystać z&nbsp;moich usług?
           </SubTitle>
           <Text as="ul" $check>
-            <li><h3>Szybka diagnoza i naprawa</h3>Cenię Twój czas – dokładnie diagnozuję problem już podczas pierwszej wizyty, a naprawy wykonuję w możliwie najkrótszym czasie.</li>
-            <li><h3>Trwałe efekty naprawy</h3>Stosuję tylko sprawdzone i oryginalne części zamienne, co zapewnia długotrwałą sprawność Twojej suszarki.</li>
-            <li><h3>Ponad 20 lat doświadczenia</h3>Moja wiedza i umiejętności to efekt wieloletniej pracy z urządzeniami AGD różnych marek i technologii.</li>
-            <li><h3>Indywidualne podejście</h3>Oferuję naprawy zarówno w warsztacie, jak i z dojazdem do klienta, dostosowując się do Twojego harmonogramu.</li>
+            <li><h3>Szybka diagnoza i&nbsp;naprawa</h3>Cenię Twój czas –&nbsp;dokładnie diagnozuję problem już podczas pierwszej wizyty, a&nbsp;naprawy wykonuję w&nbsp;możliwie najkrótszym czasie.</li>
+            <li><h3>Trwałe efekty naprawy</h3>Stosuję tylko sprawdzone i&nbsp;oryginalne części zamienne, co&nbsp;zapewnia długotrwałą sprawność Twojej suszarki.</li>
+            <li><h3>Ponad 20 lat doświadczenia</h3>Moja wiedza i&nbsp;umiejętności to efekt wieloletniej pracy z urządzeniami AGD różnych marek i&nbsp;technologii.</li>
+            <li><h3>Indywidualne podejście</h3>Oferuję naprawy zarówno w warsztacie, jak i&nbsp;z&nbsp;dojazdem do klienta, dostosowując się do Twojego harmonogramu.</li>
           </Text>
           <Text>
             <b>Nie pozwól, aby awaria suszarki wpłynęła na Twoją codzienność! </b>

@@ -22,16 +22,16 @@ const About = () => {
         <Title>Kim jestem</Title>
         <main>
           <Text>
-            Jestem specjalistą z&nbsp;wieloletnim doświadczeniem w&nbsp;naprawie pralek, zmywarek, telewizorów oraz ekspresów do&nbsp;kawy.
-            Każda naprawa to&nbsp;dla&nbsp;mnie nie&nbsp;tylko techniczne zadanie, ale&nbsp;również okazja do&nbsp;budowanie zaufania i&nbsp;dobrych relacji z&nbsp;klientami.
-            Wykonuję swoją pracę z&nbsp;pełnym zaangażowaniem i&nbsp;pasją, dążąc do&nbsp;tego, aby&nbsp;każdy klient był w&nbsp;pełni zadowolony z&nbsp;jakości usług.
+            Jestem specjalistą z wieloletnim doświadczeniem w naprawie pralek, suszarek, zmywarek, telewizorów oraz ekspresów do kawy.
+            Każda naprawa to dla mnie nie tylko techniczne zadanie, ale również okazja do budowanie zaufania i dobrych relacji z klientami.
+            Wykonuję swoją pracę z pełnym zaangażowaniem i pasją, dążąc do tego, aby każdy klient był w pełni zadowolony z jakości usług.
           </Text>
           <Text>
-            Stawiam na indywidualne podejście, co&nbsp;pozwala mi&nbsp;dostosować naprawę do&nbsp;specyficznych potrzeb każdego urządzenia oraz&nbsp;oczekiwań klienta.
-            W&nbsp;mojej pracy gwarantuję rzetelność, terminowość oraz&nbsp;uczciwość.
+            Stawiam na indywidualne podejście, co pozwala mi dostosować naprawę do specyficznych potrzeb każdego urządzenia oraz oczekiwań klienta.
+            W mojej pracy gwarantuję rzetelność, terminowość oraz uczciwość.
           </Text>
           <Text>
-            Skorzystaj z&nbsp;moich usług, a&nbsp;Twoje urządzenia odzyskają swoją sprawność!
+            Skorzystaj z moich usług, a Twoje urządzenia odzyskają swoją sprawność!
           </Text>
           <TeamImage src={imageUrls.serwis} alt="serwis" loading='lazy' />
         </main>
