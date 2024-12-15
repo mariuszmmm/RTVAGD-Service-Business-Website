@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { formattedDate } from '../../../utils/formattedDate';
 import { getCurrentDateTimeISOWithOffset } from '../../../utils/formatDateToISOWithOffset';
 import { useState } from 'react';
+import { serwis } from '../../../utils/serwis';
 
 const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   const [ogTime, setOgTime] = useState(getCurrentDateTimeISOWithOffset());
@@ -27,7 +28,12 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         "ratingValue": rating,
         "reviewCount": ratingsTotal,
         "bestRating": "5",
-        "worstRating": "1"
+        "worstRating": "1",
+        "itemReviewed": {
+          "@type": "ProfessionalService",
+          "name": serwis.name,
+          "@id": "https://naprawaprzemysl.pl/"
+        }
       }
     } : null
   };
@@ -38,7 +44,10 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     const reviewsArray = reviews.map((review) => (
       {
         "@type": "Review",
-        "author": review.author_name,
+        "author": {
+          "@type": "Person",
+          "name": review.author_name,
+        },
         "datePublished": formattedDate(review.time),
         "reviewBody": review.text,
         "reviewRating": {
