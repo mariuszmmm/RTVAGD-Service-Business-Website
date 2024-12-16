@@ -87,6 +87,6 @@ const DryerService = ({ reviews }) => {
   );
 };
 
-export const getStaticProps = getReviewsProps;
+export const getStaticProps = getRatingProps;
 
 export default DryerService;
