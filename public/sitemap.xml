@@ -3,7 +3,7 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://naprawaprzemysl.pl/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-16</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/share.png</image:loc>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/o-mnie/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/share.png</image:loc>
@@ -21,52 +21,52 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-pralek/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-16</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-pralki</image:loc>
-      <image:caption>Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790-258-612</image:caption>
+      <image:caption>Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790 258 612</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-suszarek/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-16</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-suszarki</image:loc>
-      <image:caption>Naprawa suszarek ✔️ Serwis Przemyśl ☎️ 790-258-612</image:caption>
+      <image:caption>Naprawa suszarek ✔️ Serwis Przemyśl ☎️ 790 258 612</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-zmywarek/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-16</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis-zmywarek</image:loc>
-      <image:caption>Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790-258-612</image:caption>
+      <image:caption>Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-ekspresow/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-16</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-ekspresow</image:loc>
-      <image:caption>Naprawa ekspresów ✔️ Serwis Przemyśl ☎️ 790-258-612</image:caption>
+      <image:caption>Naprawa ekspresów ✔️ Serwis Przemyśl ☎️ 790 258 612</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-telewizorow/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-16</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis-telewizorow</image:loc>
-      <image:caption>Naprawa telewizorów ✔️ Serwis Przemyśl ☎️ 790-258-612</image:caption>
+      <image:caption>Naprawa telewizorów ✔️ Serwis Przemyśl ☎️ 790 258 612</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/opinie/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/share.png</image:loc>
@@ -75,11 +75,11 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/kontakt/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-16</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/share.png</image:loc>
-      <image:caption>Kontakt ✔️ Serwis RTV AGD w Przemyślu ☎️ 790-258-612</image:caption>
+      <image:caption>Kontakt ✔️ Serwis RTV AGD w Przemyślu ☎️ 790 258 612</image:caption>
     </image:image>
   </url>
 </urlset>

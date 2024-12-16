@@ -22,7 +22,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   const { organization, breadcrumbList } = page.schema;
 
   const getAggregateRating = () => {
-    return ["/", "/opinie/"].includes(path) ? {
+    return ["/", "/opinie/", "/naprawa-pralek/", "/naprawa-zmywarek/", "/naprawa-suszarek/", "/naprawa-ekspresow/", "/naprawa-telewizorow/"].includes(path) ? {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": rating,
@@ -34,16 +34,20 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   };
 
   const getReviews = () => {
-    if (!["/opinie/"].includes(path)) return null;
+    if (!["/", "/opinie/", "/naprawa-pralek/", "/naprawa-zmywarek/", "/naprawa-suszarek/", "/naprawa-ekspresow/", "/naprawa-telewizorow/"].includes(path)) return null;
 
     const reviewsArray = reviews.map((review, index) => (
       {
         "@type": "Review",
-        "@id": `https://naprawaprzemysl.pl/opinie#review${index+1}`,
-        "url": `https://naprawaprzemysl.pl/opinie#review${index+1}`,
+        "@id": `https://naprawaprzemysl.pl/opinie#review${index + 1}`,
+        "url": `https://naprawaprzemysl.pl/opinie#review${index + 1}`,
         "author": {
           "@type": "Person",
           "name": review.author_name,
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google"
         },
         "datePublished": formattedDate(review.time),
         "reviewBody": review.text,
@@ -51,7 +55,6 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           "@type": "Rating",
           "ratingValue": review.rating,
           "bestRating": "5",
-          "worstRating": "1"
         }
       }
     ))
