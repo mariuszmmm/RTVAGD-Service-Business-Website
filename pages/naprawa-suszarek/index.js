@@ -7,13 +7,12 @@ import { Photo } from '../../components/common/Photo';
 import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
 import { getRatingProps } from '../../utils/getRatingProps';
-import { getReviewsProps } from '../../utils/getReviewsProps';
 import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 
-const DryerService = ({ reviews }) => {
+const DryerService = () => {
   const path = useRouter().asPath;
 
   return (
