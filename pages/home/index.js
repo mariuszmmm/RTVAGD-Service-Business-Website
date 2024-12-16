@@ -87,7 +87,6 @@ const Home = ({ rating, ratingsTotal }) => {
         page={dataForMetaTags.home}
         rating={rating}
         ratingsTotal={ratingsTotal}
-        reviews={reviews}
       />
       <HeroContainer id="business">
         <HeroTitle>
