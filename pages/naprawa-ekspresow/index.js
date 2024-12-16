@@ -87,6 +87,6 @@ const CoffeeMachineService = ({ reviews }) => {
   );
 };
 
-export const getStaticProps = getReviewsProps;
+export const getStaticProps = getRatingProps;
 
 export default CoffeeMachineService;
