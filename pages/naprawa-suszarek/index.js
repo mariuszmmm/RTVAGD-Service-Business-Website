@@ -19,8 +19,7 @@ const DryerService = () => {
     <Section>
       <MetaTags
         path={path}
-        page={dataForMetaTags.naprawa_suszarek}
-        reviews={reviews}
+page={dataForMetaTags.naprawa_suszarek}
       />
       <Container>
         <Title>
