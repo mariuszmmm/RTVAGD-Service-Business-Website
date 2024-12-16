@@ -1,5 +1,5 @@
 import Home from './home';
-import { getRatingProps } from '../../utils/getRatingProps';
+import { getRatingProps } from '../utils/getRatingProps';
 
 export const getStaticProps = getRatingProps;
 
