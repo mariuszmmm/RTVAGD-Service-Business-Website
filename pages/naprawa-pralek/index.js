@@ -19,8 +19,7 @@ const WashingMachineService = () => {
     <Section>
       <MetaTags
         path={path}
-        page={dataForMetaTags.naprawa_pralek}
-        reviews={reviews}
+page={dataForMetaTags.naprawa_pralek}
       />
       <Container>
         <Title>
