@@ -87,6 +87,6 @@ const WashingMachineService = ({ reviews }) => {
   );
 };
 
-export const getStaticProps = getReviewsProps;
+export const getStaticProps = getRatingProps;
 
 export default WashingMachineService;
