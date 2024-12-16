@@ -4,9 +4,8 @@ import { ReviewsContainer } from "../../styles/opinie/OpinieStyled";
 import ReviewsItem from "../../components/ReviewsItem";
 import { serwis } from "../../utils/serwis";
 import { ButtonLink } from "../../components/common/ButtonLink";
-import axios from 'axios';
-import { reviewUrl } from "../../utils/urls";
-import { getSharedStaticProps } from "../../utils/getSharedStaticProps";
+import { getRatingProps } from "../../utils/getRatingProps";
+import { getReviewsProps } from "../../utils/getReviewsProps";
 import MetaTags from "../../components/common/MetaTags";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
 import { useRouter } from "next/router";
@@ -29,7 +28,8 @@ const Reviews = ({ status, reviews, rating, ratingsTotal }) => {
         {status === "success" && reviews.map((item, index) => (
           <ReviewsItem
             item={item}
-            key={index+1}
+            key={item.time}
+            reviewIndex={index + 1}
           />
         ))}
         {status === "error" &&
@@ -46,49 +46,18 @@ const Reviews = ({ status, reviews, rating, ratingsTotal }) => {
   );
 };
 
-export async function getStaticProps() {
-  const sharedProps = await getSharedStaticProps();
+export const getStaticProps = async () => {
+  const [ratingProps, reviewsProps] = await Promise.all([
+    getRatingProps(),
+    getReviewsProps(),
+  ]);
 
-  try {
-    const response = await axios(reviewUrl)
-    const reviews = response.data?.reviews || [];
-
-    if (!Array.isArray(reviews)) {
-      throw new Error('Invalid response from Google Places API');
-    };
-
-    let newReviews = [...reviews];
-    if (reviews.length < 5) {
-      let reserveReviews = serwis.reviews.filter((item) =>
-        !newReviews.find((review) => review.text === item.text));
-      let reserveReviewsIndex = 0;
-
-      while (newReviews.length < 5 && reserveReviewsIndex < reserveReviews.length) {
-        newReviews = [...newReviews, reserveReviews[reserveReviewsIndex]];
-        reserveReviewsIndex++;
-      };
-    }
-
-    return {
-      ...sharedProps,
-      props: {
-        ...sharedProps.props,
-        status: 'success',
-        reviews: newReviews,
-      },
-    };
-  } catch (error) {
-    console.error('Error fetching reviews:', error);
-    return {
-      ...sharedProps,
-      props: {
-        ...sharedProps.props,
-        status: 'error',
-        reviews: [],
-        error: error.message,
-      },
-    };
-  }
-}
+  return {
+    props: {
+      ...ratingProps.props,
+      ...reviewsProps.props,
+    },
+  };
+};
 
 export default Reviews;

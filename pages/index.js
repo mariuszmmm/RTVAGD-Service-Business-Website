@@ -1,6 +1,6 @@
 import Home from './home';
-import { getSharedStaticProps } from "../utils/getSharedStaticProps";
+import { getReviewsProps } from '../utils/getReviewsProps';
 
-export const getStaticProps = getSharedStaticProps;
+export const getStaticProps = getReviewsProps;
 
 export default Home;

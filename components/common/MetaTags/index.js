@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { formattedDate } from '../../../utils/formattedDate';
 import { getCurrentDateTimeISOWithOffset } from '../../../utils/formatDateToISOWithOffset';
 import { useState } from 'react';
-import { serwis } from '../../../utils/serwis';
 
 const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   const [ogTime, setOgTime] = useState(getCurrentDateTimeISOWithOffset());

@@ -6,13 +6,14 @@ import { Text } from '../../components/common/Text';
 import { Photo } from '../../components/common/Photo';
 import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
-import { getSharedStaticProps } from '../../utils/getSharedStaticProps';
+import { getRatingProps } from '../../utils/getRatingProps';
+import { getReviewsProps } from '../../utils/getReviewsProps';
 import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 
-const TelevisionService = () => {
+const TelevisionService = ({ reviews }) => {
   const path = useRouter().asPath;
 
   return (
@@ -20,7 +21,9 @@ const TelevisionService = () => {
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_telewizorow}
-      />    <Container>
+        reviews={reviews}
+      />
+      <Container>
         <Title>
           Naprawa telewizorów
           <Emoticon
@@ -85,6 +88,6 @@ const TelevisionService = () => {
   );
 };
 
-export const getStaticProps = getSharedStaticProps;
+export const getStaticProps = getReviewsProps;
 
 export default TelevisionService;

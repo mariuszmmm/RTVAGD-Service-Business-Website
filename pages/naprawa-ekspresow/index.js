@@ -6,13 +6,14 @@ import { Text } from '../../components/common/Text';
 import { Photo } from '../../components/common/Photo';
 import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
-import { getSharedStaticProps } from '../../utils/getSharedStaticProps';
+import { getRatingProps } from '../../utils/getRatingProps';
+import { getReviewsProps } from '../../utils/getReviewsProps';
 import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 
-const CoffeeMachineService = () => {
+const CoffeeMachineService = ({ reviews }) => {
   const path = useRouter().asPath;
 
   return (
@@ -20,6 +21,7 @@ const CoffeeMachineService = () => {
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_ekspresow}
+        reviews={reviews}
       />
       <Container>
         <Title>
@@ -85,6 +87,6 @@ const CoffeeMachineService = () => {
   );
 };
 
-export const getStaticProps = getSharedStaticProps;
+export const getStaticProps = getReviewsProps;
 
 export default CoffeeMachineService;

@@ -6,13 +6,14 @@ import { Text } from '../../components/common/Text';
 import { Photo } from '../../components/common/Photo';
 import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
-import { getSharedStaticProps } from '../../utils/getSharedStaticProps';
+import { getRatingProps } from '../../utils/getRatingProps';
+import { getReviewsProps } from '../../utils/getReviewsProps';
 import { Emoticon } from '../../components/common/Emoticon';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 import MetaTags from '../../components/common/MetaTags';
 
-const WashingMachineService = () => {
+const WashingMachineService = ({ reviews }) => {
   const path = useRouter().asPath;
 
   return (
@@ -20,6 +21,7 @@ const WashingMachineService = () => {
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_pralek}
+        reviews={reviews}
       />
       <Container>
         <Title>
@@ -85,6 +87,6 @@ const WashingMachineService = () => {
   );
 };
 
-export const getStaticProps = getSharedStaticProps;
+export const getStaticProps = getReviewsProps;
 
 export default WashingMachineService;

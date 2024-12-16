@@ -4,7 +4,7 @@ import { Title } from '../../components/common/Title';
 import { Text } from '../../components/common/Text';
 import { TeamImage } from '../../components/common/TeamImage';
 import { imageUrls } from '../../utils/urls';
-import { getSharedStaticProps } from '../../utils/getSharedStaticProps';
+import { getRatingProps } from '../../utils/getRatingProps';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
@@ -40,6 +40,6 @@ const About = () => {
   );
 };
 
-export const getStaticProps = getSharedStaticProps;
+export const getStaticProps = getRatingProps;
 
 export default About;

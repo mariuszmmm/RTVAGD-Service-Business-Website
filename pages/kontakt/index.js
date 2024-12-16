@@ -7,7 +7,7 @@ import { Title } from "../../components/common/Title";
 import { serwis } from "../../utils/serwis";
 import ContactForm from "./ContactForm";
 import Iframe from "./Iframe";
-import { getSharedStaticProps } from "../../utils/getSharedStaticProps";
+import { getRatingProps } from "../../utils/getRatingProps";
 import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
@@ -54,6 +54,6 @@ const Contact = () => {
   );
 };
 
-export const getStaticProps = getSharedStaticProps;
+export const getStaticProps = getRatingProps;
 
 export default Contact;

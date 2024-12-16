@@ -17,7 +17,7 @@ import MetaTags from '../../components/common/MetaTags';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 import { useRouter } from 'next/router';
 
-const Home = ({ rating, ratingsTotal }) => {
+const Home = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
   const [isPortrait, setIsPortrait] = useState(
     typeof window !== 'undefined' ? window.innerHeight > window.innerWidth : true
@@ -87,6 +87,7 @@ const Home = ({ rating, ratingsTotal }) => {
         page={dataForMetaTags.home}
         rating={rating}
         ratingsTotal={ratingsTotal}
+        reviews={reviews}
       />
       <HeroContainer id="business">
         <HeroTitle>

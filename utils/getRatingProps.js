@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { reviewUrl } from "../utils/urls";
-export const getSharedStaticProps = async () => {
+import { reviewUrl } from "./urls";
+export const getRatingProps = async () => {
   try {
     const response = await axios(reviewUrl)
     const ratingsTotal = response.data?.user_ratings_total || null;
