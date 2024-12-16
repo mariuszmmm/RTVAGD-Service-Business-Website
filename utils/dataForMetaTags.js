@@ -94,7 +94,7 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl i okolice"
         },
-        "provider": {
+        "serviceProvider": {
           ...provider,
           "url": urls.home,
         },
