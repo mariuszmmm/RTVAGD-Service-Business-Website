@@ -83,7 +83,7 @@ export const dataForMetaTags = {
     schema: {
       organization: {
         "@context": "https://schema.org",
-        "@type": "Service",
+        "@type": "WebPage",
         "name": serwis.name,
         "@id": urls.home,
         "url": urls.home,
