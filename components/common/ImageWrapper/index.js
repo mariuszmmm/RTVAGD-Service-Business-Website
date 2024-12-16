@@ -7,7 +7,6 @@ position: absolute;
   transform: translateX(-170%);
   transition: opacity 0.5s ease-in-out;
   opacity: ${({ $show }) => ($show ? 1 : 0)};
-  display: ${({ $show }) => ($show ? "auto" : "none")};
   width: 25vw;
   height: 25vw;
 
@@ -16,8 +15,7 @@ position: absolute;
   `};
 
     ${({ $show }) => !$show && css`
-        // z-index: -1;
-        display: none;
+        z-index: -1;
         pointer-events: none;
     `};
 
