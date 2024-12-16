@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const GoogleRating = ({ rating, hidden }) => (
   <>
-    {rating > 4 && <Wrpper $hidden={hidden}>
+    {rating > 4 && <Wrpper $hidden={hidden} id="rating">
       <StyledLink href="/opinie/">
         <ImageWrapper>
           <Image
