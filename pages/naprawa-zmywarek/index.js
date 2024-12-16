@@ -19,9 +19,8 @@ const DishwasherService = () => {
     <Section>
       <MetaTags
         path={path}
-        page={dataForMetaTags.naprawa_zmywarek}
-        reviews={reviews}
-      />
+page={dataForMetaTags.naprawa_zmywarek}
+/>
       <Container>
         <Title>
           Naprawa zmywarek
