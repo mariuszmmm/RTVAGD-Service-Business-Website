@@ -21,7 +21,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   const { organization, breadcrumbList } = page.schema;
 
   const getAggregateRating = () => {
-    return ["/", "/opinie/", "/naprawa-pralek/", "/naprawa-zmywarek/", "/naprawa-suszarek/", "/naprawa-ekspresow/", "/naprawa-telewizorow/"].includes(path) ? {
+    return {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": rating,
@@ -29,11 +29,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         "bestRating": "5",
         "worstRating": "1",
       }
-    } : null
+    }
   };
 
   const getReviews = () => {
-    if (!["/", "/opinie/", "/naprawa-pralek/", "/naprawa-zmywarek/", "/naprawa-suszarek/", "/naprawa-ekspresow/", "/naprawa-telewizorow/"].includes(path)) return null;
+    if (!["/opinie/"].includes(path)) return null;
 
     const reviewsArray = reviews.map((review, index) => (
       {
