@@ -94,10 +94,6 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl i okolice"
         },
-        "serviceProvider": {
-          ...provider,
-          "url": urls.home,
-        },
         "geo": geo,
         "hasMap": serwis.url.mapaGoogle,
         "openingHoursSpecification": openingHoursSpecification,
