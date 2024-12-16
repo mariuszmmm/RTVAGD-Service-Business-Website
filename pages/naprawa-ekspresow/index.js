@@ -19,8 +19,7 @@ const CoffeeMachineService = () => {
     <Section>
       <MetaTags
         path={path}
-        page={dataForMetaTags.naprawa_ekspresow}
-        reviews={reviews}
+page={dataForMetaTags.naprawa_ekspresow}
       />
       <Container>
         <Title>
