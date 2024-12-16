@@ -19,9 +19,7 @@ const TelevisionService = () => {
     <Section>
       <MetaTags
         path={path}
-        page={dataForMetaTags.naprawa_telewizorow}
-        reviews={reviews}
-      />
+page={dataForMetaTags.naprawa_telewizorow} />
       <Container>
         <Title>
           Naprawa telewizorów
