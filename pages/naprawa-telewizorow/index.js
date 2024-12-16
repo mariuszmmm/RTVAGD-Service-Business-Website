@@ -88,6 +88,6 @@ const TelevisionService = ({ reviews }) => {
   );
 };
 
-export const getStaticProps = getReviewsProps;
+export const getStaticProps = getRatingProps;
 
 export default TelevisionService;
