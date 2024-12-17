@@ -20,15 +20,12 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   } = page.metaTags;
   const { organization, breadcrumbList } = page.schema;
 
-  const getAggregateRating = () => {
+  const getRating = () => {
+    if (["/o-mnie/", "/kontakt/"].includes(path)) return null;
+
     return {
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": rating,
-        "reviewCount": ratingsTotal,
-        "bestRating": "5",
-        "worstRating": "1",
-      }
+      "ratingValue": rating,
+      "reviewCount": ratingsTotal,
     }
   };
 
@@ -63,7 +60,10 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   const organizationSchema = {
     ...organization,
-    ...getAggregateRating(),
+    "aggregateRating": {
+      ...organization["aggregateRating"],
+      ...getRating(),
+    },
     ...getReviews(),
   }
 

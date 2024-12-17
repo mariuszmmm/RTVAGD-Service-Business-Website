@@ -52,6 +52,12 @@ const provider = {
   "address": address,
 };
 
+const aggregateRating = {
+  "@type": "AggregateRating",
+  "bestRating": "5",
+  "worstRating": "1",
+};
+
 const breadcrumbList = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -107,6 +113,7 @@ export const dataForMetaTags = {
         "priceRange": "$$$",
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
         "paymentAccepted": "Cash",
+        "aggregateRating": aggregateRating,
       },
       breadcrumbList,
     }
@@ -128,7 +135,7 @@ export const dataForMetaTags = {
     schema: {
       organization: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
+        "@type": "ContactPage",
         "name": `Kontakt - ${serwis.name}`,
         "url": urls.kontakt,
         "description": "Skontaktuj się pod numerem 790 258 612 lub odwiedź nas w Przemyślu, ul. Generała Sowińskiego 2. Szybkie, fachowe usługi naprawy sprzętu RTV i AGD.",
@@ -164,7 +171,7 @@ export const dataForMetaTags = {
     schema: {
       organization: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
+        "@type": "AboutPage",
         "name": `O mnie - ${serwis.name}`,
         "url": urls.o_mnie,
         "description": "Dowiedz się o moim doświadczeniu w naprawie sprzętu RTV i AGD oraz zaangażowaniu w najwyższej jakości usługi serwisowe w Przemyślu.",
@@ -215,6 +222,7 @@ export const dataForMetaTags = {
         },
         "priceRange": "$$$",
         "description": "Sprawdź opinie klientów o naprawach sprzętu RTV i AGD w Przemyślu. Dowiedz się, dlaczego tak wielu poleca moje usługi.",
+        "aggregateRating": aggregateRating,
       },
       breadcrumbList: {
         ...breadcrumbList,
@@ -250,11 +258,25 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": `Naprawa Pralek - ${serwis.name}`,
         "url": urls.naprawa_pralek,
+        "image": {
+          "@type": "ImageObject",
+          "url": `${urls.home}share.png`,
+          "width": 931,
+          "height": 497
+        },
+        "priceRange": "$$$",
         "serviceType": "Naprawa pralek",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "areaServed": {
           "@type": "Place",
           "name": "Przemyśl i okolice"
+        },
+        "aggregateRating": {
+          ...aggregateRating,
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa pralek"
+          }
         },
         "provider": {
           ...provider,
@@ -308,11 +330,25 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": `Naprawa Suszarek - ${serwis.name}`,
         "url": urls.naprawa_suszarek,
+        "image": {
+          "@type": "ImageObject",
+          "url": `${urls.home}share.png`,
+          "width": 931,
+          "height": 497
+        },
+        "priceRange": "$$$",
         "serviceType": "Naprawa suszarek",
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "areaServed": {
           "@type": "Place",
           "name": "Przemyśl i okolice"
+        },
+        "aggregateRating": {
+          ...aggregateRating,
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa suszarek"
+          }
         },
         "provider": {
           ...provider,
@@ -366,11 +402,25 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": `Naprawa Zmywarek - ${serwis.name}`,
         "url": urls.naprawa_zmywarek,
+        "image": {
+          "@type": "ImageObject",
+          "url": `${urls.home}share.png`,
+          "width": 931,
+          "height": 497
+        },
+        "priceRange": "$$$",
         "serviceType": "Naprawa zmywarek",
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
         "areaServed": {
           "@type": "Place",
           "name": "Przemyśl i okolice"
+        },
+        "aggregateRating": {
+          ...aggregateRating,
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa zmywarek"
+          }
         },
         "provider": {
           ...provider,
@@ -424,11 +474,25 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": `Naprawa Ekspresów - ${serwis.name}`,
         "url": urls.naprawa_ekspresow,
+        "image": {
+          "@type": "ImageObject",
+          "url": `${urls.home}share.png`,
+          "width": 931,
+          "height": 497
+        },
+        "priceRange": "$$$",
         "serviceType": "Naprawa ekspresów",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
         "areaServed": {
           "@type": "Place",
           "name": "Przemyśl i okolice"
+        },
+        "aggregateRating": {
+          ...aggregateRating,
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa ekspresów"
+          }
         },
         "provider": {
           ...provider,
@@ -482,11 +546,25 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": `Naprawa Telewizorów - ${serwis.name}`,
         "url": urls.naprawa_telewizorow,
+        "image": {
+          "@type": "ImageObject",
+          "url": `${urls.home}share.png`,
+          "width": 931,
+          "height": 497
+        },
+        "priceRange": "$$$",
         "serviceType": "Naprawa telewizorów",
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
         "areaServed": {
           "@type": "Place",
           "name": "Przemyśl i okolice"
+        },
+        "aggregateRating": {
+          ...aggregateRating,
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa telewizorów"
+          }
         },
         "provider": {
           ...provider,

@@ -25,7 +25,7 @@ const Footer = () => (
         </StyledLink>
         <StyledLink
           href={`mailto:${serwis.email}`}
-          title="Napisz jaki masz problem">
+          title="Napisz z jakim sprzętem masz problem">
           <EmailIcon />
           <FooterText>{serwis.email} </FooterText>
         </StyledLink>
