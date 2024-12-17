@@ -205,6 +205,15 @@ export const dataForMetaTags = {
         "@id": "https://naprawaprzemysl.pl#business",
         "name": serwis.name,
         "url": urls.home,
+        "address": address,
+        "telephone": serwis.phone,
+        "image": {
+          "@type": "ImageObject",
+          "url": `${urls.home}share.png`,
+          "width": 931,
+          "height": 497
+        },
+        "priceRange": "$$$",
         "description": "Sprawdź opinie klientów o naprawach sprzętu RTV i AGD w Przemyślu. Dowiedz się, dlaczego tak wielu poleca moje usługi.",
       },
       breadcrumbList: {

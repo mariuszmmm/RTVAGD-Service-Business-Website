@@ -10,7 +10,10 @@ const CoffeeMachine = ({ show, setHold }) => (
     onMouseEnter={() => setHold(true)}
     onMouseLeave={() => setHold(false)}
   >
-    <Link href="/naprawa-ekspresow">
+    <Link
+      href="/naprawa-ekspresow"
+      title="Naprawa ekspresów do kawy w Przemyślu"
+    >
       <Image
         src={imageUrls.ekspres}
         alt="Naprawa ekspresów do kawy w Przemyślu"

@@ -11,7 +11,10 @@ const Television = ({ show, left, setHold }) => (
     onMouseLeave={() => setHold(false)}
     $left={left}
   >
-    <Link href="/naprawa-telewizorow">
+    <Link
+      href="/naprawa-telewizorow"
+      title="Serwis telewizorów w Przemyślu"
+    >
       <Image
         src={imageUrls.telewizor}
         alt="Serwis telewizorów w Przemyślu"

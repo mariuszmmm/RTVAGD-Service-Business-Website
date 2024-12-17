@@ -12,13 +12,16 @@ const WashingMachine = ({ show, left, setHold }) => {
       onMouseLeave={() => setHold(false)}
       $left={left}
     >
-      <Link href="/naprawa-pralek">
+      <Link
+        href="/naprawa-pralek"
+        title="Naprawa pralek w Przemyślu"
+      >
         <Image
           src={imageUrls.pralka}
           alt="naprawa pralek"
           loading='lazy'
-width={dataForMetaTags.naprawa_pralek.metaTags.imageWidth}
-height={dataForMetaTags.naprawa_pralek.metaTags.imageHeight}
+          width={dataForMetaTags.naprawa_pralek.metaTags.imageWidth}
+          height={dataForMetaTags.naprawa_pralek.metaTags.imageHeight}
           crop={{
             type: 'auto',
             source: true

@@ -17,23 +17,36 @@ const Footer = () => (
   <FooterWrapper>
     <FooterContainer>
       <FooterInfo>
-        <StyledLink href={`tel:${serwis.phone}`} >
+        <StyledLink
+          href={`tel:${serwis.phone}`}
+          title="Zadzwoń i zgłoś sprzęt do naprawy">
           <PhoneIcon />
           <FooterText>{serwis.phone} </FooterText>
         </StyledLink>
-        <StyledLink href={`mailto:${serwis.email}`}>
+        <StyledLink
+          href={`mailto:${serwis.email}`}
+          title="Napisz jaki masz problem">
           <EmailIcon />
           <FooterText>{serwis.email} </FooterText>
         </StyledLink>
-        <StyledLink href={serwis.url.facebook}>
+        <StyledLink
+          href={serwis.url.facebook}
+          title="Facebook">
           <FacebookIcon />
           <FooterText>facebook</FooterText>
         </StyledLink>
-        <StyledLink href={"https://naprawaprzemysl.pl/"} $link>
+        <StyledLink
+          $link
+          href={"https://naprawaprzemysl.pl/"}
+          title="Link do strony naprawaprzemysl.pl"
+        >
           <LinkIcon />
           <FooterText>{"naprawaprzemysl.pl"} </FooterText>
         </StyledLink>
-        <StyledLink href={serwis.url.google}>
+        <StyledLink
+          href={serwis.url.google}
+          title="Google"
+        >
           <GoogleIcon />
           <FooterText>google</FooterText>
         </StyledLink>

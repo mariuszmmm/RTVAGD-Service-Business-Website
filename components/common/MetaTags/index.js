@@ -91,6 +91,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta name="twitter:image" content={image} />
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
+      <meta http-equiv="Content-Language" content="pl" />
 
       <script type="application/ld+json"
         dangerouslySetInnerHTML={{

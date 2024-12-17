@@ -12,7 +12,10 @@ const Dryer = ({ show, left, setHold }) => {
       onMouseLeave={() => setHold(false)}
       $left={left}
     >
-      <Link href="/naprawa-suszarek">
+      <Link
+        href="/naprawa-suszarek"
+        title="Naprawa suszarek w Przemyślu"
+      >
         <Image
           src={imageUrls.suszarka}
           alt="Naprawa suszarek w Przemyślu"

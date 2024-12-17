@@ -10,7 +10,10 @@ const Dishwasher = ({ show, setHold }) => (
     onMouseEnter={() => setHold(true)}
     onMouseLeave={() => setHold(false)}
   >
-    <Link href="/naprawa-zmywarek">
+    <Link
+      href="/naprawa-zmywarek"
+      title="Serwis zmywarek w Przemyślu"
+    >
       <Image
         src={imageUrls.zmywarka}
         alt="Serwis zmywarek w Przemyślu"
