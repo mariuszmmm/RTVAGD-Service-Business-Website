@@ -398,19 +398,22 @@ export const dataForMetaTags = {
     },
     schema: {
       organization: {
-        "@context": "https://schema.org",
-        "@type": "Service",
+        "@context": "",
+        "@type": "Product",
         "name": `Naprawa Zmywarek - ${serwis.name}`,
         "url": urls.naprawa_zmywarek,
-        "image": {
-          "@type": "ImageObject",
-          "url": `${urls.home}share.png`,
-          "width": 931,
-          "height": 497
-        },
+        "image": [
+          `${urls.home}share.png`,
+         ],
         "priceRange": "$$$",
         "serviceType": "Naprawa zmywarek",
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
+        "sku": "SEO",
+        "mpn": "SEO-33",
+        "brand": {
+          "@type": "Thing",
+           "name": "Naprawaprzemysl",
+        },
         "areaServed": {
           "@type": "Place",
           "name": "Przemyśl i okolice"
@@ -431,7 +434,13 @@ export const dataForMetaTags = {
           "url": urls.naprawa_zmywarek,
           "priceCurrency": "PLN",
           "price": "150",
-          "description": "Cena orientacyjna za naprawę zmywarki."
+          "priceValidUntil": "2024-12-17",
+          "itemCondition": "https://schema.org/UsedCondition"
+          "availability": "https://schema.org/InStock"
+          "seller": {
+            "@type": "Organization",
+            "name": "Naprawaprzemysl",
+          },
         },
         "image": {
           "@type": "ImageObject",
