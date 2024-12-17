@@ -398,7 +398,7 @@ export const dataForMetaTags = {
     },
     schema: {
       organization: {
-        "@context": "",
+        "@context": "https://schema.org",
         "@type": "Product",
         "name": `Naprawa Zmywarek - ${serwis.name}`,
         "url": urls.naprawa_zmywarek,
