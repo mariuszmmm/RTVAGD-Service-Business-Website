@@ -3,7 +3,7 @@
   RewriteBase /serwis/
 
   <FilesMatch "\.(jpg|jpeg|png|gif|svg|css|js|woff|woff2)$">
-    Header set Cache-Control "max-age=31536000, public, immutable"
+    Header set Cache-Control "max-age=7776000, public, immutable"
   </FilesMatch>
 
   <FilesMatch "\.(html|json)$">
