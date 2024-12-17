@@ -400,13 +400,11 @@ export const dataForMetaTags = {
       organization: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": `Naprawa Zmywarek - ${serwis.name}`,
-        "url": urls.naprawa_zmywarek,
+        "name": "Naprawa zmywarek",
+        // "url": urls.naprawa_zmywarek,
         "image": [
           `${urls.home}share.png`,
          ],
-        "priceRange": "$$$",
-        "serviceType": "Naprawa zmywarek",
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
         "sku": "SEO",
         "mpn": "SEO-33",
@@ -414,21 +412,38 @@ export const dataForMetaTags = {
           "@type": "Thing",
            "name": "Naprawaprzemysl",
         },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Przemyśl i okolice"
+        // "priceRange": "$$$",
+        // "serviceType": "Naprawa zmywarek",
+        "review": {
+           "type": "Review",
+           "reviewRating": {
+             "@type": "Rating",
+             "ratingValue": "4.6",
+             "bestRating": "5",
+           },
+           "author": {
+             "@type": "Person",
+             "name": " Naprawaprzemysl ",
+           },
         },
+        
+        // "areaServed": {
+        //   "@type": "Place",
+        //  "name": "Przemyśl i okolice"
+       // },
         "aggregateRating": {
           ...aggregateRating,
-          "itemReviewed": {
-            "@type": "Service",
-            "name": "Naprawa zmywarek"
-          }
+          "ratingValue": "4.6",
+             "bestRating": "5",
+        //  "itemReviewed": {
+        //    "@type": "Service",
+         //   "name": "Naprawa zmywarek"
+         // }
         },
-        "provider": {
-          ...provider,
-          "url": urls.naprawa_zmywarek,
-        },
+      //  "provider": {
+      //    ...provider,
+      //    "url": urls.naprawa_zmywarek,
+      //  },
         "offers": {
           "@type": "Offer",
           "url": urls.naprawa_zmywarek,
@@ -442,12 +457,12 @@ export const dataForMetaTags = {
             "name": "Naprawaprzemysl",
           },
         },
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/serwis-zmywarek.webp",
-          "width": 538,
-          "height": 706
-        }
+     //   "image": {
+     //     "@type": "ImageObject",
+     //     "url": "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/serwis-zmywarek.webp",
+      //    "width": 538,
+      //    "height": 706
+      //  }
       },
       breadcrumbList: {
         ...breadcrumbList,
