@@ -435,8 +435,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2024-12-17",
-          "itemCondition": "https://schema.org/UsedCondition"
-          "availability": "https://schema.org/InStock"
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
             "name": "Naprawaprzemysl",
