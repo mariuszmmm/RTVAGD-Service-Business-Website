@@ -9,7 +9,7 @@ import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 
-const About = () => {
+const About = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
@@ -17,6 +17,8 @@ const About = () => {
       <MetaTags
         path={path}
         page={dataForMetaTags.o_mnie}
+        rating={rating}
+        ratingsTotal={ratingsTotal}
       />
       <Container>
         <Title>Kim jestem</Title>

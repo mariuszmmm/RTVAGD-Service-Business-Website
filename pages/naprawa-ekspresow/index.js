@@ -12,14 +12,16 @@ import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 
-const CoffeeMachineService = () => {
+const CoffeeMachineService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
     <Section>
       <MetaTags
         path={path}
-page={dataForMetaTags.naprawa_ekspresow}
+        page={dataForMetaTags.naprawa_ekspresow}
+        rating={rating}
+        ratingsTotal={ratingsTotal}
       />
       <Container>
         <Title>

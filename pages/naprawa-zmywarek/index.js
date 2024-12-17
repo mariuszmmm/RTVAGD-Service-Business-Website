@@ -12,15 +12,17 @@ import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 
-const DishwasherService = () => {
+const DishwasherService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
     <Section>
       <MetaTags
         path={path}
-page={dataForMetaTags.naprawa_zmywarek}
-/>
+        page={dataForMetaTags.naprawa_zmywarek}
+        rating={rating}
+        ratingsTotal={ratingsTotal}
+      />
       <Container>
         <Title>
           Naprawa zmywarek

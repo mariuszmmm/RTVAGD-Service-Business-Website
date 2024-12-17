@@ -12,7 +12,7 @@ import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
 
-const Contact = () => {
+const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
@@ -20,6 +20,8 @@ const Contact = () => {
       <MetaTags
         path={path}
         page={dataForMetaTags.kontakt}
+        rating={rating}
+        ratingsTotal={ratingsTotal}
       />
       <ContactContainer>
         <Title>Kontakt</Title>

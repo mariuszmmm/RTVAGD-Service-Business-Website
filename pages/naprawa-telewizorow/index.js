@@ -12,14 +12,17 @@ import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 
-const TelevisionService = () => {
+const TelevisionService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
     <Section>
       <MetaTags
         path={path}
-page={dataForMetaTags.naprawa_telewizorow} />
+        page={dataForMetaTags.naprawa_telewizorow}
+        rating={rating}
+        ratingsTotal={ratingsTotal}
+      />
       <Container>
         <Title>
           Naprawa telewizorów
