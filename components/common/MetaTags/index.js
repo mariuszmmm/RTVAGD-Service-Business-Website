@@ -18,7 +18,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     keywords,
     appleMobileWebAppTitle,
   } = page.metaTags;
-  const { organization, product, place, webpage, imageObject, breadcrumbList } = page.schema;
+  const { organization, product, place, webpage, website, imageObject, breadcrumbList } = page.schema;
 
   const getReviews = () => {
     const reviewsArray = reviews.map((review) => (
@@ -117,6 +117,14 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(webpage)
+          }}
+        />
+      )}
+
+     {path === "/" && (
+        <script type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(website)
           }}
         />
       )}
