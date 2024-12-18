@@ -44,7 +44,7 @@ const Header = ({ rating }) => {
         <Logo href="/">
           <Emoticon
             src={imageUrls.logo}
-            alt="emoticon"
+            alt="Logo serwisu RTV i AGD"
             loading="lazy"
             $logo
           />
