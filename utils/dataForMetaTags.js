@@ -93,7 +93,7 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Naprawa sprzętu RTV i AGD w Przemyślu",
+        "name": "NAPRAWA TELEWIZORÓW, PRALEK, SUSZAREK, ZMYWAREK, EKSPRESÓW",
         "image": urls.home,
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
         "brand": {
@@ -104,19 +104,6 @@ export const dataForMetaTags = {
           "@type": "AggregateRating",
           "worstRating": "3",
           "bestRating": "5",
-        },
-        "offers": {
-          "@type": "Offer",
-          "url": urls.home,
-          "priceCurrency": "PLN",
-          "price": "150",
-          "priceValidUntil": "2024-12-17",
-          "itemCondition": "https://schema.org/UsedCondition",
-          "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "Organization",
-            "name": "Naprawaprzemysl",
-          },
         },
       },
       place: {
@@ -534,7 +521,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Telewizorów",
-        "image": ["https://res.cloudinary.com/difc0i71u/image/upload/v1731168332/Serwis/serwis-telewizorow.webp"],
+        "image": [`${urls.home}share.png`],
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
         "sku": "SEO",
         "mpn": "SEO-33",
