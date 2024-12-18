@@ -1,4 +1,5 @@
 import { serwis } from './serwis';
+import { appUrls } from './urls';
 
 const shortName = "Serwis RTV i AGD";
 
@@ -60,7 +61,7 @@ const breadcrumbList = {
       "@type": "ListItem",
       "position": 1,
       "name": "Naprawa telewizorów, pralek, szuszarek, zmywarek i ekspresów",
-      "item": urls.home
+      "item": appUrls.home
     }
   ]
 };
@@ -69,10 +70,10 @@ export const dataForMetaTags = {
   home: {
     metaTags: {
       title: "Naprawa telewizorów, pralek, szuszarek, zmywarek i ekspresów",
-      canonical: urls.home,
+      canonical: appUrls.home,
       description: "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
       siteName: shortName,
-      image: `${urls.home}share.png`,
+      image: `${appUrls.home}share.png`,
       imageWidth: "931",
       imageHeight: "497",
       imageAlt: shortName,
@@ -86,7 +87,7 @@ export const dataForMetaTags = {
         "@type": "Organization",
         "name": ".Naprawa sprzętu RTV i AGD Naprawaprzemysl",
         "logo": "https://res.cloudinary.com/difc0i71u/image/upload/v1733813310/Serwis/emoticon.png",
-        "url": urls.home,
+        "url": appUrls.home,
         "address": address,
         "sameAs": [],
       },
@@ -94,7 +95,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "NAPRAWA TELEWIZORÓW, PRALEK, SUSZAREK, ZMYWAREK, EKSPRESÓW",
-        "image": urls.home,
+        "image": appUrls.home,
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
         "brand": {
           "@type": "Brand",
@@ -117,21 +118,21 @@ export const dataForMetaTags = {
         "@type": "WebPage",
         "name": serwis.name,
         "alternateName": serwis.subName,
-        "url": urls.home,
+        "url": appUrls.home,
       },
       website: {
         "@context": "http://www.schema.org",
         "@type": "WebSite",
         "name": "Naprawa pralek, szuszarek, zmywarek, telewizorów, ekspresów",
         "alternateName": "Naprawa pralek, szuszarek, zmywarek, telewizorów i ekspresów do kawy",
-        "url": urls.home,
+        "url": appUrls.home,
       },
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
         "author": "Serwis RTV i AGD Naprawaprzemysl",
         "contentLocation": "Przemyśl",
-        "contentUrl": `${urls.home}share.png`,
+        "contentUrl": `${appUrls.home}share.png`,
         "datePublished": "2024-12-18",
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
       },
@@ -141,10 +142,10 @@ export const dataForMetaTags = {
   kontakt: {
     metaTags: {
       title: "Kontakt ✔️ Serwis RTV AGD w Przemyślu ☎️ 790 258 612",
-      canonical: urls.kontakt,
+      canonical: appUrls.kontakt,
       description: "Skontaktuj się pod numerem 790 258 612 lub odwiedź nas w Przemyślu, ul. Generała Sowińskiego 2. Szybkie, fachowe usługi naprawy sprzętu RTV i AGD.",
       siteName: `${shortName} - kontakt`,
-      image: `${urls.home}share.png`,
+      image: `${appUrls.home}share.png`,
       imageWidth: "931",
       imageHeight: "497",
       imageAlt: shortName,
@@ -161,7 +162,7 @@ export const dataForMetaTags = {
             "@type": "ListItem",
             "position": 2,
             "name": "Kontakt",
-            "item": urls.kontakt
+            "item": appUrls.kontakt
           }
         ]
       },
@@ -170,10 +171,10 @@ export const dataForMetaTags = {
   o_mnie: {
     metaTags: {
       title: "Informacje o serwisie RTV i AGD w Przemyślu, ul.Sowińskiego 2.",
-      canonical: urls.o_mnie,
+      canonical: appUrls.o_mnie,
       description: "Dowiedz się o moim doświadczeniu w naprawie sprzętu RTV i AGD oraz zaangażowaniu w najwyższej jakości usługi serwisowe w Przemyślu.",
       siteName: `${shortName} - o mnie`,
-      image: `${urls.home}share.png`,
+      image: `${appUrls.home}share.png`,
       imageWidth: "931",
       imageHeight: "497",
       imageAlt: shortName,
@@ -190,7 +191,7 @@ export const dataForMetaTags = {
             "@type": "ListItem",
             "position": 2,
             "name": "O mnie",
-            "item": urls.o_mnie
+            "item": appUrls.o_mnie
           }
         ]
       },
@@ -200,10 +201,10 @@ export const dataForMetaTags = {
     path: "/opinie/",
     metaTags: {
       title: "Poznaj opinie klientów ✔️ Serwis RTV AGD w Przemyślu",
-      canonical: urls.opinie,
+      canonical: appUrls.opinie,
       description: "Sprawdź opinie klientów o naprawach sprzętu RTV i AGD w Przemyślu. Dowiedz się, dlaczego tak wielu poleca moje usługi.",
       siteName: `${shortName} - opinie`,
-      image: `${urls.home}share.png`,
+      image: `${appUrls.home}share.png`,
       imageWidth: "931",
       imageHeight: "497",
       imageAlt: shortName,
@@ -220,7 +221,7 @@ export const dataForMetaTags = {
             "@type": "ListItem",
             "position": 2,
             "name": "O mnie",
-            "item": urls.opinie
+            "item": appUrls.opinie
           }
         ]
       },
@@ -521,7 +522,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Telewizorów",
-        "image": [`${urls.home}share.png`],
+        "image": [`${appUrls.home}share.png`],
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
         "sku": "SEO",
         "mpn": "SEO-33",

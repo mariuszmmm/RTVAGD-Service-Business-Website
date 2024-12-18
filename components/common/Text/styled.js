@@ -9,7 +9,7 @@ export const StyledText = styled.p`
   text-align: justify;
   text-justify: inter-word;
 
-  ${({ $check }) => $check && css`
+  ${({ $check, $cross }) => ($check || $cross) && css`
     list-style: none;  
     padding-left: 12px;
     
@@ -19,11 +19,24 @@ export const StyledText = styled.p`
     }
 
     li::before {
-      content: "✔"; 
       position: absolute;
-      left: 0;
-      color: ${({ theme }) => theme.color.check};
-      font-size: 1.2em; 
+      margin: -2px 0 0 5px;
+
+      ${({ $check }) => $check && css`
+        content: "✔";
+        top: 1px;
+        left: -6px;
+        font-size: 1.2em; 
+        color: ${({ theme }) => theme.color.check};
+      `};
+
+      ${({ $cross }) => $cross && css`
+        content: "❌";
+        top: 4px;
+        left: -10px;
+        font-size: 1em; 
+        color: ${({ theme }) => theme.color.cross};
+     `};
     }
   `};
   

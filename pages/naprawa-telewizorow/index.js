@@ -11,9 +11,14 @@ import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
+import { appUrls } from "../../utils/urls"
+import { ButtonLink } from '../../components/common/ButtonLink';
+import { serwis } from '../../utils/serwis';
 
 const TelevisionService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
+
+  console.log(`${appUrls.home}images/telewizor.png`)
 
   return (
     <Section>
@@ -43,8 +48,8 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
 
           <ServiceOffer>
             <Photo
-              src={imageUrls.telewizor}
-              alt="naprawa telewizorów"
+              src={`/images/telewizor.png`}
+              alt="telewizor"
               loading='lazy'
               width={dataForMetaTags.naprawa_telewizorow.metaTags.imageWidth}
               height={dataForMetaTags.naprawa_telewizorow.metaTags.imageHeight}
@@ -56,7 +61,7 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
             <SubTitle as="h3">
               Najczęstsze problemy z telewizorami, które naprawiam:
             </SubTitle>
-            <Text as="ul">
+            <Text as="ul" $cross>
               <li><b>brak obrazu lub problemy z&nbsp;jakością wyświetlania</b> -&nbsp;usterki matrycy, uszkodzenia podświetlenia LED, błędy w&nbsp;układzie sterowania.</li>
               <li><b>brak dźwięku</b> -&nbsp;awarie układów audio, problemy z&nbsp;głośnikami lub oprogramowaniem.</li>
               <li><b>problemy z&nbsp;zasilaniem</b> -&nbsp;telewizor nie włącza się, wyłącza samoczynnie lub występują nieregularności w&nbsp;działaniu zasilacza.</li>
@@ -82,6 +87,9 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
             <b>Nie pozwól, aby usterka telewizora popsuła Twój czas wolny! </b>
             Skontaktuj się ze mną już dziś, a sprawnie przywrócę Twój telewizor do pełnej funkcjonalności, byś mógł znów cieszyć się ulubionymi programami i filmami.
           </Text>
+          <ButtonLink href={`tel:${serwis.phone}`} >
+            Zadzwoń teraz
+          </ButtonLink>
         </main>
       </Container>
     </Section>

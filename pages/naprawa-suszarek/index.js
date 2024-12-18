@@ -11,6 +11,8 @@ import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
+import { ButtonLink } from '../../components/common/ButtonLink';
+import { serwis } from '../../utils/serwis';
 
 const DryerService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
@@ -56,7 +58,7 @@ const DryerService = ({ rating, ratingsTotal }) => {
             <SubTitle as="h3">
               Najczęstsze problemy z suszarkami, które naprawiam:
             </SubTitle>
-            <Text as="ul">
+            <Text as="ul" $cross>
               <li><b>suszarka nie nagrzewa powietrza</b> -&nbsp;uszkodzona grzałka, czujnik temperatury lub termostat.</li>
               <li><b>problemy z&nbsp;wentylacją</b> -&nbsp;zatkane filtry, awarie wentylatora lub drożności przewodów.</li>
               <li><b>ubrania nadal mokre po&nbsp;zakończeniu cyklu</b> -&nbsp;usterki w&nbsp;układzie kondensacyjnym lub nieprawidłowa praca pompy ciepła.</li>
@@ -81,6 +83,9 @@ const DryerService = ({ rating, ratingsTotal }) => {
             <b>Nie pozwól, aby awaria suszarki wpłynęła na Twoją codzienność! </b>
             Zadzwoń lub napisz już dziś, a szybko przywrócę Twoje urządzenie do pełnej sprawności. Gwarantuję rzetelność, profesjonalizm i satysfakcję z wykonanej usługi.
           </Text>
+          <ButtonLink href={`tel:${serwis.phone}`} >
+            Zadzwoń teraz
+          </ButtonLink>
         </main>
       </Container>
     </Section>

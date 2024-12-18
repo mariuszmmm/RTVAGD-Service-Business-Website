@@ -2,6 +2,13 @@ import styled, { css } from "styled-components";
 import { Button } from "../Button";
 
 export const ButtonLink = styled(Button).attrs({ as: "a" })`
+  display: inline-block;
+  margin-top: 60px;
+
+  ${({ $hero }) => $hero && css`
+    margin-top: 0;
+  `};
+
   ${({ $opinia }) => $opinia && css`
     position: absolute;
     top: 67px;

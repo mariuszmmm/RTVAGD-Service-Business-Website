@@ -12,4 +12,16 @@ export const imageUrls = {
   mapa: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/mapa"
 };
 
+export const appUrls = {
+  home: "https://naprawaprzemysl.pl/",
+  kontakt: "https://naprawaprzemysl.pl/kontakt/",
+  o_mnie: "https://naprawaprzemysl.pl/o-mnie/",
+  opinie: "https://naprawaprzemysl.pl/opinie/",
+  naprawa_pralek: "https://naprawaprzemysl.pl/naprawa-pralek/",
+  naprawa_suszarek: "https://naprawaprzemysl.pl/naprawa-suszarek/",
+  naprawa_zmywarek: "https://naprawaprzemysl.pl/naprawa-zmywarek/",
+  naprawa_ekspresow: "https://naprawaprzemysl.pl/naprawa-ekspresow/",
+  naprawa_telewizorow: "https://naprawaprzemysl.pl/naprawa-telewizorow/",
+};
+
 export const reviewUrl = "https://naprawaprzemysl.pl/api/reviews.json"; 

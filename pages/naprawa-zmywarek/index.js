@@ -11,6 +11,8 @@ import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
+import { ButtonLink } from '../../components/common/ButtonLink';
+import { serwis } from '../../utils/serwis';
 
 const DishwasherService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
@@ -43,7 +45,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
 
           <ServiceOffer>
             <Photo
-              src={imageUrls.zmywarka}
+              src={"/images/zmywarka.png"}
               alt="naprawa zmywarek"
               loading='lazy'
               width={dataForMetaTags.naprawa_zmywarek.metaTags.imageWidth}
@@ -56,7 +58,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
             <SubTitle as="h3">
               Najczęstsze problemy z zmywarkami, które naprawiam:
             </SubTitle>
-            <Text as="ul">
+            <Text as="ul" $cross>
               <li><b>zmywarka nie podgrzewa wody</b> -&nbsp;problem z&nbsp;grzałką, czujnikiem temperatury lub modułem sterującym.</li>
               <li><b>wycieki wody podczas pracy</b> -&nbsp;uszkodzone uszczelki drzwi, pęknięte węże doprowadzające wodę lub problemy z &nbsp;pompą odpływową.</li>
               <li><b>naczynia pozostają mokre po cyklu suszenia</b> -&nbsp;awaria wentylatora, grzałki suszącej lub uszkodzenie modułu sterującego.</li>
@@ -81,6 +83,9 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
             <b>Nie pozwól, aby zepsuta zmywarka psuła Twój dzień! </b>
             Skontaktuj się ze mną, a przywrócę pełną funkcjonalność Twojego urządzenia szybko, profesjonalnie i watrakcyjnej cenie.
           </Text>
+          <ButtonLink href={`tel:${serwis.phone}`} >
+            Zadzwoń teraz
+          </ButtonLink>
         </main>
       </Container>
     </Section>

@@ -11,6 +11,8 @@ import { Emoticon } from '../../components/common/Emoticon';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 import MetaTags from '../../components/common/MetaTags';
+import { ButtonLink } from '../../components/common/ButtonLink';
+import { serwis } from '../../utils/serwis';
 
 const WashingMachineService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
@@ -43,7 +45,7 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
 
           <ServiceOffer>
             <Photo
-              src={imageUrls.pralka}
+              src={"https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-pralki.webp"}
               alt="naprawa pralek"
               loading='lazy'
               width={dataForMetaTags.naprawa_pralek.metaTags.imageWidth}
@@ -56,7 +58,7 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
             <SubTitle as="h3">
               Najczęstsze problemy z pralkami, które naprawiam:
             </SubTitle>
-            <Text as="ul">
+            <Text as="ul" $cross>
               <li><b>pralka nie pobiera wody</b> -&nbsp;problem z&nbsp;elektrozaworem, zatkany filtr lub uszkodzona pompa wody.</li>
               <li><b>wycieki wody podczas prania</b> -&nbsp;nieszczelne uszczelki, pęknięty wąż odpływowy lub zużycie zbiornika.</li>
               <li><b>pralka hałasuje lub wibruje</b> -&nbsp;uszkodzone łożyska bębna, zużyte amortyzatory lub niewyważony wsad.</li>
@@ -81,6 +83,9 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
             <b>Nie trać czasu na pranie ręczne! </b>
             Zadzwoń lub napisz już teraz, a szybko i skutecznie rozwiążę problem z Twoją pralką. Profesjonalizm, uczciwość i rzetelność – to moje priorytety.
           </Text>
+          <ButtonLink href={`tel:${serwis.phone}`} >
+            Zadzwoń teraz
+          </ButtonLink>
         </main>
       </Container>
     </Section>

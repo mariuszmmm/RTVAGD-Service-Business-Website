@@ -22,6 +22,7 @@ const theme = {
     start_1: "#ffbc00",
     start_2: "#d9d7d5",
     check: "#00ff00",
+    cross: "#ff0000",
   },
 };
 

@@ -11,6 +11,9 @@ import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
+import { appUrls } from '../../utils/urls';
+import { ButtonLink } from '../../components/common/ButtonLink';
+import { serwis } from '../../utils/serwis';
 
 const CoffeeMachineService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
@@ -43,8 +46,8 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
 
           <ServiceOffer>
             <Photo
-              src={imageUrls.ekspres}
-              alt="naprawa ekspresow"
+              src={`${appUrls.home}images/ekspres.png`}
+              alt="profesjonalny ekspres do kawy"
               loading='lazy'
               width={dataForMetaTags.naprawa_ekspresow.metaTags.imageWidth}
               height={dataForMetaTags.naprawa_ekspresow.metaTags.imageHeight}
@@ -56,7 +59,7 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
             <SubTitle as="h3">
               Najczęstsze problemy z&nbsp;ekspresami do&nbsp;kawy, które naprawiam:
             </SubTitle>
-            <Text as="ul">
+            <Text as="ul" $cross>
               <li><b>ekspres nie zaparza kawy</b> -&nbsp;problem z&nbsp;układem zaparzania, zatkane dysze lub uszkodzenie pompy.</li>
               <li><b>wycieki wody podczas pracy</b> -&nbsp;uszkodzone uszczelki, pęknięte przewody lub nieszczelny bojler.</li>
               <li><b>ekspres wyświetla błędy</b> -&nbsp;usterki elektroniki, czujników lub niewłaściwa konfiguracja urządzenia.</li>
@@ -81,6 +84,9 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
             <b>Nie pozwól, aby awaria ekspresu popsuła Twój dzień! </b>
             Skontaktuj się ze mną, a sprawnie przywrócę pełną funkcjonalność Twojego urządzenia, abyś mógł cieszyć się ulubioną kawą każdego dnia.
           </Text>
+          <ButtonLink href={`tel:${serwis.phone}`} >
+            Zadzwoń teraz
+          </ButtonLink>
         </main>
       </Container>
     </Section>

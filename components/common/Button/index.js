@@ -5,19 +5,17 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.color.black};
   padding: 15px 30px;
   margin: 15px 0;
-  font-size: clamp(0.7rem, 2vw, 2rem);
+  font-size: clamp(0.7rem, 2vw, 1.4rem);
   text-decoration: none;
   border: 2px solid transparent;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s ease,
-   outline-color 0.2s ease;
+  transition: background-color 0.2s ease;
   font-weight: 600;
   min-width: max-content;  
 
   &:hover {
     background-color: ${({ theme }) => theme.color.buttonHover};
-    outline: 2px solid ${({ theme }) => theme.color.white};
   }
 
   &:active {
