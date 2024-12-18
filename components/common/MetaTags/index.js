@@ -18,54 +18,50 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     keywords,
     appleMobileWebAppTitle,
   } = page.metaTags;
-  const { organization, breadcrumbList } = page.schema;
-
-  const getRating = () => {
-    if (["/o-mnie/", "/kontakt/"].includes(path)) return null;
-
-    return {
-      "ratingValue": rating,
-      "reviewCount": ratingsTotal,
-    }
-  };
+  const { organization, product, place, webpage, imageObject, breadcrumbList } = page.schema;
 
   const getReviews = () => {
-    if (!["/opinie/"].includes(path)) return null;
-
-    const reviewsArray = reviews.map((review, index) => (
+    const reviewsArray = reviews.map((review) => (
       {
         "@type": "Review",
-        "@id": `https://naprawaprzemysl.pl/opinie#review${index + 1}`,
-        "url": `https://naprawaprzemysl.pl/opinie#review${index + 1}`,
+        "name": "Polecam serwis RTV AGD w Przemyślu",
         "author": {
           "@type": "Person",
           "name": review.author_name,
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Google"
         },
         "datePublished": formattedDate(review.time),
         "reviewBody": review.text,
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": review.rating,
-          "bestRating": "5",
-        }
+        },
       }
     ))
 
     return { "review": reviewsArray }
   };
 
-  const organizationSchema = {
-    ...organization,
+  const productSchema = {
+    ...product,
+    ...(path === "/" ?
+      { ...getReviews() }
+      :
+      {
+        "review": {
+          ...(product && product["review"]),
+          "reviewRating": {
+            ...(product && product["review"]["reviewRating"]),
+            "ratingValue": rating.toString(),
+          }
+        }
+      }),
     "aggregateRating": {
-      ...organization["aggregateRating"],
-      ...getRating(),
-    },
-    ...getReviews(),
-  }
+      ...(product && product["aggregateRating"]),
+      "ratingValue": rating.toString(),
+      "reviewCount": ratingsTotal.toString(),
+      ...(path === "/" && { "ratingCount": ratingsTotal.toString() }),
+    }
+  };
 
   return (
     <Head>
@@ -93,11 +89,37 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
       <meta http-equiv="Content-Language" content="pl" />
 
-      <script type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema)
-        }}
-      />
+      {(path === "/" || path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
+        <script type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(productSchema)
+          }}
+        />
+      )}
+
+      {path === "/" && (
+        <script type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(place)
+          }}
+        />
+      )}
+
+      {path === "/" && (
+        <script type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webpage)
+          }}
+        />
+      )}
+
+      {path === "/" && (
+        <script type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(imageObject)
+          }}
+        />
+      )}
 
       <script type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -8,6 +8,7 @@ export const imageUrls = {
   suszarka: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-suszarki",
   logoGoogle: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/logoGoogle",
   emoticon: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/emoticon",
+  logo: "https://res.cloudinary.com/difc0i71u/image/upload/v1733813310/Serwis/emoticon.png",
   mapa: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/mapa"
 };
 

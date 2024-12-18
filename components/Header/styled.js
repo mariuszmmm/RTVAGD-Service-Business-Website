@@ -109,4 +109,7 @@ export const Logo = styled(Link)`
   font-size: clamp(0.5rem, 2.5vw, 1.3rem);
   font-weight: bold;
   padding-right: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;

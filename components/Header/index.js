@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 import SubNav from "./SubNav";
 import { usePathname } from 'next/navigation';
 import { GoogleRating } from '../GoogleRating';
+import { Emoticon } from '../common/Emoticon';
+import { imageUrls } from '../../utils/urls';
 
 const Header = ({ rating }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +41,14 @@ const Header = ({ rating }) => {
   return (
     <HeaderWrapper>
       <HeaderContainer>
-        <Logo href="/">Serwis RTV&nbsp;i&nbsp;AGD</Logo>
+        <Logo href="/">
+          <Emoticon
+            src={imageUrls.logo}
+            alt="emoticon"
+            loading="lazy"
+            $logo
+          />
+          Serwis RTV&nbsp;i&nbsp;AGD</Logo>
         <nav>
           <NavList>
             <ListItem>
