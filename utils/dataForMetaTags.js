@@ -132,6 +132,13 @@ export const dataForMetaTags = {
         "alternateName": serwis.subName,
         "url": urls.home,
       },
+      website: {
+        "@context": "http://www.schema.org",
+        "@type": "WebSite",
+        "name": "Naprawa pralek, szuszarek, zmywarek, telewizorów, ekspresów",
+        "alternateName": "Naprawa pralek, szuszarek, zmywarek, telewizorów i ekspresów do kawy",
+        "url": urls.home,
+      },
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
