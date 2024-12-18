@@ -16,6 +16,7 @@ export const ButtonLink = styled(Button).attrs({ as: "a" })`
     padding: 8px 15px;
     font-size: clamp(0.3rem, 1.6vw, 0.9rem);
     font-weight: 600;
+    margin-top: 0;
     opacity: 1;
     transition:  opacity 0.2s ease;
   
