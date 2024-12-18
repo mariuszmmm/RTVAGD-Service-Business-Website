@@ -50,16 +50,16 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         "review": {
           ...(product && product["review"]),
           "reviewRating": {
-            ...(product && product["review"]["reviewRating"]),
-            "ratingValue": rating.toString(),
+            ...(product?.["review"]?.["reviewRating"]),
+            "ratingValue": rating?.toString(),
           }
         }
       }),
     "aggregateRating": {
       ...(product && product["aggregateRating"]),
-      "ratingValue": rating.toString(),
-      "reviewCount": ratingsTotal.toString(),
-      ...(path === "/" && { "ratingCount": ratingsTotal.toString() }),
+      "ratingValue": rating?.toString(),
+      "reviewCount": ratingsTotal?.toString(),
+      ...(path === "/" && { "ratingCount": ratingsTotal?.toString() }),
     }
   };
 
@@ -93,6 +93,14 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(productSchema)
+          }}
+        />
+      )}
+
+      {path === "/" && (
+        <script type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organization)
           }}
         />
       )}
