@@ -18,9 +18,7 @@ export const geo = {
   "longitude": "22.7760291"
 };
 
-export const openingHours = {
-  "openingHours": "Mo, Tu, We, Th, Fr, 09:30-17:00"
-};
+export const openingHours = "Mo, Tu, We, Th, Fr, 09:30-17:00";
 
 const provider = {
   "@type": "LocalBusiness",
