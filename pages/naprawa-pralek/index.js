@@ -45,7 +45,7 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
 
           <ServiceOffer>
             <Photo
-              src={"https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-pralki.webp"}
+              src={imageUrls.pralka_auto}
               alt="Naprawa pralek - serwis pralki w Przemyślu"
               loading='lazy'
               width={dataForMetaTags.naprawa_pralek.metaTags.imageWidth}
