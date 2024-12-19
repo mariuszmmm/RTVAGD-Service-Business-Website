@@ -1,8 +1,8 @@
 export const imageUrls = {
   serwis: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis",
   telewizor: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis-telewizorow",
-  ekspres: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-ekspresow",
-  ekspres_2: "https://res.cloudinary.com/difc0i71u/image/upload/v1733124426/Serwis/serwis-ekspresow-przemysl-naprawa-ekspresu.png",
+  ekspres: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/serwis-ekspresow-przemysl-naprawa-ekspresu.webp",
+  ekspres_2: "https://res.cloudinary.com/difc0i71u/image/upload/v1733124426/Serwis/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu.png",
   zmywarka: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis-zmywarek",
   pralka: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-pralki.webp",
   suszarka: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-suszarki",
