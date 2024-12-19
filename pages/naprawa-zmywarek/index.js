@@ -5,7 +5,7 @@ import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
 import { Photo } from '../../components/common/Photo';
 import { ServiceOffer } from '../../components/common/ServiceOffer';
-import { imageUrls } from '../../utils/urls';
+import { appUrls, imageUrls } from '../../utils/urls';
 import { getRatingProps } from '../../utils/getRatingProps';
 import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
@@ -45,7 +45,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
 
           <ServiceOffer>
             <Photo
-              src={imageUrls.zmywarka}
+              src={`${appUrls.home}images/zmywarka.png`}
               alt="Naprawa zmywarek - serwis zmywarki w Przemyślu"
               loading='lazy'
               width={dataForMetaTags.naprawa_zmywarek.metaTags.imageWidth}
