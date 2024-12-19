@@ -60,7 +60,7 @@ export const dataForMetaTags = {
       organization: {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": ".Naprawa sprzętu RTV i AGD Naprawaprzemysl",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
         "logo": "https://res.cloudinary.com/difc0i71u/image/upload/v1733813310/Serwis/emoticon.png",
         "url": appUrls.home,
         "address": address,
@@ -74,7 +74,7 @@ export const dataForMetaTags = {
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
         "brand": {
           "@type": "Brand",
-          "name": "Naprawaprzemysl",
+          "name": "NaprawaPrzemysl",
         },
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -86,7 +86,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Place",
         "geo": geo,
-        "name": "Naprawa sprzętu RTV i AGD Naprawaprzemysl",
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
       },
       webpage: {
         "@context": "http://www.schema.org",
@@ -105,7 +105,7 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD Naprawaprzemysl",
+        "author": "Serwis RTV i AGD NaprawaPrzemysl",
         "contentLocation": "Przemyśl",
         "contentUrl": `${appUrls.home}share.png`,
         "datePublished": "2024-12-18",
