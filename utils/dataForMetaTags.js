@@ -110,6 +110,7 @@ export const dataForMetaTags = {
         "contentUrl": `${appUrls.home}share.png`,
         "datePublished": "2024-12-18",
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
+        "name": serwis.name,
       },
       breadcrumbList,
     }
