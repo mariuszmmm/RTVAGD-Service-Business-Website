@@ -1,5 +1,5 @@
 import { serwis } from './serwis';
-import { appUrls } from './urls';
+import { appUrls, imageUrls } from './urls';
 
 const shortName = "Serwis RTV i AGD";
 
@@ -209,7 +209,7 @@ export const dataForMetaTags = {
       canonical: appUrls.naprawa_pralek,
       description: "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
       siteName: `${shortName} - naprawa pralek`,
-      image: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-pralki.webp",
+      image: imageUrls.pralka_auto,
       imageWidth: "599",
       imageHeight: "729",
       imageAlt: "naprawa pralek",
@@ -222,13 +222,13 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Pralek",
-        "image": ["https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-pralki.webp"],
+        "image": [imageUrls.pralka_auto],
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
           "@type": "Thing",
-          "name": "Naprawaprzemysl",
+          "name": "NaprawaPrzemysl",
         },
         "review": {
           "type": "Review",
@@ -238,7 +238,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " Naprawaprzemysl ",
+            "name": " NaprawaPrzemysl ",
           },
         },
         "aggregateRating": {
@@ -254,7 +254,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "Naprawaprzemysl",
+            "name": "NaprawaPrzemysl",
           },
         },
       },
@@ -278,7 +278,7 @@ export const dataForMetaTags = {
       canonical: appUrls.naprawa_suszarek,
       description: "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
       siteName: `${shortName} - naprawa suszarek`,
-      image: "https://res.cloudinary.com/difc0i71u/image/upload/v1733118542/Serwis/naprawa-suszarki.webp",
+      image: imageUrls.suszarka,
       imageWidth: "700",
       imageHeight: "865",
       imageAlt: "naprawa suszarek",
@@ -291,13 +291,13 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Suszarek",
-        "image": ["https://res.cloudinary.com/difc0i71u/image/upload/v1733118542/Serwis/naprawa-suszarki.webp"],
+        "image": [imageUrls.suszarka],
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
           "@type": "Thing",
-          "name": "Naprawaprzemysl",
+          "name": "NaprawaPrzemysl",
         },
         "review": {
           "type": "Review",
@@ -307,7 +307,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " Naprawaprzemysl ",
+            "name": " NaprawaPrzemysl ",
           },
         },
         "aggregateRating": {
@@ -323,7 +323,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "Naprawaprzemysl",
+            "name": "NaprawaPrzemysl",
           },
         },
       },
@@ -366,7 +366,7 @@ export const dataForMetaTags = {
         "mpn": "SEO-33",
         "brand": {
           "@type": "Thing",
-          "name": "Naprawaprzemysl",
+          "name": "NaprawaPrzemysl",
         },
         "review": {
           "type": "Review",
@@ -376,7 +376,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " Naprawaprzemysl ",
+            "name": " NaprawaPrzemysl ",
           },
         },
         "aggregateRating": {
@@ -392,7 +392,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "Naprawaprzemysl",
+            "name": "NaprawaPrzemysl",
           },
         },
       },
@@ -416,7 +416,7 @@ export const dataForMetaTags = {
       canonical: appUrls.naprawa_ekspresow,
       description: "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
       siteName: `${shortName} - naprawa ekspresów`,
-      image: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-ekspresow.webp",
+      image: imageUrls.ekspres,
       imageWidth: "700",
       imageHeight: "700",
       imageAlt: "naprawa ekspresów",
@@ -429,13 +429,13 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Ekspresów",
-        "image": ["https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-ekspresow.webp"],
+        "image": [imageUrls.ekspres],
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
           "@type": "Thing",
-          "name": "Naprawaprzemysl",
+          "name": "NaprawaPrzemysl",
         },
         "review": {
           "type": "Review",
@@ -445,7 +445,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " Naprawaprzemysl ",
+            "name": " NaprawaPrzemysl ",
           },
         },
         "aggregateRating": {
@@ -461,7 +461,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "Naprawaprzemysl",
+            "name": "NaprawaPrzemysl",
           },
         },
       },
@@ -485,7 +485,7 @@ export const dataForMetaTags = {
       canonical: appUrls.naprawa_telewizorow,
       description: "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
       siteName: `${shortName} - naprawa telewizorów`,
-      image: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168332/Serwis/serwis-telewizorow.webp",
+      image: imageUrls.telewizor,
       imageWidth: "918",
       imageHeight: "743",
       imageAlt: "naprawa telewizorów",
@@ -498,13 +498,13 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Telewizorów",
-        "image": [`${appUrls.home}share.png`],
+        "image": [imageUrls.telewizor],
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
           "@type": "Thing",
-          "name": "Naprawaprzemysl",
+          "name": "NaprawaPrzemysl",
         },
         "review": {
           "type": "Review",
@@ -514,7 +514,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " Naprawaprzemysl ",
+            "name": " NaprawaPrzemysl ",
           },
         },
         "aggregateRating": {
@@ -530,7 +530,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "Naprawaprzemysl",
+            "name": "NaprawaPrzemysl",
           },
         },
       },
