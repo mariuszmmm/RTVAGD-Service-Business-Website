@@ -17,7 +17,7 @@ const Television = ({ show, left, setHold }) => (
     >
       <Image
         src={imageUrls.telewizor}
-        alt="Serwis telewizorów w Przemyślu"
+        alt="Naprawa telewizorów - serwis telewizora w Przemyślu"
         loading="lazy"
         width={dataForMetaTags.naprawa_telewizorow.metaTags.imageWidth}
         height={dataForMetaTags.naprawa_telewizorow.metaTags.imageHeight}

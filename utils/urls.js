@@ -4,7 +4,7 @@ export const imageUrls = {
   ekspres: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-ekspresow",
   ekspres_2: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis-ekspresow",
   zmywarka: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/serwis-zmywarek",
-  pralka: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-pralki",
+  pralka: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-pralki.webp",
   suszarka: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/naprawa-suszarki",
   logoGoogle: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/logoGoogle",
   emoticon: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto/v1/Serwis/emoticon",

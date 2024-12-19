@@ -18,7 +18,7 @@ const WashingMachine = ({ show, left, setHold }) => {
       >
         <Image
           src={imageUrls.pralka}
-          alt="naprawa pralek"
+          alt="Naprawa pralek - serwis pralki w Przemyślu"
           loading='lazy'
           width={dataForMetaTags.naprawa_pralek.metaTags.imageWidth}
           height={dataForMetaTags.naprawa_pralek.metaTags.imageHeight}

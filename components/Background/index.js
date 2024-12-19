@@ -4,11 +4,11 @@ import { imageUrls } from "../../utils/urls";
 const Background = () => {
   return (
     <BackgroundWrapper>
-      <Image
+      {/* <Image
         src={imageUrls.serwis}
         alt="Background image"
         loading="lazy"
-      />
+      /> */}
       <Rotating>
         <Circle $top={"0"} $left={"0"}></Circle>
         <Circle $top={"-80%"} $left={"30%"}></Circle>

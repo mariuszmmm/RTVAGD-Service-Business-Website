@@ -18,8 +18,6 @@ import { serwis } from '../../utils/serwis';
 const TelevisionService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
-  console.log(`${appUrls.home}images/telewizor.png`)
-
   return (
     <Section>
       <MetaTags
@@ -48,8 +46,8 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
 
           <ServiceOffer>
             <Photo
-              src={`/images/telewizor.png`}
-              alt="telewizor"
+              src={imageUrls.telewizor}
+              alt="Naprawa telewizorów - serwis telewizora w Przemyślu"
               loading='lazy'
               width={dataForMetaTags.naprawa_telewizorow.metaTags.imageWidth}
               height={dataForMetaTags.naprawa_telewizorow.metaTags.imageHeight}

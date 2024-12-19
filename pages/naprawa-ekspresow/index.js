@@ -11,7 +11,6 @@ import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
-import { appUrls } from '../../utils/urls';
 import { ButtonLink } from '../../components/common/ButtonLink';
 import { serwis } from '../../utils/serwis';
 
@@ -46,8 +45,8 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
 
           <ServiceOffer>
             <Photo
-              src={`${appUrls.home}images/ekspres.png`}
-              alt="profesjonalny ekspres do kawy"
+              src={imageUrls.ekspres}
+              alt="Naprawa ekspresów do kawy - profesjonalny serwis ekspresu w Przemyślu"
               loading='lazy'
               width={dataForMetaTags.naprawa_ekspresow.metaTags.imageWidth}
               height={dataForMetaTags.naprawa_ekspresow.metaTags.imageHeight}

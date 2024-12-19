@@ -3,19 +3,7 @@ import { appUrls } from './urls';
 
 const shortName = "Serwis RTV i AGD";
 
-const urls = {
-  home: "https://naprawaprzemysl.pl/",
-  kontakt: "https://naprawaprzemysl.pl/kontakt/",
-  o_mnie: "https://naprawaprzemysl.pl/o-mnie/",
-  opinie: "https://naprawaprzemysl.pl/opinie/",
-  naprawa_pralek: "https://naprawaprzemysl.pl/naprawa-pralek/",
-  naprawa_suszarek: "https://naprawaprzemysl.pl/naprawa-suszarek/",
-  naprawa_zmywarek: "https://naprawaprzemysl.pl/naprawa-zmywarek/",
-  naprawa_ekspresow: "https://naprawaprzemysl.pl/naprawa-ekspresow/",
-  naprawa_telewizorow: "https://naprawaprzemysl.pl/naprawa-telewizorow/",
-};
-
-const address = {
+export const address = {
   "@type": "PostalAddress",
   "streetAddress": "Generała Józefa Sowińskiego 2",
   "addressLocality": "Przemyśl",
@@ -24,26 +12,15 @@ const address = {
   "addressCountry": "PL"
 };
 
-const geo = {
+export const geo = {
   "@type": "GeoCoordinates",
   "latitude": "49.7827725",
   "longitude": "22.7760291"
 };
 
-const openingHoursSpecification = [
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "09:30",
-    "closes": "17:00"
-  }
-];
+export const openingHours = {
+  "openingHours": "Mo, Tu, We, Th, Fr, 09:30-17:00"
+};
 
 const provider = {
   "@type": "LocalBusiness",
@@ -220,7 +197,7 @@ export const dataForMetaTags = {
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "O mnie",
+            "name": "Opinie",
             "item": appUrls.opinie
           }
         ]
@@ -230,7 +207,7 @@ export const dataForMetaTags = {
   naprawa_pralek: {
     metaTags: {
       title: "Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790 258 612",
-      canonical: urls.naprawa_pralek,
+      canonical: appUrls.naprawa_pralek,
       description: "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
       siteName: `${shortName} - naprawa pralek`,
       image: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-pralki.webp",
@@ -270,7 +247,7 @@ export const dataForMetaTags = {
         },
         "offers": {
           "@type": "Offer",
-          "url": urls.naprawa_pralek,
+          "url": appUrls.naprawa_pralek,
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2024-12-17",
@@ -290,7 +267,7 @@ export const dataForMetaTags = {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa pralek",
-            "item": urls.naprawa_pralek
+            "item": appUrls.naprawa_pralek
           }
         ]
       },
@@ -299,7 +276,7 @@ export const dataForMetaTags = {
   naprawa_suszarek: {
     metaTags: {
       title: "Naprawa suszarek ✔️ Serwis Przemyśl ☎️ 790 258 612",
-      canonical: urls.naprawa_suszarek,
+      canonical: appUrls.naprawa_suszarek,
       description: "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
       siteName: `${shortName} - naprawa suszarek`,
       image: "https://res.cloudinary.com/difc0i71u/image/upload/v1733118542/Serwis/naprawa-suszarki.webp",
@@ -339,7 +316,7 @@ export const dataForMetaTags = {
         },
         "offers": {
           "@type": "Offer",
-          "url": urls.naprawa_suszarek,
+          "url": appUrls.naprawa_suszarek,
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2024-12-17",
@@ -359,7 +336,7 @@ export const dataForMetaTags = {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa suszarek",
-            "item": urls.naprawa_suszarek,
+            "item": appUrls.naprawa_suszarek,
           }
         ]
       },
@@ -368,7 +345,7 @@ export const dataForMetaTags = {
   naprawa_zmywarek: {
     metaTags: {
       title: "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612",
-      canonical: urls.naprawa_zmywarek,
+      canonical: appUrls.naprawa_zmywarek,
       description: "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
       siteName: `${shortName} - naprawa zmywarek`,
       image: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/serwis-zmywarek.webp",
@@ -408,7 +385,7 @@ export const dataForMetaTags = {
         },
         "offers": {
           "@type": "Offer",
-          "url": urls.naprawa_zmywarek,
+          "url": appUrls.naprawa_zmywarek,
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2024-12-17",
@@ -428,7 +405,7 @@ export const dataForMetaTags = {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa zmywarek",
-            "item": urls.naprawa_zmywarek,
+            "item": appUrls.naprawa_zmywarek,
           }
         ]
       },
@@ -437,7 +414,7 @@ export const dataForMetaTags = {
   naprawa_ekspresow: {
     metaTags: {
       title: "Naprawa ekspresów ✔️ Serwis Przemyśl ☎️ 790 258 612",
-      canonical: urls.naprawa_ekspresow,
+      canonical: appUrls.naprawa_ekspresow,
       description: "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
       siteName: `${shortName} - naprawa ekspresów`,
       image: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168333/Serwis/naprawa-ekspresow.webp",
@@ -477,7 +454,7 @@ export const dataForMetaTags = {
         },
         "offers": {
           "@type": "Offer",
-          "url": urls.naprawa_ekspresow,
+          "url": appUrls.naprawa_ekspresow,
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2024-12-17",
@@ -497,7 +474,7 @@ export const dataForMetaTags = {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa ekspresów do kawy",
-            "item": urls.naprawa_ekspresow,
+            "item": appUrls.naprawa_ekspresow,
           }
         ]
       },
@@ -506,7 +483,7 @@ export const dataForMetaTags = {
   naprawa_telewizorow: {
     metaTags: {
       title: "Naprawa telewizorów ✔️ Serwis Przemyśl ☎️ 790 258 612",
-      canonical: urls.naprawa_telewizorow,
+      canonical: appUrls.naprawa_telewizorow,
       description: "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
       siteName: `${shortName} - naprawa telewizorów`,
       image: "https://res.cloudinary.com/difc0i71u/image/upload/v1731168332/Serwis/serwis-telewizorow.webp",
@@ -546,7 +523,7 @@ export const dataForMetaTags = {
         },
         "offers": {
           "@type": "Offer",
-          "url": urls.naprawa_telewizorow,
+          "url": appUrls.naprawa_telewizorow,
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2024-12-17",
@@ -566,7 +543,7 @@ export const dataForMetaTags = {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa telewizorów",
-            "item": urls.naprawa_telewizorow,
+            "item": appUrls.naprawa_telewizorow,
           }
         ]
       },

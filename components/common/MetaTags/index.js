@@ -48,7 +48,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       :
       {
         "review": {
-          ...(product && product["review"]),
+          ...(product?.["review"]),
           "reviewRating": {
             ...(product?.["review"]?.["reviewRating"]),
             "ratingValue": rating?.toString(),
@@ -56,7 +56,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         }
       }),
     "aggregateRating": {
-      ...(product && product["aggregateRating"]),
+      ...(product?.["aggregateRating"]),
       "ratingValue": rating?.toString(),
       "reviewCount": ratingsTotal?.toString(),
       ...(path === "/" && { "ratingCount": ratingsTotal?.toString() }),
@@ -121,7 +121,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         />
       )}
 
-     {path === "/" && (
+      {path === "/" && (
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(website)
