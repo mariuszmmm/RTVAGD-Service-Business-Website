@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { imageUrls } from "../../../utils/urls";
+import { appUrls, imageUrls } from "../../../utils/urls";
 import { Image } from "../../../components/common/Image";
 import { ImageWrapper } from "../../../components/common/ImageWrapper";
 import { dataForMetaTags } from "../../../utils/dataForMetaTags";
@@ -15,7 +15,7 @@ const Dishwasher = ({ show, setHold }) => (
       title="Serwis zmywarek w Przemyślu"
     >
       <Image
-        src={imageUrls.zmywarka}
+        src={`${appUrls.home}images/zmywarka.png`}
         alt="Serwis zmywarek w Przemyślu"
         loading="lazy"
         width={dataForMetaTags.naprawa_zmywarek.metaTags.imageWidth}
