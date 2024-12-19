@@ -15,7 +15,7 @@ const Dishwasher = ({ show, setHold }) => (
       title="Serwis zmywarek w Przemyślu"
     >
       <Image
-        src={`${appUrls.home}images/zmywarka.png`}
+        src={`${appUrls.home}images/serwis-zmywarek-przemysl-naprawa-zmywarki.png`}
         alt="Serwis zmywarek w Przemyślu"
         loading="lazy"
         width={dataForMetaTags.naprawa_zmywarek.metaTags.imageWidth}
