@@ -4,7 +4,7 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.color.button};
   color: ${({ theme }) => theme.color.black};
   padding: 15px 30px;
-  margin: 60px 0;
+  margin: 60px 0 0;
   font-size: clamp(0.7rem, 2vw, 1.4rem);
   text-decoration: none;
   border: 2px solid transparent;
@@ -24,7 +24,6 @@ export const Button = styled.button`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
     padding: 10px 15px;
-    margin: 0;
     border-radius: 3px;
   }
 

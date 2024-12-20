@@ -3,7 +3,7 @@ import { Container } from '../../components/common/Container';
 import { Title } from '../../components/common/Title';
 import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
-import { Photo } from '../../components/common/Photo';
+import { StyledPhoto } from '../../components/common/StyledPhoto';
 import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { appUrls, imageUrls } from '../../utils/urls';
 import { getRatingProps } from '../../utils/getRatingProps';
@@ -13,9 +13,11 @@ import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 import { ButtonLink } from '../../components/common/ButtonLink';
 import { serwis } from '../../utils/serwis';
+import Image from 'next/image';
 
 const DishwasherService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
+  if (!imageUrls.zmywarka) return null;
 
   return (
     <Section>
@@ -44,19 +46,21 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
           </Text>
 
           <ServiceOffer>
-            <Photo
-              src={`${appUrls.home}images/serwis-zmywarek-przemysl-naprawa-zmywarki.png`}
-              alt="Naprawa zmywarek - serwis zmywarki w Przemyślu"
-              loading='lazy'
-              width={dataForMetaTags.naprawa_zmywarek.metaTags.imageWidth}
-              height={dataForMetaTags.naprawa_zmywarek.metaTags.imageHeight}
-              crop={{
-                type: 'auto',
-                source: true
-              }}
-            />
+            <StyledPhoto>
+              <Image
+                src={`${appUrls.home}images/serwis-zmywarek-przemysl-naprawa-zmywarki.png`}
+                alt="Naprawa zmywarek - serwis zmywarki w Przemyślu"
+                loading='lazy'
+                fill
+                style={{
+                  objectFit: 'contain',
+                  maxHeight: 'content',
+                }}
+              />
+            </StyledPhoto>
+
             <SubTitle as="h3">
-              Najczęstsze problemy z zmywarkami, które naprawiam:
+              Najczęstsze problemy ze zmywarkami, które naprawiam:
             </SubTitle>
             <Text as="ul" $cross>
               <li><b>zmywarka nie podgrzewa wody</b> -&nbsp;problem z&nbsp;grzałką, czujnikiem temperatury lub modułem sterującym.</li>

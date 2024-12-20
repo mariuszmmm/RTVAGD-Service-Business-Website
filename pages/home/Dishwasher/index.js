@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { appUrls, imageUrls } from "../../../utils/urls";
-import { Image } from "../../../components/common/Image";
+import { StyledImage } from "../../../components/common/StyledImage";
 import { ImageWrapper } from "../../../components/common/ImageWrapper";
 import { dataForMetaTags } from "../../../utils/dataForMetaTags";
+import Image from "next/image";
+
+console.log(`${appUrls.home}images/serwis-zmywarek-przemysl-naprawa-zmywarki.png`);
 
 const Dishwasher = ({ show, setHold }) => (
   <ImageWrapper
@@ -14,17 +17,18 @@ const Dishwasher = ({ show, setHold }) => (
       href="/naprawa-zmywarek"
       title="Serwis zmywarek w Przemyślu"
     >
-      <Image
-        src={`${appUrls.home}images/serwis-zmywarek-przemysl-naprawa-zmywarki.png`}
-        alt="Serwis zmywarek w Przemyślu"
-        loading="lazy"
-        width={dataForMetaTags.naprawa_zmywarek.metaTags.imageWidth}
-        height={dataForMetaTags.naprawa_zmywarek.metaTags.imageHeight}
-        crop={{
-          type: 'auto',
-          source: true
-        }}
-      />
+      <StyledImage>
+        <Image
+          src={imageUrls.zmywarka}
+          alt="Serwis zmywarek w Przemyślu"
+          loading='lazy'
+          fill
+          style={{
+            objectFit: 'contain',
+            maxHeight: 'content',
+          }}
+        />
+      </StyledImage>
     </Link>
   </ImageWrapper>
 );

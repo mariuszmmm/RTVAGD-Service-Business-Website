@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { CldImage } from 'next-cloudinary';
 
-export const Image = styled(CldImage)`
+export const StyledImage = styled.div`
   width: 100%;
   height: 100%;
   max-width: 300px;

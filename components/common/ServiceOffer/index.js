@@ -6,8 +6,9 @@ export const ServiceOffer = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas:
+  "photo photo"
     "header header"
-    "text photo"
+    "text text"
     "text_2 text_2";  
  
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
@@ -16,9 +17,9 @@ export const ServiceOffer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
     grid-template-areas:
+    "photo"
     "header"
     "text"
-    "photo"
     "text_2";
   } 
 `;

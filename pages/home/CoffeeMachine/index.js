@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 import { ImageWrapper } from "../../../components/common/ImageWrapper";
-import { Image } from "../../../components/common/Image";
-import { dataForMetaTags } from "../../../utils/dataForMetaTags";
+import { StyledImage } from "../../../components/common/StyledImage";
+import Image from "next/image";
 
 const CoffeeMachine = ({ show, setHold }) => (
   <ImageWrapper
@@ -14,17 +14,18 @@ const CoffeeMachine = ({ show, setHold }) => (
       href="/naprawa-ekspresow"
       title="Naprawa ekspresów do kawy w Przemyślu"
     >
-      <Image
-        src={imageUrls.ekspres}
-        alt="Naprawa ekspresów do kawy - serwis ekspresu w Przemyślu"
-        loading="lazy"
-        width={dataForMetaTags.naprawa_ekspresow.metaTags.imageWidth}
-        height={dataForMetaTags.naprawa_ekspresow.metaTags.imageHeight}
-        crop={{
-          type: 'auto',
-          source: true
-        }}
-      />
+      <StyledImage>
+        <Image
+          src={imageUrls.ekspres}
+          alt="Naprawa ekspresów do kawy - serwis ekspresu w Przemyślu"
+          loading='lazy'
+          fill
+          style={{
+            objectFit: 'contain',
+            maxHeight: 'content',
+          }}
+        />
+      </StyledImage>
     </Link>
   </ImageWrapper>
 );

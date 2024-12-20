@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 import { ImageWrapper } from "../../../components/common/ImageWrapper";
-import { Image } from "../../../components/common/Image";
+import { StyledImage } from "../../../components/common/StyledImage";
 import { dataForMetaTags } from "../../../utils/dataForMetaTags";
+import Image from "next/image";
 
 const Television = ({ show, left, setHold }) => (
   <ImageWrapper
@@ -15,17 +16,18 @@ const Television = ({ show, left, setHold }) => (
       href="/naprawa-telewizorow"
       title="Serwis telewizorów w Przemyślu"
     >
-      <Image
-        src={imageUrls.telewizor}
-        alt="Naprawa telewizorów - serwis telewizora w Przemyślu"
-        loading="lazy"
-        width={dataForMetaTags.naprawa_telewizorow.metaTags.imageWidth}
-        height={dataForMetaTags.naprawa_telewizorow.metaTags.imageHeight}
-        crop={{
-          type: 'auto',
-          source: true
-        }}
-      />
+      <StyledImage>
+        <Image
+          src={imageUrls.telewizor}
+          alt="Naprawa telewizorów - serwis telewizora w Przemyślu"
+          loading='lazy'
+          fill
+          style={{
+            objectFit: 'contain',
+            maxHeight: 'content',
+          }}
+        />
+      </StyledImage>
     </Link>
   </ImageWrapper>
 );

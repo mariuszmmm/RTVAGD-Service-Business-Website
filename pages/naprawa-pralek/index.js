@@ -3,7 +3,6 @@ import { Container } from '../../components/common/Container';
 import { Title } from '../../components/common/Title';
 import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
-import { Photo } from '../../components/common/Photo';
 import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
 import { getRatingProps } from '../../utils/getRatingProps';
@@ -13,6 +12,8 @@ import { dataForMetaTags } from '../../utils/dataForMetaTags';
 import MetaTags from '../../components/common/MetaTags';
 import { ButtonLink } from '../../components/common/ButtonLink';
 import { serwis } from '../../utils/serwis';
+import Image from 'next/image';
+import { StyledPhoto } from '../../components/common/StyledPhoto';
 
 const WashingMachineService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
@@ -44,17 +45,18 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
           </Text>
 
           <ServiceOffer>
-            <Photo
-              src={imageUrls.pralka_auto}
-              alt="Naprawa pralek - serwis pralki w Przemyślu"
-              loading='lazy'
-              width={dataForMetaTags.naprawa_pralek.metaTags.imageWidth}
-              height={dataForMetaTags.naprawa_pralek.metaTags.imageHeight}
-              crop={{
-                type: 'auto',
-                source: true
-              }}
-            />
+            <StyledPhoto>
+              <Image
+                src={imageUrls.pralka_auto}
+                alt="Naprawa pralek - serwis pralki w Przemyślu"
+                loading='lazy'
+                fill
+                style={{
+                  objectFit: 'contain',
+                  maxHeight: 'content',
+                }}
+              />
+            </StyledPhoto>
             <SubTitle as="h3">
               Najczęstsze problemy z pralkami, które naprawiam:
             </SubTitle>
