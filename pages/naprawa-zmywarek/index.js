@@ -31,8 +31,8 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
         <Title>
           Naprawa zmywarek
           <Emoticon
-            src={imageUrls.emoticon}
-            alt="emoticon"
+            src={imageUrls.logo}
+            alt="logo"
             loading="lazy"
           />
         </Title>
@@ -48,7 +48,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                src={`${appUrls.home}images/serwis-zmywarek-przemysl-naprawa-zmywarki.png`}
+                src={"https://res.cloudinary.com/difc0i71u/image/upload/v1734715051/Serwis/serwis-zmywarek-przemysl-naprawa-zmywarki.png"}
                 alt="Naprawa zmywarek - serwis zmywarki w Przemyślu"
                 loading='lazy'
                 fill

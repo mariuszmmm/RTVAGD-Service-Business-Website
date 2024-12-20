@@ -30,8 +30,8 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
         <Title>
           Naprawa telewizorów
           <Emoticon
-            src={imageUrls.emoticon}
-            alt="emoticon"
+            src={imageUrls.logo}
+            alt="logo"
             loading="lazy"
           />
         </Title>

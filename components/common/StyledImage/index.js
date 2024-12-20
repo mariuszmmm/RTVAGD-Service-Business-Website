@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
 export const StyledImage = styled.div`
-  width: 100%;
-  height: 100%;
-  max-width: 300px;
-  object-fit: contain; 
+  /* background-color: red; */
+  width: 30vw;
+  aspect-ratio: 1;
+  max-width: 600px;
+  justify-self: center;
+
+  @media(orientation: portrait) {
+    width: clamp(30vw, 59vw, 520px);
+  }
  
   filter: drop-shadow(10px 10px 15px rgba(40, 40, 40, 0.7))
     drop-shadow(0px 20px 30px rgba(40, 40, 40, 0.4));

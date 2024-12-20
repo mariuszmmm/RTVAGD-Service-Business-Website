@@ -5,7 +5,6 @@ import { ImageWrapper } from "../../../components/common/ImageWrapper";
 import { dataForMetaTags } from "../../../utils/dataForMetaTags";
 import Image from "next/image";
 
-console.log(`${appUrls.home}images/serwis-zmywarek-przemysl-naprawa-zmywarki.png`);
 
 const Dishwasher = ({ show, setHold }) => (
   <ImageWrapper

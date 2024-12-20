@@ -25,7 +25,7 @@ export const HeroContainer = styled.header`
   }
 
   @media (orientation: portrait) {
-    min-height: clamp(400px, 105vw, 1100px);  
+    min-height: clamp(400px, 105vw, 900px);  
   }
 `;
 

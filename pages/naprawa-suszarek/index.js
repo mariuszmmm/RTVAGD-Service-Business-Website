@@ -30,8 +30,8 @@ const DryerService = ({ rating, ratingsTotal }) => {
         <Title>
           Naprawa suszarek
           <Emoticon
-            src={imageUrls.emoticon}
-            alt="emoticon"
+            src={imageUrls.logo}
+            alt="logo"
             loading="lazy"
           />
         </Title>

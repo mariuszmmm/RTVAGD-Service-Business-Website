@@ -30,8 +30,8 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
         <Title>
           Naprawa pralek
           <Emoticon
-            src={imageUrls.emoticon}
-            alt="emoticon"
+            src={imageUrls.logo}
+            alt="logo"
             loading="lazy"
           />
         </Title>
