@@ -20,7 +20,7 @@ position: absolute;
     `};
 
 @media(orientation: portrait) {
-  width: 45vw;
+  width: 44vw;
   height: 50vw;
   top: clamp(400px, 82vw, 480px);
   transform: translateX(-50%);
