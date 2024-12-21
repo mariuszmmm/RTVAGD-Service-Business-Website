@@ -30,11 +30,18 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
       <Container>
         <Title>
           Naprawa zmywarek
-          <Emoticon
-            src={imageUrls.logo}
-            alt="logo"
-            loading="lazy"
-          />
+          <Emoticon>
+            <Image
+              src={imageUrls.logo}
+              alt="logo"
+              loading="lazy"
+              fill
+              style={{
+                objectFit: 'contain',
+                maxHeight: 'content',
+              }}
+            />
+          </Emoticon>
         </Title>
 
         <main>
@@ -48,7 +55,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                src={imageUrls.zmywarka}
+                src={imageUrls.zmywarka_auto}
                 alt="Naprawa zmywarek - serwis zmywarki w Przemyślu"
                 loading='lazy'
                 fill

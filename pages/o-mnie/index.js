@@ -2,12 +2,13 @@ import { Section } from '../../components/common/Section';
 import { Container } from '../../components/common/Container';
 import { Title } from '../../components/common/Title';
 import { Text } from '../../components/common/Text';
-import { TeamImage } from '../../components/common/TeamImage';
+import { Team, TeamImage } from '../../components/common/TeamImage';
 import { imageUrls } from '../../utils/urls';
 import { getRatingProps } from '../../utils/getRatingProps';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
+import Image from 'next/image';
 
 const About = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
@@ -35,7 +36,18 @@ const About = ({ rating, ratingsTotal }) => {
           <Text>
             Skorzystaj z moich usług, a Twoje urządzenia odzyskają swoją sprawność!
           </Text>
-          <TeamImage src={imageUrls.serwis} alt="serwis" loading='lazy' />
+          <Team>
+            <Image
+              src={imageUrls.serwis}
+              alt="serwis"
+              loading='lazy'
+              fill
+              style={{
+                objectFit: 'contain',
+                maxHeight: 'content',
+              }}
+            />
+          </Team>
         </main>
       </Container>
     </Section>

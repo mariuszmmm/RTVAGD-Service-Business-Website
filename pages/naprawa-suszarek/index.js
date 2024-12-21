@@ -29,11 +29,18 @@ const DryerService = ({ rating, ratingsTotal }) => {
       <Container>
         <Title>
           Naprawa suszarek
-          <Emoticon
-            src={imageUrls.logo}
-            alt="logo"
-            loading="lazy"
-          />
+          <Emoticon>
+            <Image
+              src={imageUrls.logo}
+              alt="logo"
+              loading="lazy"
+              fill
+              style={{
+                objectFit: 'contain',
+                maxHeight: 'content',
+              }}
+            />
+          </Emoticon>
         </Title>
 
         <main>

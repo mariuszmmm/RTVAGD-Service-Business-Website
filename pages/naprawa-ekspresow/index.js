@@ -29,11 +29,18 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
       <Container>
         <Title>
           Naprawa ekspresów do&nbsp;kawy
-          <Emoticon
-            src={imageUrls.logo}
-            alt="logo"
-            loading="lazy"
-          />
+          <Emoticon>
+            <Image
+              src={imageUrls.logo}
+              alt="logo"
+              loading="lazy"
+              fill
+              style={{
+                objectFit: 'contain',
+                maxHeight: 'content',
+              }}
+            />
+          </Emoticon>
         </Title>
 
         <main>

@@ -29,11 +29,18 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
       <Container>
         <Title>
           Naprawa telewizorów
-          <Emoticon
-            src={imageUrls.logo}
-            alt="logo"
-            loading="lazy"
-          />
+          <Emoticon>
+            <Image
+              src={imageUrls.logo}
+              alt="logo"
+              loading="lazy"
+              fill
+              style={{
+                objectFit: 'contain',
+                maxHeight: 'content',
+              }}
+            />
+          </Emoticon>
         </Title>
 
         <main>
@@ -47,7 +54,7 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                src={imageUrls.telewizor}
+                src={imageUrls.telewizor_auto}
                 alt="Naprawa telewizorów - serwis telewizora w Przemyślu"
                 loading='lazy'
                 fill

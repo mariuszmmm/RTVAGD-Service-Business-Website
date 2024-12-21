@@ -13,11 +13,11 @@ const Television = ({ show, left, setHold }) => (
   >
     <Link
       href="/naprawa-telewizorow"
-      title="Serwis telewizorów w Przemyślu"
+      title="Serwis telewizorów w Przemyślu" s
     >
       <StyledImage>
         <Image
-          src={imageUrls.telewizor}
+          src={imageUrls.telewizor_auto}
           alt="Naprawa telewizorów - serwis telewizora w Przemyślu"
           loading='lazy'
           fill

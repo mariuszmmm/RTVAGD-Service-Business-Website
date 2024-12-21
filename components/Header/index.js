@@ -14,6 +14,7 @@ import { usePathname } from 'next/navigation';
 import { GoogleRating } from '../GoogleRating';
 import { Emoticon } from '../common/Emoticon';
 import { imageUrls } from '../../utils/urls';
+import Image from "next/image";
 
 const Header = ({ rating }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,12 +43,18 @@ const Header = ({ rating }) => {
     <HeaderWrapper>
       <HeaderContainer>
         <Logo href="/">
-          <Emoticon
-            src={imageUrls.logo}
-            alt="Logo serwisu RTV i AGD"
-            loading="lazy"
-            $logo
-          />
+          <Emoticon $logo>
+            <Image
+              src={imageUrls.logo}
+              alt="Logo serwisu RTV i AGD"
+              loading="lazy"
+              fill
+              style={{
+                objectFit: 'contain',
+                maxHeight: 'content',
+              }}
+            />
+          </Emoticon>
           Serwis RTV&nbsp;i&nbsp;AGD</Logo>
         <nav>
           <NavList>
