@@ -433,7 +433,7 @@ export const dataForMetaTags = {
   },
   naprawa_telewizorow: {
     metaTags: {
-      title: "Naprawa telewizorów ✔️ Serwis Przemyśl ☎️ 790 258 612",
+      title: "Naprawa telewizorów ✔️ Serwis Przemyśl ☎️_790-258-612",
       canonical: appUrls.naprawa_telewizorow,
       description: "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
       siteName: `${shortName} - naprawa telewizorów`,
