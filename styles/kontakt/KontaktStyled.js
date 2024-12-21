@@ -49,7 +49,3 @@ export const ImageContainer = styled.div`
   aspect-ratio: 600/450;
   margin: 50px 0 80px;
 `;
-
-export const Image = styled.img`
-  width: 100%;
-`;

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { imageUrls } from "../../../utils/urls";
 import { ImageWrapper } from "../../../components/common/ImageWrapper";
 import { StyledImage } from "../../../components/common/StyledImage";
-import { dataForMetaTags } from "../../../utils/dataForMetaTags";
 import Image from "next/image";
 
 const Dryer = ({ show, left, setHold }) => {

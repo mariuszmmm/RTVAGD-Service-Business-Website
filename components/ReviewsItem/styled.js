@@ -13,9 +13,9 @@ export const Header = styled.div`
   display: flex;
 `;
 
-export const Avatar = styled.img`
-  width: clamp(2.5rem, 6vw, 4rem);;
-  height: clamp(2.5rem, 6vw, 4rem);
+export const Avatar = styled.div`
+  position: relative;
+  width: clamp(3rem, 6vw, 4rem);;
   margin-right: 15px;
 `;
 

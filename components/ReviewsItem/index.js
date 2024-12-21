@@ -8,23 +8,30 @@ import {
   Avatar,
 } from "./styled";
 import { Text } from "../common/Text";
+import Image from "next/image";
 
 const ReviewsItem = ({ reviewIndex, item }) => (
   <ItemWrapper id={`review${reviewIndex}`}>
     <Header>
-      <Avatar
-        itemProp="image"
-        src={item?.profile_photo_url}
-        alt="Foto"
-        loading="lazy"
-      />
+      <Avatar>
+        <Image
+          src={item?.profile_photo_url}
+          alt="Foto"
+          loading='lazy'
+          fill
+          style={{
+            objectFit: 'contain',
+            maxHeight: 'content',
+          }}
+        />
+      </Avatar>
       <Data>
         <Author>{item?.author_name}</Author>
         <Time time={item?.time} />
       </Data>
     </Header>
     <Stars rating={item?.rating || 0} />
-    <Text itemProp="reviewBody" $forReviews>{item?.text}</Text>
+    <Text $forReviews>{item?.text}</Text>
   </ItemWrapper>
 );
 

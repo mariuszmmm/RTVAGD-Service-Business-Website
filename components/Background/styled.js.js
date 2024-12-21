@@ -7,15 +7,6 @@ export const BackgroundWrapper = styled.div`
   z-index: -1;
 `;
 
-export const Image = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0;
-`;
-
 export const Rotating = styled.div`
   @keyframes rotateBg {
     0% {

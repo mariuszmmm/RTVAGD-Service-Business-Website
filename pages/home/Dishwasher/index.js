@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { appUrls, imageUrls } from "../../../utils/urls";
+import { imageUrls } from "../../../utils/urls";
 import { StyledImage } from "../../../components/common/StyledImage";
 import { ImageWrapper } from "../../../components/common/ImageWrapper";
-import { dataForMetaTags } from "../../../utils/dataForMetaTags";
 import Image from "next/image";
 
 
