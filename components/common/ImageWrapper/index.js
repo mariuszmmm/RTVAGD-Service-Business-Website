@@ -17,7 +17,7 @@ export const ImageWrapper = styled.div`
   `};
 
   @media(orientation: portrait) {
-    top: clamp(400px, 59vw, 520px);
+    top: clamp(400px, 59vw, 600px);
     transform: translateX(-50%);
   }
 `;
