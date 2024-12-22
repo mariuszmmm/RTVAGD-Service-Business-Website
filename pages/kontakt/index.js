@@ -25,8 +25,8 @@ const Contact = ({ rating, ratingsTotal }) => {
       const checkConsent = () => {
         const consent = window.Cookiebot?.consent?.necessary;
         setConsentGiven(consent || false);
+        console.log('Cookiebot', consent);
       };
-      console.log('Cookiebot', consent);
       console.log('consentGiven', consentGiven);
       window.addEventListener('CookieConsentUpdate', checkConsent);
       checkConsent();
