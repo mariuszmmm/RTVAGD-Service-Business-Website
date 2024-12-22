@@ -83,7 +83,7 @@ const Contact = ({ rating, ratingsTotal }) => {
           </ContactInfo>
         </ContactContainer>
       </ContactSection >
-      <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></Script>
+      <Script id="CookieDeclaration" src="https://consent.cookiebot.com/3b999804-26b5-40e7-93bc-f82624a559cc/cd.js" type="text/javascript" async></Script>
     </>
   );
 };
