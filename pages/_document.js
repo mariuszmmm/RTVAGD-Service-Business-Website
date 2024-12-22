@@ -32,11 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang='pl'>
         <Head>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P52JLLB7');`,
-            }}
-          />
+          <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></script>
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
@@ -56,8 +52,7 @@ export default class MyDocument extends Document {
           <meta property="fb:app_id" content="100063811592941" />
         </Head>
         <body>
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P52JLLB7"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+          <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></script>
           <Main />
           <NextScript />
           <Script
