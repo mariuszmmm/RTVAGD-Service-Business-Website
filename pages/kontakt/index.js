@@ -12,15 +12,14 @@ import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
 import Head from "next/head";
+import Script from "next/script";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
     <>
-      <Head>
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></script>
-      </Head>
+      <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></Script>
       < ContactSection >
         <MetaTags
           path={path}
@@ -58,7 +57,7 @@ const Contact = ({ rating, ratingsTotal }) => {
           </ContactInfo>
         </ContactContainer>
       </ContactSection >
-      <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></script>
+      <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></Script>
     </>
   );
 };
