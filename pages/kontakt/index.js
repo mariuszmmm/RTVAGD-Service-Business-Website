@@ -30,7 +30,9 @@ const Contact = ({ rating, ratingsTotal }) => {
           window.Cookiebot?.consent?.marketing ||
           window.Cookiebot?.consent?.functional;
 
-        console.log(consent)
+        console.log("window", window)
+        console.log("window.Cookiebot", window.Cookiebot)
+
         setConsentGiven(true || false);
       };
 
