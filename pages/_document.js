@@ -32,6 +32,20 @@ export default class MyDocument extends Document {
     return (
       <Html lang='pl'>
         <Head>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-X6C7E1S25H"
+            strategy="afterInteractive"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || []; 
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-X6C7E1S25H');
+              `,
+            }}
+          />
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
