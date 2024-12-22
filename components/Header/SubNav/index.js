@@ -2,16 +2,16 @@ import { ListItem, NavList, StyledLink } from "../styled";
 import { SubNavWrapper } from "./styled";
 import { usePathname } from 'next/navigation';
 
-const SubNav = ({ showSubNav, setShowSubNav }) => {
+const SubNav = ({ showSubNav }) => {
   const pathname = usePathname()
 
   return (
     <SubNavWrapper $show={showSubNav}>
-      <NavList $subNav onClick={() => setShowSubNav(false)}>
+      <NavList $subNav>
         <ListItem >
           <StyledLink
             href="/naprawa-pralek"
-            $active={pathname === "/naprawa-pralek/"}
+            $active={pathname === "/naprawa-pralek/" && showSubNav}
             $subNav
           >
             Naprawa pralek
@@ -20,7 +20,7 @@ const SubNav = ({ showSubNav, setShowSubNav }) => {
         <ListItem >
           <StyledLink
             href="/naprawa-suszarek"
-            $active={pathname === "/naprawa-suszarek/"}
+            $active={pathname === "/naprawa-suszarek/" && showSubNav}
             $subNav
           >
             Naprawa suszarek
@@ -29,7 +29,7 @@ const SubNav = ({ showSubNav, setShowSubNav }) => {
         <ListItem >
           <StyledLink
             href="/naprawa-zmywarek"
-            $active={pathname === "/naprawa-zmywarek/"}
+            $active={pathname === "/naprawa-zmywarek/" && showSubNav}
             $subNav
           >
             Naprawa zmywarek
@@ -38,7 +38,7 @@ const SubNav = ({ showSubNav, setShowSubNav }) => {
         <ListItem >
           <StyledLink
             href="/naprawa-ekspresow"
-            $active={pathname === "/naprawa-ekspresow/"}
+            $active={pathname === "/naprawa-ekspresow/" && showSubNav}
             $subNav
           >
             Naprawa ekspresów
@@ -47,7 +47,7 @@ const SubNav = ({ showSubNav, setShowSubNav }) => {
         <ListItem >
           <StyledLink
             href="/naprawa-telewizorow"
-            $active={pathname === "/naprawa-telewizorow/"}
+            $active={pathname === "/naprawa-telewizorow/" && showSubNav}
             $subNav
           >
             Naprawa telewizorów

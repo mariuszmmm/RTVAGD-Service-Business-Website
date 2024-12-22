@@ -78,7 +78,7 @@ const Header = ({ rating }) => {
                 disabled
               >Usługi
               </StyledLink>
-              <SubNav showSubNav={showSubNav} setShowSubNav={setShowSubNav} />
+              <SubNav showSubNav={showSubNav} />
             </ListItem>
             <ListItem>
               <StyledLink href="/opinie" $active={pathname === "/opinie/"}>Opinie</StyledLink>

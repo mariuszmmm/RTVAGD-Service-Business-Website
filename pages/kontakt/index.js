@@ -11,13 +11,16 @@ import { getRatingProps } from "../../utils/getRatingProps";
 import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
-import Script from "next/script";
+import Head from "next/head";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
     <>
+      <Head>
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></script>
+      </Head>
       < ContactSection >
         <MetaTags
           path={path}
@@ -55,13 +58,7 @@ const Contact = ({ rating, ratingsTotal }) => {
           </ContactInfo>
         </ContactContainer>
       </ContactSection >
-      {/* <Script
-        id="google-maps"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = \`https://maps.\${c}apis.com/maps/api/js?\` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({ key: "AIzaSyBdnXnOIJ1jabs-RVE4M2IbwJQ04Ym3xKM", v: "weekly" });`,
-        }}
-      /> */}
+      <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></script>
     </>
   );
 };

@@ -32,7 +32,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang='pl'>
         <Head>
-          {/* <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></script> */}
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
@@ -52,10 +51,8 @@ export default class MyDocument extends Document {
           <meta property="fb:app_id" content="100063811592941" />
         </Head>
         <body>
-          {/* <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></script> */}
           <Main />
           <NextScript />
-
         </body>
       </Html>
     );
