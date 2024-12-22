@@ -15,6 +15,7 @@ const theme = {
     background: "#252525",
     button: "#ff8c00",
     buttonHover: "#ff6f00",
+    buttonDisabled: "#ff8c0036",
     border: "#cccccc",
     tableHeader: "#252525",
     flamingo: "#eb5c20",

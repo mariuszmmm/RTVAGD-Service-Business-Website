@@ -78,7 +78,7 @@ const ContactForm = ({ consentGiven }) => {
         onChange={(e) => setMessage(e.target.value)}
         required
       ></Textarea>
-      <Button type="submit" value="Send" disabled={!consentGiven}>
+      <Button type="submit" value="Send" disabled={!consentGiven?.Cookiebot?.consent?.functional}>
         Wyślij
       </Button>
     </Form>

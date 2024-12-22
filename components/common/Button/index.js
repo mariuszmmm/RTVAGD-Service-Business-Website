@@ -22,6 +22,11 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.color.button};
   }
 
+  &:disabled {
+    background-color: ${({ theme }) => theme.color.buttonDisabled};
+    cursor: not-allowed;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
     padding: 10px 15px;
     border-radius: 3px;

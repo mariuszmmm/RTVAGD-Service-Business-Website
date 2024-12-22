@@ -22,18 +22,23 @@ const Contact = ({ rating, ratingsTotal }) => {
   console.log(consentGiven);
 
   useEffect(() => {
-    const checkConsent = () => {
-      const consent = window.Cookiebot?.consent?.preferences ||
-        window.Cookiebot?.consent?.statistics ||
-        window.Cookiebot?.consent?.marketing ||
-        window.Cookiebot?.consent?.functional;
-      setConsentGiven(consent || false);
-    };
+    // Sprawdzamy, czy kod działa po stronie klienta
+    if (typeof window !== "undefined") {
+      const checkConsent = () => {
+        const consent = window.Cookiebot?.consent?.preferences ||
+          window.Cookiebot?.consent?.statistics ||
+          window.Cookiebot?.consent?.marketing ||
+          window.Cookiebot?.consent?.functional;
+        setConsentGiven(consent || false);
+      };
 
-    window.addEventListener('CookieConsentUpdate', checkConsent);
-    checkConsent();
+      // Nasłuchujemy na zmiany zgody
+      window.addEventListener('CookieConsentUpdate', checkConsent);
+      checkConsent();  // Wykonaj wstępne sprawdzenie zgody
 
-    return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
+      // Sprzątanie po sobie
+      return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
+    }
   }, []);
 
   return (
@@ -76,7 +81,7 @@ const Contact = ({ rating, ratingsTotal }) => {
                 :
                 <Image
                   src={imageUrls.mapa}
-                  alt="Mapa dojazdu"
+                  alt={`Mapa Google - ${serwis.name}`}
                   fill
                 />}
             </ImageContainer>
