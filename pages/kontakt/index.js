@@ -22,21 +22,21 @@ const Contact = ({ rating, ratingsTotal }) => {
   console.log(consentGiven);
 
   useEffect(() => {
-    // Sprawdzamy, czy kod działa po stronie klienta
-    const checkConsent = () => {
-      const consent = window?.Cookiebot?.consent?.preferences ||
-        window?.Cookiebot?.consent?.statistics ||
-        window?.Cookiebot?.consent?.marketing ||
-        window?.Cookiebot?.consent?.functional;
-      setConsentGiven(consent || false);
-    };
+    // Sprawdzamy, czy kod jest uruchamiany w przeglądarce
+    if (typeof window !== 'undefined') {
+      const checkConsent = () => {
+        const consent = window.Cookiebot?.consent?.preferences ||
+          window.Cookiebot?.consent?.statistics ||
+          window.Cookiebot?.consent?.marketing ||
+          window.Cookiebot?.consent?.functional;
+        setConsentGiven(consent || false);
+      };
 
-    // Nasłuchujemy na zmiany zgody
-    window?.addEventListener('CookieConsentUpdate', checkConsent);
-    checkConsent();  // Wykonaj wstępne sprawdzenie zgody
+      window.addEventListener('CookieConsentUpdate', checkConsent);
+      checkConsent();
 
-    // Sprzątanie po sobie
-    return () => window?.removeEventListener('CookieConsentUpdate', checkConsent);
+      return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
+    }
   }, []);
 
   return (
@@ -71,7 +71,7 @@ const Contact = ({ rating, ratingsTotal }) => {
             <br />
             <ContactText>Zapraszamy od poniedziałku do piątku</ContactText>
             <ContactText>
-              w godzinach <>9.30-17.00</>
+              w godzinach 9.30-17.00
             </ContactText>
             <ImageContainer>
               {consentGiven ?
