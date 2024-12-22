@@ -11,11 +11,30 @@ import { getRatingProps } from "../../utils/getRatingProps";
 import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
-import Head from "next/head";
 import Script from "next/script";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { imageUrls } from "../../utils/urls";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
+  const [consentGiven, setConsentGiven] = useState(false);
+  console.log(consentGiven);
+
+  useEffect(() => {
+    const checkConsent = () => {
+      const consent = window.Cookiebot?.consent?.preferences ||
+        window.Cookiebot?.consent?.statistics ||
+        window.Cookiebot?.consent?.marketing ||
+        window.Cookiebot?.consent?.functional;
+      setConsentGiven(consent || false);
+    };
+
+    window.addEventListener('CookieConsentUpdate', checkConsent);
+    checkConsent();
+
+    return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
+  }, []);
 
   return (
     <>
@@ -29,7 +48,7 @@ const Contact = ({ rating, ratingsTotal }) => {
         />
         <ContactContainer>
           <Title>Kontakt</Title>
-          <ContactForm />
+          <ContactForm consentGiven={consentGiven} />
           <ContactInfo>
             <SubTitle>{serwis.name}</SubTitle>
             <ContactText>
@@ -52,7 +71,14 @@ const Contact = ({ rating, ratingsTotal }) => {
               w godzinach <>9.30-17.00</>
             </ContactText>
             <ImageContainer>
-              <Iframe />
+              {consentGiven ?
+                <Iframe />
+                :
+                <Image
+                  src={imageUrls.mapa}
+                  alt="Mapa dojazdu"
+                  fill
+                />}
             </ImageContainer>
           </ContactInfo>
         </ContactContainer>

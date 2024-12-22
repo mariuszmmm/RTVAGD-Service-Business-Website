@@ -45,6 +45,7 @@ export const StyledLink = styled.a`
 `;
 
 export const ImageContainer = styled.div`
+  position: relative;
   width: 100%;
   aspect-ratio: 600/450;
   margin: 50px 0 80px;

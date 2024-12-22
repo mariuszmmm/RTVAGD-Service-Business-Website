@@ -5,12 +5,13 @@ import SendInfo from "./SendInfo";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "../../../utils/emailjs";
 import { Button } from "../../../components/common/Button";
 
-const ContactForm = () => {
+const ContactForm = ({ consentGiven }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [showInfo, setShowInfo] = useState(false);
   const [success, setSuccess] = useState(null);
+  console.log(consentGiven);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -77,7 +78,7 @@ const ContactForm = () => {
         onChange={(e) => setMessage(e.target.value)}
         required
       ></Textarea>
-      <Button type="submit" value="Send">
+      <Button type="submit" value="Send" disabled={!consentGiven}>
         Wyślij
       </Button>
     </Form>
