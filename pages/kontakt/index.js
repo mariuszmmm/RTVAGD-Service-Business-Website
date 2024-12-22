@@ -32,7 +32,7 @@ const Contact = ({ rating, ratingsTotal }) => {
 
       return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
     }
-  }, []);
+  }, [consentGiven]);
 
   return (
     <>

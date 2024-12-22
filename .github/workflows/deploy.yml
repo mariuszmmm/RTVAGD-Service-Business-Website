@@ -179,7 +179,7 @@ jobs:
 
       - name: Set copy folder name
         if: github.event_name == 'push'
-        run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
+        run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
       - name: Deploy copy to FTP
         if: github.event_name == 'push'
