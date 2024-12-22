@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Lato", sans-serif;
     margin: 0;
     padding: 0;
+    user-select: none;
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: scroll;
