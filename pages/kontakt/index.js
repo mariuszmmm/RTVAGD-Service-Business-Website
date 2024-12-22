@@ -23,22 +23,20 @@ const Contact = ({ rating, ratingsTotal }) => {
 
   useEffect(() => {
     // Sprawdzamy, czy kod działa po stronie klienta
-    if (typeof window !== "undefined") {
-      const checkConsent = () => {
-        const consent = window.Cookiebot?.consent?.preferences ||
-          window.Cookiebot?.consent?.statistics ||
-          window.Cookiebot?.consent?.marketing ||
-          window.Cookiebot?.consent?.functional;
-        setConsentGiven(consent || false);
-      };
+    const checkConsent = () => {
+      const consent = window?.Cookiebot?.consent?.preferences ||
+        window?.Cookiebot?.consent?.statistics ||
+        window?.Cookiebot?.consent?.marketing ||
+        window?.Cookiebot?.consent?.functional;
+      setConsentGiven(consent || false);
+    };
 
-      // Nasłuchujemy na zmiany zgody
-      window.addEventListener('CookieConsentUpdate', checkConsent);
-      checkConsent();  // Wykonaj wstępne sprawdzenie zgody
+    // Nasłuchujemy na zmiany zgody
+    window?.addEventListener('CookieConsentUpdate', checkConsent);
+    checkConsent();  // Wykonaj wstępne sprawdzenie zgody
 
-      // Sprzątanie po sobie
-      return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
-    }
+    // Sprzątanie po sobie
+    return () => window?.removeEventListener('CookieConsentUpdate', checkConsent);
   }, []);
 
   return (
