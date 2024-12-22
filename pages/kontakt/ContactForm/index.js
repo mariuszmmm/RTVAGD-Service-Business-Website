@@ -11,7 +11,6 @@ const ContactForm = ({ consentGiven }) => {
   const [message, setMessage] = useState("");
   const [showInfo, setShowInfo] = useState(false);
   const [success, setSuccess] = useState(null);
-  console.log(consentGiven);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -78,7 +77,7 @@ const ContactForm = ({ consentGiven }) => {
         onChange={(e) => setMessage(e.target.value)}
         required
       ></Textarea>
-      <Button type="submit" value="Send" disabled={!consentGiven?.Cookiebot?.consent?.functional}>
+      <Button type="submit" value="Send" disabled={!consentGiven}>
         Wyślij
       </Button>
     </Form>

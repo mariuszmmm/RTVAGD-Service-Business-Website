@@ -19,21 +19,12 @@ import { imageUrls } from "../../utils/urls";
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
   const [consentGiven, setConsentGiven] = useState(false);
-  console.log(consentGiven);
 
   useEffect(() => {
-    // Sprawdzamy, czy kod jest uruchamiany w przeglądarce
     if (typeof window !== 'undefined') {
       const checkConsent = () => {
-        const consent = window.Cookiebot?.consent?.preferences ||
-          window.Cookiebot?.consent?.statistics ||
-          window.Cookiebot?.consent?.marketing ||
-          window.Cookiebot?.consent?.functional;
-
-        console.log("window", window)
-        console.log("window.Cookiebot", window.Cookiebot)
-
-        setConsentGiven(true || false);
+        const consent = window.Cookiebot?.consent?.necessary;
+        setConsentGiven(consent || false);
       };
 
       window.addEventListener('CookieConsentUpdate', checkConsent);
