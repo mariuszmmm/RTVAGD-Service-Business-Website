@@ -29,6 +29,8 @@ const Contact = ({ rating, ratingsTotal }) => {
           window.Cookiebot?.consent?.statistics ||
           window.Cookiebot?.consent?.marketing ||
           window.Cookiebot?.consent?.functional;
+
+        console.log(consent)
         setConsentGiven(true || false);
       };
 
