@@ -77,8 +77,9 @@ const ContactForm = ({ consentGiven }) => {
         onChange={(e) => setMessage(e.target.value)}
         required
       />
-      <Button type="submit" value="Send" disabled={!consentGiven}
-        title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
+      <Button type="submit" value="Send"
+      // disabled={!consentGiven}
+      // title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
       >
         Wyślij
       </Button>
