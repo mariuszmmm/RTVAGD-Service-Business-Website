@@ -29,7 +29,7 @@ const Contact = ({ rating, ratingsTotal }) => {
           window.Cookiebot?.consent?.statistics ||
           window.Cookiebot?.consent?.marketing ||
           window.Cookiebot?.consent?.functional;
-        setConsentGiven(consent || false);
+        setConsentGiven(true || false);
       };
 
       window.addEventListener('CookieConsentUpdate', checkConsent);
