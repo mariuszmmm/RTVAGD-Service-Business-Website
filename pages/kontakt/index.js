@@ -12,34 +12,14 @@ import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
 import Script from "next/script";
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useGlobalContext } from "../../context/GlobalContext";
 import { imageUrls } from "../../utils/urls";
+
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
-  const [consentGiven, setConsentGiven] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const checkConsent = () => {
-        const consent = window.Cookiebot?.consent?.necessary;
-        console.log('window.Cookiebot?.consent?', window.Cookiebot?.consent);
-        console.log('Cookiebot', consent);
-
-        const newValue = consent || false;
-        if (consentGiven !== newValue) {
-          setConsentGiven(newValue);
-        }
-      };
-
-      console.log('consentGiven', consentGiven);
-      window.addEventListener('CookieConsentUpdate', checkConsent);
-      checkConsent();
-
-      return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
-    }
-  }, [consentGiven]);
+  const { consentGiven } = useGlobalContext();
 
   return (
     <>

@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { getCookie } from '../utils/getCookie';
 
 const GlobalContext = createContext();
 
@@ -8,38 +9,17 @@ export const GlobalProvider = ({ children }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const checkConsent = () => {
-        const consent = window.Cookiebot?.consent?.necessary;
-        // console.log('checkConsent called, consent:', consent);
-        setConsentGiven(consent || false);
-        // console.log('Cookiebot', consent);
+        const consent = getCookie('CookieConsent');
+        setConsentGiven(consent === 'true');
+        console.log('CookieConsent', consent);
       };
 
-      // Nasłuchuj na zdarzenie CookieConsentUpdate
-      const handleCookieConsentUpdate = () => {
-        // console.log('CookieConsentUpdate event detected');
-        checkConsent();
-      };
-
-      // console.log('Adding event listener for CookieConsentUpdate');
-      window.addEventListener('CookieConsentUpdate', handleCookieConsentUpdate);
-
-      // Sprawdź zgodę przy pierwszym renderowaniu
       checkConsent();
-
-      // Usuń nasłuchiwacz zdarzeń przy odmontowaniu komponentu
-      return () => {
-        // console.log('Removing event listener for CookieConsentUpdate');
-        window.removeEventListener('CookieConsentUpdate', handleCookieConsentUpdate);
-      };
     }
   }, []);
 
-  useEffect(() => {
-    // console.log('consentGiven updated:', consentGiven);
-  }, [consentGiven]);
-
   return (
-    <GlobalContext.Provider value={{ consentGiven }}>
+    <GlobalContext.Provider value={{ consentGiven, setConsentGiven }}>
       {children}
     </GlobalContext.Provider>
   );
