@@ -9,18 +9,18 @@ export const GlobalProvider = ({ children }) => {
     if (typeof window !== 'undefined') {
       const checkConsent = () => {
         const consent = window.Cookiebot?.consent?.necessary;
-        console.log('checkConsent called, consent:', consent);
+        // console.log('checkConsent called, consent:', consent);
         setConsentGiven(consent || false);
-        console.log('Cookiebot', consent);
+        // console.log('Cookiebot', consent);
       };
 
       // Nasłuchuj na zdarzenie CookieConsentUpdate
       const handleCookieConsentUpdate = () => {
-        console.log('CookieConsentUpdate event detected');
+        // console.log('CookieConsentUpdate event detected');
         checkConsent();
       };
 
-      console.log('Adding event listener for CookieConsentUpdate');
+      // console.log('Adding event listener for CookieConsentUpdate');
       window.addEventListener('CookieConsentUpdate', handleCookieConsentUpdate);
 
       // Sprawdź zgodę przy pierwszym renderowaniu
@@ -28,14 +28,14 @@ export const GlobalProvider = ({ children }) => {
 
       // Usuń nasłuchiwacz zdarzeń przy odmontowaniu komponentu
       return () => {
-        console.log('Removing event listener for CookieConsentUpdate');
+        // console.log('Removing event listener for CookieConsentUpdate');
         window.removeEventListener('CookieConsentUpdate', handleCookieConsentUpdate);
       };
     }
   }, []);
 
   useEffect(() => {
-    console.log('consentGiven updated:', consentGiven);
+    // console.log('consentGiven updated:', consentGiven);
   }, [consentGiven]);
 
   return (

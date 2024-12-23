@@ -12,35 +12,30 @@ import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
 import Script from "next/script";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { imageUrls } from "../../utils/urls";
-import { useGlobalContext } from "../../context/GlobalContext";
-import { useEffect } from "react";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
-  const { consentGiven } = useGlobalContext();
+  const [consentGiven, setConsentGiven] = useState(false);
 
   useEffect(() => {
-    console.log('Contact component rendered, consentGiven:', consentGiven);
-  }, [consentGiven]);
+    if (typeof window !== 'undefined') {
+      const checkConsent = () => {
+        const consent = window.Cookiebot?.consent?.necessary;
+        console.log(' window.Cookiebot', window.Cookiebot);
+        console.log('Cookiebot', consent);
+        setConsentGiven(consent || false);
+      };
 
-  useEffect(() => {
-    const handleConsentChange = () => {
-      if (window.Cookiebot && window.Cookiebot.consents) {
-        window.dispatchEvent(new Event('CookieConsentUpdate'));
-      }
-    };
+      console.log('consentGiven', consentGiven);
+      window.addEventListener('CookieConsentUpdate', checkConsent);
+      checkConsent();
 
-    // Nasłuchuj na zmiany w stanie zgody
-    document.addEventListener('CookieConsentDeclaration', handleConsentChange);
-
-    return () => {
-      document.removeEventListener('CookieConsentDeclaration', handleConsentChange);
-    };
+      return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
+    }
   }, []);
-
-
 
   return (
     <>
