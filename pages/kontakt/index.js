@@ -53,9 +53,21 @@ const Contact = ({ rating, ratingsTotal }) => {
       };
 
       window.addEventListener("CookieConsentUpdate", checkConsent);
+      window.addEventListener("CookieConsentDecline", checkConsent);
+      window.addEventListener("CookieConsentAccept", checkConsent);
+      window.addEventListener("CookieConsentReject", checkConsent);
+      window.addEventListener("CookieConsentRevoke", checkConsent);
+      window.addEventListener("CookieConsentChange", checkConsent);
+      window.addEventListener("CookieConsentRenew", checkConsent);
 
       return () => {
+        window.removeEventListener("CookieConsentChange", checkConsent);
+        window.removeEventListener("CookieConsentRenew", checkConsent);
+        window.removeEventListener("CookieConsentRevoke", checkConsent);
         window.removeEventListener("CookieConsentUpdate", checkConsent);
+        window.removeEventListener("CookieConsentDecline", checkConsent);
+        window.removeEventListener("CookieConsentAccept", checkConsent);
+        window.removeEventListener("CookieConsentReject", checkConsent);
       };
     }
 

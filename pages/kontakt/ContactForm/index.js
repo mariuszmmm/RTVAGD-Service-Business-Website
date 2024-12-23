@@ -59,8 +59,8 @@ const ContactForm = ({ consentGiven }) => {
         placeholder="Twoje imię"
         onChange={(e) => setName(e.target.value)}
         required
-        disabled={!consentGiven}
-        title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
+      // disabled={!consentGiven}
+      // title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
 
       />
       <Label>Email</Label>
@@ -71,8 +71,8 @@ const ContactForm = ({ consentGiven }) => {
         placeholder="Twój email"
         onChange={(e) => setEmail(e.target.value)}
         required
-        disabled={!consentGiven}
-        title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
+      // disabled={!consentGiven}
+      // title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
 
       />
       <Label>Wiadomość</Label>
@@ -82,8 +82,8 @@ const ContactForm = ({ consentGiven }) => {
         placeholder="Twoja wiadomość"
         onChange={(e) => setMessage(e.target.value)}
         required
-        disabled={!consentGiven}
-        title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
+      // disabled={!consentGiven}
+      // title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
 
       />
       <Button type="submit" value="Send"
