@@ -5,13 +5,13 @@ const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [consentGiven, setConsentGiven] = useState(false);
-
+  console.log('GlobalContext');
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const checkConsent = () => {
         const consent = getCookie('CookieConsent');
         setConsentGiven(consent === 'true');
-        console.log('CookieConsent', consent);
+        // console.log('CookieConsent', consent);
       };
 
       checkConsent();
