@@ -15,10 +15,17 @@ import Script from "next/script";
 import Image from "next/image";
 import { imageUrls } from "../../utils/urls";
 import { useGlobalContext } from "../../context/GlobalContext";
+import { useEffect } from "react";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
   const { consentGiven } = useGlobalContext();
+
+  useEffect(() => {
+    console.log('Contact component rendered, consentGiven:', consentGiven);
+  }, [consentGiven]);
+
+
 
   return (
     <>

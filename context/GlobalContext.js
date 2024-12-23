@@ -9,6 +9,8 @@ export const GlobalProvider = ({ children }) => {
     if (typeof window !== 'undefined') {
       const checkConsent = () => {
         const consent = window.Cookiebot?.consent?.necessary;
+        console.log('checkConsent called, consent:', consent);
+
         setConsentGiven(consent || false);
         console.log('Cookiebot', consent);
       };
@@ -19,6 +21,10 @@ export const GlobalProvider = ({ children }) => {
       return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
     }
   }, []);
+
+  useEffect(() => {
+    console.log('consentGiven updated:', consentGiven);
+  }, [consentGiven]);
 
   return (
     <GlobalContext.Provider value={{ consentGiven }}>
