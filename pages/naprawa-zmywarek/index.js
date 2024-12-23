@@ -55,7 +55,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                src={imageUrls.zmywarka_auto}
+                src={imageUrls.zmywarka}
                 alt="Naprawa zmywarek - serwis zmywarki w Przemyślu"
                 loading='lazy'
                 fill
