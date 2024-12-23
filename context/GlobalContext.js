@@ -14,6 +14,11 @@ export const GlobalProvider = ({ children }) => {
         setConsentGiven(consent || false);
         console.log('Cookiebot', consent);
       };
+      // Nasłuchuj na zdarzenie CookieConsentUpdate
+      window.addEventListener('CookieConsentUpdate', () => {
+        console.log('CookieConsentUpdate event detected');
+        checkConsent();
+      });
 
       window.addEventListener('CookieConsentUpdate', checkConsent);
       checkConsent();
