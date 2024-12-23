@@ -24,9 +24,13 @@ const Contact = ({ rating, ratingsTotal }) => {
     if (typeof window !== 'undefined') {
       const checkConsent = () => {
         const consent = window.Cookiebot?.consent?.necessary;
-        console.log(' window.Cookiebot', window.Cookiebot);
+        console.log('window.Cookiebot?.consent?', window.Cookiebot?.consent);
         console.log('Cookiebot', consent);
-        setConsentGiven(consent || false);
+
+        const newValue = consent || false;
+        if (consentGiven !== newValue) {
+          setConsentGiven(newValue);
+        }
       };
 
       console.log('consentGiven', consentGiven);
@@ -35,7 +39,7 @@ const Contact = ({ rating, ratingsTotal }) => {
 
       return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
     }
-  }, []);
+  }, [consentGiven]);
 
   return (
     <>
