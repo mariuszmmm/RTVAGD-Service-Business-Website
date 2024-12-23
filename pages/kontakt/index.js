@@ -25,6 +25,21 @@ const Contact = ({ rating, ratingsTotal }) => {
     console.log('Contact component rendered, consentGiven:', consentGiven);
   }, [consentGiven]);
 
+  useEffect(() => {
+    const handleConsentChange = () => {
+      if (window.Cookiebot && window.Cookiebot.consents) {
+        window.dispatchEvent(new Event('CookieConsentUpdate'));
+      }
+    };
+
+    // Nasłuchuj na zmiany w stanie zgody
+    document.addEventListener('CookieConsentDeclaration', handleConsentChange);
+
+    return () => {
+      document.removeEventListener('CookieConsentDeclaration', handleConsentChange);
+    };
+  }, []);
+
 
 
   return (

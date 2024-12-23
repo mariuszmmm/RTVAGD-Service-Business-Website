@@ -10,20 +10,27 @@ export const GlobalProvider = ({ children }) => {
       const checkConsent = () => {
         const consent = window.Cookiebot?.consent?.necessary;
         console.log('checkConsent called, consent:', consent);
-
         setConsentGiven(consent || false);
         console.log('Cookiebot', consent);
       };
+
       // Nasłuchuj na zdarzenie CookieConsentUpdate
-      window.addEventListener('CookieConsentUpdate', () => {
+      const handleCookieConsentUpdate = () => {
         console.log('CookieConsentUpdate event detected');
         checkConsent();
-      });
+      };
 
-      window.addEventListener('CookieConsentUpdate', checkConsent);
+      console.log('Adding event listener for CookieConsentUpdate');
+      window.addEventListener('CookieConsentUpdate', handleCookieConsentUpdate);
+
+      // Sprawdź zgodę przy pierwszym renderowaniu
       checkConsent();
 
-      return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
+      // Usuń nasłuchiwacz zdarzeń przy odmontowaniu komponentu
+      return () => {
+        console.log('Removing event listener for CookieConsentUpdate');
+        window.removeEventListener('CookieConsentUpdate', handleCookieConsentUpdate);
+      };
     }
   }, []);
 
