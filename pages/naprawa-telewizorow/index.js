@@ -54,7 +54,7 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                src={imageUrls.telewizor_auto}
+                src={imageUrls.telewizor}
                 alt="Naprawa telewizorów - serwis telewizora w Przemyślu"
                 loading='lazy'
                 fill
