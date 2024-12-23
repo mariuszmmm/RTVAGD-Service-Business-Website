@@ -23,12 +23,20 @@ const Contact = ({ rating, ratingsTotal }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const checkConsent = () => {
-        console.log(window.Cookiebot?.consents);
-        if (window.Cookiebot.consents?.given && window.Cookiebot?.consents?.statistics) {
-          setConsentGiven(true);
-        } else {
-          setConsentGiven(false);
-        }
+
+        const interval = setInterval(() => {
+          if (!window.Cookiebot.consents) return;
+          if (window.Cookiebot.consents) {
+            console.log(window.Cookiebot?.consents);
+            if (window.Cookiebot.consents?.given && window.Cookiebot?.consents?.statistics) {
+              setConsentGiven(true);
+            } else {
+              setConsentGiven(false);
+            }
+          }
+        }, 1000);
+
+        return () => clearInterval(interval);
       };
 
       window.addEventListener("CookieConsentUpdate", checkConsent);
