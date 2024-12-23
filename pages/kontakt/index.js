@@ -33,6 +33,10 @@ const Contact = ({ rating, ratingsTotal }) => {
 
       return () => window.removeEventListener('CookieConsentUpdate', checkConsent);
     }
+  }, []);
+
+  useEffect(() => {
+    console.log('consentGiven updated:', consentGiven);
   }, [consentGiven]);
 
   return (
