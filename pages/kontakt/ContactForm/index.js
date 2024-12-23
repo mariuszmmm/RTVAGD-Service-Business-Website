@@ -87,8 +87,8 @@ const ContactForm = ({ consentGiven }) => {
 
       />
       <Button type="submit" value="Send"
-        disabled={!consentGiven}
-        title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
+      // disabled={!consentGiven}
+      // title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
       >
         Wyślij
       </Button>

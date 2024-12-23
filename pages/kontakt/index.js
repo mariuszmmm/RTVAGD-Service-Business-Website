@@ -13,31 +13,41 @@ import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
 import Script from "next/script";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import { imageUrls } from "../../utils/urls";
+// import Image from "next/image";
+// import { imageUrls } from "../../utils/urls";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
   const [consentGiven, setConsentGiven] = useState(false);
 
   useEffect(() => {
+    console.log("useEffect");
+    console.log(window.Cookiebot?.consents);
+
     if (typeof window !== 'undefined') {
+      console.log("typeof window !== 'undefined'");
+
       const checkConsent = () => {
+        console.log("checkConsent");
 
         const interval = setInterval(() => {
-          console.log("iterwał");
+          console.log("interval");
           console.log(window.Cookiebot?.consents);
 
           if (!window.Cookiebot.consents) return;
           if (window.Cookiebot.consents) {
             console.log(window.Cookiebot?.consents);
-            if (window.Cookiebot.consents?.given && window.Cookiebot?.consents?.statistics) {
+            if (true) {
+              // if (window.Cookiebot.consents?.given && window.Cookiebot?.consents?.statistics) {
+              console.log("set true");
+
               setConsentGiven(true);
             } else {
+              console.log("set false");
               setConsentGiven(false);
             }
           }
-        }, 1000);
+        }, 3000);
 
         return () => clearInterval(interval);
       };
@@ -86,14 +96,15 @@ const Contact = ({ rating, ratingsTotal }) => {
               w godzinach 9.30-17.00
             </ContactText>
             <ImageContainer>
-              {consentGiven ?
+              <Iframe />
+              {/* {consentGiven ?
                 <Iframe />
                 :
                 <Image
                   src={imageUrls.mapa}
                   alt={`Mapa Google - ${serwis.name}`}
                   fill
-                />}
+                />} */}
             </ImageContainer>
           </ContactInfo>
         </ContactContainer>
