@@ -47,17 +47,19 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   const productSchema = {
     ...product,
-    ...(path === "/" 
-       ?
+    ...(path === "/"
+      ?
       { ...getReviews() }
       :
-      { "review": {
-      ...(product?.["review"]),
-      "reviewRating": {
-        ...(product?.["review"]?.["reviewRating"]),
-        "ratingValue": rating?.toString(),
-      },
-    }}
+      {
+        "review": {
+          ...(product?.["review"]),
+          "reviewRating": {
+            ...(product?.["review"]?.["reviewRating"]),
+            "ratingValue": rating?.toString(),
+          },
+        }
+      }
     ),
 
     "aggregateRating": {

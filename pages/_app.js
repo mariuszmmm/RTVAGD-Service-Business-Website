@@ -1,3 +1,4 @@
+import { GlobalProvider } from '../context/GlobalContext';
 import { ThemeProvider } from 'styled-components';
 import theme from '../styles/theme';
 import { Normalize } from 'styled-normalize';
@@ -9,7 +10,7 @@ import Footer from '../components/Footer';
 
 function App({ Component, pageProps }) {
   return (
-    <>
+    <GlobalProvider>
       <React.StrictMode>
         <ThemeProvider theme={theme}>
           <Normalize />
@@ -20,7 +21,7 @@ function App({ Component, pageProps }) {
           <Footer />
         </ThemeProvider>
       </React.StrictMode>
-    </>
+    </GlobalProvider>
   );
 }
 
