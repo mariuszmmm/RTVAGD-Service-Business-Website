@@ -25,6 +25,9 @@ const Contact = ({ rating, ratingsTotal }) => {
       const checkConsent = () => {
 
         const interval = setInterval(() => {
+          console.log("iterwał");
+          console.log(window.Cookiebot?.consents);
+
           if (!window.Cookiebot.consents) return;
           if (window.Cookiebot.consents) {
             console.log(window.Cookiebot?.consents);
