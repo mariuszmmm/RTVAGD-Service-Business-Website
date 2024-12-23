@@ -13,8 +13,8 @@ import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
 import Script from "next/script";
 import { useEffect, useState } from "react";
-// import Image from "next/image";
-// import { imageUrls } from "../../utils/urls";
+import Image from "next/image";
+import { imageUrls } from "../../utils/urls";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
@@ -70,15 +70,14 @@ const Contact = ({ rating, ratingsTotal }) => {
               w godzinach 9.30-17.00
             </ContactText>
             <ImageContainer>
-              <Iframe />
-              {/* {consentGiven ?
+              {consentGiven ?
                 <Iframe />
                 :
                 <Image
                   src={imageUrls.mapa}
                   alt={`Mapa Google - ${serwis.name}`}
                   fill
-                />} */}
+                />}
             </ImageContainer>
           </ContactInfo>
         </ContactContainer>
