@@ -3,6 +3,7 @@ import { Button } from "../Button";
 
 export const ButtonLink = styled(Button).attrs({ as: "a" })`
   display: inline-block;
+  margin: 60px 0 0;
 
   ${({ $hero }) => $hero && css`
     margin: 0;
