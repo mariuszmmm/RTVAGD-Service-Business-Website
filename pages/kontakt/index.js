@@ -11,50 +11,46 @@ import { getRatingProps } from "../../utils/getRatingProps";
 import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
-import Script from "next/script";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
-    <>
-      <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3b999804-26b5-40e7-93bc-f82624a559cc" type="text/javascript" async></Script>
-      < ContactSection >
-        <MetaTags
-          path={path}
-          page={dataForMetaTags.kontakt}
-          rating={rating}
-          ratingsTotal={ratingsTotal}
-        />
-        <ContactContainer>
-          <Title>Kontakt</Title>
-          <ContactForm />
-          <ContactInfo>
-            <SubTitle>{serwis.name}</SubTitle>
-            <ContactText>
-              adres:{"  "}
-              <StyledLink href={serwis.url.mapaGoogle} title={serwis.adres}>{serwis.adres}</StyledLink>
-            </ContactText>
-            <ContactText>
-              e-mail:{" "}
-              <StyledLink href={`mailto:${serwis.email}`} title={serwis.email}>{serwis.email}</StyledLink>
-            </ContactText>
-            <ContactText>
-              telefon:{" "}
-              <StyledLink href={`tel:${serwis.phone}`} title={(serwis.phone).replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3')}>{serwis.phone}</StyledLink>
-            </ContactText>
-            <br />
-            <ContactText>NIP: 7952257951</ContactText>
-            <br />
-            <ContactText>Zapraszamy od poniedziałku do piątku</ContactText>
-            <ContactText>
-              w godzinach 9.30-17.00
-            </ContactText>
-            <Iframe />
-          </ContactInfo>
-        </ContactContainer>
-      </ContactSection>
-    </>
+    <ContactSection>
+      <MetaTags
+        path={path}
+        page={dataForMetaTags.kontakt}
+        rating={rating}
+        ratingsTotal={ratingsTotal}
+      />
+      <ContactContainer>
+        <Title>Kontakt</Title>
+        <ContactForm />
+        <ContactInfo>
+          <SubTitle>{serwis.name}</SubTitle>
+          <ContactText>
+            adres:{"  "}
+            <StyledLink href={serwis.url.mapaGoogle} title={serwis.adres}>{serwis.adres}</StyledLink>
+          </ContactText>
+          <ContactText>
+            e-mail:{" "}
+            <StyledLink href={`mailto:${serwis.email}`} title={serwis.email}>{serwis.email}</StyledLink>
+          </ContactText>
+          <ContactText>
+            telefon:{" "}
+            <StyledLink href={`tel:${serwis.phone}`} title={(serwis.phone).replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3')}>{serwis.phone}</StyledLink>
+          </ContactText>
+          <br />
+          <ContactText>NIP: 7952257951</ContactText>
+          <br />
+          <ContactText>Zapraszamy od poniedziałku do piątku</ContactText>
+          <ContactText>
+            w godzinach 9.30-17.00
+          </ContactText>
+          <Iframe />
+        </ContactInfo>
+      </ContactContainer>
+    </ContactSection>
   );
 };
 

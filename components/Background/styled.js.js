@@ -9,7 +9,8 @@ export const BackgroundWrapper = styled.div`
 
 export const ImageContainer = styled.div`
   position: absolute;
-  width: 100vw;
+  min-width: 100vw;
+  min-height: 100vh;
   aspect-ratio: 255/170;
   opacity: 0.05;
   transition: opacity 0.5s;

@@ -59,9 +59,6 @@ const ContactForm = () => {
         placeholder="Twoje imię"
         onChange={(e) => setName(e.target.value)}
         required
-      // disabled={!consentGiven}
-      // title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
-
       />
       <Label>Email</Label>
       <Input
@@ -71,9 +68,6 @@ const ContactForm = () => {
         placeholder="Twój email"
         onChange={(e) => setEmail(e.target.value)}
         required
-      // disabled={!consentGiven}
-      // title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
-
       />
       <Label>Wiadomość</Label>
       <Textarea
@@ -82,14 +76,8 @@ const ContactForm = () => {
         placeholder="Twoja wiadomość"
         onChange={(e) => setMessage(e.target.value)}
         required
-      // disabled={!consentGiven}
-      // title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
-
       />
-      <Button type="submit" value="Send"
-      // disabled={!consentGiven}
-      // title={!consentGiven ? "Zaznacz zgodę na przetwarzanie danych osobowych" : ""}
-      >
+      <Button type="submit" value="Send">
         Wyślij
       </Button>
     </Form>
