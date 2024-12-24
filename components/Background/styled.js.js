@@ -12,7 +12,7 @@ export const ImageContainer = styled.div`
   min-width: 100vw;
   min-height: 100vh;
   aspect-ratio: 255/170;
-  opacity: 0.05;
+  opacity: 0.02;
   transition: opacity 0.5s;
 
   @media(orientation: portrait) {
