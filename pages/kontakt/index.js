@@ -30,7 +30,7 @@ const Contact = ({ rating, ratingsTotal }) => {
 
       const checkConsent = () => {
         console.log("checkConsent");
-        if (Cookiebot.consents.marketing) {
+        if (Cookiebot.consents?.marketing) {
           setConsentGiven(true);
         }
       };

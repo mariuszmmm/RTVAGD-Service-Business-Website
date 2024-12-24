@@ -12,6 +12,11 @@ export const ImageContainer = styled.div`
   width: 100vw;
   aspect-ratio: 255/170;
   opacity: 0.05;
+  transition: opacity 0.5s;
+
+  @media(orientation: portrait) {
+    opacity: 0;
+  };
 `;
 
 export const Rotating = styled.div`

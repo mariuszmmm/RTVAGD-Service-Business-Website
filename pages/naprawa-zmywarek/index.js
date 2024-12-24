@@ -46,7 +46,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
 
         <main>
           <SubTitle>
-            Fachowe usługi naprawy zmywarek wszystkich marek i&nbsp;modeli
+            Fachowa naprawa zmywarek wszystkich marek i&nbsp;modeli
           </SubTitle>
           <Text>
             Awaria zmywarki potrafi skutecznie zakłócić codzienny rytm życia w domu. Rozumiem, jak ważne jest szybkie i skuteczne rozwiązanie problemu, dlatego oferuję kompleksowe usługi diagnostyki i naprawy zmywarek w Przemyślu i okolicach.
