@@ -13,8 +13,9 @@ import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
 import Script from "next/script";
 import { useEffect, useState } from "react";
-// import Image from "next/image";
-// import { imageUrls } from "../../utils/urls";
+import { set } from "date-fns";
+import Image from "next/image";
+import { imageUrls } from "../../utils/urls";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
@@ -29,45 +30,16 @@ const Contact = ({ rating, ratingsTotal }) => {
 
       const checkConsent = () => {
         console.log("checkConsent");
-
-        const interval = setInterval(() => {
-          console.log("interval");
-          console.log(window.Cookiebot?.consents);
-
-          if (!window.Cookiebot.consents) return;
-          if (window.Cookiebot.consents) {
-            console.log(window.Cookiebot?.consents);
-            if (true) {
-              // if (window.Cookiebot.consents?.given && window.Cookiebot?.consents?.statistics) {
-              console.log("set true");
-
-              setConsentGiven(true);
-            } else {
-              console.log("set false");
-              setConsentGiven(false);
-            }
-          }
-        }, 3000);
-
-        return () => clearInterval(interval);
+        if (Cookiebot.consents.marketing) {
+          setConsentGiven(true);
+        }
       };
 
-      window.addEventListener("CookieConsentUpdate", checkConsent);
-      window.addEventListener("CookieConsentDecline", checkConsent);
-      window.addEventListener("CookieConsentAccept", checkConsent);
-      window.addEventListener("CookieConsentReject", checkConsent);
-      window.addEventListener("CookieConsentRevoke", checkConsent);
-      window.addEventListener("CookieConsentChange", checkConsent);
-      window.addEventListener("CookieConsentRenew", checkConsent);
+      window.addEventListener('CookieConsentDeclarationLoaded', checkConsent);
+      checkConsent();
 
       return () => {
-        window.removeEventListener("CookieConsentChange", checkConsent);
-        window.removeEventListener("CookieConsentRenew", checkConsent);
-        window.removeEventListener("CookieConsentRevoke", checkConsent);
-        window.removeEventListener("CookieConsentUpdate", checkConsent);
-        window.removeEventListener("CookieConsentDecline", checkConsent);
-        window.removeEventListener("CookieConsentAccept", checkConsent);
-        window.removeEventListener("CookieConsentReject", checkConsent);
+        window.removeEventListener('CookieConsentDeclarationLoaded', checkConsent);
       };
     }
 
@@ -108,18 +80,14 @@ const Contact = ({ rating, ratingsTotal }) => {
               w godzinach 9.30-17.00
             </ContactText>
             <ImageContainer>
-              <Iframe
-                type="text/plain"
-                data-cookieconsent="marketing"
-              />
-              {/* {consentGiven ?
+              {consentGiven ?
                 <Iframe />
                 :
                 <Image
                   src={imageUrls.mapa}
                   alt={`Mapa Google - ${serwis.name}`}
                   fill
-                />} */}
+                />}
             </ImageContainer>
           </ContactInfo>
         </ContactContainer>
