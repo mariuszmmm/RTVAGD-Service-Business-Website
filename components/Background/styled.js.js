@@ -7,6 +7,13 @@ export const BackgroundWrapper = styled.div`
   z-index: -1;
 `;
 
+export const ImageContainer = styled.div`
+  position: absolute;
+  width: 100vw;
+  aspect-ratio: 255/170;
+  opacity: 0.05;
+`;
+
 export const Rotating = styled.div`
   @keyframes rotateBg {
     0% {

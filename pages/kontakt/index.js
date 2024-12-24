@@ -108,7 +108,10 @@ const Contact = ({ rating, ratingsTotal }) => {
               w godzinach 9.30-17.00
             </ContactText>
             <ImageContainer>
-              <Iframe />
+              <Iframe
+                type="text/plain"
+                data-cookieconsent="marketing"
+              />
               {/* {consentGiven ?
                 <Iframe />
                 :
