@@ -11,6 +11,7 @@ import { getRatingProps } from "../../utils/getRatingProps";
 import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
+import { ImageContainer } from "../../styles/kontakt/KontaktStyled";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
@@ -47,7 +48,9 @@ const Contact = ({ rating, ratingsTotal }) => {
           <ContactText>
             w godzinach 9.30-17.00
           </ContactText>
-          <Iframe />
+          <ImageContainer>
+            <Iframe />
+          </ImageContainer>
         </ContactInfo>
       </ContactContainer>
     </ContactSection>
