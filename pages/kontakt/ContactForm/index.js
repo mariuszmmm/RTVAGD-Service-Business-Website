@@ -77,7 +77,11 @@ const ContactForm = () => {
         onChange={(e) => setMessage(e.target.value)}
         required
       />
-      <Button type="submit" value="Send">
+      <Button 
+       type="submit" 
+       value="Send"
+       $submit
+       >
         Wyślij
       </Button>
     </Form>
