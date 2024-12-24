@@ -5,7 +5,7 @@ import SendInfo from "./SendInfo";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "../../../utils/emailjs";
 import { Button } from "../../../components/common/Button";
 
-const ContactForm = ({ consentGiven }) => {
+const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");

@@ -3,7 +3,7 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://naprawaprzemysl.pl/</loc>
-    <lastmod>2024-12-21</lastmod>
+    <lastmod>2024-12-24</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/images/serwis.webp</image:loc>
@@ -12,8 +12,8 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/o-mnie/</loc>
-    <lastmod>2024-12-21</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2024-12-24</lastmod>
+    <priority>0.5</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/images/serwis.webp</image:loc>
       <image:caption>Informacje o serwisie RTV i AGD w Przemyślu, ul.Sowińskiego 2.</image:caption>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-pralek/</loc>
-    <lastmod>2024-12-21</lastmod>
+    <lastmod>2024-12-24</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.webp</image:loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-suszarek/</loc>
-    <lastmod>2024-12-21</lastmod>
+    <lastmod>2024-12-24</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.webp</image:loc>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-zmywarek/</loc>
-    <lastmod>2024-12-21</lastmod>
+    <lastmod>2024-12-24</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp</image:loc>
@@ -48,7 +48,7 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-ekspresow/</loc>
-    <lastmod>2024-12-21</lastmod>
+    <lastmod>2024-12-24</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.webp</image:loc>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/naprawa-telewizorow/</loc>
-    <lastmod>2024-12-21</lastmod>
+    <lastmod>2024-12-24</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.webp</image:loc>
@@ -66,8 +66,8 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/opinie/</loc>
-    <lastmod>2024-12-21</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2024-12-24</lastmod>
+    <priority>0.5</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/images/serwis.webp</image:loc>
       <image:caption>Poznaj opinie klientów ✔️ Serwis RTV AGD w Przemyślu</image:caption>
@@ -75,8 +75,8 @@
   </url>
   <url>
     <loc>https://naprawaprzemysl.pl/kontakt/</loc>
-    <lastmod>2024-12-21</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2024-12-24</lastmod>
+    <priority>0.5</priority>
     <image:image>
       <image:loc>https://naprawaprzemysl.pl/images/serwis.webp</image:loc>
       <image:caption>Kontakt ✔️ Serwis RTV AGD w Przemyślu ☎️ 790 258 612</image:caption>

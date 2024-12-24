@@ -1,6 +1,6 @@
 import {
   ContactSection, ContactContainer, ContactInfo,
-  ContactText, StyledLink, ImageContainer
+  ContactText, StyledLink
 } from "../../styles/kontakt/KontaktStyled";
 import { SubTitle } from "../../components/common/SubTitle";
 import { Title } from "../../components/common/Title";
@@ -12,38 +12,9 @@ import MetaTags from "../../components/common/MetaTags";
 import { useRouter } from "next/router";
 import { dataForMetaTags } from "../../utils/dataForMetaTags";
 import Script from "next/script";
-import { useEffect, useState } from "react";
-import { set } from "date-fns";
-import Image from "next/image";
-import { imageUrls } from "../../utils/urls";
 
 const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
-  const [consentGiven, setConsentGiven] = useState(false);
-
-  useEffect(() => {
-    console.log("useEffect");
-    console.log(window.Cookiebot?.consents);
-
-    if (typeof window !== 'undefined') {
-      console.log("typeof window !== 'undefined'");
-
-      const checkConsent = () => {
-        console.log("checkConsent");
-        if (Cookiebot.consents?.marketing) {
-          setConsentGiven(true);
-        }
-      };
-
-      window.addEventListener('CookieConsentDeclarationLoaded', checkConsent);
-      checkConsent();
-
-      return () => {
-        window.removeEventListener('CookieConsentDeclarationLoaded', checkConsent);
-      };
-    }
-
-  }, []);
 
   return (
     <>
@@ -57,7 +28,7 @@ const Contact = ({ rating, ratingsTotal }) => {
         />
         <ContactContainer>
           <Title>Kontakt</Title>
-          <ContactForm consentGiven={consentGiven} />
+          <ContactForm />
           <ContactInfo>
             <SubTitle>{serwis.name}</SubTitle>
             <ContactText>
@@ -79,16 +50,7 @@ const Contact = ({ rating, ratingsTotal }) => {
             <ContactText>
               w godzinach 9.30-17.00
             </ContactText>
-            <ImageContainer>
-              {consentGiven ?
-                <Iframe />
-                :
-                <Image
-                  src={imageUrls.mapa}
-                  alt={`Mapa Google - ${serwis.name}`}
-                  fill
-                />}
-            </ImageContainer>
+            <Iframe />
           </ContactInfo>
         </ContactContainer>
       </ContactSection>
