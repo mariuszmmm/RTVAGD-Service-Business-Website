@@ -17,7 +17,7 @@ const CoffeeMachine_2 = ({ show, setHold }) => (
       <StyledImage>
         <Image
           src={imageUrls.ekspres_2}
-          alt="Naprawa ekspresów do kawy - profesjonalny serwis ekspresu w Przemyślu"
+          alt="Ekspres - profesjonalny serwis w Przemyślu"
           loading='lazy'
           fill
         />

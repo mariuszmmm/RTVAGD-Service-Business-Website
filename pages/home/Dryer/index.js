@@ -19,7 +19,7 @@ const Dryer = ({ show, left, setHold }) => {
         <StyledImage>
           <Image
             src={imageUrls.suszarka}
-            alt="Naprawa suszarek - serwis suszarki w Przemyślu"
+            alt="Suszarka - serwis w Przemyślu"
             loading='lazy'
             fill
           />

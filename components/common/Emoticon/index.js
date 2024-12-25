@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Emoticon = styled.div`
+export const Emoticon = styled.span`
   position: relative;
   width: clamp(1.5rem, 3vw, 2rem);
   aspect-ratio: 1;
