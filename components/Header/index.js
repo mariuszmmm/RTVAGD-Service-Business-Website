@@ -49,10 +49,6 @@ const Header = ({ rating }) => {
               alt="Logo serwisu RTV i AGD"
               loading="lazy"
               fill
-              style={{
-                objectFit: 'contain',
-                maxHeight: 'content',
-              }}
             />
           </Emoticon>
           Serwis RTV&nbsp;i&nbsp;AGD</Logo>
@@ -75,7 +71,7 @@ const Header = ({ rating }) => {
             >
               <StyledLink as="div"
                 $active={servicesPath && !showSubNav}
-                disabled
+                $disabled
               >Usługi
               </StyledLink>
               <SubNav showSubNav={showSubNav} />

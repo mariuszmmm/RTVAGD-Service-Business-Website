@@ -43,7 +43,7 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
           </Emoticon>
         </Title>
 
-        <main>
+        <div>
           <SubTitle>
             Fachowa naprawa telewizorów wszystkich typów i&nbsp;marek
           </SubTitle>
@@ -93,10 +93,10 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
             <b>Nie pozwól, aby usterka telewizora popsuła Twój czas wolny! </b>
             Skontaktuj się ze mną już dziś, a sprawnie przywrócę Twój telewizor do pełnej funkcjonalności, byś mógł znów cieszyć się ulubionymi programami i filmami.
           </Text>
-          <ButtonLink href={`tel:${serwis.phone}`} >
+          <ButtonLink href={`tel:${serwis.phone.number}`} >
             Zadzwoń teraz
           </ButtonLink>
-        </main>
+        </div>
       </Container>
     </Section>
   );

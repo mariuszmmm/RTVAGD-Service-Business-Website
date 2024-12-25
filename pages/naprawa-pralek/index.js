@@ -43,7 +43,7 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
           </Emoticon>
         </Title>
 
-        <main>
+        <div>
           <SubTitle>
             Fachowa naprawa pralek wszystkich marek i&nbsp;modeli
           </SubTitle>
@@ -92,10 +92,10 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
             <b>Nie trać czasu na pranie ręczne! </b>
             Zadzwoń lub napisz już teraz, a szybko i skutecznie rozwiążę problem z Twoją pralką. Profesjonalizm, uczciwość i rzetelność – to moje priorytety.
           </Text>
-          <ButtonLink href={`tel:${serwis.phone}`} >
+          <ButtonLink href={`tel:${serwis.phone.number}`} >
             Zadzwoń teraz
           </ButtonLink>
-        </main>
+        </div>
       </Container>
     </Section>
   );

@@ -43,7 +43,7 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
           </Emoticon>
         </Title>
 
-        <main>
+        <div>
           <SubTitle>
             Profesjonalna naprawa ekspresów każdej marki i&nbsp;modelu
           </SubTitle>
@@ -93,10 +93,10 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
             <b>Nie pozwól, aby awaria ekspresu popsuła Twój dzień! </b>
             Skontaktuj się ze mną, a sprawnie przywrócę pełną funkcjonalność Twojego urządzenia, abyś mógł cieszyć się ulubioną kawą każdego dnia.
           </Text>
-          <ButtonLink href={`tel:${serwis.phone}`} >
+          <ButtonLink href={`tel:${serwis.phone.number}`} >
             Zadzwoń teraz
           </ButtonLink>
-        </main>
+        </div>
       </Container>
     </Section>
   );

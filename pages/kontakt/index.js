@@ -39,7 +39,7 @@ const Contact = ({ rating, ratingsTotal }) => {
           </ContactText>
           <ContactText>
             telefon:{" "}
-            <StyledLink href={`tel:${serwis.phone}`} title={(serwis.phone).replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3')}>{serwis.phone}</StyledLink>
+            <StyledLink href={`tel:${serwis.phone.number}`} title={(serwis.phone.formatted).replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3')}>{serwis.phone.formatted}</StyledLink>
           </ContactText>
           <br />
           <ContactText>NIP: 7952257951</ContactText>

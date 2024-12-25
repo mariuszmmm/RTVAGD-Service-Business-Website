@@ -8,8 +8,10 @@ export const serwis = {
   name: "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
   subName: "Serwis RTV i AGD",
   email: "piotrek_serwis@wp.pl",
-  phone: "+48 790 258 612",
-  adres: "Generała Józefa Sowińskiego 2, 37-700 Przemyśl",
+  phone: {
+    number: "+48790258612",
+    formatted: "+48 790 258 612",
+  }, adres: "Generała Józefa Sowińskiego 2, 37-700 Przemyśl",
   reviews: [
     {
       "author_name": "m p",

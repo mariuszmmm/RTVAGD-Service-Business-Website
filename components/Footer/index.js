@@ -18,10 +18,10 @@ const Footer = () => (
     <FooterContainer>
       <FooterInfo>
         <StyledLink
-          href={`tel:${serwis.phone}`}
+          href={`tel:${serwis.phone.number}`}
           title="Zadzwoń i zgłoś sprzęt do naprawy">
           <PhoneIcon />
-          <FooterText>{serwis.phone} </FooterText>
+          <FooterText>{serwis.phone.formatted} </FooterText>
         </StyledLink>
         <StyledLink
           href={`mailto:${serwis.email}`}

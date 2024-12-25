@@ -23,7 +23,7 @@ const About = ({ rating, ratingsTotal }) => {
       />
       <Container>
         <Title>Kim jestem</Title>
-        <main>
+        <div>
           <Text>
             Jestem specjalistą z wieloletnim doświadczeniem w naprawie pralek, suszarek, zmywarek, telewizorów oraz ekspresów do kawy.
             Każda naprawa to dla mnie nie tylko techniczne zadanie, ale również okazja do budowanie zaufania i dobrych relacji z klientami.
@@ -48,7 +48,7 @@ const About = ({ rating, ratingsTotal }) => {
               }}
             />
           </Team>
-        </main>
+        </div>
       </Container>
     </Section>
   );

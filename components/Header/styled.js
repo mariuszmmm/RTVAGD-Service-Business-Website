@@ -73,7 +73,7 @@ export const StyledLink = styled(Link)`
   border-radius: 5px;
 
  
-  ${({ disabled }) => disabled && css`
+  ${({ $disabled }) => $disabled && css`
     cursor: auto;
   `}
 
@@ -97,7 +97,7 @@ export const StyledLink = styled(Link)`
 
   &:hover {
     background-color: ${({ theme }) => theme.color.emperor};
-    ${({ disabled }) => disabled && css`
+    ${({ $disabled }) => $disabled && css`
       background-color: ${({ theme }) => theme.color.primary};
     `};
   }

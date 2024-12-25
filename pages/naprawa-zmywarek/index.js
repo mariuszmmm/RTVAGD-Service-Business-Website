@@ -44,7 +44,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
           </Emoticon>
         </Title>
 
-        <main>
+        <div>
           <SubTitle>
             Fachowa naprawa zmywarek wszystkich marek i&nbsp;modeli
           </SubTitle>
@@ -94,10 +94,10 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
             <b>Nie pozwól, aby zepsuta zmywarka psuła Twój dzień! </b>
             Skontaktuj się ze mną, a przywrócę pełną funkcjonalność Twojego urządzenia szybko, profesjonalnie i watrakcyjnej cenie.
           </Text>
-          <ButtonLink href={`tel:${serwis.phone}`} >
+          <ButtonLink href={`tel:${serwis.phone.number}`} >
             Zadzwoń teraz
           </ButtonLink>
-        </main>
+        </div>
       </Container>
     </Section>
   );

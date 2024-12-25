@@ -101,7 +101,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
           w&nbsp;Przemyślu
         </HeroTitle>
         <HeroText> Rzetelnie, szybko i&nbsp;skutecznie!</HeroText>
-        <ButtonLink href={`tel:${serwis.phone}`} $hero>
+        <ButtonLink href={`tel:${serwis.phone.number}`} $hero>
           Zadzwoń teraz
         </ButtonLink>
       </HeroContainer>

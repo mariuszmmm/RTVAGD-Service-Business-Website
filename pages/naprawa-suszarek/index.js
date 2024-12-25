@@ -43,7 +43,7 @@ const DryerService = ({ rating, ratingsTotal }) => {
           </Emoticon>
         </Title>
 
-        <main>
+        <div>
           <SubTitle>
             Profesjonalna naprawa suszarek wszystkich marek i&nbsp;modeli <br />– szybko i&nbsp;skutecznie
           </SubTitle>
@@ -92,10 +92,10 @@ const DryerService = ({ rating, ratingsTotal }) => {
             <b>Nie pozwól, aby awaria suszarki wpłynęła na Twoją codzienność! </b>
             Zadzwoń lub napisz już dziś, a szybko przywrócę Twoje urządzenie do pełnej sprawności. Gwarantuję rzetelność, profesjonalizm i satysfakcję z wykonanej usługi.
           </Text>
-          <ButtonLink href={`tel:${serwis.phone}`} >
+          <ButtonLink href={`tel:${serwis.phone.number}`} >
             Zadzwoń teraz
           </ButtonLink>
-        </main>
+        </div>
       </Container>
     </Section>
   );
