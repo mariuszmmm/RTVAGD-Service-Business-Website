@@ -36,10 +36,6 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
               alt="logo"
               loading="lazy"
               fill
-              style={{
-                objectFit: 'contain',
-                maxHeight: 'content',
-              }}
             />
           </Emoticon>
         </Title>
@@ -59,10 +55,6 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
                 alt="Naprawa zmywarek - serwis zmywarki w Przemyślu"
                 loading='lazy'
                 fill
-                style={{
-                  objectFit: 'contain',
-                  maxHeight: 'content',
-                }}
               />
             </StyledPhoto>
 

@@ -20,10 +20,6 @@ const CoffeeMachine = ({ show, setHold }) => (
           alt="Naprawa ekspresów do kawy - serwis ekspresu w Przemyślu"
           loading='lazy'
           fill
-          style={{
-            objectFit: 'contain',
-            maxHeight: 'content',
-          }}
         />
       </StyledImage>
     </Link>

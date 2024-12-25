@@ -35,10 +35,6 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
               alt="logo"
               loading="lazy"
               fill
-              style={{
-                objectFit: 'contain',
-                maxHeight: 'content',
-              }}
             />
           </Emoticon>
         </Title>
@@ -58,10 +54,6 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
                 alt="Naprawa pralek - serwis pralki w Przemyślu"
                 loading='lazy'
                 fill
-                style={{
-                  objectFit: 'contain',
-                  maxHeight: 'content',
-                }}
               />
             </StyledPhoto>
             <SubTitle as="h3">

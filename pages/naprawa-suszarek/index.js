@@ -35,10 +35,6 @@ const DryerService = ({ rating, ratingsTotal }) => {
               alt="logo"
               loading="lazy"
               fill
-              style={{
-                objectFit: 'contain',
-                maxHeight: 'content',
-              }}
             />
           </Emoticon>
         </Title>
@@ -58,10 +54,6 @@ const DryerService = ({ rating, ratingsTotal }) => {
                 alt="Naprawa szuszarek - serwis suszarki w Przemyślu"
                 loading='lazy'
                 fill
-                style={{
-                  objectFit: 'contain',
-                  minHeight: 'content',
-                }}
               />
             </StyledPhoto>
             <SubTitle as="h3">

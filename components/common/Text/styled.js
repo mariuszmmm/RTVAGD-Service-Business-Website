@@ -25,7 +25,7 @@ export const StyledText = styled.p`
       ${({ $check }) => $check && css`
         content: "✔";
         top: 1px;
-        left: -6px;
+        left: -7px;
         font-size: 1.2em; 
         color: ${({ theme }) => theme.color.check};
       `};

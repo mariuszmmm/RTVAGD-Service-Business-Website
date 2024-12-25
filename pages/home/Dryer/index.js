@@ -22,10 +22,6 @@ const Dryer = ({ show, left, setHold }) => {
             alt="Naprawa suszarek - serwis suszarki w Przemyślu"
             loading='lazy'
             fill
-            style={{
-              objectFit: 'contain',
-              maxHeight: 'content',
-            }}
           />
         </StyledImage>
       </Link>

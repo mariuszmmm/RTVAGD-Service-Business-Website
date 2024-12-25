@@ -35,10 +35,6 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
               alt="logo"
               loading="lazy"
               fill
-              style={{
-                objectFit: 'contain',
-                maxHeight: 'content',
-              }}
             />
           </Emoticon>
         </Title>
@@ -58,10 +54,6 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
                 alt="Naprawa ekspresów do kawy - profesjonalny serwis ekspresu w Przemyślu"
                 loading='lazy'
                 fill
-                style={{
-                  objectFit: 'contain',
-                  maxHeight: 'content',
-                }}
               />
             </StyledPhoto>
 

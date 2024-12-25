@@ -19,10 +19,6 @@ const ReviewsItem = ({ reviewIndex, item }) => (
           alt="Foto"
           loading='lazy'
           fill
-          style={{
-            objectFit: 'contain',
-            maxHeight: 'content',
-          }}
         />
       </Avatar>
       <Data>

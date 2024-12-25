@@ -42,10 +42,6 @@ const About = ({ rating, ratingsTotal }) => {
               alt="serwis"
               loading='lazy'
               fill
-              style={{
-                objectFit: 'contain',
-                maxHeight: 'content',
-              }}
             />
           </Team>
         </div>

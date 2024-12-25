@@ -35,10 +35,6 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
               alt="logo"
               loading="lazy"
               fill
-              style={{
-                objectFit: 'contain',
-                maxHeight: 'content',
-              }}
             />
           </Emoticon>
         </Title>
@@ -58,10 +54,6 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
                 alt="Naprawa telewizorów - serwis telewizora w Przemyślu"
                 loading='lazy'
                 fill
-                style={{
-                  objectFit: 'contain',
-                  maxHeight: 'content',
-                }}
               />
             </StyledPhoto>
             <SubTitle as="h3">

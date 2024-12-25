@@ -22,10 +22,6 @@ const WashingMachine = ({ show, left, setHold }) => {
             alt="Naprawa pralek - serwis pralki w Przemyślu"
             loading='lazy'
             fill
-            style={{
-              objectFit: 'contain',
-              maxHeight: 'content',
-            }}
           />
         </StyledImage>
       </Link>

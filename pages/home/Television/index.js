@@ -21,10 +21,6 @@ const Television = ({ show, left, setHold }) => (
           alt="Naprawa telewizorów - serwis telewizora w Przemyślu"
           loading='lazy'
           fill
-          style={{
-            objectFit: 'contain',
-            maxHeight: 'content',
-          }}
         />
       </StyledImage>
     </Link>

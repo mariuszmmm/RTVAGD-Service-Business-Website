@@ -21,10 +21,6 @@ const Dishwasher = ({ show, setHold }) => (
           alt="Serwis zmywarek w Przemyślu"
           loading='lazy'
           fill
-          style={{
-            objectFit: 'contain',
-            maxHeight: 'content',
-          }}
         />
       </StyledImage>
     </Link>
