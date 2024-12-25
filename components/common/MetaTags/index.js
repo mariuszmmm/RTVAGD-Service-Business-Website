@@ -103,7 +103,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         />
       )}
 
-      {path === "/" && (
+      {(path === "/" || path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organization)
@@ -111,7 +111,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         />
       )}
 
-      {path === "/" && (
+      {(path === "/" || path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(place)
@@ -119,7 +119,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         />
       )}
 
-      {path === "/" && (
+      {(path === "/" || path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(webpage)
@@ -135,7 +135,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         />
       )}
 
-      {path === "/" && (
+      {(path === "/" || path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(imageObject)

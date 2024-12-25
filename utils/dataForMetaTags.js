@@ -185,6 +185,15 @@ export const dataForMetaTags = {
       appleMobileWebAppTitle: `${shortName} - naprawa pralek`,
     },
     schema: {
+      organization: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "logo": imageUrls.logo,
+        "url": appUrls.home,
+        "address": address,
+        "sameAs": [],
+      },
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -198,7 +207,7 @@ export const dataForMetaTags = {
           "name": "NaprawaPrzemysl",
         },
         "review": {
-          "type": "Review",
+          "@type": "Review",
           "reviewRating": {
             "@type": "Rating",
             "bestRating": "5",
@@ -216,7 +225,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_pralek,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2024-12-25",
+          "priceValidUntil": "2024-12-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -224,6 +233,19 @@ export const dataForMetaTags = {
             "name": "NaprawaPrzemysl",
           },
         },
+      },
+      place: {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        "geo": geo,
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+      },
+      webpage: {
+        "@context": "http://www.schema.org",
+        "@type": "WebPage",
+        "name": "Naprawa Pralek",
+        "alternateName": "Naprawa pralek automatycznych w Przemyślu",
+        "url": appUrls.naprawa_pralek,
       },
       imageObject: {
         "@context": "http://schema.org",
@@ -259,6 +281,15 @@ export const dataForMetaTags = {
       appleMobileWebAppTitle: `${shortName} - naprawa suszarek`,
     },
     schema: {
+      organization: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "logo": imageUrls.logo,
+        "url": appUrls.home,
+        "address": address,
+        "sameAs": [],
+      },
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -272,7 +303,7 @@ export const dataForMetaTags = {
           "name": "NaprawaPrzemysl",
         },
         "review": {
-          "type": "Review",
+          "@type": "Review",
           "reviewRating": {
             "@type": "Rating",
             "bestRating": "5",
@@ -290,7 +321,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_suszarek,
           "priceCurrency": "PLN",
           "price": "140",
-          "priceValidUntil": "2024-12-25",
+          "priceValidUntil": "2024-12-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -298,6 +329,19 @@ export const dataForMetaTags = {
             "name": "NaprawaPrzemysl",
           },
         },
+      },
+      place: {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        "geo": geo,
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+      },
+      webpage: {
+        "@context": "http://www.schema.org",
+        "@type": "WebPage",
+        "name": "Naprawa Suszarek",
+        "alternateName": "Naprawa suszarek do ubrań w Przemyślu",
+        "url": appUrls.naprawa_suszarek,
       },
       imageObject: {
         "@context": "http://schema.org",
@@ -333,10 +377,19 @@ export const dataForMetaTags = {
       appleMobileWebAppTitle: `${shortName} - naprawa zmywarek`,
     },
     schema: {
+      organization: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "logo": imageUrls.logo,
+        "url": appUrls.home,
+        "address": address,
+        "sameAs": [],
+      },
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Naprawa zmywarek",
+        "name": "Naprawa Zmywarek",
         "image": [imageUrls.zmywarka],
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
         "sku": "SEO",
@@ -346,7 +399,7 @@ export const dataForMetaTags = {
           "name": "NaprawaPrzemysl",
         },
         "review": {
-          "type": "Review",
+          "@type": "Review",
           "reviewRating": {
             "@type": "Rating",
             "bestRating": "5",
@@ -364,7 +417,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_zmywarek,
           "priceCurrency": "PLN",
           "price": "130",
-          "priceValidUntil": "2024-12-25",
+          "priceValidUntil": "2024-12-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -372,6 +425,19 @@ export const dataForMetaTags = {
             "name": "NaprawaPrzemysl",
           },
         },
+      },
+      place: {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        "geo": geo,
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+      },
+      webpage: {
+        "@context": "http://www.schema.org",
+        "@type": "WebPage",
+        "name": "Naprawa Zmywarek",
+        "alternateName": "Naprawa zmywarek w Przemyślu",
+        "url": appUrls.naprawa_zmywarek,
       },
       imageObject: {
         "@context": "http://schema.org",
@@ -407,6 +473,15 @@ export const dataForMetaTags = {
       appleMobileWebAppTitle: `${shortName} - naprawa ekspresów`,
     },
     schema: {
+      organization: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "logo": imageUrls.logo,
+        "url": appUrls.home,
+        "address": address,
+        "sameAs": [],
+      },
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -420,7 +495,7 @@ export const dataForMetaTags = {
           "name": "NaprawaPrzemysl",
         },
         "review": {
-          "type": "Review",
+          "@type": "Review",
           "reviewRating": {
             "@type": "Rating",
             "bestRating": "5",
@@ -438,7 +513,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_ekspresow,
           "priceCurrency": "PLN",
           "price": "120",
-          "priceValidUntil": "2024-12-25",
+          "priceValidUntil": "2024-12-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -446,6 +521,19 @@ export const dataForMetaTags = {
             "name": "NaprawaPrzemysl",
           },
         },
+      },
+      place: {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        "geo": geo,
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+      },
+      webpage: {
+        "@context": "http://www.schema.org",
+        "@type": "WebPage",
+        "name": "Naprawa Ekspresów",
+        "alternateName": "Naprawa ekspresów do kawy w Przemyślu",
+        "url": appUrls.naprawa_ekspresow,
       },
       imageObject: {
         "@context": "http://schema.org",
@@ -481,6 +569,15 @@ export const dataForMetaTags = {
       appleMobileWebAppTitle: `${shortName} - naprawa telewizorów`,
     },
     schema: {
+      organization: {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "logo": imageUrls.logo,
+        "url": appUrls.home,
+        "address": address,
+        "sameAs": [],
+      },
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -494,7 +591,7 @@ export const dataForMetaTags = {
           "name": "NaprawaPrzemysl",
         },
         "review": {
-          "type": "Review",
+          "@type": "Review",
           "reviewRating": {
             "@type": "Rating",
             "bestRating": "5",
@@ -512,7 +609,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_telewizorow,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2024-12-25",
+          "priceValidUntil": "2024-12-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -520,6 +617,19 @@ export const dataForMetaTags = {
             "name": "NaprawaPrzemysl",
           },
         },
+      },
+      place: {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        "geo": geo,
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+      },
+      webpage: {
+        "@context": "http://www.schema.org",
+        "@type": "WebPage",
+        "name": "Naprawa Telewizorów",
+        "alternateName": "Naprawa telewizorów w Przemyślu",
+        "url": appUrls.naprawa_telewizorow,
       },
       imageObject: {
         "@context": "http://schema.org",
