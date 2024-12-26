@@ -20,7 +20,7 @@ export const GoogleRating = ({ rating, hidden }) => (
               fill
             />
           </ImageWrapper>
-          <Text>Google Rating {rating}</Text >
+          <Text>Google Rating {rating.replace(".",",")}</Text >
           <Stars rating={5} center />
         </StyledLink>
       </Wrpper>}
