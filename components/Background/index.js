@@ -1,4 +1,4 @@
-import { BackgroundWrapper, Circle, Rotating, ImageContainer } from "./styled.js";
+import { BackgroundWrapper, Circle, Rotating } from "./styled.js";
 
 const Background = () => {
   return (

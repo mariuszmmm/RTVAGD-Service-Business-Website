@@ -2,7 +2,7 @@
   RewriteEngine On
   RewriteBase /serwis/
 
-  <FilesMatch "\.(jpg|jpeg|png|gif|svg|css|js|woff|woff2)$">
+  <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|css|js|woff|woff2)$">
     Header set Cache-Control "max-age=7776000, public, immutable"
   </FilesMatch>
 
