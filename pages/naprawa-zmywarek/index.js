@@ -57,7 +57,6 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
                 fill
               />
             </StyledPhoto>
-
             <SubTitle as="h3">
               Najczęstsze problemy ze zmywarkami, które naprawiam:
             </SubTitle>

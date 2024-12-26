@@ -17,6 +17,9 @@ import MetaTags from '../../components/common/MetaTags';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
 import { useRouter } from 'next/router';
 import { Schema } from '../../components/common/Schema/inedx';
+import Image from 'next/image';
+import { imageUrls } from '../../utils/urls';
+import { BackgroundImage } from '../../components/common/BackgroundImage';
 
 const Home = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
@@ -209,6 +212,14 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
           Zaufaj profesjonalnemu serwisowi, który codziennie dba o niezawodność Twoich urządzeń RTV i AGD!
         </Text>
       </Container>
+      <BackgroundImage>
+        <Image
+          src={imageUrls.serwis}
+          alt="Background image"
+          loading="lazy"
+          fill
+        />
+      </BackgroundImage>
     </Hero>
   );
 };
