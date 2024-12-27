@@ -32,6 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang='pl'>
         <Head>
+          <meta name="ahrefs-site-verification" content="872fda14e78e81e184fbd94520c07242f57fb1ec51dd76d5d5539e5c92e154a7" />
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,6 +46,8 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="https://naprawaprzemysl.pl/site.webmanifest" />
           <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
           <meta property="fb:app_id" content="100063811592941" />
+          <meta httpEquiv="Content-Language" content="pl" />
+
           <Script
             id="gtm-script"
             dangerouslySetInnerHTML={{
