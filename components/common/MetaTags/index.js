@@ -104,6 +104,20 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           />
           <script type="application/ld+json"
             dangerouslySetInnerHTML={{
+              __html: JSON.stringify(imageObject)
+            }}
+          />
+        </>
+      )}
+
+      {path === "/" && (
+        <script type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(website)
+          }}
+        />
+        <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
               __html: JSON.stringify(organization)
             }}
           />
@@ -117,20 +131,6 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(webpage)
             }}
           />
-          <script type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(imageObject)
-            }}
-          />
-        </>
-      )}
-
-      {path === "/" && (
-        <script type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(website)
-          }}
-        />
       )}
 
       <script type="application/ld+json"
