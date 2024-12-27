@@ -41,7 +41,7 @@ const DryerService = ({ rating, ratingsTotal }) => {
 
         <div>
           <SubTitle>
-            Profesjonalna naprawa suszarek wszystkich marek i&nbsp;modeli <br />– szybko i&nbsp;skutecznie
+            Szybka i&nbsp;skuteczna naprawa suszarek wszystkich marek w&nbsp;Przemyślu i&nbsp;okolicach.
           </SubTitle>
           <Text>
             Twoja suszarka do prania odmówiła posłuszeństwa? A może działa, ale nie suszy tak dobrze, jak powinna? Niezależnie od rodzaju usterki – od awarii grzałki po błędy elektroniczne – jestem tutaj, aby pomóc! Oferuję kompleksowe usługi naprawcze dla suszarek kondensacyjnych, wentylacyjnych oraz modeli z pompą ciepła.

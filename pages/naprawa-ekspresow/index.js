@@ -41,7 +41,7 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
 
         <div>
           <SubTitle>
-            Profesjonalna naprawa ekspresów każdej marki i&nbsp;modelu
+            Profesjonalna naprawa ekspresów każdej marki w&nbsp;Przemyślu i&nbsp;okolicach.
           </SubTitle>
           <Text>
             Awaria ekspresu do kawy może skutecznie zepsuć poranek lub uniemożliwić sprawne działanie kawiarni. Oferuję kompleksowe usługi naprawcze, które pozwolą Ci ponownie cieszyć się aromatyczną kawą. Specjalizuję się zarówno w naprawach domowych ekspresów automatycznych, jak i profesjonalnych urządzeń stosowanych w gastronomii.

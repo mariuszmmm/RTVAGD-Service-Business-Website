@@ -41,7 +41,7 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
 
         <div>
           <SubTitle>
-            Fachowa naprawa pralek wszystkich marek i&nbsp;modeli
+            Szybka i&nbsp;skuteczna naprawa pralek wszystkich modeli w&nbsp;Przemyślu i&nbsp;okolicach.
           </SubTitle>
           <Text>
             Zepsuta pralka? Nie pozwól, by awaria utrudniła Twoje codzienne obowiązki. Oferuję kompleksową diagnostykę i naprawę pralek w Przemyślu i okolicach, zapewniając szybkie i trwałe rozwiązanie każdego problemu.

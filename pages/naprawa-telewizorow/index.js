@@ -41,7 +41,7 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
 
         <div>
           <SubTitle>
-            Fachowa naprawa telewizorów wszystkich typów i&nbsp;marek
+            Fachowa naprawa telewizorów wszystkich typów i&nbsp;marek w&nbsp;Przemyślu i&nbsp;okolicach.
           </SubTitle>
           <Text>
             Zepsuty telewizor to problem, który może zakłócić Twoją rozrywkę i dostęp do informacji. Niezależnie od tego, czy Twój sprzęt to starszy model LCD, nowoczesny OLED, czy zaawansowany telewizor Smart TV, jestem tutaj, aby pomóc. Oferuję profesjonalną naprawę telewizorów, niezależnie od marki i typu urządzenia, zapewniając szybką i skuteczną obsługę.

@@ -29,7 +29,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
       />
       <Container>
         <Title>
-          Naprawa zmywarek w&nbsp;Przemyślu
+          Naprawa zmywarek
           <Emoticon>
             <Image
               src={imageUrls.logo}
@@ -42,7 +42,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
 
         <div>
           <SubTitle>
-            Fachowa naprawa zmywarek wszystkich marek i&nbsp;modeli
+            Szybka i&nbsp;skuteczna naprawa zmywarek wszystkich modeli w&nbsp;Przemyślu i&nbsp;okolicach.
           </SubTitle>
           <Text>
             Awaria zmywarki potrafi skutecznie zakłócić codzienny rytm życia w domu. Rozumiem, jak ważne jest szybkie i skuteczne rozwiązanie problemu, dlatego oferuję kompleksowe usługi diagnostyki i naprawy zmywarek w Przemyślu i okolicach.
@@ -82,8 +82,8 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
             <li><h3>Elastyczność i&nbsp;wygoda</h3>Naprawy realizuję zarówno w&nbsp;warsztacie, jak i&nbsp;na miejscu u&nbsp;klienta, dostosowując się do Twoich potrzeb i&nbsp;harmonogramu.</li>
           </Text>
           <Text>
-            <b>Nie pozwól, aby zepsuta zmywarka psuła Twój dzień! </b>
-            Skontaktuj się ze mną, a przywrócę pełną funkcjonalność Twojego urządzenia szybko, profesjonalnie i watrakcyjnej cenie.
+            <b>Nie pozwól, aby awaria zmywarki zabierała Ci cenny czas i komfort życia. </b>
+            Skontaktuj się ze mną, a Twój sprzęt odzyska pełną sprawność – szybko, profesjonalnie i w przystępnej cenie.
           </Text>
           <ButtonLink href={`tel:${serwis.phone.number}`} >
             Zadzwoń teraz
