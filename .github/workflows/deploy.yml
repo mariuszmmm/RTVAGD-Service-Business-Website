@@ -177,16 +177,16 @@ jobs:
           quit
           "
 
-      - name: Set copy folder name
-        if: github.event_name == 'push'
-        run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      # - name: Set copy folder name
+      #   if: github.event_name == 'push'
+      #   run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      - name: Deploy copy to FTP
-        if: github.event_name == 'push'
-        run: |
-          lftp -f "
-          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-          mirror /public_html/serwis ./local_copy
-          mirror -R ./local_copy /public_html/${{ env.COPY_FOLDER_NAME }}
-          quit
-          "
+      # - name: Deploy copy to FTP
+      #   if: github.event_name == 'push'
+      #   run: |
+      #     lftp -f "
+      #     open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+      #     mirror /public_html/serwis ./local_copy
+      #     mirror -R ./local_copy /public_html/${{ env.COPY_FOLDER_NAME }}
+      #     quit
+      #     "
