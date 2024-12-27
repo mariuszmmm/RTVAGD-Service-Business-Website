@@ -111,6 +111,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       )}
 
       {path === "/" && (
+<>
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(website)
@@ -131,6 +132,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(webpage)
             }}
           />
+</>
       )}
 
       <script type="application/ld+json"
