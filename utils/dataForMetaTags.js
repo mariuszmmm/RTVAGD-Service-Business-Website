@@ -203,7 +203,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemysl",
         },
         "review": {
@@ -232,6 +232,8 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
+          "shippingDetails": {},
+          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
@@ -299,7 +301,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemysl",
         },
         "review": {
@@ -328,6 +330,8 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
+          "shippingDetails": {},
+          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
@@ -395,7 +399,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemysl",
         },
         "review": {
@@ -424,6 +428,8 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
+          "shippingDetails": {},
+          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
@@ -491,7 +497,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemysl",
         },
         "review": {
@@ -520,6 +526,8 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
+          "shippingDetails": {},
+          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
@@ -587,7 +595,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemysl",
         },
         "review": {
@@ -616,6 +624,8 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
+          "shippingDetails": {},
+          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
