@@ -232,8 +232,6 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
-          "shippingDetails": {},
-          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
@@ -330,8 +328,6 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
-          "shippingDetails": {},
-          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
@@ -428,8 +424,6 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
-          "shippingDetails": {},
-          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
@@ -526,8 +520,6 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
-          "shippingDetails": {},
-          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
@@ -624,8 +616,6 @@ export const dataForMetaTags = {
             "@type": "Organization",
             "name": "NaprawaPrzemysl",
           },
-          "shippingDetails": {},
-          "hasMerchantReturnPolicy": {}
         },
       },
       place: {
