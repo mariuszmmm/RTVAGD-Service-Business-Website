@@ -52,8 +52,11 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
               <Image
                 src={imageUrls.pralka}
                 alt="Naprawa pralek - serwis pralek w Przemyślu"
-                loading='lazy'
+                // loading='lazy'
                 fill
+                srcset={`${imageUrls.pralka_300} 500w,
+                ${imageUrls.pralka} 1000w`}
+                sizes="(max-width: 500px) 500px, 1000px"
               />
             </StyledPhoto>
             <SubTitle as="h3">

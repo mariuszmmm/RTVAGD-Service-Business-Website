@@ -21,6 +21,9 @@ const Television = ({ show, left, setHold }) => (
           alt="Telewizor - serwis w Przemyślu"
           loading='lazy'
           fill
+          srcset={`${imageUrls.telewizor_300} 500w,
+          ${imageUrls.telewizor} 1000w`}
+          sizes="(max-width: 500px) 500px, 1000px"
         />
       </StyledImage>
     </Link>

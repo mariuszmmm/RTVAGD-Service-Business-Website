@@ -22,6 +22,9 @@ const Dryer = ({ show, left, setHold }) => {
             alt="Suszarka - serwis w Przemyślu"
             loading='lazy'
             fill
+            srcset={`${imageUrls.suszarka_300} 500w,
+            ${imageUrls.suszarka} 1000w`}
+            sizes="(max-width: 500px) 500px, 1000px"
           />
         </StyledImage>
       </Link>

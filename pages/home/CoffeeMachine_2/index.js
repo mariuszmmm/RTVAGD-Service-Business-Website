@@ -20,6 +20,9 @@ const CoffeeMachine_2 = ({ show, setHold }) => (
           alt="Ekspres - profesjonalny serwis w Przemyślu"
           loading='lazy'
           fill
+          srcset={`${imageUrls.ekspres_2_300} 500w,
+          ${imageUrls.ekspres_2} 1000w`}
+          sizes="(max-width: 500px) 500px, 1000px"
         />
       </StyledImage>
     </Link>
