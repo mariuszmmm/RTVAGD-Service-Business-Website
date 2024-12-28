@@ -30,6 +30,7 @@ export const imageUrls = {
   zmywarka: "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
   zmywarka_auto: "https://res.cloudinary.com/difc0i71u/image/upload/f_auto,q_auto,w_300/v1/Serwis/serwis-zmywarek-przemysl-naprawa-zmywarki",
   pralka: "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.webp",
+  pralka_300: "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki_300.webp",
   suszarka: "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.webp",
   logoGoogle: "https://naprawaprzemysl.pl/images/logoGoogle.webp",
   logo: "https://naprawaprzemysl.pl/images/logo.webp",
