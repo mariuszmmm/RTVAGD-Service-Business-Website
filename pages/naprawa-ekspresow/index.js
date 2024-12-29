@@ -31,7 +31,7 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
           Naprawa ekspresów do&nbsp;kawy
           <Emoticon>
             <Image
-              src={imageUrls.logo_svg}
+              src={imageUrls.logo}
               alt="logo"
               loading="lazy"
               fill

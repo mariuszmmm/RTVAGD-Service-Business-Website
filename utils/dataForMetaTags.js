@@ -1,4 +1,3 @@
-import { serwis } from './serwis';
 import { appUrls, imageUrls } from './urls';
 
 const shortName = "Serwis RTV i AGD";
@@ -57,7 +56,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "NAPRAWA TELEWIZORÓW, PRALEK, SUSZAREK, ZMYWAREK, EKSPRESÓW",
-        "image": imageUrls.serwis,
+        "image": imageUrls.logo,
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
         "brand": {
           "@type": "Brand",
@@ -94,7 +93,7 @@ export const dataForMetaTags = {
         "@type": "ImageObject",
         "author": "Serwis RTV i AGD NaprawaPrzemyśl",
         "contentLocation": "Przemyśl",
-        "contentUrl": imageUrls.serwis,
+        "contentUrl": imageUrls.logo,
         "datePublished": "2024-12-29",
         "description": "Serwis RTV i AGD w Przemyślu, naprawa pralek, naprawa szuszarek, naprawa zmywarek, naprawa telewizorów, naprawa ekspresów.",
         "name": "Serwis RTV i AGD",
