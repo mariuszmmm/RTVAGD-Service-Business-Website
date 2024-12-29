@@ -54,7 +54,7 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
                 alt="Naprawa pralek - serwis pralek w Przemyślu"
                 loading='lazy'
                 fill
-                srcset={`${imageUrls.pralka_300} 500w,
+                srcSet={`${imageUrls.pralka_300} 500w,
                 ${imageUrls.pralka} 1000w`}
                 sizes="(max-width: 500px) 500px, 1000px"
               />

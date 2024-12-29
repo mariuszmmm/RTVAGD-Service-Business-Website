@@ -55,7 +55,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
                 alt="Naprawa zmywarek - serwis zmywarek w Przemyślu"
                 loading='lazy'
                 fill
-                srcset={`${imageUrls.zmywarka_300} 500w,
+                srcSet={`${imageUrls.zmywarka_300} 500w,
                 ${imageUrls.zmywarka} 1000w`}
                 sizes="(max-width: 500px) 500px, 1000px"
               />

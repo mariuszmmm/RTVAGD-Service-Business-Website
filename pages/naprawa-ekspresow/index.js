@@ -54,7 +54,7 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
                 alt="Naprawa ekspresów do kawy - profesjonalny serwis ekspresów w Przemyślu"
                 loading='lazy'
                 fill
-                srcset={`${imageUrls.ekspres_300} 500w,
+                srcSet={`${imageUrls.ekspres_300} 500w,
                 ${imageUrls.ekspres} 1000w`}
                 sizes="(max-width: 500px) 500px, 1000px"
               />

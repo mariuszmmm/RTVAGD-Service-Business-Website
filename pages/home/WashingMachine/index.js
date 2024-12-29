@@ -22,7 +22,7 @@ const WashingMachine = ({ show, left, setHold }) => {
             alt="Naprawa pralek - serwis pralki w Przemyślu"
             loading='lazy'
             fill
-            srcset={`${imageUrls.pralka_300} 500w,
+            srcSet={`${imageUrls.pralka_300} 500w,
             ${imageUrls.pralka} 1000w`}
             sizes="(max-width: 500px) 500px, 1000px"
           />
