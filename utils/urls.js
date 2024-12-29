@@ -40,6 +40,7 @@ export const imageUrls = {
   suszarka_300: "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki_300.webp",
   logoGoogle: "https://naprawaprzemysl.pl/images/logoGoogle.webp",
   logo: "https://naprawaprzemysl.pl/images/logo.webp",
+  logo_svg: "https://naprawaprzemysl.pl/images/logo.svg",
   mapa: "https://naprawaprzemysl.pl/images/mapa.webp",
 };
 
