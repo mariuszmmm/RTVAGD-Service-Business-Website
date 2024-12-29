@@ -27,7 +27,7 @@ const breadcrumbList = {
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Naprawa telewizorów, pralek, szuszarek, zmywarek i ekspresów",
+      "name": "Strona główna",
       "item": appUrls.home
     }
   ]
@@ -47,7 +47,7 @@ export const dataForMetaTags = {
       organization: {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
         "logo": imageUrls.logo,
         "url": appUrls.home,
         "address": address,
@@ -61,7 +61,7 @@ export const dataForMetaTags = {
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
         "brand": {
           "@type": "Brand",
-          "name": "NaprawaPrzemysl",
+          "name": "NaprawaPrzemyśl",
         },
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -73,31 +73,31 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Place",
         "geo": geo,
-        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
       webpage: {
         "@context": "http://www.schema.org",
         "@type": "WebPage",
-        "name": serwis.name,
-        "alternateName": serwis.subName,
+        "name": "Serwis RTV i AGD",
+        "alternateName": "Serwis RTV i AGD w Przemyślu",
         "url": appUrls.home,
       },
       website: {
         "@context": "http://www.schema.org",
         "@type": "WebSite",
-        "name": "Naprawa pralek, szuszarek, zmywarek, telewizorów, ekspresów",
-        "alternateName": "Naprawa pralek, szuszarek, zmywarek, telewizorów i ekspresów do kawy w Przemyślu",
+        "name": "Serwis RTV i AGD NaprawaPrzemyśl",
+        "alternateName": "Serwis RTV i AGD w Przemyślu, naprawa pralek, naprawa szuszarek, naprawa zmywarek, naprawa telewizorów, naprawa ekspresów.",
         "url": appUrls.home,
       },
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemysl",
+        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
         "contentLocation": "Przemyśl",
         "contentUrl": imageUrls.serwis,
-        "datePublished": "2024-12-25",
-        "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
-        "name": serwis.name,
+        "datePublished": "2024-12-29",
+        "description": "Serwis RTV i AGD w Przemyślu, naprawa pralek, naprawa szuszarek, naprawa zmywarek, naprawa telewizorów, naprawa ekspresów.",
+        "name": "Serwis RTV i AGD",
       },
       breadcrumbList,
     }
@@ -188,7 +188,7 @@ export const dataForMetaTags = {
       organization: {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
         "logo": imageUrls.logo,
         "url": appUrls.home,
         "address": address,
@@ -204,7 +204,7 @@ export const dataForMetaTags = {
         "mpn": "SEO-33",
         "brand": {
           "@type": "Brand",
-          "name": "NaprawaPrzemysl",
+          "name": "NaprawaPrzemyśl",
         },
         "review": {
           "@type": "Review",
@@ -214,7 +214,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " NaprawaPrzemysl ",
+            "name": " NaprawaPrzemyśl ",
           },
         },
         "aggregateRating": {
@@ -230,7 +230,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "NaprawaPrzemysl",
+            "name": "NaprawaPrzemyśl",
           },
         },
       },
@@ -238,7 +238,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Place",
         "geo": geo,
-        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
       webpage: {
         "@context": "http://www.schema.org",
@@ -250,7 +250,7 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemysl",
+        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
         "contentLocation": "Przemyśl",
         "contentUrl": imageUrls.pralka,
         "datePublished": "2024-12-25",
@@ -284,7 +284,7 @@ export const dataForMetaTags = {
       organization: {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
         "logo": imageUrls.logo,
         "url": appUrls.home,
         "address": address,
@@ -300,7 +300,7 @@ export const dataForMetaTags = {
         "mpn": "SEO-33",
         "brand": {
           "@type": "Brand",
-          "name": "NaprawaPrzemysl",
+          "name": "NaprawaPrzemyśl",
         },
         "review": {
           "@type": "Review",
@@ -310,7 +310,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " NaprawaPrzemysl ",
+            "name": " NaprawaPrzemyśl ",
           },
         },
         "aggregateRating": {
@@ -326,7 +326,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "NaprawaPrzemysl",
+            "name": "NaprawaPrzemyśl",
           },
         },
       },
@@ -334,7 +334,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Place",
         "geo": geo,
-        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
       webpage: {
         "@context": "http://www.schema.org",
@@ -346,7 +346,7 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemysl",
+        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
         "contentLocation": "Przemyśl",
         "contentUrl": imageUrls.suszarka,
         "datePublished": "2024-12-25",
@@ -380,7 +380,7 @@ export const dataForMetaTags = {
       organization: {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
         "logo": imageUrls.logo,
         "url": appUrls.home,
         "address": address,
@@ -396,7 +396,7 @@ export const dataForMetaTags = {
         "mpn": "SEO-33",
         "brand": {
           "@type": "Brand",
-          "name": "NaprawaPrzemysl",
+          "name": "NaprawaPrzemyśl",
         },
         "review": {
           "@type": "Review",
@@ -406,7 +406,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " NaprawaPrzemysl ",
+            "name": " NaprawaPrzemyśl ",
           },
         },
         "aggregateRating": {
@@ -422,7 +422,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "NaprawaPrzemysl",
+            "name": "NaprawaPrzemyśl",
           },
         },
       },
@@ -430,7 +430,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Place",
         "geo": geo,
-        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
       webpage: {
         "@context": "http://www.schema.org",
@@ -442,7 +442,7 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemysl",
+        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
         "contentLocation": "Przemyśl",
         "contentUrl": imageUrls.zmywarka,
         "datePublished": "2024-12-25",
@@ -476,7 +476,7 @@ export const dataForMetaTags = {
       organization: {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
         "logo": imageUrls.logo,
         "url": appUrls.home,
         "address": address,
@@ -492,7 +492,7 @@ export const dataForMetaTags = {
         "mpn": "SEO-33",
         "brand": {
           "@type": "Brand",
-          "name": "NaprawaPrzemysl",
+          "name": "NaprawaPrzemyśl",
         },
         "review": {
           "@type": "Review",
@@ -502,7 +502,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " NaprawaPrzemysl ",
+            "name": " NaprawaPrzemyśl ",
           },
         },
         "aggregateRating": {
@@ -518,7 +518,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "NaprawaPrzemysl",
+            "name": "NaprawaPrzemyśl",
           },
         },
       },
@@ -526,7 +526,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Place",
         "geo": geo,
-        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
       webpage: {
         "@context": "http://www.schema.org",
@@ -538,7 +538,7 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemysl",
+        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
         "contentLocation": "Przemyśl",
         "contentUrl": imageUrls.ekspres,
         "datePublished": "2024-12-25",
@@ -572,7 +572,7 @@ export const dataForMetaTags = {
       organization: {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": ".Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
         "logo": imageUrls.logo,
         "url": appUrls.home,
         "address": address,
@@ -588,7 +588,7 @@ export const dataForMetaTags = {
         "mpn": "SEO-33",
         "brand": {
           "@type": "Brand",
-          "name": "NaprawaPrzemysl",
+          "name": "NaprawaPrzemyśl",
         },
         "review": {
           "@type": "Review",
@@ -598,7 +598,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " NaprawaPrzemysl ",
+            "name": " NaprawaPrzemyśl ",
           },
         },
         "aggregateRating": {
@@ -614,7 +614,7 @@ export const dataForMetaTags = {
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
-            "name": "NaprawaPrzemysl",
+            "name": "NaprawaPrzemyśl",
           },
         },
       },
@@ -622,7 +622,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Place",
         "geo": geo,
-        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemysl",
+        "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
       webpage: {
         "@context": "http://www.schema.org",
@@ -634,7 +634,7 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemysl",
+        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
         "contentLocation": "Przemyśl",
         "contentUrl": imageUrls.telewizor,
         "datePublished": "2024-12-25",
