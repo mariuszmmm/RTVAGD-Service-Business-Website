@@ -189,7 +189,7 @@ jobs:
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
             cd /public_html
             echo 'Checking if serwis directory exists...'
-            ls serwis
+            ls -l serwis || echo 'ls serwis failed'
             if [ $? -eq 0 ]; then
               echo 'Directory serwis exists, renaming to ${{ env.COPY_FOLDER_NAME }}'
               mv serwis ${{ env.COPY_FOLDER_NAME }}
