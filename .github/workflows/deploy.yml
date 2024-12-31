@@ -189,7 +189,7 @@ jobs:
       #     echo "COPY_FOLDER_NAME set to ${{ env.COPY_FOLDER_NAME }}"
 
       - name: Check and rename "serwis" directory to "COPY_FOLDER_NAME"
-        if: github.event_name == 'push' && env.REVIEWS == 'true'
+        if: github.event_name == 'push'
         run: |
           lftp -c "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
