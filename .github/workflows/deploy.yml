@@ -187,6 +187,7 @@ jobs:
         run: |
           lftp -c "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+            set cmd:verbose on
             cd /public_html
             echo 'Listing contents of /public_html:'
             ls -l # List everything in /public_html for better debugging
