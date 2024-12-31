@@ -177,14 +177,18 @@ jobs:
           quit
           "
 
+      - name: Set copy folder name
+        if: github.event_name == 'push'
+        run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
       - name: Check and rename existing directory
         run: |
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           cd /public_html
           if [ -d serwis ]; then
-            mv serwis serwis_old1
-            echo 'Katalog serwis został zmieniony na serwis_old1'
+            mv serwis ${{ env.COPY_FOLDER_NAME }}
+            echo 'Katalog serwis został zmieniony na ${{ env.COPY_FOLDER_NAME }}'
           else
             echo 'Katalog serwis nie istnieje'
           fi
