@@ -190,7 +190,7 @@ jobs:
             set cmd:verbose on
             cd /public_html
             echo 'Listing contents of /public_html:'
-            ls -l # List everything in /public_html for better debugging
+            ls -l serwis || echo 'serwis directory does not exist'
             echo 'Checking if serwis directory exists...'
             ls -l serwis >/dev/null 2>&1
             if [ $? -eq 0 ]; then
