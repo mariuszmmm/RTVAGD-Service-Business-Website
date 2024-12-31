@@ -191,6 +191,8 @@ jobs:
           quit
           "
 
+      # test
+
       # - name: Set copy folder name
       #   if: github.event_name == 'push'
       #   run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
