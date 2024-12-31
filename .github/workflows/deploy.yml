@@ -180,6 +180,7 @@ jobs:
       - name: Set copy folder name
         if: github.event_name == 'push'
         run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+          echo "COPY_FOLDER_NAME set to ${{ env.COPY_FOLDER_NAME }}"
 
       - name: Check and rename "serwis" directory to "COPY_FOLDER_NAME"
         if: github.event_name == 'push'
@@ -187,11 +188,12 @@ jobs:
           lftp -c "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
             cd /public_html
+            echo 'Checking if serwis directory exists...'
             ls serwis
             if [ $? -eq 0 ]; then
+              echo 'Directory serwis exists, renaming to ${{ env.COPY_FOLDER_NAME }}'
               mv serwis ${{ env.COPY_FOLDER_NAME }}
-              echo 'Katalog serwis został zmieniony na ${{
-              env.COPY_FOLDER_NAME }}.'
+              echo 'Katalog serwis został zmieniony na ${{env.COPY_FOLDER_NAME }}.'
             else
               echo 'Katalog serwis nie istnieje.'
             fi
