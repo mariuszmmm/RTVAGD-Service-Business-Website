@@ -188,8 +188,10 @@ jobs:
           lftp -c "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
             cd /public_html
+            echo 'Listing contents of /public_html:'
+            ls -l # List everything in /public_html for better debugging
             echo 'Checking if serwis directory exists...'
-            ls -l serwis || echo 'ls serwis failed'
+            ls -l serwis >/dev/null 2>&1
             if [ $? -eq 0 ]; then
               echo 'Directory serwis exists, renaming to ${{ env.COPY_FOLDER_NAME }}'
               mv serwis ${{ env.COPY_FOLDER_NAME }}
