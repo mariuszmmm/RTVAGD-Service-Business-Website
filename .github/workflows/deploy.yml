@@ -118,7 +118,6 @@ jobs:
         if: github.event_name == 'push' && env.REVIEWS == 'false'
         run: |
           echo "Tworzenie pliku reviews.json z default_reviews.json"
-
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
@@ -217,7 +216,7 @@ jobs:
       #     quit
       #     "
 
-      # test
+      # test_
 
       # - name: Set copy folder name
       #   if: github.event_name == 'push'
