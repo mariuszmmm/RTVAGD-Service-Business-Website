@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { reviewUrl } from "./urls";
+import { serwis } from '../utils/serwis';
 export const getReviewsProps = async () => {
   try {
     const response = await axios(reviewUrl)
