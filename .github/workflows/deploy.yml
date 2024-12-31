@@ -111,7 +111,6 @@ jobs:
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           lcd ./out
           mirror -R . /public_html/serwis
-          mirror -R . /public_html/serwis_new
           quit
           "
 
