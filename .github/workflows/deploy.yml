@@ -194,7 +194,7 @@ jobs:
           "
 
       - name: Check and rename "serwis_new" directory to "serwis"
-        if: github.event_name == 'push' && env.REVIEWS == 'true'
+        if: github.event_name == 'push'
         run: |
           lftp -c "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
