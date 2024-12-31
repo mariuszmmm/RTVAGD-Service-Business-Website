@@ -187,19 +187,8 @@ jobs:
         run: |
           lftp -c "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-            set cmd:verbose on
             cd /public_html
-            echo 'Listing contents of /public_html:'
-            ls -l # List everything in /public_html for better debugging
-            echo 'Checking if serwis directory exists...'
-            ls -l serwis >/dev/null 2>&1
-            if [ $? -eq 0 ]; then
-              echo 'Directory serwis exists, renaming to ${{ env.COPY_FOLDER_NAME }}'
-              mv serwis ${{ env.COPY_FOLDER_NAME }}
-              echo 'Katalog serwis został zmieniony na ${{env.COPY_FOLDER_NAME }}.'
-            else
-              echo 'Katalog serwis nie istnieje.'
-            fi
+            mv serwis serwis_olddd
             quit
           "
 
