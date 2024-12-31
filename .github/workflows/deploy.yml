@@ -188,7 +188,12 @@ jobs:
           lftp -c "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
             cd /public_html
-            mv serwis serwis_olddd
+            if [ -d serwis ]; then
+              mv serwis serwis_olddd2
+              echo 'Katalog serwis został zmieniony na serwis_olddd.'
+            else
+              echo 'Katalog serwis nie istnieje.'
+            fi
             quit
           "
 
