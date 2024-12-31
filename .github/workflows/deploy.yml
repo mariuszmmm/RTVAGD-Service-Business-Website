@@ -123,8 +123,11 @@ jobs:
             set xfer:clobber on
             cd /public_html/data/serwis
             get default_reviews.json -o reviews.json
-            put reviews.json -o /public_html/serwis/api/reviews.json
             put reviews.json -o /public_html/serwis_new/api/reviews.json
+            cd /public_html
+            ls serwis/api || mkdir -p serwis/api
+            cd /public_html/serwis/api
+            put reviews.json -o /public_html/serwis/api/reviews.json
             quit
           "
 
@@ -159,6 +162,8 @@ jobs:
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
+          cd /public_html
+          ls serwis/api || mkdir -p serwis/api
           cd /public_html/serwis/api
           get reviews.json -o reviewsCopy.json
           put reviewsCopy.json -o /public_html/serwis/api/reviewsCopy.json
