@@ -178,27 +178,33 @@ jobs:
       #     "
 
       - name: Set copy folder name
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && env.REVIEWS == 'true'
         run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
           echo "COPY_FOLDER_NAME set to ${{ env.COPY_FOLDER_NAME }}"
 
       - name: Check and rename "serwis" directory to "COPY_FOLDER_NAME"
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && env.REVIEWS == 'true'
         run: |
           lftp -c "
             open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
             cd /public_html
-            ls serwis
-            if [ $? -eq 0 ]; then
-              mv serwis serwis_ol
-              echo 'Katalog serwis został zmieniony na serwis_olddd.'
-            else
-              echo 'Katalog serwis nie istnieje.'
-            fi
+            mv serwis ${{ env.COPY_FOLDER_NAME }}
+            echo 'Katalog serwis został zmieniony na ${{ env.COPY_FOLDER_NAME }}'
             quit
           "
 
-      # test   f
+      - name: Check and rename "serwis_new" directory to "serwis"
+        if: github.event_name == 'push' && env.REVIEWS == 'true'
+        run: |
+          lftp -c "
+            open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+            cd /public_html
+            mv serwis_new serwis
+            echo 'Katalog serwis_new został zmieniony na serwis'
+            quit
+          "
+
+      # test
 
       # - name: Check and rename "serwis_new" directory to "serwis"
       #   if: github.event_name == 'push'
