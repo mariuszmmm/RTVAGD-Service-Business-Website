@@ -82,7 +82,7 @@ jobs:
         if: github.event_name == 'push'
         run: |
           echo "Kopiowanie aktualnego reviews.json"
-          lftp -f "
+          lftp -c "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
           cd /public_html/serwis
@@ -90,7 +90,7 @@ jobs:
             get reviews.json -o reviews.json
             put reviews.json -o /public_html/data/serwis/reviews.json
           else
-            echo "Brak pliku reviews.json"
+            echo 'Brak pliku reviews.json'
           fi
           quit
           "
