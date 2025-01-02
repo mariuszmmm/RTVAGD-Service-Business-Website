@@ -17,7 +17,6 @@ import Image from 'next/image';
 
 const DishwasherService = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
-  if (!imageUrls.zmywarka) return null;
 
   return (
     <Section>

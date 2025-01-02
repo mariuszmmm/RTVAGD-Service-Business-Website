@@ -3,6 +3,7 @@ import { formattedDate } from '../../../utils/formattedDate';
 import { getCurrentDateTimeISOWithOffset } from '../../../utils/formatDateToISOWithOffset';
 import { useState } from 'react';
 import { appUrls } from '../../../utils/urls';
+import { serwis } from '../../../utils/serwis';
 
 const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   const [ogTime, setOgTime] = useState(getCurrentDateTimeISOWithOffset());
@@ -56,7 +57,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           ...(product?.["review"]),
           "reviewRating": {
             ...(product?.["review"]?.["reviewRating"]),
-            "ratingValue": rating?.toString(),
+            "ratingValue": (rating || serwis.rating)?.toString(),
           },
         }
       }
@@ -64,9 +65,9 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
     "aggregateRating": {
       ...(product?.["aggregateRating"]),
-      "ratingValue": rating?.toString(),
-      "reviewCount": ratingsTotal?.toString(),
-      ...(path === "/" && { "ratingCount": ratingsTotal?.toString() }),
+      "ratingValue": (rating || serwis.rating).toString(),
+      "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+      ...(path === "/" && { "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString() }),
     }
   };
 

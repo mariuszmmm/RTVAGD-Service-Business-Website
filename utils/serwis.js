@@ -49,6 +49,8 @@ export const serwis = {
       "time": 1671176883,
     }
   ],
+  ratingsTotal: 62,
+  rating: 4.6,
   types: [
     "point_of_interest",
     "establishment"
