@@ -79,7 +79,7 @@ jobs:
           echo "UPDATE_NEEDED: $UPDATE_NEEDED"
 
       - name: Copy reviews.json
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && env.REVIEWS == 'true'
         run: |
           echo "Kopiowanie reviews.json"
           lftp -f "
