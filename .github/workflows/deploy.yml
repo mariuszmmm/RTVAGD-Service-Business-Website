@@ -88,44 +88,45 @@ jobs:
           cd /public_html/data/serwis
           get reviews.json -o reviews.json
           put reviews.json -o /public_html/serwis/api/reviews.json
+          put reviews.json -o /public_html/serwis/api/reviewsCopy.json
           quit
           "
 
-      # - name: Checkout repository
-      #   if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-      #   uses: actions/checkout@v2
+      - name: Checkout repository
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        uses: actions/checkout@v2
 
-      # - name: Set up Node.js
-      #   if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: "20"
+      - name: Set up Node.js
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20"
 
-      # - name: Install dependencies
-      #   if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-      #   run: |
-      #     npm ci || npm install
+      - name: Install dependencies
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        run: |
+          npm ci || npm install
 
-      # - name: Build the application
-      #   if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-      #   env:
-      #     NEXT_PUBLIC_SERVICE_ID: ${{ secrets.SERVICE_ID }}
-      #     NEXT_PUBLIC_TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
-      #     NEXT_PUBLIC_PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
-      #     NEXT_PUBLIC_GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-      #     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
-      #     NEXT_PUBLIC_PLACE_ID: ${{ secrets.PLACE_ID }}
-      #   run: npm run build
+      - name: Build the application
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        env:
+          NEXT_PUBLIC_SERVICE_ID: ${{ secrets.SERVICE_ID }}
+          NEXT_PUBLIC_TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+          NEXT_PUBLIC_PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
+          NEXT_PUBLIC_GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          NEXT_PUBLIC_PLACE_ID: ${{ secrets.PLACE_ID }}
+        run: npm run build
 
-      # - name: Deploy to FTP
-      #   if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
-      #   run: |
-      #     lftp -f "
-      #     open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-      #     lcd ./out
-      #     mirror -R . /public_html/serwis
-      #     quit
-      #     "
+      - name: Deploy to FTP
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        run: |
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          lcd ./out
+          mirror -R . /public_html/serwis
+          quit
+          "
 
       # - name: Renewing build and deployment
       #   if: github.event_name == 'push' && env.REVIEWS == 'false'
