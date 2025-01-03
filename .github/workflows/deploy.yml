@@ -27,7 +27,9 @@ jobs:
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
           cd /public_html/data/serwis
-          get reviews.json -o reviews.json
+          cls reviews.json && (
+            get reviews.json -o reviews.json
+          ) || echo 'Plik reviews.json nie istnieje. Operacja pominięta.'
           quit
           "
 
@@ -54,7 +56,9 @@ jobs:
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
           cd /public_html/data/serwis
-          get reviewsCopy.json -o reviewsCopy.json
+          cls reviews.json && (
+            get reviewsCopy.json -o reviewsCopy.json
+          ) || echo 'Plik reviewsCopy.json nie istnieje. Operacja pominięta.'
           quit
           "
 
