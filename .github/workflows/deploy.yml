@@ -157,7 +157,7 @@ jobs:
       #   run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
       - name: Rename directories for push
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && env.UPDATE_NEEDED == 'false'
         run: |
           echo "Zmienianie nazw katalogów"
           lftp -f "
@@ -172,10 +172,10 @@ jobs:
           quit
           "
 
-      - name: Rename directories for schedule
+      - name: Rename directories for update
         if: env.UPDATE_NEEDED == 'true'
         run: |
-          echo "Zmienianie nazw katalogów"
+          echo "Zmienianie nazw katalogów dla aktualizacji"
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
