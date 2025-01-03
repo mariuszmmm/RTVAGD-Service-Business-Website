@@ -85,12 +85,16 @@ jobs:
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
-          mkdir -p /public_html/serwis
-          mkdir -p /public_html/serwis/api
           cd /public_html/data/serwis
-          get reviews.json -o reviews.json
-          put reviews.json -o /public_html/serwis/api/reviews.json
-          put reviews.json -o /public_html/serwis/api/reviewsCopy.json
+          if [ -e reviews.json ]; then
+            mkdir -p /public_html/serwis
+            mkdir -p /public_html/serwis/api
+            get reviews.json -o reviews.json
+            put reviews.json -o /public_html/serwis/api/reviews.json
+            put reviews.json -o /public_html/serwis/api/reviewsCopy.json
+          else
+            echo 'Plik reviews.json nie istnieje. Operacja pominięta.'
+          fi
           quit
           "
 
