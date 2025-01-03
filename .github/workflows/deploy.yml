@@ -78,21 +78,21 @@ jobs:
           echo "REVIEWS_COPY: $REVIEWS_COPY"
           echo "UPDATE_NEEDED: $UPDATE_NEEDED"
 
-          - name: Copy reviews.json
-          if: github.event_name == 'push'
-          run: |
-            echo "Kopiowanie reviews.json"
-            lftp -f "
-            open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
-            set xfer:clobber on
-            mkdir -p /public_html/data/serwis
-            mkdir -p /public_html/serwis/api
-            cd /public_html/data/serwis
-            get reviews.json -o reviews.json
-            put reviews.json -o /public_html/serwis/api/reviews.json
-            put reviews.json -o /public_html/serwis/api/reviewsCopy.json
-            quit
-            "
+      - name: Copy reviews.json
+        if: github.event_name == 'push'
+        run: |
+          echo "Kopiowanie reviews.json"
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          set xfer:clobber on
+          mkdir -p /public_html/data/serwis
+          mkdir -p /public_html/serwis/api
+          cd /public_html/data/serwis
+          get reviews.json -o reviews.json
+          put reviews.json -o /public_html/serwis/api/reviews.json
+          put reviews.json -o /public_html/serwis/api/reviewsCopy.json
+          quit
+          "
 
       # - name: Checkout repository
       #   if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
