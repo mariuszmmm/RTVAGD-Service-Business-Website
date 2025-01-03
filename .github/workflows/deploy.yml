@@ -115,7 +115,7 @@ jobs:
           quit
           "
 
-      # - name: Checkout repository
+      # - name: Checkout repository     sssssss
       #   if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
       #   uses: actions/checkout@v2
 
