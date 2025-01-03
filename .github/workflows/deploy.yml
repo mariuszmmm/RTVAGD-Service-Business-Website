@@ -85,7 +85,7 @@ jobs:
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
-          mkdir -p /public_html/data/serwis
+          mkdir -p /public_html/serwis
           mkdir -p /public_html/serwis/api
           cd /public_html/data/serwis
           get reviews.json -o reviews.json
