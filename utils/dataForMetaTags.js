@@ -11,7 +11,7 @@ export const address = {
   "addressCountry": "PL"
 };
 
-// test qq
+// test q
 
 export const geo = {
   "@type": "GeoCoordinates",
