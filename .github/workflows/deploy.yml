@@ -156,8 +156,8 @@ jobs:
       #   if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
       #   run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      - name: Rename directories
-        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+      - name: Rename directories for push
+        if: github.event_name == 'push'
         run: |
           echo "Zmienianie nazw katalogów"
           lftp -f "
@@ -167,6 +167,20 @@ jobs:
           mkdir -p /public_html/serwis
           mv /public_html/serwis_old /public_html/serwis_to_delete
           mv /public_html/serwis /public_html/serwis_old
+          mv /public_html/serwis_new /public_html/serwis
+          rm -r /public_html/serwis_to_delete
+          quit
+          "
+
+      - name: Rename directories for schedule
+        if: env.UPDATE_NEEDED == 'true'
+        run: |
+          echo "Zmienianie nazw katalogów"
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          set xfer:clobber on
+          mkdir -p /public_html/serwis
+          mv /public_html/serwis /public_html/serwis_to_delete
           mv /public_html/serwis_new /public_html/serwis
           rm -r /public_html/serwis_to_delete
           quit
