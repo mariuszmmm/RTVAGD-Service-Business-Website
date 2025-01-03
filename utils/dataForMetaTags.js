@@ -11,8 +11,6 @@ export const address = {
   "addressCountry": "PL"
 };
 
-// test
-
 export const geo = {
   "@type": "GeoCoordinates",
   "latitude": "49.7827725",
