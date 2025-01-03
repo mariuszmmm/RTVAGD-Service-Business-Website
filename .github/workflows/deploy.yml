@@ -175,7 +175,7 @@ jobs:
       - name: Rename directories for update
         if: env.UPDATE_NEEDED == 'true'
         run: |
-          echo "Zmienianie nazw katalogów dla aktualizacji"
+          echo "Zmienianie nazw katalogów"
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
