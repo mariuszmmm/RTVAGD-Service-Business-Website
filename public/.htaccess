@@ -2,7 +2,9 @@
   RewriteEngine On
   RewriteBase /serwis/
 
-
+RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\.naprawaprzemysl\.pl$ [NC]
+  RewriteRule ^ https://naprawaprzemysl.pl%{REQUEST_URI} [R=301,L]
 
   ErrorDocument 404 /404.html
 </IfModule>
