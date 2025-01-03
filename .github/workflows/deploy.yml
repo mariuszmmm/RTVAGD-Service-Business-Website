@@ -83,7 +83,7 @@ jobs:
           echo "REVIEWS_COPY=$REVIEWS_COPY" >> $GITHUB_ENV
           echo "REVIEWS_COPY_TIME=$REVIEWS_COPY_TIME" >> $GITHUB_ENV
 
-      - name: Czy potrzebna aktualizacja? ggg
+      - name: Czy potrzebna aktualizacja? 
         run: |
           UPDATE_NEEDED=false
 
