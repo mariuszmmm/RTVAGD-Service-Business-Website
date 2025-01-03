@@ -128,7 +128,23 @@ jobs:
           lftp -f "
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           lcd ./out
-          mirror -R . /public_html/serwis
+          mirror -R . /public_html/serwis_new
+          quit
+          "
+
+      - name: Set copy folder name
+        if: github.event_name == 'push'
+        run: echo "COPY_FOLDER_NAME=serwis_$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Rename directories
+        if: github.event_name == 'push'
+        run: |
+          echo "Zmienianie nazw katalogów"
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          set xfer:clobber on
+          mv /public_html/serwis /public_html/${{ env.COPY_FOLDER_NAME }}
+          mv /public_html/serwis_new /public_html/serwis
           quit
           "
 
