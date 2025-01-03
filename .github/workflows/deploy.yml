@@ -86,12 +86,13 @@ jobs:
           open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
           set xfer:clobber on
           cd /public_html/data/serwis
-          ls reviews.json || echo 'Plik reviews.json nie istnieje. Operacja pominięta.' || quit
-          mkdir -p /public_html/serwis
-          mkdir -p /public_html/serwis/api
-          get reviews.json -o reviews.json
-          put reviews.json -o /public_html/serwis/api/reviews.json
-          put reviews.json -o /public_html/serwis/api/reviewsCopy.json
+          cls reviews.json && (
+            mkdir -p /public_html/serwis
+            mkdir -p /public_html/serwis/api
+            get reviews.json -o reviews.json
+            put reviews.json -o /public_html/serwis/api/reviews.json
+            put reviews.json -o /public_html/serwis/api/reviewsCopy.json
+          ) || echo 'Plik reviews.json nie istnieje. Operacja pominięta.'
           quit
           "
 
