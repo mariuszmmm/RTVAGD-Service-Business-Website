@@ -83,7 +83,7 @@ jobs:
           echo "REVIEWS_COPY=$REVIEWS_COPY" >> $GITHUB_ENV
           echo "REVIEWS_COPY_TIME=$REVIEWS_COPY_TIME" >> $GITHUB_ENV
 
-      - name: Czy potrzebna aktualizacja? 
+      - name: Czy potrzebna aktualizacja?
         run: |
           UPDATE_NEEDED=false
 
@@ -187,5 +187,16 @@ jobs:
           mv /public_html/serwis /public_html/serwis_to_delete
           mv /public_html/serwis_new /public_html/serwis
           rm -r /public_html/serwis_to_delete
+          quit
+          "
+
+      - name: Copy reviews.json for development
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
+        run: |
+          echo "Kopiowanie reviews.json"
+          lftp -f "
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_HOST }}
+          set xfer:clobber on
+          put reviews.json -o /public_html/serwis/api/reviews.json
           quit
           "
