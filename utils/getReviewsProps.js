@@ -5,7 +5,6 @@ export const getReviewsProps = async () => {
   try {
     const response = await axios(reviewUrl)
     const reviews = response.data?.reviews || [];
-    const update_time = response.data?.update_time || null;
 
     if (!Array.isArray(reviews)) {
       throw new Error('Invalid response from Google Places API');
@@ -27,7 +26,6 @@ export const getReviewsProps = async () => {
       props: {
         status: 'success',
         reviews: newReviews,
-        update_time,
       },
     };
   } catch (error) {
@@ -37,7 +35,6 @@ export const getReviewsProps = async () => {
         status: 'error',
         reviews: [],
         error: error.message,
-        update_time: null,
       },
     };
   }

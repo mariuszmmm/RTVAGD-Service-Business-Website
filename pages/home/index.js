@@ -21,7 +21,7 @@ import Image from 'next/image';
 import { imageUrls } from '../../utils/urls';
 import { BackgroundImage } from '../../components/common/BackgroundImage';
 
-const Home = ({ rating, ratingsTotal, reviews, update_time }) => {
+const Home = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
   const [isPortrait, setIsPortrait] = useState(
     typeof window !== 'undefined' ? window.innerHeight > window.innerWidth : true
@@ -83,7 +83,6 @@ const Home = ({ rating, ratingsTotal, reviews, update_time }) => {
 
     return () => clearInterval(interval);
   }, [hold, isPortrait]);
-  console.log("update_time", update_time);
 
   return (
     <Hero>

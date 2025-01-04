@@ -17,6 +17,9 @@
     AddOutputFilterByType DEFLATE font/ttf font/otf font/eot font/woff font/woff2
   </IfModule>
 
+  RewriteCond %{REQUEST_URI} ^/robots\.txt$ [NC]
+  RewriteRule ^ - [L]
+
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} ^www\.naprawaprzemysl\.pl$ [NC]
   RewriteRule ^ https://naprawaprzemysl.pl%{REQUEST_URI} [R=301,L]
