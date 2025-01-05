@@ -9,7 +9,7 @@ export const Schema = () => {
     "name": "Naprawa Przemyśl",
     "url": appUrls.home,
     "logo": imageUrls.logo,
-    "image": imageUrls.logo,
+    "image": imageUrls.serwis,
     "description": "Naprawa sprzętu AGD i RTV w Przemyślu. Serwis pogwarancyjny. Naprawa pralek, zmywarek, suszarek, ekspresów, telewizorów.",
     "telephone": serwis.phone.number,
     "email": serwis.email,
