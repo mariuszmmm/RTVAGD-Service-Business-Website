@@ -25,25 +25,6 @@ export const Schema = () => {
     }
   };
 
-  // const breadcrumbList = {
-  //   "@context": "https://schema.org",
-  //   "@type": "BreadcrumbList",
-  //   "itemListElement": [
-  //     {
-  //       "@type": "ListItem",
-  //       "position": 1,
-  //       "name": "Naprawa Przemyśl",
-  //       "item": appUrls.home
-  //     },
-  //     {
-  //       "@type": "ListItem",
-  //       "position": 2,
-  //       "name": `☎ ${serwis.phone.number}`,
-  //       "item": `${appUrls.home}#`
-  //     }
-  //   ]
-  // };
-
   return (
     <script type="application/ld+json"
       dangerouslySetInnerHTML={{

@@ -34,3 +34,5 @@
     AddOutputFilterByType DEFLATE font/woff2
   </IfModule>
 </IfModule>
+
+ErrorDocument 404 /404.html
