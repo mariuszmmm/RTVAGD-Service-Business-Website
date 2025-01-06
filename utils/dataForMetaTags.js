@@ -93,8 +93,8 @@ export const dataForMetaTags = {
         "@type": "ImageObject",
         "author": "Serwis RTV i AGD NaprawaPrzemyśl",
         "contentLocation": "Przemyśl",
-        "contentUrl": imageUrls.serwis,
-        "datePublished": "2025-01-05",
+        "contentUrl": imageUrls.logo,
+        "datePublished": "2025-01-06",
         "description": "Serwis RTV i AGD w Przemyślu, naprawa pralek, naprawa szuszarek, naprawa zmywarek, naprawa telewizorów, naprawa ekspresów.",
         "name": "Serwis RTV i AGD",
       },
@@ -202,7 +202,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -298,7 +298,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -394,7 +394,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -490,7 +490,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -586,7 +586,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
