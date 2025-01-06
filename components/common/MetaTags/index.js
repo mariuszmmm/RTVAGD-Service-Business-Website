@@ -128,19 +128,22 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(webpage)
             }}
           />
-          <script type="application/ld+json"
+ {/*     <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
             }}
-          />
+          />   */}
         </>
       )}
 
-     <script type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbList)
-        }}
-      />
+ {/* 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(breadcrumbList)
+  }}
+/>
+*/}  
+
     </Head>
   );
 };
