@@ -22,7 +22,7 @@ export const cloudinaryImageUrls = {
 };
 
 export const imageUrls = {
-  serwis: "https://naprawaprzemysl.pl/images/serwis.webp",
+  serwis: "https://naprawaprzemysl.pl/images/serwis_v2.webp",
   telewizor: "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.webp",
   telewizor_300: "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora_300.webp",
   ekspres: "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.webp",
@@ -31,10 +31,10 @@ export const imageUrls = {
   ekspres_2_300: "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu_300.webp",
   zmywarka: "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
   zmywarka_300: "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki_300.webp",
-  pralka: "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki_v2.webp",
-  pralka_300: "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki_300_v2.webp",
-  suszarka: "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki_v2.webp",
-  suszarka_300: "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki_300_v2.webp",
+  pralka: "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki_v3.webp",
+  pralka_300: "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki_300_v3.webp",
+  suszarka: "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki_v3.webp",
+  suszarka_300: "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki_300_v3.webp",
   logoGoogle: "https://naprawaprzemysl.pl/images/logoGoogle.webp",
   logo: "https://naprawaprzemysl.pl/images/logo.svg",
   mapa: "https://naprawaprzemysl.pl/images/mapa.webp",

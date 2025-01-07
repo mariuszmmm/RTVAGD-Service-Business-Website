@@ -4,6 +4,7 @@ import { getCurrentDateTimeISOWithOffset } from '../../../utils/formatDateToISOW
 import { useState } from 'react';
 import { appUrls } from '../../../utils/urls';
 import { serwis } from '../../../utils/serwis';
+import { localBusiness } from '../../../utils/dataForMetaTags';
 
 const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   const [ogTime, setOgTime] = useState(getCurrentDateTimeISOWithOffset());
@@ -100,6 +101,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         <>
           <script type="application/ld+json"
             dangerouslySetInnerHTML={{
+              __html: JSON.stringify(localBusiness)
+            }}
+          />
+          <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
             }}
           />
@@ -128,21 +134,19 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(webpage)
             }}
           />
-      <script type="application/ld+json"
+          <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
             }}
-          />   
+          />
         </>
       )}
 
- {/* 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(breadcrumbList)
-  }}
-/>
-*/}  
+      <script type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbList)
+        }}
+      />
 
     </Head>
   );

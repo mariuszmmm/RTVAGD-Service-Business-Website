@@ -1,3 +1,4 @@
+import { serwis } from './serwis';
 import { appUrls, imageUrls } from './urls';
 
 const shortName = "Serwis RTV i AGD";
@@ -30,6 +31,28 @@ const breadcrumbList = {
       "item": appUrls.home
     }
   ]
+};
+
+export const localBusiness = {
+  "@context": "http://www.schema.org",
+  "@type": "LocalBusiness",
+  "name": "Naprawa Przemyśl",
+  "url": appUrls.home,
+  "logo": imageUrls.logo,
+  "image": imageUrls.logo,
+  "description": "Naprawa sprzętu AGD i RTV w Przemyślu. Serwis pogwarancyjny. Naprawa pralek, zmywarek, suszarek, ekspresów, telewizorów.",
+  "telephone": serwis.phone.formatted,
+  "email": serwis.email,
+  "priceRange": "PLN",
+  "address": address,
+  "geo": geo,
+  "hasMap": serwis.url.mapaGoogle,
+  "openingHours": openingHours,
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": serwis.phone.formatted,
+    "contactType": "office"
+  }
 };
 
 export const dataForMetaTags = {

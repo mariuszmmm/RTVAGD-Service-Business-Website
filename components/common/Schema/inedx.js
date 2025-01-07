@@ -26,10 +26,11 @@ export const Schema = () => {
   };
 
   return (
-    <script type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(localBusiness)
-      }}
-    />
+    // <script type="application/ld+json"
+    //   dangerouslySetInnerHTML={{
+    //     __html: JSON.stringify(localBusiness)
+    //   }}
+    // />
+    null
   )
 };
