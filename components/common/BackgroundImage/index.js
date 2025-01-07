@@ -8,5 +8,5 @@ export const BackgroundImage = styled.div`
   transition: opacity 0.5s;
   top: 0;
   z-index: -1;
-  opacity: 0;
+  opacity: 0.01;
 `;
