@@ -36,7 +36,7 @@ export const imageUrls = {
   suszarka: "/images/serwis-suszarek-przemysl-naprawa-suszarki_v3.webp",
   suszarka_300: "/images/serwis-suszarek-przemysl-naprawa-suszarki_300_v3.webp",
   logoGoogle: "/images/logoGoogle.webp",
-  logo: "/images/logo.svg",
+  logo: "/images/naprawa-serwis-rtv-agd-przemysl-logo.svg",
   mapa: "/images/mapa.webp",
 };
 
