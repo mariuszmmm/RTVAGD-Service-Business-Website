@@ -53,15 +53,16 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       ?
       { ...getReviews() }
       :
-      {
-        "review": {
-          ...(product?.["review"]),
-          "reviewRating": {
-            ...(product?.["review"]?.["reviewRating"]),
-            "ratingValue": (rating || serwis.rating)?.toString(),
-          },
-        }
-      }
+      // {
+      //   "review": {
+      //     ...(product?.["review"]),
+      //     "reviewRating": {
+      //       ...(product?.["review"]?.["reviewRating"]),
+      //       "ratingValue": (rating || serwis.rating)?.toString(),
+      //     },
+      //   }
+      // }
+      { ...getReviews() }
     ),
     "aggregateRating": {
       ...(product?.["aggregateRating"]),
@@ -96,7 +97,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
 
-      {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
+      {(path === "/" || path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <>
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -111,19 +112,19 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         </>
       )}
 
-      {/* {path === "/" && (
+      {path === "/" && (
         <>
-          <script type="application/ld+json"
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(website)
             }}
-          />
+          /> */}
           <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(organization)
             }}
           />
-          <script type="application/ld+json"
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(place)
             }}
@@ -137,9 +138,9 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
             }}
-          />
+          /> */}
         </>
-      )} */}
+      )}
 
       {/* <script type="application/ld+json"
         dangerouslySetInnerHTML={{

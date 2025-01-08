@@ -32,7 +32,7 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
           <Emoticon>
             <Image
               src={imageUrls.logo}
-              alt="logo"
+              alt="Serwis RTV i AGD NaprawaPrzemyśl, naprawa pralek"
               loading="lazy"
               fill
             />

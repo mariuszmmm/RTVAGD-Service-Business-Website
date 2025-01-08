@@ -32,7 +32,7 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
           <Emoticon>
             <Image
               src={imageUrls.logo}
-              alt="logo"
+              alt="Serwis RTV i AGD NaprawaPrzemyśl, naprawa telewizorów"
               loading="lazy"
               fill
             />
