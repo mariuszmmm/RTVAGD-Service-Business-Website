@@ -225,7 +225,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -321,7 +321,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -417,7 +417,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -513,7 +513,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -609,7 +609,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Thing",
+          "@type": "Brand",
           "name": "NaprawaPrzemyśl",
         },
         "review": {

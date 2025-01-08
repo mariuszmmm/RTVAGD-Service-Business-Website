@@ -46,7 +46,7 @@ const Header = ({ rating }) => {
           <Emoticon $logo>
             <Image
               src={imageUrls.logo}
-              alt="Logo serwisu RTV i AGD"
+              alt="Serwis RTV i AGD NaprawaPrzemyśl, naprawa pralek, naprawa zmywarek, naprawa suszarek, naprawa ekspresów, naprawa telewizorów"
               loading="lazy"
               fill
             />

@@ -63,7 +63,6 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         }
       }
     ),
-
     "aggregateRating": {
       ...(product?.["aggregateRating"]),
       "ratingValue": (rating || serwis.rating).toString(),
@@ -99,11 +98,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
       {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <>
-          <script type="application/ld+json"
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(localBusiness)
             }}
-          />
+          /> */}
           <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
@@ -112,7 +111,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         </>
       )}
 
-      {path === "/" && (
+      {/* {path === "/" && (
         <>
           <script type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -134,21 +133,19 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(webpage)
             }}
           />
-   {/* 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(imageObject)
-  }}
-/> 
-*/}
+          <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(imageObject)
+            }}
+          />
         </>
-      )}
+      )} */}
 
-      <script type="application/ld+json"
+      {/* <script type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbList)
         }}
-      />
+      /> */}
 
     </Head>
   );
