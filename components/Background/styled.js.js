@@ -25,6 +25,13 @@ export const Rotating = styled.div`
   background-color: transparent;
 `;
 
+export const StyledImage = styled.div`
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  aspect-ratio: 255/170;
+`;
+
 export const Circle = styled.div`
   position: absolute;
   top: ${({ $top }) => $top};

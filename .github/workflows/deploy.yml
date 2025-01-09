@@ -191,7 +191,7 @@ jobs:
           "
 
       - name: Copy reviews.json for development
-        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'false'
+        if: github.event_name == 'push' || env.UPDATE_NEEDED == 'true'
         run: |
           echo "Kopiowanie reviews.json"
           lftp -f "
