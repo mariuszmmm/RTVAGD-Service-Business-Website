@@ -151,7 +151,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
             >
               <h3>Pralki: </h3>
             </StyledLink>
-            {/* <Schema /> */}
+            <Schema />
             Bosch, Siemens, LG, Samsung, Whirlpool, Electrolux, Miele, Beko, AEG, Candy
           </li>
           <li>
@@ -191,7 +191,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
             >
               <h3>Ekspresy do kawy: </h3>
             </StyledLink>
-            {/* <Schema /> */}
+            <Schema />
             De’Longhi, Jura, Siemens, Bosch, Philips, Nivona, Krups, Melitta, Smeg, Miele
           </li>
         </Text>

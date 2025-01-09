@@ -26,10 +26,11 @@ export const Rotating = styled.div`
 `;
 
 export const StyledImage = styled.div`
-  position: relative;
+  position: absolute;
   min-width: 100%;
   min-height: 100%;
   aspect-ratio: 255/170;
+  opacity: 0;
 `;
 
 export const Circle = styled.div`
