@@ -19,7 +19,7 @@ const WashingMachine = ({ show, left, setHold }) => {
         <StyledImage>
           <Image
             src={imageUrls.pralka}
-            alt="Naprawa pralek - serwis pralki w Przemyślu"
+            alt="Naprawa pralek - serwis w Przemyślu"
             loading='lazy'
             fill
             // srcSet={`${imageUrls.pralka_300} 500w,
