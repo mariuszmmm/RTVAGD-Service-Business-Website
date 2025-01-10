@@ -2,7 +2,9 @@ import { appUrls, imageUrls } from '../../../utils/urls';
 import { serwis } from '../../../utils/serwis';
 import { address, geo, openingHours } from '../../../utils/dataForMetaTags';
 
-export const Schema = () => {
+export const Schema = ({ page }) => {
+  const { breadcrumbList } = page.schema;
+
   const localBusiness = {
     "@context": "http://www.schema.org",
     "@type": "LocalBusiness",
@@ -26,10 +28,17 @@ export const Schema = () => {
   };
 
   return (
-    <script type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(localBusiness)
-      }}
-    />
+    <>
+      <script type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusiness)
+        }}
+      />
+      <script type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbList)
+        }}
+      />
+    </>
   )
 };

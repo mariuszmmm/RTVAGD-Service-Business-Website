@@ -151,7 +151,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
             >
               <h3>Pralki: </h3>
             </StyledLink>
-            <Schema />
+            <Schema page={dataForMetaTags.naprawa_pralek} />
             Bosch, Siemens, LG, Samsung, Whirlpool, Electrolux, Miele, Beko, AEG, Candy
           </li>
           <li>
@@ -161,7 +161,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
             >
               <h3>Suszarki: </h3>
             </StyledLink>
-            {/* <Schema /> */}
+            <Schema page={dataForMetaTags.naprawa_suszarek} />
             Bosch, Siemens, Whirlpool, Electrolux, Beko, Miele, Samsung, AEG, Candy, Amica
           </li>
           <li>
@@ -171,7 +171,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
             >
               <h3>Zmywarki: </h3>
             </StyledLink>
-            {/* <Schema /> */}
+            <Schema page={dataForMetaTags.naprawa_zmywarek} />
             Bosch, Siemens, Whirlpool, Electrolux, Beko, Miele, Samsung, AEG, Candy, Amica
           </li>
           <li>
@@ -181,7 +181,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
             >
               <h3>Telewizory: </h3>
             </StyledLink>
-            {/* <Schema /> */}
+            <Schema page={dataForMetaTags.naprawa_telewizorow} />
             LG, Samsung, Sony, Philips, Panasonic, TCL, Sharp, Hisense, Grundig, JVC
           </li>
           <li>
@@ -191,7 +191,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
             >
               <h3>Ekspresy do kawy: </h3>
             </StyledLink>
-            <Schema />
+            <Schema page={dataForMetaTags.naprawa_ekspresow} />
             De’Longhi, Jura, Siemens, Bosch, Philips, Nivona, Krups, Melitta, Smeg, Miele
           </li>
         </Text>
