@@ -22,22 +22,22 @@ export const cloudinaryImageUrls = {
 };
 
 export const imageUrls = {
-  serwis: "/images/serwis_v2.webp",
-  telewizor: "/images/serwis-telewizorow-przemysl-naprawa-telewizora.webp",
-  telewizor_300: "/images/serwis-telewizorow-przemysl-naprawa-telewizora_300.webp",
-  ekspres: "/images/serwis-ekspresow-przemysl-naprawa-ekspresu.webp",
-  ekspres_300: "/images/serwis-ekspresow-przemysl-naprawa-ekspresu_300.webp",
-  ekspres_2: "/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu.webp",
-  ekspres_2_300: "/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu_300.webp",
-  zmywarka: "/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
-  zmywarka_300: "/images/serwis-zmywarek-przemysl-naprawa-zmywarki_300.webp",
-  pralka: "/images/serwis-pralek-przemysl-naprawa-pralki_v3.webp",
-  pralka_300: "/images/serwis-pralek-przemysl-naprawa-pralki_300_v3.webp",
-  suszarka: "/images/serwis-suszarek-przemysl-naprawa-suszarki_v3.webp",
-  suszarka_300: "/images/serwis-suszarek-przemysl-naprawa-suszarki_300_v3.webp",
-  logoGoogle: "/images/logoGoogle.webp",
-  logo: "/images/naprawa-serwis-rtv-agd-przemysl-logo.svg",
-  mapa: "/images/mapa.webp",
+  serwis: "https://naprawaprzemysl.pl/images/serwis_v2.webp",
+  telewizor: "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.webp",
+  telewizor_300: "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora_300.webp",
+  ekspres: "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.webp",
+  ekspres_300: "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu_300.webp",
+  ekspres_2: "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu.webp",
+  ekspres_2_300: "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu_300.webp",
+  zmywarka: "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
+  zmywarka_300: "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki_300.webp",
+  pralka: "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki_v3.webp",
+  pralka_300: "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki_300_v3.webp",
+  suszarka: "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki_v3.webp",
+  suszarka_300: "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki_300_v3.webp",
+  logoGoogle: "https://naprawaprzemysl.pl/images/logoGoogle.webp",
+  logo: "https://naprawaprzemysl.pl/images/naprawa-serwis-rtv-agd-przemysl-logo.svg",
+  mapa: "https://naprawaprzemysl.pl/images/mapa.webp",
 };
 
 export const appUrls = {

@@ -114,8 +114,14 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
-        "contentLocation": "Przemyśl",
+        "author": {
+          "@type": "Organization",
+          "name": "Serwis RTV i AGD NaprawaPrzemyśl"
+        },
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Przemyśl"
+        },
         "contentUrl": imageUrls.serwis,
         "datePublished": "2025-01-09",
         "description": "Serwis RTV i AGD w Przemyślu, naprawa pralek, naprawa szuszarek, naprawa zmywarek, naprawa telewizorów, naprawa ekspresów.",
@@ -272,8 +278,14 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
-        "contentLocation": "Przemyśl",
+        "author": {
+          "@type": "Organization",
+          "name": "Serwis RTV i AGD NaprawaPrzemyśl"
+        },
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Przemyśl"
+        },
         "contentUrl": imageUrls.pralka,
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
@@ -368,8 +380,14 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
-        "contentLocation": "Przemyśl",
+        "author": {
+          "@type": "Organization",
+          "name": "Serwis RTV i AGD NaprawaPrzemyśl"
+        },
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Przemyśl"
+        },
         "contentUrl": imageUrls.suszarka,
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
@@ -464,8 +482,14 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
-        "contentLocation": "Przemyśl",
+        "author": {
+          "@type": "Organization",
+          "name": "Serwis RTV i AGD NaprawaPrzemyśl"
+        },
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Przemyśl"
+        },
         "contentUrl": imageUrls.zmywarka,
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części.",
@@ -560,8 +584,14 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
-        "contentLocation": "Przemyśl",
+        "author": {
+          "@type": "Organization",
+          "name": "Serwis RTV i AGD NaprawaPrzemyśl"
+        },
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Przemyśl"
+        },
         "contentUrl": imageUrls.logo,
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części.",
@@ -656,8 +686,14 @@ export const dataForMetaTags = {
       imageObject: {
         "@context": "http://schema.org",
         "@type": "ImageObject",
-        "author": "Serwis RTV i AGD NaprawaPrzemyśl",
-        "contentLocation": "Przemyśl",
+        "author": {
+          "@type": "Organization",
+          "name": "Serwis RTV i AGD NaprawaPrzemyśl"
+        },
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Przemyśl"
+        },
         "contentUrl": imageUrls.telewizor,
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części.",
