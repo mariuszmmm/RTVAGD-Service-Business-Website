@@ -108,7 +108,7 @@ export const dataForMetaTags = {
         "@context": "http://www.schema.org",
         "@type": "WebSite",
         "name": "Serwis RTV i AGD NaprawaPrzemyśl",
-        "alternateName": "Serwis RTV i AGD w Przemyślu, naprawa pralek, naprawa szuszarek, naprawa zmywarek, naprawa telewizorów, naprawa ekspresów.",
+        "alternateName": "Serwis RTV i AGD w Przemyślu",
         "url": appUrls.home,
       },
       imageObject: {
@@ -124,7 +124,7 @@ export const dataForMetaTags = {
         },
         "contentUrl": imageUrls.serwis,
         "datePublished": "2025-01-09",
-        "description": "Serwis RTV i AGD w Przemyślu, naprawa pralek, naprawa szuszarek, naprawa zmywarek, naprawa telewizorów, naprawa ekspresów.",
+        "description": "Serwis RTV i AGD w Przemyślu",
         "name": "Serwis RTV i AGD",
       },
       breadcrumbList,
