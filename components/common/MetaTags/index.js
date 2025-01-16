@@ -26,8 +26,10 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     breadcrumbList
   } = page.schema;
 
+  const selectedReviews = reviews?.filter((review, index) => index < 2);
+
   const getReviews = () => {
-    const reviewsArray = reviews.map((review) => (
+    const reviewsArray = selectedReviews.map((review) => (
       {
         "@type": "Review",
         "name": "Polecam serwis RTV AGD w Przemyślu",
@@ -98,11 +100,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
       {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <>
-          {/* <script type="application/ld+json"
+          <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(localBusiness)
             }}
-          /> */}
+          />
           <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
@@ -143,15 +145,19 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(imageObject)
             }}
           />
+          <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(productSchema)
+            }}
+          />
         </>
       )}
 
-      {/* <script type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbList)
         }}
-      /> */}
-
+      />
     </Head>
   );
 };

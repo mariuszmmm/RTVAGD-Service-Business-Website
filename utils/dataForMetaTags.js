@@ -78,9 +78,9 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "NAPRAWA TELEWIZORÓW, PRALEK, SUSZAREK, ZMYWAREK, EKSPRESÓW",
+        "name": shortName,
         "image": appUrls.home,
-        "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
+        "description": "Naprawa sprzętu AGD i RTV w Przemyślu.",
         "brand": {
           "@type": "Brand",
           "name": "NaprawaPrzemyśl",
