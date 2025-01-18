@@ -100,51 +100,51 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
       {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <>
-          <script type="application/ld+json"
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(localBusiness)
             }}
-          />
-          <script type="application/ld+json"
+          /> */}
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
             }}
-          />
-          <script type="application/ld+json"
+          /> */}
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
             }}
-          />
+          /> */}
         </>
       )}
 
       {path === "/" && (
         <>
-          <script type="application/ld+json"
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(website)
             }}
-          />
-          <script type="application/ld+json"
+          /> */}
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(organization)
             }}
-          />
-          <script type="application/ld+json"
+          /> */}
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(place)
             }}
-          />
-          <script type="application/ld+json"
+          /> */}
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(webpage)
             }}
-          />
-          <script type="application/ld+json"
+          /> */}
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
             }}
-          />
+          /> */}
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
@@ -153,11 +153,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         </>
       )}
 
-      <script type="application/ld+json"
+      {/* <script type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbList)
         }}
-      />
+      /> */}
     </Head>
   );
 };
