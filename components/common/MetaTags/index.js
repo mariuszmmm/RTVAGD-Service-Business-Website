@@ -109,7 +109,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
 
-      {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
+      {(path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <>
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -126,6 +126,31 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(productSchema)
             }}
           /> */}
+          {/* <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(imageObject)
+            }}
+          /> */}
+        </>
+      )}
+
+      {(path === "/naprawa-pralek/") && (
+        <>
+          {/* <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(localBusiness)
+            }}
+          /> */}
+          {/* <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(serviceSchema)
+            }}
+          /> */}
+          <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(productSchema)
+            }}
+          />
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
