@@ -244,7 +244,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Pralek",
-        "image": [imageUrls.pralka],
+        "image": imageUrls.pralka,
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
@@ -363,12 +363,12 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Suszarek",
-        "image": [imageUrls.suszarka],
+        "image": imageUrls.suszarka,
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
