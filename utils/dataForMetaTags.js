@@ -234,6 +234,10 @@ export const dataForMetaTags = {
         },
         "aggregateRating": {
           "@type": "AggregateRating",
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa Pralek"
+          }
         },
       },
       product: {
@@ -349,7 +353,10 @@ export const dataForMetaTags = {
           "address": address,
         },
         "aggregateRating": {
-          "@type": "AggregateRating",
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa Suszarek"
+          }
         },
       },
       product: {
@@ -466,6 +473,10 @@ export const dataForMetaTags = {
         },
         "aggregateRating": {
           "@type": "AggregateRating",
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa Zmywarek"
+          }
         },
       },
       product: {
@@ -582,6 +593,10 @@ export const dataForMetaTags = {
         },
         "aggregateRating": {
           "@type": "AggregateRating",
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa Ekspresów"
+          }
         },
       },
       product: {
@@ -698,6 +713,10 @@ export const dataForMetaTags = {
         },
         "aggregateRating": {
           "@type": "AggregateRating",
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Naprawa Telewizorów"
+          }
         },
       },
       product: {
