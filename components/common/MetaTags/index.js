@@ -18,6 +18,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   } = page.metaTags;
   const {
     organization,
+    service,
     product,
     place,
     webpage,
@@ -73,6 +74,16 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     }
   };
 
+  const serviceSchema = {
+    ...service,
+    "aggregateRating": {
+      ...(product?.["aggregateRating"]),
+      "ratingValue": (rating || serwis.rating).toString(),
+      "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+      // ...(path === "/" && { "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString() }),
+    }
+  };
+
   return (
     <Head>
       <title>{title}</title>
@@ -107,9 +118,14 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           /> */}
           <script type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(productSchema)
+              __html: JSON.stringify(serviceSchema)
             }}
           />
+          {/* <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(productSchema)
+            }}
+          /> */}
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
