@@ -77,7 +77,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   const serviceSchema = {
     ...service,
     "aggregateRating": {
-      ...(product?.["aggregateRating"]),
+      ...(service?.["aggregateRating"]),
       "ratingValue": (rating || serwis.rating).toString(),
       "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
       // ...(path === "/" && { "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString() }),

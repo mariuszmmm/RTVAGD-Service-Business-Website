@@ -227,7 +227,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Pralek",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-        "image": [imageUrls.pralka],
+        "image": imageUrls.pralka,
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -347,7 +347,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Suszarek",
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-        "image": [imageUrls.suszarka],
+        "image": imageUrls.suszarka,
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -466,7 +466,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Zmywarek",
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
-        "image": [imageUrls.zmywarka],
+        "image": imageUrls.zmywarka,
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -586,7 +586,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Ekspresów",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
-        "image": [imageUrls.ekspres],
+        "image": imageUrls.ekspres,
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -706,7 +706,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Telewizorów",
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
-        "image": [imageUrls.telewizor],
+        "image": imageUrls.telewizor,
         "areaServed": {
           "@type": "Place",
           "address": address,
