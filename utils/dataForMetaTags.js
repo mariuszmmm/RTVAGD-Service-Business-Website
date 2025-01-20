@@ -244,7 +244,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Pralek",
-        "image": imageUrls.pralka,
+        "image": "https://naprawaprzemysl.pl/images/pralka.png",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
