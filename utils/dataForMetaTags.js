@@ -260,7 +260,7 @@ export const dataForMetaTags = {
           },
           "author": {
             "@type": "Person",
-            "name": " NaprawaPrzemyśl ",
+            "name": " NaprawaPrzemyśl",
           },
         },
         "aggregateRating": {
