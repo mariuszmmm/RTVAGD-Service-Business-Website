@@ -122,7 +122,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             }}
           />
           {/* <script type="application/ld+json"
-            dangerouslySetInnerHTML={{
+            dangerouslySetInnerHTML={{ 
               __html: JSON.stringify(productSchema)
             }}
           /> */}

@@ -58,7 +58,7 @@ export const localBusiness = {
 export const dataForMetaTags = {
   home: {
     metaTags: {
-      title: "Naprawa telewizorów, pralek, szuszarek, zmywarek i ekspresów",
+      title: "Naprawa RTV i AGD ✔️ Serwis w Przemyślu ☎️ 790-258-612",
       canonical: appUrls.home,
       description: "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
       siteName: shortName,
@@ -79,7 +79,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": shortName,
-        "image": appUrls.home,
+        "image": "https://naprawaprzemysl.pl/images/serwis.jpg",
         "description": "Naprawa sprzętu AGD i RTV w Przemyślu.",
         "brand": {
           "@type": "Brand",
@@ -122,8 +122,8 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl"
         },
-        "contentUrl": imageUrls.serwis,
-        "datePublished": "2025-01-09",
+        "contentUrl": "https://naprawaprzemysl.pl/images/serwis.jpg",
+        "datePublished": "2025-01-22",
         "description": "Serwis RTV i AGD w Przemyślu",
         "name": "Serwis RTV i AGD",
       },
@@ -227,7 +227,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Pralek",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-        "image": imageUrls.pralka,
+        "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -244,7 +244,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Pralek",
-        "image": "https://naprawaprzemysl.pl/images/pralka.png",
+        "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
@@ -304,7 +304,7 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl"
         },
-        "contentUrl": imageUrls.pralka,
+        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
         "name": "Naprawa pralek w Przemyślu",
@@ -347,7 +347,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Suszarek",
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-        "image": imageUrls.suszarka,
+        "image": "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png",
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -363,7 +363,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Suszarek",
-        "image": imageUrls.suszarka,
+        "image": "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png",
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
@@ -423,7 +423,7 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl"
         },
-        "contentUrl": imageUrls.suszarka,
+        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png",
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
         "name": "Naprawa suszarek w Przemyślu",
@@ -466,7 +466,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Zmywarek",
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
-        "image": imageUrls.zmywarka,
+        "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png",
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -483,7 +483,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Zmywarek",
-        "image": [imageUrls.zmywarka],
+        "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png",
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
         "sku": "SEO",
         "mpn": "SEO-33",
@@ -543,7 +543,7 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl"
         },
-        "contentUrl": imageUrls.zmywarka,
+        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png",
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części.",
         "name": "Naprawa zmywarek w Przemyślu",
@@ -586,7 +586,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Ekspresów",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
-        "image": imageUrls.ekspres,
+        "image": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu.png",
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -603,7 +603,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Ekspresów",
-        "image": [imageUrls.ekspres],
+        "image": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu.png",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
@@ -663,7 +663,7 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl"
         },
-        "contentUrl": imageUrls.logo,
+        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu.png",
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części.",
         "name": "Naprawa ekspresów w Przemyślu",
@@ -706,7 +706,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Telewizorów",
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
-        "image": imageUrls.telewizor,
+        "image": "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png",
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -723,7 +723,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Telewizorów",
-        "image": [imageUrls.telewizor],
+        "image": "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png",
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
         "sku": "SEO",
         "mpn": "SEO-33",
@@ -783,7 +783,7 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl"
         },
-        "contentUrl": imageUrls.telewizor,
+        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png",
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części.",
         "name": "Naprawa telewizorów w Przemyślu",
