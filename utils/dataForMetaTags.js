@@ -271,7 +271,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_pralek,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2025-01-31",
+          "priceValidUntil": "2025-02-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -390,7 +390,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_suszarek,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2025-01-31",
+          "priceValidUntil": "2025-02-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -488,7 +488,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -510,7 +510,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_zmywarek,
           "priceCurrency": "PLN",
           "price": "130",
-          "priceValidUntil": "2025-01-31",
+          "priceValidUntil": "2025-02-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -630,7 +630,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_ekspresow,
           "priceCurrency": "PLN",
           "price": "120",
-          "priceValidUntil": "2025-01-31",
+          "priceValidUntil": "2025-02-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -750,7 +750,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_telewizorow,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2025-01-31",
+          "priceValidUntil": "2025-02-31",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
