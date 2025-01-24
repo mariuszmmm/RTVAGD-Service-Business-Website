@@ -249,7 +249,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
@@ -586,7 +586,7 @@ export const dataForMetaTags = {
         "@type": "Service",
         "name": "Naprawa Ekspresów",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
-        "image": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu.png",
+        "image": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png",
         "areaServed": {
           "@type": "Place",
           "address": address,
@@ -603,7 +603,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Naprawa Ekspresów",
-        "image": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu.png",
+        "image": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
         "sku": "SEO",
         "mpn": "SEO-33",
@@ -663,7 +663,7 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl"
         },
-        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-profesjonalna-naprawa-ekspresu.png",
+        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png",
         "datePublished": "2025-01-09",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części.",
         "name": "Naprawa ekspresów w Przemyślu",
@@ -728,7 +728,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {

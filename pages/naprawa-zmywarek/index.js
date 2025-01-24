@@ -41,7 +41,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
 
         <div>
           <SubTitle>
-            Szybka i&nbsp;skuteczna naprawa zmywarek wszystkich modeli w&nbsp;Przemyślu i&nbsp;okolicach.
+            Szybka i&nbsp;niezawodna naprawa zmywarek wszystkich modeli w&nbsp;Przemyślu i&nbsp;okolicach.
           </SubTitle>
           <Text>
             Awaria zmywarki potrafi skutecznie zakłócić codzienny rytm życia w domu. Rozumiem, jak ważne jest szybkie i skuteczne rozwiązanie problemu, dlatego oferuję kompleksowe usługi diagnostyki i naprawy zmywarek w Przemyślu i okolicach.

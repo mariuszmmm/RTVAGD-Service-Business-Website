@@ -27,10 +27,10 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     breadcrumbList
   } = page.schema;
 
-  const selectedReviews = reviews?.filter((review, index) => index < 2);
+  // const selectedReviews = reviews?.filter((review, index) => index < 2);
 
   const getReviews = () => {
-    const reviewsArray = selectedReviews.map((review) => (
+    const reviewsArray = reviews.map((review) => (
       {
         "@type": "Review",
         "name": "Polecam serwis RTV AGD w Przemyślu",
