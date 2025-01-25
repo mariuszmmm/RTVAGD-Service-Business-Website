@@ -608,7 +608,7 @@ export const dataForMetaTags = {
         "sku": "SEO",
         "mpn": "SEO-33",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "review": {
