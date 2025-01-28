@@ -82,7 +82,7 @@ export const dataForMetaTags = {
         "image": "https://naprawaprzemysl.pl/images/serwis.jpg",
         "description": "Naprawa sprzętu AGD i RTV w Przemyślu.",
         "brand": {
-          "@type": "Brand",
+          "@type": "Thing",
           "name": "NaprawaPrzemyśl",
         },
         "aggregateRating": {
