@@ -17,6 +17,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     appleMobileWebAppTitle,
   } = page.metaTags;
   const {
+    localBusiness,
     organization,
     service,
     product,
@@ -111,6 +112,13 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
       {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <>
+          <script type="application/ld+json"                // dodane 14.05.2025
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(serviceSchema)
+            }}
+          />
+
+
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(localBusiness)
@@ -141,11 +149,16 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(website)
             }}
           /> */}
-          <script type="application/ld+json"
+          <script type="application/ld+json"     // dodane 14.05.2025
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(localBusiness)
+            }}
+          />
+          {/* <script type="application/ld+json"     // wyłączone 14.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(organization)
             }}
-          />
+          /> */}
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(place)

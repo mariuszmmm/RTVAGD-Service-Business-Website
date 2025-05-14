@@ -36,7 +36,7 @@ const breadcrumbList = {
 export const localBusiness = {
   "@context": "http://www.schema.org",
   "@type": "LocalBusiness",
-  "name": "Naprawa Przemyśl",
+  "name": serwis.name,  // "name": "Naprawa Przemyśl",
   "url": appUrls.home,
   "logo": imageUrls.logo,
   "image": imageUrls.logo,
@@ -66,6 +66,7 @@ export const dataForMetaTags = {
       appleMobileWebAppTitle: shortName,
     },
     schema: {
+      localBusiness,
       organization: {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -115,7 +116,7 @@ export const dataForMetaTags = {
         "@context": "http://schema.org",
         "@type": "ImageObject",
         "author": {
-          "@type": "Organization",
+          "@type": "LocalBusiness",   // "@type": "Organization",
           "name": "Serwis RTV i AGD NaprawaPrzemyśl"
         },
         "contentLocation": {
@@ -239,6 +240,14 @@ export const dataForMetaTags = {
             "name": "Naprawa Pralek"
           }
         },
+        "provider": {                           // dodane 14.05.2025
+          "@type": "LocalBusiness",
+          "name": serwis.name,
+          "url": appUrls.home,
+          "telephone": serwis.phone.formatted,
+          "address": address,
+          //  "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
+        },
       },
       product: {
         "@context": "https://schema.org",
@@ -275,7 +284,7 @@ export const dataForMetaTags = {
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
-            "@type": "Organization",
+            "@type": "LocalBusiness",  // "@type": "Organization",
             "name": "NaprawaPrzemyśl",
           },
         },
@@ -297,7 +306,7 @@ export const dataForMetaTags = {
         "@context": "http://schema.org",
         "@type": "ImageObject",
         "author": {
-          "@type": "Organization",
+          "@type": "LocalBusiness",  // "@type": "Organization",
           "name": "Serwis RTV i AGD NaprawaPrzemyśl"
         },
         "contentLocation": {
@@ -358,6 +367,14 @@ export const dataForMetaTags = {
             "name": "Naprawa Suszarek"
           }
         },
+        "provider": {                           // dodane 14.05.2025
+          "@type": "LocalBusiness",
+          "name": serwis.name,
+          "url": appUrls.home,
+          "telephone": serwis.phone.formatted,
+          "address": address,
+          //  "image": "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png",
+        },
       },
       product: {
         "@context": "https://schema.org",
@@ -394,7 +411,7 @@ export const dataForMetaTags = {
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
-            "@type": "Organization",
+            "@type": "LocalBusiness",  // "@type": "Organization",
             "name": "NaprawaPrzemyśl",
           },
         },
@@ -416,7 +433,7 @@ export const dataForMetaTags = {
         "@context": "http://schema.org",
         "@type": "ImageObject",
         "author": {
-          "@type": "Organization",
+          "@type": "LocalBusiness",  // "@type": "Organization",
           "name": "Serwis RTV i AGD NaprawaPrzemyśl"
         },
         "contentLocation": {
@@ -478,6 +495,14 @@ export const dataForMetaTags = {
             "name": "Naprawa Zmywarek"
           }
         },
+        "provider": {                           // dodane 14.05.2025
+          "@type": "LocalBusiness",
+          "name": serwis.name,
+          "url": appUrls.home,
+          "telephone": serwis.phone.formatted,
+          "address": address,
+          //  "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png",
+        },
       },
       product: {
         "@context": "https://schema.org",
@@ -514,7 +539,7 @@ export const dataForMetaTags = {
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
-            "@type": "Organization",
+            "@type": "LocalBusiness",  // "@type": "Organization",
             "name": "NaprawaPrzemyśl",
           },
         },
@@ -536,7 +561,7 @@ export const dataForMetaTags = {
         "@context": "http://schema.org",
         "@type": "ImageObject",
         "author": {
-          "@type": "Organization",
+          "@type": "LocalBusiness",  // "@type": "Organization",
           "name": "Serwis RTV i AGD NaprawaPrzemyśl"
         },
         "contentLocation": {
@@ -598,6 +623,14 @@ export const dataForMetaTags = {
             "name": "Naprawa Ekspresów"
           }
         },
+        "provider": {                           // dodane 14.05.2025
+          "@type": "LocalBusiness",
+          "name": serwis.name,
+          "url": appUrls.home,
+          "telephone": serwis.phone.formatted,
+          "address": address,
+          //  "image": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png",
+        },
       },
       product: {
         "@context": "https://schema.org",
@@ -634,7 +667,7 @@ export const dataForMetaTags = {
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
-            "@type": "Organization",
+            "@type": "LocalBusiness",  // "@type": "Organization",
             "name": "NaprawaPrzemyśl",
           },
         },
@@ -656,7 +689,7 @@ export const dataForMetaTags = {
         "@context": "http://schema.org",
         "@type": "ImageObject",
         "author": {
-          "@type": "Organization",
+          "@type": "LocalBusiness",  // "@type": "Organization",
           "name": "Serwis RTV i AGD NaprawaPrzemyśl"
         },
         "contentLocation": {
@@ -718,6 +751,14 @@ export const dataForMetaTags = {
             "name": "Naprawa Telewizorów"
           }
         },
+        "provider": {                           // dodane 14.05.2025
+          "@type": "LocalBusiness",
+          "name": serwis.name,
+          "url": appUrls.home,
+          "telephone": serwis.phone.formatted,
+          "address": address,
+          //  "image": "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png",
+        },
       },
       product: {
         "@context": "https://schema.org",
@@ -754,7 +795,7 @@ export const dataForMetaTags = {
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
-            "@type": "Organization",
+            "@type": "LocalBusiness",  // "@type": "Organization",
             "name": "NaprawaPrzemyśl",
           },
         },
@@ -776,7 +817,7 @@ export const dataForMetaTags = {
         "@context": "http://schema.org",
         "@type": "ImageObject",
         "author": {
-          "@type": "Organization",
+          "@type": "LocalBusiness",  // "@type": "Organization",
           "name": "Serwis RTV i AGD NaprawaPrzemyśl"
         },
         "contentLocation": {

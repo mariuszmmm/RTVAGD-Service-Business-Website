@@ -8,7 +8,7 @@ export const Schema = ({ page }) => {
   const localBusiness = {
     "@context": "http://www.schema.org",
     "@type": "LocalBusiness",
-    "name": "Naprawa Przemyśl",
+    "name": serwis.name,  // "name": "Naprawa Przemyśl",
     "url": appUrls.home,
     "logo": imageUrls.logo,
     "image": imageUrls.serwis,
