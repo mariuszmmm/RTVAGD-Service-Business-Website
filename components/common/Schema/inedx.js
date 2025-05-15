@@ -6,7 +6,7 @@ export const Schema = ({ page }) => {
   const { breadcrumbList } = page.schema;
 
   const localBusiness = {
-    "@context": "http://www.schema.org",
+    "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": serwis.name,  // "name": "Naprawa Przemyśl",
     "url": appUrls.home,
