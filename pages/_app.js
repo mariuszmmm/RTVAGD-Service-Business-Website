@@ -7,6 +7,8 @@ import Background from '../components/Background';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+// test
+
 function App({ Component, pageProps }) {
   return (
     <React.StrictMode>
