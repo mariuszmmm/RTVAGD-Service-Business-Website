@@ -15,9 +15,10 @@ export const Header = styled.div`
 
 export const Avatar = styled.div`
   position: relative;
-  width: clamp(3rem, 6vw, 4rem);;
+  width: clamp(3rem, 6vw, 4rem);
+  height: clamp(3rem, 6vw, 4rem);
+  aspect-ratio: 1/1;
   margin-right: 15px;
-  max-height: clamp(3rem, 6vw, 4rem);;
 `;
 
 export const Data = styled.div`

@@ -110,6 +110,9 @@ export const dataForMetaTags = {
             "@type": "LocalBusiness",   // "@type": "Organization",
             "name": serwis.name,  //   "name": "Serwis RTV i AGD NaprawaPrzemyśl"
             address,
+            "image": imageUrls.serwis,
+            "telephone": serwis.phone.formatted,
+            "priceRange": "PLN",
           },
           "contentLocation": {
             "@type": "Place",
@@ -331,12 +334,15 @@ export const dataForMetaTags = {
         //   ]
         // },
         "image": {
-          "@context": "https://schema.org",
+          // "@context": "https://schema.org",
           "@type": "ImageObject",
           "author": {
             "@type": "LocalBusiness",  // "@type": "Organization",
             "name": serwis.name,   // "name": "Serwis RTV i AGD NaprawaPrzemyśl"
             address,
+            "image": imageUrls.serwis,
+            "telephone": serwis.phone.formatted,
+            "priceRange": "PLN",
           },
           "contentLocation": {
             "@type": "Place",
@@ -356,6 +362,7 @@ export const dataForMetaTags = {
             "name": serwis.name,
             "url": appUrls.home,
             "telephone": serwis.phone.formatted,
+            address,
           }
         }
       },
@@ -498,12 +505,15 @@ export const dataForMetaTags = {
         //   ]
         // },
         "image": {
-          "@context": "https://schema.org",
+          // "@context": "https://schema.org",
           "@type": "ImageObject",
           "author": {
             "@type": "LocalBusiness",  // "@type": "Organization",
             "name": serwis.name,  // "name": "Serwis RTV i AGD NaprawaPrzemyśl"
             address,
+            "image": imageUrls.serwis,
+            "telephone": serwis.phone.formatted,
+            "priceRange": "PLN",
           },
           "contentLocation": {
             "@type": "Place",
@@ -523,6 +533,7 @@ export const dataForMetaTags = {
             "name": serwis.name,
             "url": appUrls.home,
             "telephone": serwis.phone.formatted,
+            address,
           }
         }
       },
@@ -666,12 +677,15 @@ export const dataForMetaTags = {
         //   ]
         // },
         "image": {
-          "@context": "https://schema.org",
+          // "@context": "https://schema.org",
           "@type": "ImageObject",
           "author": {
             "@type": "LocalBusiness",  // "@type": "Organization",
             "name": serwis.name,   //  "name": "Serwis RTV i AGD NaprawaPrzemyśl"
             address,
+            "image": imageUrls.serwis,
+            "telephone": serwis.phone.formatted,
+            "priceRange": "PLN",
           },
           "contentLocation": {
             "@type": "Place",
@@ -691,6 +705,7 @@ export const dataForMetaTags = {
             "name": serwis.name,
             "url": appUrls.home,
             "telephone": serwis.phone.formatted,
+            address,
           }
         }
       },
@@ -834,12 +849,15 @@ export const dataForMetaTags = {
         //   ]
         // },
         "image": {
-          "@context": "https://schema.org",
+          // "@context": "https://schema.org",
           "@type": "ImageObject",
           "author": {
             "@type": "LocalBusiness",  // "@type": "Organization",
             "name": serwis.name,    //  "name": "Serwis RTV i AGD NaprawaPrzemyśl"
             address,
+            "image": imageUrls.serwis,
+            "telephone": serwis.phone.formatted,
+            "priceRange": "PLN",
           },
           "contentLocation": {
             "@type": "Place",
@@ -859,6 +877,7 @@ export const dataForMetaTags = {
             "name": serwis.name,
             "url": appUrls.home,
             "telephone": serwis.phone.formatted,
+            address,
           }
         }
       },
@@ -1002,12 +1021,15 @@ export const dataForMetaTags = {
         //   ]
         // },
         "image": {
-          "@context": "https://schema.org",
+          // "@context": "https://schema.org",
           "@type": "ImageObject",
           "author": {
             "@type": "LocalBusiness",  // "@type": "Organization",
             "name": serwis.name,    //   "name": "Serwis RTV i AGD NaprawaPrzemyśl"
             address,
+            "image": imageUrls.serwis,
+            "telephone": serwis.phone.formatted,
+            "priceRange": "PLN",
           },
           "contentLocation": {
             "@type": "Place",
@@ -1027,6 +1049,7 @@ export const dataForMetaTags = {
             "name": serwis.name,
             "url": appUrls.home,
             "telephone": serwis.phone.formatted,
+            address,
           }
         }
       },
