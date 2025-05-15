@@ -17,6 +17,7 @@ export const Avatar = styled.div`
   position: relative;
   width: clamp(3rem, 6vw, 4rem);;
   margin-right: 15px;
+  max-height: clamp(3rem, 6vw, 4rem);;
 `;
 
 export const Data = styled.div`
