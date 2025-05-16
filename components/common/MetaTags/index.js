@@ -117,11 +117,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(serviceSchema)
             }}
           /> */}
-          <script type="application/ld+json"   // dodane 15.05.2025    
+          {/* <script type="application/ld+json"    // wyłączone 16.05.2025  // dodane 15.05.2025    
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(webpage)
             }}
-          />
+          /> */}
 
 
           {/* <script type="application/ld+json"
@@ -154,11 +154,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(website)
             }}
           /> */}
-          <script type="application/ld+json"     // dodane 14.05.2025
+          {/* <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(localBusiness)
             }}
-          />
+          /> */}
           {/* <script type="application/ld+json"     // wyłączone 14.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(organization)
@@ -169,11 +169,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(place)
             }}
           /> */}
-          <script type="application/ld+json"
+          {/* <script type="application/ld+json"     // wyłączone 16.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(webpage)
             }}
-          />
+          /> */}
           {/* <script type="application/ld+json"   // wyłączone 15.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
