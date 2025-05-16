@@ -119,7 +119,7 @@ export const dataForMetaTags = {
             "name": "Przemyśl"
           },
           "contentUrl": "https://naprawaprzemysl.pl/images/serwis.jpg",
-          "datePublished": "2025-05-15",
+          "datePublished": "2025-05-16",
           "description": "Serwis RTV i AGD w Przemyślu",
           "name": "Strona główna – " + shortName,   //  "name": "Serwis RTV i AGD",
         },
@@ -144,7 +144,7 @@ export const dataForMetaTags = {
           "name": "Przemyśl"
         },
         "contentUrl": "https://naprawaprzemysl.pl/images/serwis.jpg",
-        "datePublished": "2025-05-15",
+        "datePublished": "2025-05-16",
         "description": "Serwis RTV i AGD w Przemyślu",
         "name": serwis.name,   //  "name": "Serwis RTV i AGD",
       },
@@ -300,7 +300,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_pralek,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2025-05-15",
+          "priceValidUntil": "2025-05-16",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -349,7 +349,7 @@ export const dataForMetaTags = {
             "name": "Przemyśl"
           },
           "contentUrl": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
-          "datePublished": "2025-05-15",
+          "datePublished": "2025-05-16",
           "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
           "name": "Naprawa Pralek - " + shortName,  // "name": "Naprawa pralek w Przemyślu",
         },
@@ -378,7 +378,7 @@ export const dataForMetaTags = {
           "name": "Przemyśl"
         },
         "contentUrl": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
-        "datePublished": "2025-05-15",
+        "datePublished": "2025-05-16",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
         "name": "Naprawa Pralek - " + serwis.name,  // "name": "Naprawa pralek w Przemyślu",
       },
@@ -471,7 +471,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_suszarek,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2025-05-15",
+          "priceValidUntil": "2025-05-16",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -520,7 +520,7 @@ export const dataForMetaTags = {
             "name": "Przemyśl"
           },
           "contentUrl": "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png",
-          "datePublished": "2025-05-15",
+          "datePublished": "2025-05-16",
           "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
           "name": "Naprawa Suszarek - " + shortName, //  "name": "Naprawa suszarek w Przemyślu",
         },
@@ -549,7 +549,7 @@ export const dataForMetaTags = {
           "name": "Przemyśl"
         },
         "contentUrl": "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png",
-        "datePublished": "2025-05-15",
+        "datePublished": "2025-05-16",
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
         "name": "Naprawa Suszarek - " + serwis.name,  //  "name": "Naprawa suszarek w Przemyślu",
       },
@@ -643,7 +643,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_zmywarek,
           "priceCurrency": "PLN",
           "price": "130",
-          "priceValidUntil": "2025-05-15",
+          "priceValidUntil": "2025-05-16",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -692,7 +692,7 @@ export const dataForMetaTags = {
             "name": "Przemyśl"
           },
           "contentUrl": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png",
-          "datePublished": "2025-05-15",
+          "datePublished": "2025-05-16",
           "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części.",
           "name": "Naprawa Zmywarek - " + shortName,  //   "name": "Naprawa zmywarek w Przemyślu",
         },
@@ -721,7 +721,7 @@ export const dataForMetaTags = {
           "name": "Przemyśl"
         },
         "contentUrl": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png",
-        "datePublished": "2025-05-15",
+        "datePublished": "2025-05-16",
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części.",
         "name": "Naprawa Zmywarek - " + serwis.name,   //   "name": "Naprawa zmywarek w Przemyślu",
       },
@@ -815,7 +815,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_ekspresow,
           "priceCurrency": "PLN",
           "price": "120",
-          "priceValidUntil": "2025-05-15",
+          "priceValidUntil": "2025-05-16",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -864,7 +864,7 @@ export const dataForMetaTags = {
             "name": "Przemyśl"
           },
           "contentUrl": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png",
-          "datePublished": "2025-05-15",
+          "datePublished": "2025-05-16",
           "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części.",
           "name": "Naprawa Ekspresów - " + shortName,   //   "name": "Naprawa ekspresów w Przemyślu",
         },
@@ -893,7 +893,7 @@ export const dataForMetaTags = {
           "name": "Przemyśl"
         },
         "contentUrl": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png",
-        "datePublished": "2025-05-15",
+        "datePublished": "2025-05-16",
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części.",
         "name": "Naprawa Ekspresów - " + serwis.name,    //   "name": "Naprawa ekspresów w Przemyślu",
       },
@@ -987,7 +987,7 @@ export const dataForMetaTags = {
           "url": appUrls.naprawa_telewizorow,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2025-05-15",
+          "priceValidUntil": "2025-05-16",
           "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -1036,7 +1036,7 @@ export const dataForMetaTags = {
             "name": "Przemyśl"
           },
           "contentUrl": "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png",
-          "datePublished": "2025-05-15",
+          "datePublished": "2025-05-16",
           "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części.",
           "name": "Naprawa Telewizorów - " + shortName,    // "name": "Naprawa telewizorów w Przemyślu",
         },
@@ -1065,7 +1065,7 @@ export const dataForMetaTags = {
           "name": "Przemyśl"
         },
         "contentUrl": "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png",
-        "datePublished": "2025-05-15",
+        "datePublished": "2025-05-16",
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części.",
         "name": "Naprawa Telewizorów - " + serwis.name,    // "name": "Naprawa telewizorów w Przemyślu",
       },

@@ -93,6 +93,14 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
         ratingsTotal={ratingsTotal}
         reviews={reviews}
       />
+      <BackgroundImage>
+        <Image
+          src={imageUrls.serwis}
+          alt="Background image"
+          loading="lazy"
+          fill
+        />
+      </BackgroundImage>
       <HeroContainer id="business">
         <HeroTitle
           lang="pl"
@@ -212,14 +220,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
           Zaufaj profesjonalnemu serwisowi, który codziennie dba o niezawodność Twoich urządzeń RTV i AGD!
         </Text>
       </Container>
-      <BackgroundImage>
-        <Image
-          src={imageUrls.serwis}
-          alt="Background image"
-          loading="lazy"
-          fill
-        />
-      </BackgroundImage>
+
     </Hero>
   );
 };
