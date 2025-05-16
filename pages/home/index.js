@@ -107,8 +107,47 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
           aria-label="Profesjonalna naprawa pralek, suszarek, zmywarek, telewizorów i ekspresów do kawy w Przemyślu"
         >
           Profesjonalna naprawa{" "}<br />
-          pralek, suszarek, zmywarek,{" "}<br />
-          telewizorów i&nbsp;ekspresów do&nbsp;kawy{" "}<br />
+          <StyledLink
+            href="/naprawa-pralek"
+            title='Naprawa pralek w Przemyślu'
+            $standardText
+          >
+            pralek
+          </StyledLink>
+          {", "}
+          <StyledLink
+            href="/naprawa-suszarek"
+            title='Naprawa suszarek w Przemyślu'
+            $standardText
+          >
+            suszarek
+          </StyledLink>
+          {", "}
+          <StyledLink
+            href="/naprawa-zmywarek"
+            title='Naprawa zmywarek w Przemyślu'
+            $standardText
+          >
+            zmywarek
+          </StyledLink>
+          {", "}
+          <StyledLink
+            href="/naprawa-telewizorow"
+            title='Naprawa telewizorów w Przemyślu'
+            $standardText
+          >
+            <br />
+            telewizorów
+          </StyledLink>
+          {" i "}
+          <StyledLink
+            href="/naprawa-ekspresow"
+            title='Naprawa ekspresów w Przemyślu'
+            $standardText
+          >
+            ekspresów do&nbsp;kawy
+          </StyledLink>
+          <br />
           w&nbsp;Przemyślu
         </HeroTitle>
         <HeroText> Rzetelnie, szybko i&nbsp;skutecznie!</HeroText>
