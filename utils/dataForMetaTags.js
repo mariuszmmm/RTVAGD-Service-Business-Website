@@ -321,18 +321,18 @@ export const dataForMetaTags = {
         "name": "Naprawa Pralek - " + shortName, // "name": "Naprawa Pralek",
         "alternateName": "Naprawa pralek automatycznych w Przemyślu",
         "url": appUrls.naprawa_pralek,
-        // "breadcrumb": {
-        //   ...breadcrumbList,
-        //   "itemListElement": [
-        //     ...breadcrumbList["itemListElement"],
-        //     {
-        //       "@type": "ListItem",
-        //       "position": 2,
-        //       "name": "Naprawa Pralek - " + shortName,
-        //       "item": appUrls.naprawa_pralek
-        //     }
-        //   ]
-        // },
+        "breadcrumb": {
+          ...breadcrumbList,
+          "itemListElement": [
+            ...breadcrumbList["itemListElement"],
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Naprawa Pralek - " + shortName,
+              "item": appUrls.naprawa_pralek
+            }
+          ]
+        },
         "image": {
           // "@context": "https://schema.org",
           "@type": "ImageObject",
