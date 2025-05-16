@@ -114,22 +114,22 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         // || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/"
       ) && (
           <>
-            {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(serviceSchema)
-            }}
-          /> */}
+            <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(serviceSchema)
+              }}
+            />
             <script type="application/ld+json"    // wyłączone 16.05.2025  // dodane 15.05.2025    
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify(webpage)
               }}
             />
 
-            <script type="application/ld+json"   // dodane 16.05.2025
+            {/* <script type="application/ld+json"   // dodane 16.05.2025
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify(breadcrumbList)
               }}
-            />
+            /> */}
 
 
             {/* <script type="application/ld+json"

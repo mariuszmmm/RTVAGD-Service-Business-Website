@@ -28,7 +28,10 @@ const breadcrumbList = {
       "@type": "ListItem",
       "position": 1,
       "name": "Strona główna – " + shortName,
-      "item": appUrls.home
+      "item": {
+        "@id": appUrls.home,
+        "name": "Strona główna – " + shortName,
+      }
     }
   ]
 };
@@ -246,20 +249,21 @@ export const dataForMetaTags = {
       service: {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Naprawa Pralek - " + shortName,  //  "name": "Naprawa Pralek",
+        "name": "Naprawa Pralek",  //  "name": "Naprawa Pralek",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-        "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
+        // "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
         "areaServed": {
           "@type": "Place",
-          "address": address,
+          // "address": address,
+          "name": "Przemyśl",
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "itemReviewed": {
-            "@type": "Service",
-            "name": "Naprawa Pralek"
-          }
-        },
+        // "aggregateRating": {
+        //   "@type": "AggregateRating",
+        //   "itemReviewed": {
+        //     "@type": "Service",
+        //     "name": "Naprawa Pralek"
+        //   }
+        // },
         "provider": {                           // dodane 14.05.2025
           "@type": "LocalBusiness",
           "name": serwis.name,
@@ -321,6 +325,11 @@ export const dataForMetaTags = {
         "name": "Naprawa Pralek - " + shortName, // "name": "Naprawa Pralek",
         "alternateName": "Naprawa pralek automatycznych w Przemyślu",
         "url": appUrls.naprawa_pralek,
+        "@id": appUrls.naprawa_pralek,
+        "isPartOf": {
+          "@id": "https://naprawaprzemysl.pl/#website"
+        },
+        "inLanguage": "pl-PL",
         "breadcrumb": {
           ...breadcrumbList,
           "itemListElement": [
@@ -329,42 +338,48 @@ export const dataForMetaTags = {
               "@type": "ListItem",
               "position": 2,
               "name": "Naprawa Pralek - " + shortName,
-              "item": appUrls.naprawa_pralek
+              "item": {
+                "@id": appUrls.naprawa_pralek,
+                "name": "Naprawa Pralek - " + shortName,
+              }
             }
           ]
         },
         "image": {
           // "@context": "https://schema.org",
           "@type": "ImageObject",
-          "author": {
-            "@type": "LocalBusiness",  // "@type": "Organization",
-            "name": serwis.name,   // "name": "Serwis RTV i AGD NaprawaPrzemyśl"
-            address,
-            "image": imageUrls.serwis,
-            "telephone": serwis.phone.formatted,
-            "priceRange": "PLN",
-          },
-          "contentLocation": {
-            "@type": "Place",
-            "name": "Przemyśl"
-          },
+          // "author": {
+          //   "@type": "LocalBusiness",  // "@type": "Organization",
+          //   "name": serwis.name,   // "name": "Serwis RTV i AGD NaprawaPrzemyśl"
+          //   address,
+          //   "image": imageUrls.serwis,
+          //   "telephone": serwis.phone.formatted,
+          //   "priceRange": "PLN",
+          // },
+          // "contentLocation": {
+          //   "@type": "Place",
+          //   "name": "Przemyśl"
+          // },
           "contentUrl": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
           "datePublished": "2025-05-16",
           "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
-          "name": "Naprawa Pralek - " + shortName,  // "name": "Naprawa pralek w Przemyślu",
+          // "name": "Naprawa Pralek - " + shortName,  // "name": "Naprawa pralek w Przemyślu",
         },
-        "mainEntity": {
-          "@type": "Service",
-          "name": "Naprawa pralek",
-          "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": serwis.name,
-            "url": appUrls.home,
-            "telephone": serwis.phone.formatted,
-            address,
-          }
+        "primaryImageOfPage": {
+          "@id": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png"
         }
+        // "mainEntity": {
+        //   "@type": "Service",
+        //   "name": "Naprawa pralek",
+        //   "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
+        //   "provider": {
+        //     "@type": "LocalBusiness",
+        //     "name": serwis.name,
+        //     "url": appUrls.home,
+        //     "telephone": serwis.phone.formatted,
+        //     address,
+        //   }
+        // }
       },
       imageObject: {
         "@context": "https://schema.org",
