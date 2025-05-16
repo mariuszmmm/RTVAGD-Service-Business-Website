@@ -28,7 +28,7 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
       />
       <Container>
         <Title>
-          Naprawa telewizorów
+          Naprawa telewizorów w&nbsp;Przemyślu
           <Emoticon>
             <Image
               src={imageUrls.logo}

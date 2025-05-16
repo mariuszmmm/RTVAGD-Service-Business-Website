@@ -28,7 +28,7 @@ const DryerService = ({ rating, ratingsTotal }) => {
       />
       <Container>
         <Title>
-          Naprawa suszarek
+          Naprawa suszarek w&nbsp;Przemyślu
           <Emoticon>
             <Image
               src={imageUrls.logo}
