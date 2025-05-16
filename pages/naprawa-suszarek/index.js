@@ -50,6 +50,7 @@ const DryerService = ({ rating, ratingsTotal }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
+                title="Naprawa szuszarek w Przemyślu"
                 src={imageUrls.suszarka}
                 alt="Naprawa szuszarek - serwis suszarek w Przemyślu"
                 loading='lazy'

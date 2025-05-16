@@ -50,6 +50,7 @@ const CoffeeMachineService = ({ rating, ratingsTotal }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
+                title="Naprawa ekspresów w Przemyślu"
                 src={imageUrls.ekspres}
                 alt="Naprawa ekspresów do kawy - profesjonalny serwis ekspresów w Przemyślu"
                 loading='lazy'
