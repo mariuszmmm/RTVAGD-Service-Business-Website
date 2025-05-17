@@ -39,23 +39,50 @@ const breadcrumbList = {
 export const localBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": serwis.name,  // "name": "Naprawa Przemyśl",
+  "name": shortName,  // "name": serwis.name,  // "name": "Naprawa Przemyśl",
+  "image": [imageUrls.serwis],  // "image": imageUrls.logo,
+  "@id": "https://naprawaprzemysl.pl/#business",  // dodane 17.05.2025
   "url": appUrls.home,
-  "logo": imageUrls.logo,
-  "image": imageUrls.logo,
-  "description": "Naprawa sprzętu AGD i RTV w Przemyślu. Serwis pogwarancyjny. Naprawa pralek, zmywarek, suszarek, ekspresów, telewizorów.",
   "telephone": serwis.phone.formatted,
-  "email": serwis.email,
   "priceRange": "PLN",
   "address": address,
+  // "review": {                   // dodane 17.05.2025
+  //   "@type": "Review",
+  //   "reviewRating": {
+  //     "@type": "Rating",
+  //     "bestRating": "5",
+  //   },
+  //   "author": {
+  //     "@type": "Person",
+  //     "name": " NaprawaPrzemyśl",
+  //   },
+  // },
   "geo": geo,
-  "hasMap": serwis.url.mapaGoogle,
-  "openingHours": openingHours,
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": serwis.phone.formatted,
-    "contactType": "office"
-  }
+  "openingHoursSpecification": {    // dodane 17.05.2025
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:30",
+    "closes": "17:00"
+  },
+  "sameAs": ["https://www.facebook.com/100063811592941"],    // dodane 17.05.2025
+  // "openingHours": openingHours,
+  "logo": imageUrls.logo,
+  "hasMap": "https://maps.google.com/?q=49.7827725,22.7760291",
+
+  // "description": "Naprawa sprzętu AGD i RTV w Przemyślu. Serwis pogwarancyjny. Naprawa pralek, zmywarek, suszarek, ekspresów, telewizorów.",
+  // "email": serwis.email,
+  // "hasMap": serwis.url.mapaGoogle,
+  // "contactPoint": {
+  //   "@type": "ContactPoint",
+  //   "telephone": serwis.phone.formatted,
+  //   "contactType": "office"
+  // }
 };
 
 export const dataForMetaTags = {
@@ -948,28 +975,70 @@ export const dataForMetaTags = {
       service: {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Naprawa Telewizorów - " + shortName,    //   "name": "Naprawa Telewizorów",
-        "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
-        "image": "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png",
+        "name": "Naprawa Telewizorów",    //   "name": "Naprawa Telewizorów",
+        "serviceType": "Naprawa telewizorów wszystkich marek",
+
+        // "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
+        "image": ["https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
         "areaServed": {
           "@type": "Place",
           "address": address,
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "itemReviewed": {
-            "@type": "Service",
-            "name": "Naprawa Telewizorów"
-          }
-        },
-        "provider": {                           // dodane 14.05.2025
+        // "aggregateRating": {
+        //   "@type": "AggregateRating",
+        //   "itemReviewed": {
+        //     "@type": "Service",
+        //     "name": "Naprawa Telewizorów"
+        //   }
+        // },
+        "provider": {
           "@type": "LocalBusiness",
-          "name": serwis.name,
-          "url": appUrls.home,
+          "@id": "https://naprawaprzemysl.pl/#business",
+          "name": shortName,  // "name": serwis.name,  // "name": "Naprawa Przemyśl",
+          "image": [imageUrls.serwis],  // "image": imageUrls.logo,
           "telephone": serwis.phone.formatted,
+          "priceRange": "PLN",
           "address": address,
-          //  "image": "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png",
         },
+        "areaServed": [
+          { "@type": "City", "name": "Przemyśl" },
+          { "@type": "City", "name": "Bolestraszyce" },
+          { "@type": "City", "name": "Duńkowiczki" },
+          { "@type": "City", "name": "Krówniki" },
+          { "@type": "City", "name": "Nehrybka" },
+          { "@type": "City", "name": "Orzechowce" },
+          { "@type": "City", "name": "Ostrów" },
+          { "@type": "City", "name": "Pikulice" },
+          { "@type": "City", "name": "Prałkowce" },
+          { "@type": "City", "name": "Wyszatyce" },
+          { "@type": "City", "name": "Żurawica" }
+        ],
+
+
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "PLN",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "od 100",
+            "priceCurrency": "PLN"
+          },
+          "url": "https://naprawaprzemysl.pl/naprawa-telewizorow"
+        },
+        // "aggregateRating": {
+        //   "@type": "AggregateRating",
+        //   "ratingValue": "4.6",
+        //   "reviewCount": "65"
+        // },
+        // "review": [
+        //   {
+        //     "@type": "Review",
+        //     "author": { "@type": "Person", "name": "egon920" },
+        //     "datePublished": "2025-02-11",
+        //     "reviewBody": "Super fachowiec…",
+        //     "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 }
+        //   }
+        // ]
       },
       product: {
         "@context": "https://schema.org",

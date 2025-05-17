@@ -30,8 +30,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   // const selectedReviews = reviews?.filter((review, index) => index < 2);
 
-  const getReviews = () => {
-    const reviewsArray = reviews.map((review) => (
+  const getReviews = (selectedReviewNumber) => {
+    if (!reviews) return null;
+
+    const selectedReviews = !!selectedReviewNumber ? [reviews[selectedReviewNumber - 1]] : reviews;
+    const reviewsArray = selectedReviews.map((review) => (
       {
         "@type": "Review",
         "name": "Polecam serwis RTV AGD w Przemyślu",
@@ -44,11 +47,32 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": review.rating,
+          "bestRating": "5",
+          "worstRating": "1",
+        },
+        "itemReviewed": {
+          "@type": "Service",
+          "name": "Naprawa sprzętu RTV i AGD",
+          // "serviceType": "Naprawa sprzętu RTV i AGD",
+          // "address": {
+          //   "@type": "PostalAddress",
+          //   "addressLocality": "Przemyśl",
+          //   "addressCountry": "PL",
+          // },
+
         },
       }
     ))
 
-    return { "review": reviewsArray }
+    return {
+      "review": reviewsArray,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": (rating || serwis.rating).toString(),
+        "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+      },
+
+    }
   };
 
   const productSchema = {
@@ -83,6 +107,12 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
       // ...(path === "/" && { "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString() }),
     }
+  };
+
+  const localBusinessSchema = {
+    ...localBusiness,
+    ...getReviews(1),
+
   };
 
   return (
@@ -155,6 +185,17 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           </>
         )}
 
+      {(path === "/naprawa-telewizorow/"
+      ) && (
+          <>
+            <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(service)
+              }}
+            />
+          </>
+        )}
+
       {path === "/" && (
         <>
           {/* <script type="application/ld+json"
@@ -162,11 +203,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(website)
             }}
           /> */}
-          {/* <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
+          <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(localBusiness)
+              __html: JSON.stringify(localBusinessSchema)
             }}
-          /> */}
+          />
           {/* <script type="application/ld+json"     // wyłączone 14.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(organization)
