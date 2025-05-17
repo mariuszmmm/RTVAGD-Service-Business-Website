@@ -146,7 +146,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           <>
             <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{
-                __html: JSON.stringify(serviceSchema)
+                __html: JSON.stringify(service)
               }}
             />
             <script type="application/ld+json"    // wyłączone 16.05.2025  // dodane 15.05.2025    
