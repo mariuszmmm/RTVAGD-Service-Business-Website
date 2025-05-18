@@ -107,36 +107,34 @@ export const dataForMetaTags = {
         "sameAs": [],
       },
       product: {
-        product: {
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "@id": "https://naprawaprzemysl.pl/#service",
-          "name": shortName,
-          "image": [imageUrls.logo, imageUrls.serwis, "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
-          "description": "Naprawa sprzętu AGD i RTV w Przemyślu.",
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": "https://naprawaprzemysl.pl/#service",
+        "name": shortName,
+        "image": [imageUrls.logo, imageUrls.serwis, "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
+        "description": "Naprawa sprzętu AGD i RTV w Przemyślu.",
+        "url": "https://naprawaprzemysl.pl/",
+        // "sku": "SEO",
+        // "mpn": "SEO-33",
+        // "brand": {
+        //   "@type": "Thing",
+        //   "name": "NaprawaPrzemyśl",
+        // },
+
+        "offers": {
+          "@type": "Offer",
           "url": "https://naprawaprzemysl.pl/",
-          // "sku": "SEO",
-          // "mpn": "SEO-33",
-          // "brand": {
-          //   "@type": "Thing",
+          // "url": appUrls.naprawa_telewizorow,
+          "priceCurrency": "PLN",
+          "price": "150",
+          "priceValidUntil": "2026-05-16",
+          // "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
+          "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+          // "seller": {
+          //   "@type": "LocalBusiness",  // "@type": "Organization",
           //   "name": "NaprawaPrzemyśl",
           // },
-
-          "offers": {
-            "@type": "Offer",
-            "url": "https://naprawaprzemysl.pl/",
-            // "url": appUrls.naprawa_telewizorow,
-            "priceCurrency": "PLN",
-            "price": "150",
-            "priceValidUntil": "2026-05-16",
-            // "itemCondition": "https://schema.org/UsedCondition",
-            "availability": "https://schema.org/InStock",
-            "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-            // "seller": {
-            //   "@type": "LocalBusiness",  // "@type": "Organization",
-            //   "name": "NaprawaPrzemyśl",
-            // },
-          },
         },
       },
       place: {
