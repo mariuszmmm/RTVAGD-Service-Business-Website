@@ -14,10 +14,11 @@ import { ButtonLink } from '../../components/common/ButtonLink';
 import { serwis } from '../../utils/serwis';
 import Image from 'next/image';
 import { StyledPhoto } from '../../components/common/StyledPhoto';
+import { getReviewsProps } from '../../utils/getReviewsProps';
 
-const TelevisionService = ({ rating, ratingsTotal }) => {
+const TelevisionService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
-
+  console.log("reviews", reviews)
   return (
     <Section>
       <MetaTags
@@ -25,6 +26,7 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
         page={dataForMetaTags.naprawa_telewizorow}
         rating={rating}
         ratingsTotal={ratingsTotal}
+        reviews={reviews}
       />
       <Container>
         <Title>
@@ -98,6 +100,20 @@ const TelevisionService = ({ rating, ratingsTotal }) => {
   );
 };
 
-export const getStaticProps = getRatingProps;
+// export const getStaticProps = getRatingProps;  
+
+export const getStaticProps = async () => {
+  const [ratingProps, reviewsProps] = await Promise.all([
+    getRatingProps(),
+    getReviewsProps(),
+  ]);
+
+  return {
+    props: {
+      ...ratingProps.props,
+      ...reviewsProps.props,
+    },
+  };
+};
 
 export default TelevisionService;

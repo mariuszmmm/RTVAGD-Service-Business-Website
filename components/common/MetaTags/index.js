@@ -29,7 +29,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   } = page.schema;
 
   // const selectedReviews = reviews?.filter((review, index) => index < 2);
-
+  console.log("reviews", reviews)
   const getReviews = (selectedReviewNumber) => {
     if (!reviews) return null;
 
@@ -79,24 +79,29 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     ...product,
     ...(path === "/"
       ?
-      { ...getReviews() }
+      { ...getReviews(1) }
       :
       {
-        "review": {
-          ...(product?.["review"]),
-          "reviewRating": {
-            ...(product?.["review"]?.["reviewRating"]),
-            "ratingValue": (rating || serwis.rating)?.toString(),
-          },
-        }
+        ...getReviews(1)
+        // "review": {
+        //   ...(product?.["review"]),
+        //   "reviewRating": {
+        //     ...(product?.["review"]?.["reviewRating"]),
+        //     "ratingValue": (rating || serwis.rating)?.toString(),
+        //   },
+        //   "author": {
+        //     "@type": "Person",
+        //     "name": " NaprawaPrzemyśl ",
+        //   },
+        // }
       }
     ),
-    "aggregateRating": {
-      ...(product?.["aggregateRating"]),
-      "ratingValue": (rating || serwis.rating).toString(),
-      "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
-      ...(path === "/" && { "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString() }),
-    }
+    // "aggregateRating": {
+    //   ...(product?.["aggregateRating"]),
+    //   "ratingValue": (rating || serwis.rating).toString(),
+    //   "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+    //   // ...(path === "/" && { "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString() }),
+    // }
   };
 
   const serviceSchema = {
@@ -144,16 +149,16 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         // || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/"
       ) && (
           <>
-            <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
+            {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify(service)
               }}
-            />
-            <script type="application/ld+json"    // wyłączone 16.05.2025  // dodane 15.05.2025    
+            /> */}
+            {/* <script type="application/ld+json"    // wyłączone 16.05.2025  // dodane 15.05.2025    
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify(webpage)
               }}
-            />
+            /> */}
 
             {/* <script type="application/ld+json"   // dodane 16.05.2025
               dangerouslySetInnerHTML={{
@@ -188,9 +193,14 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       {(path === "/naprawa-telewizorow/"
       ) && (
           <>
-            <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
+            {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify(service)
+              }}
+            /> */}
+            <script type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(productSchema)
               }}
             />
           </>
@@ -206,6 +216,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(localBusinessSchema)
+            }}
+          />
+          <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(productSchema)
             }}
           />
           {/* <script type="application/ld+json"     // wyłączone 14.05.2025

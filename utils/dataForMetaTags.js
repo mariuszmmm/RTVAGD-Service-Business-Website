@@ -1,7 +1,7 @@
 import { serwis } from './serwis';
 import { appUrls, imageUrls } from './urls';
 
-const shortName = "Serwis RTV i AGD";
+const shortName = "Serwis RTV i AGD Przemyśl";
 
 export const address = {
   "@type": "PostalAddress",
@@ -107,19 +107,36 @@ export const dataForMetaTags = {
         "sameAs": [],
       },
       product: {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": shortName,
-        "image": "https://naprawaprzemysl.pl/images/serwis.jpg",
-        "description": "Naprawa sprzętu AGD i RTV w Przemyślu.",
-        "brand": {
-          "@type": "Thing",
-          "name": "NaprawaPrzemyśl",
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "worstRating": "3",
-          "bestRating": "5",
+        product: {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://naprawaprzemysl.pl/#service",
+          "name": shortName,
+          "image": [imageUrls.logo, imageUrls.serwis, "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
+          "description": "Naprawa sprzętu AGD i RTV w Przemyślu.",
+          "url": "https://naprawaprzemysl.pl/",
+          // "sku": "SEO",
+          // "mpn": "SEO-33",
+          // "brand": {
+          //   "@type": "Thing",
+          //   "name": "NaprawaPrzemyśl",
+          // },
+
+          "offers": {
+            "@type": "Offer",
+            "url": "https://naprawaprzemysl.pl/",
+            // "url": appUrls.naprawa_telewizorow,
+            "priceCurrency": "PLN",
+            "price": "150",
+            "priceValidUntil": "2026-05-16",
+            // "itemCondition": "https://schema.org/UsedCondition",
+            "availability": "https://schema.org/InStock",
+            "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+            // "seller": {
+            //   "@type": "LocalBusiness",  // "@type": "Organization",
+            //   "name": "NaprawaPrzemyśl",
+            // },
+          },
         },
       },
       place: {
@@ -1043,41 +1060,32 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Naprawa Telewizorów",
-        "image": "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png",
+        "@id": "https://naprawaprzemysl.pl/naprawa-telewizorow/#product",
+        "name": "Naprawa telewizorów Przemyśl",
+        "image": ["https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
-        "sku": "SEO",
-        "mpn": "SEO-33",
-        "brand": {
-          "@type": "Thing",
-          "name": "NaprawaPrzemyśl",
-        },
-        "review": {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "bestRating": "5",
-          },
-          "author": {
-            "@type": "Person",
-            "name": " NaprawaPrzemyśl ",
-          },
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-        },
+        "url": "https://naprawaprzemysl.pl/naprawa-telewizorow",
+        // "sku": "SEO",
+        // "mpn": "SEO-33",
+        // "brand": {
+        //   "@type": "Thing",
+        //   "name": "NaprawaPrzemyśl",
+        // },
+
         "offers": {
           "@type": "Offer",
-          "url": appUrls.naprawa_telewizorow,
+          "url": "https://naprawaprzemysl.pl/naprawa-telewizorow",
+          // "url": appUrls.naprawa_telewizorow,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2025-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
+          "priceValidUntil": "2026-05-16",
+          // "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "LocalBusiness",  // "@type": "Organization",
-            "name": "NaprawaPrzemyśl",
-          },
+          "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+          // "seller": {
+          //   "@type": "LocalBusiness",  // "@type": "Organization",
+          //   "name": "NaprawaPrzemyśl",
+          // },
         },
       },
       place: {
