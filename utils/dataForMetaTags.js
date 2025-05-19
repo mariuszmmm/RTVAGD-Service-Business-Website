@@ -163,7 +163,7 @@ export const dataForMetaTags = {
             "@type": "Place",
             "name": "Przemyśl"
           },
-          "contentUrl": "https://naprawaprzemysl.pl/images/serwis.jpg",
+          "contentUrl": "https://naprawaprzemysl.pl/images/serwis.webp",
           "datePublished": "2025-05-16",
           "description": "Serwis RTV i AGD w Przemyślu",
           "name": "Strona główna – " + shortName,   //  "name": "Serwis RTV i AGD",
@@ -188,7 +188,7 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl"
         },
-        "contentUrl": "https://naprawaprzemysl.pl/images/serwis.jpg",
+        "contentUrl": "https://naprawaprzemysl.pl/images/serwis.webp",
         "datePublished": "2025-05-16",
         "description": "Serwis RTV i AGD w Przemyślu",
         "name": serwis.name,   //  "name": "Serwis RTV i AGD",
