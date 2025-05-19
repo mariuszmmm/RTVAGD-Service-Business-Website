@@ -109,11 +109,11 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "@id": "https://naprawaprzemysl.pl/#service",
+        "@id": appUrls.home + "#service",
         "name": shortName,
-        "image": [imageUrls.logo, imageUrls.serwis, "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
+        "image": [imageUrls.logo, imageUrls.serwis, "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png", "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png", "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png", "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png", "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
         "description": "Naprawa sprzętu AGD i RTV w Przemyślu.",
-        "url": "https://naprawaprzemysl.pl/",
+        "url": appUrls.home,
         // "sku": "SEO",
         // "mpn": "SEO-33",
         // "brand": {
@@ -123,7 +123,7 @@ export const dataForMetaTags = {
 
         "offers": {
           "@type": "Offer",
-          "url": "https://naprawaprzemysl.pl/",
+          "url": appUrls.home,
           // "url": appUrls.naprawa_telewizorow,
           "priceCurrency": "PLN",
           "price": "150",
@@ -318,41 +318,19 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Naprawa Pralek",
-        "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
+        "@id": appUrls.naprawa_pralek + "#product",
+        "name": "Naprawa pralek Przemyśl",
+        "image": ["https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png"],
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-        "sku": "SEO",
-        "mpn": "SEO-33",
-        "brand": {
-          "@type": "Thing",
-          "name": "NaprawaPrzemyśl",
-        },
-        "review": {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "bestRating": "5",
-          },
-          "author": {
-            "@type": "Person",
-            "name": " NaprawaPrzemyśl",
-          },
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-        },
+        "url": appUrls.naprawa_pralek,
         "offers": {
           "@type": "Offer",
           "url": appUrls.naprawa_pralek,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2025-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
+          "priceValidUntil": "2026-05-16",
           "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "LocalBusiness",  // "@type": "Organization",
-            "name": "NaprawaPrzemyśl",
-          },
+          "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
       },
       place: {
@@ -500,41 +478,19 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Naprawa Suszarek",
-        "image": "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png",
+        "@id": appUrls.naprawa_suszarek + "#product",
+        "name": "Naprawa suszarek Przemyśl",
+        "image": ["https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png"],
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-        "sku": "SEO",
-        "mpn": "SEO-33",
-        "brand": {
-          "@type": "Thing",
-          "name": "NaprawaPrzemyśl",
-        },
-        "review": {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "bestRating": "5",
-          },
-          "author": {
-            "@type": "Person",
-            "name": " NaprawaPrzemyśl ",
-          },
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-        },
+        "url": appUrls.naprawa_suszarek,
         "offers": {
           "@type": "Offer",
           "url": appUrls.naprawa_suszarek,
           "priceCurrency": "PLN",
           "price": "150",
-          "priceValidUntil": "2025-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
+          "priceValidUntil": "2026-05-16",
           "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "LocalBusiness",  // "@type": "Organization",
-            "name": "NaprawaPrzemyśl",
-          },
+          "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
       },
       place: {
@@ -672,41 +628,19 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Naprawa Zmywarek",
-        "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png",
+        "@id": appUrls.naprawa_zmywarek + "#product",
+        "name": "Naprawa zmywarek Przemyśl",
+        "image": ["https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png"],
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
-        "sku": "SEO",
-        "mpn": "SEO-33",
-        "brand": {
-          "@type": "Thing",
-          "name": "NaprawaPrzemyśl",
-        },
-        "review": {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "bestRating": "5",
-          },
-          "author": {
-            "@type": "Person",
-            "name": " NaprawaPrzemyśl ",
-          },
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-        },
+        "url": appUrls.naprawa_zmywarek,
         "offers": {
           "@type": "Offer",
           "url": appUrls.naprawa_zmywarek,
           "priceCurrency": "PLN",
           "price": "130",
-          "priceValidUntil": "2025-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
+          "priceValidUntil": "2026-05-16",
           "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "LocalBusiness",  // "@type": "Organization",
-            "name": "NaprawaPrzemyśl",
-          },
+          "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
       },
       place: {
@@ -844,41 +778,19 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Naprawa Ekspresów",
-        "image": "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png",
+        "@id": appUrls.naprawa_ekspresow + "#product",
+        "name": "Naprawa ekspresów Przemyśl",
+        "image": ["https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png"],
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
-        "sku": "SEO",
-        "mpn": "SEO-33",
-        "brand": {
-          "@type": "Thing",
-          "name": "NaprawaPrzemyśl",
-        },
-        "review": {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "bestRating": "5",
-          },
-          "author": {
-            "@type": "Person",
-            "name": " NaprawaPrzemyśl ",
-          },
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-        },
+        "url": appUrls.naprawa_ekspresow,
         "offers": {
           "@type": "Offer",
           "url": appUrls.naprawa_ekspresow,
           "priceCurrency": "PLN",
           "price": "120",
-          "priceValidUntil": "2025-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
+          "priceValidUntil": "2026-05-16",
           "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "LocalBusiness",  // "@type": "Organization",
-            "name": "NaprawaPrzemyśl",
-          },
+          "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
       },
       place: {
@@ -1058,32 +970,19 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "@id": "https://naprawaprzemysl.pl/naprawa-telewizorow/#product",
+        "@id": appUrls.naprawa_telewizorow + "#product",
         "name": "Naprawa telewizorów Przemyśl",
         "image": ["https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
-        "url": "https://naprawaprzemysl.pl/naprawa-telewizorow",
-        // "sku": "SEO",
-        // "mpn": "SEO-33",
-        // "brand": {
-        //   "@type": "Thing",
-        //   "name": "NaprawaPrzemyśl",
-        // },
-
+        "url": appUrls.naprawa_telewizorow,
         "offers": {
           "@type": "Offer",
-          "url": "https://naprawaprzemysl.pl/naprawa-telewizorow",
-          // "url": appUrls.naprawa_telewizorow,
+          "url": appUrls.naprawa_telewizorow,
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2026-05-16",
-          // "itemCondition": "https://schema.org/UsedCondition",
           "availability": "https://schema.org/InStock",
           "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-          // "seller": {
-          //   "@type": "LocalBusiness",  // "@type": "Organization",
-          //   "name": "NaprawaPrzemyśl",
-          // },
         },
       },
       place: {

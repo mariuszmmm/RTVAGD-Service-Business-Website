@@ -93,14 +93,14 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
         ratingsTotal={ratingsTotal}
         reviews={reviews}
       />
-      <BackgroundImage>
+      {/* <BackgroundImage>
         <Image
           src={imageUrls.serwis}
           alt="Background image"
           loading="lazy"
           fill
         />
-      </BackgroundImage>
+      </BackgroundImage> */}
       <HeroContainer id="business">
         <HeroTitle
           lang="pl"

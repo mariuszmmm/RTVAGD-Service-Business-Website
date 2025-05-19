@@ -1,7 +1,8 @@
 import {
   ContactSection, ContactContainer, ContactInfo,
-  ContactText, StyledLink
+  ContactText
 } from "../../styles/kontakt/KontaktStyled";
+import { StyledLink } from "../../components/common/StyledLink";
 import { SubTitle } from "../../components/common/SubTitle";
 import { Title } from "../../components/common/Title";
 import { serwis } from "../../utils/serwis";
@@ -28,7 +29,8 @@ const Contact = ({ rating, ratingsTotal }) => {
         <Title>Kontakt</Title>
         <ContactForm />
         <ContactInfo>
-          <SubTitle>{serwis.name}</SubTitle>
+          <SubTitle><StyledLink href="/" title={serwis.subName}>{serwis.subName}</StyledLink>
+          </SubTitle>
           <ContactText>
             adres:{"  "}
             <StyledLink href={serwis.url.mapaGoogle} title={serwis.adres}>{serwis.adres}</StyledLink>

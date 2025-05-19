@@ -7,6 +7,7 @@ import { StyledPhoto } from '../../components/common/StyledPhoto';
 import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
 import { getRatingProps } from '../../utils/getRatingProps';
+import { getReviewsProps } from '../../utils/getReviewsProps';
 import { Emoticon } from '../../components/common/Emoticon';
 import MetaTags from '../../components/common/MetaTags';
 import { useRouter } from 'next/router';
@@ -15,7 +16,7 @@ import { ButtonLink } from '../../components/common/ButtonLink';
 import { serwis } from '../../utils/serwis';
 import Image from 'next/image';
 
-const DishwasherService = ({ rating, ratingsTotal }) => {
+const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
   return (
@@ -25,6 +26,7 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
         page={dataForMetaTags.naprawa_zmywarek}
         rating={rating}
         ratingsTotal={ratingsTotal}
+        reviews={reviews}
       />
       <Container>
         <Title>
@@ -97,6 +99,18 @@ const DishwasherService = ({ rating, ratingsTotal }) => {
   );
 };
 
-export const getStaticProps = getRatingProps;
+export const getStaticProps = async () => {
+  const [ratingProps, reviewsProps] = await Promise.all([
+    getRatingProps(),
+    getReviewsProps(),
+  ]);
+
+  return {
+    props: {
+      ...ratingProps.props,
+      ...reviewsProps.props,
+    },
+  };
+};
 
 export default DishwasherService;

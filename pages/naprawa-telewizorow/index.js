@@ -18,7 +18,7 @@ import { getReviewsProps } from '../../utils/getReviewsProps';
 
 const TelevisionService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
-  console.log("reviews", reviews)
+
   return (
     <Section>
       <MetaTags

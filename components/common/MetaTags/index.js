@@ -29,7 +29,6 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   } = page.schema;
 
   // const selectedReviews = reviews?.filter((review, index) => index < 2);
-  console.log("reviews", reviews)
   const getReviews = (selectedReviewNumber) => {
     if (!reviews) return null;
 
@@ -75,27 +74,79 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     }
   };
 
+  const getReview = (reveiwFor) => {
+    const rewiwes = serwis.reviews
+    const reviewSelected = () => {
+      switch (reveiwFor) {
+        case "telewizor":
+          return rewiwes.find((review) => review.reveiwFor.includes("telewizor"));
+        case "ekspres":
+          return rewiwes.find((review) => review.reveiwFor.includes("ekspres"));
+        case "pralka":
+          return rewiwes.find((review) => review.reveiwFor.includes("pralka"));
+        case "suszarka":
+          return rewiwes.find((review) => review.reveiwFor.includes("suszarka"));
+        case "zmywarka":
+          return rewiwes.find((review) => review.reveiwFor.includes("zmywarka"));
+        default:
+          return rewiwes[5];
+      }
+    }
+    const review = reviewSelected()
+
+    if (!reveiwFor) return null;
+
+    const reviewsArray = [
+      {
+        "@type": "Review",
+        "name": "Polecam serwis RTV AGD w Przemyślu",
+        "author": {
+          "@type": "Person",
+          "name": review.author_name,
+        },
+        "datePublished": formattedDate(review.time),
+        "reviewBody": review.text,
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": review.rating,
+          "bestRating": "5",
+          "worstRating": "1",
+        },
+        "itemReviewed": {
+          "@type": "Service",
+          "name": "Naprawa sprzętu RTV i AGD",
+          // "serviceType": "Naprawa sprzętu RTV i AGD",
+          // "address": {
+          //   "@type": "PostalAddress",
+          //   "addressLocality": "Przemyśl",
+          //   "addressCountry": "PL",
+          // },
+
+        },
+      }
+    ]
+
+    return {
+      "review": reviewsArray,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": (rating || serwis.rating).toString(),
+        "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+      },
+
+    }
+  };
+
   const productSchema = {
     ...product,
-    ...(path === "/"
-      ?
-      { ...getReviews(1) }
-      :
-      {
-        ...getReviews(1)
-        // "review": {
-        //   ...(product?.["review"]),
-        //   "reviewRating": {
-        //     ...(product?.["review"]?.["reviewRating"]),
-        //     "ratingValue": (rating || serwis.rating)?.toString(),
-        //   },
-        //   "author": {
-        //     "@type": "Person",
-        //     "name": " NaprawaPrzemyśl ",
-        //   },
-        // }
-      }
-    ),
+    ...(path === "/naprawa-telewizorow/" && { ...getReview("telewizor") }),
+    ...(path === "/naprawa-ekspresow/" && { ...getReview("ekspres") }),
+    ...(path === "/naprawa-pralek/" && { ...getReview("pralka") }),
+    ...(path === "/naprawa-suszarek/" && { ...getReview("suszarka") }),
+    ...(path === "/naprawa-zmywarek/" && { ...getReview("zmywarka") }),
+    ...(path === "/" && { ...getReviews() }),
+
+
     // "aggregateRating": {
     //   ...(product?.["aggregateRating"]),
     //   "ratingValue": (rating || serwis.rating).toString(),
@@ -132,8 +183,8 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:updated_time" content={ogTime} />
-      <meta property="og:image" content={`${appUrls.home}share.png`} />
-      <meta property="og:image:secure_url" content={`${appUrls.home}share.png`} />
+      <meta property="og:image" content={`${appUrls.home}images/share.webp`} />
+      <meta property="og:image:secure_url" content={`${appUrls.home}images/share.webp`} />
       <meta property="og:image:width" content="931" />
       <meta property="og:image:height" content="497" />
       <meta property="og:image:alt" content="Serwis RTV i AGD" />
@@ -141,70 +192,53 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${appUrls.home}share.png`} />
+      <meta name="twitter:image" content={`${appUrls.home}images/share.webp`} />
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
 
-      {(path === "/naprawa-pralek/"
-        // || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/"
-      ) && (
-          <>
-            {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
+      {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
+        <>
+          {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify(service)
               }}
             /> */}
-            {/* <script type="application/ld+json"    // wyłączone 16.05.2025  // dodane 15.05.2025    
+          {/* <script type="application/ld+json"    // wyłączone 16.05.2025  // dodane 15.05.2025    
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify(webpage)
               }}
             /> */}
 
-            {/* <script type="application/ld+json"   // dodane 16.05.2025
+          {/* <script type="application/ld+json"   // dodane 16.05.2025
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify(breadcrumbList)
               }}
             /> */}
 
 
-            {/* <script type="application/ld+json"
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(localBusiness)
             }}
           /> */}
-            {/* <script type="application/ld+json"    // wyłączone 15.05.2025
+          <script type="application/ld+json"    // wyłączone 15.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
             }}
-          /> */}
-            {/* <script type="application/ld+json"
+          />
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{ 
               __html: JSON.stringify(productSchema)
             }}
           /> */}
-            {/* <script type="application/ld+json"   // wyłączone 15.05.2025
+          {/* <script type="application/ld+json"   // wyłączone 15.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
             }}
           /> */}
-          </>
-        )}
+        </>
+      )}
 
-      {(path === "/naprawa-telewizorow/"
-      ) && (
-          <>
-            {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(service)
-              }}
-            /> */}
-            <script type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(productSchema)
-              }}
-            />
-          </>
-        )}
 
       {path === "/" && (
         <>

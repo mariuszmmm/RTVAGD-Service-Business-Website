@@ -37,7 +37,7 @@ const Footer = () => (
         </StyledLink>
         <StyledLink
           $link
-          href={"https://naprawaprzemysl.pl/"}
+          href="/"
           title="Link do strony naprawaprzemysl.pl"
         >
           <LinkIcon />

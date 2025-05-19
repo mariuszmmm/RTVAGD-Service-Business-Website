@@ -38,10 +38,10 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:200,400,400italic,600&display=swap" as="style" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:200,400,400italic,600&display=swap" media="all" />
-          <link rel="icon" type="image/png" href="https://naprawaprzemysl.pl/favicon-96x96.png" sizes="96x96" />
-          <link rel="icon" type="image/svg+xml" href="https://naprawaprzemysl.pl/favicon.svg" />
-          <link rel="shortcut icon" href="https://naprawaprzemysl.pl/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="180x180" href="https://naprawaprzemysl.pl/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" href="https://naprawaprzemysl.pl/images/favicon-96x96.png" sizes="96x96" />
+          <link rel="icon" type="image/svg+xml" href="https://naprawaprzemysl.pl/images/favicon.svg" />
+          <link rel="shortcut icon" href="https://naprawaprzemysl.pl/images/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="https://naprawaprzemysl.pl/images/apple-touch-icon.png" />
           <link rel="manifest" href="https://naprawaprzemysl.pl/site.webmanifest" />
           <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
           <meta property="fb:app_id" content="100063811592941" />

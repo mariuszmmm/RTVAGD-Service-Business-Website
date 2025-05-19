@@ -6,6 +6,7 @@ import { Text } from '../../components/common/Text';
 import { ServiceOffer } from '../../components/common/ServiceOffer';
 import { imageUrls } from '../../utils/urls';
 import { getRatingProps } from '../../utils/getRatingProps';
+import { getReviewsProps } from '../../utils/getReviewsProps';
 import { Emoticon } from '../../components/common/Emoticon';
 import { useRouter } from 'next/router';
 import { dataForMetaTags } from '../../utils/dataForMetaTags';
@@ -15,7 +16,7 @@ import { serwis } from '../../utils/serwis';
 import Image from 'next/image';
 import { StyledPhoto } from '../../components/common/StyledPhoto';
 
-const WashingMachineService = ({ rating, ratingsTotal }) => {
+const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
   return (
@@ -25,6 +26,7 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
         page={dataForMetaTags.naprawa_pralek}
         rating={rating}
         ratingsTotal={ratingsTotal}
+        reviews={reviews}
       />
       <Container>
         <Title>
@@ -97,6 +99,18 @@ const WashingMachineService = ({ rating, ratingsTotal }) => {
   );
 };
 
-export const getStaticProps = getRatingProps;
+export const getStaticProps = async () => {
+  const [ratingProps, reviewsProps] = await Promise.all([
+    getRatingProps(),
+    getReviewsProps(),
+  ]);
+
+  return {
+    props: {
+      ...ratingProps.props,
+      ...reviewsProps.props,
+    },
+  };
+};
 
 export default WashingMachineService;
