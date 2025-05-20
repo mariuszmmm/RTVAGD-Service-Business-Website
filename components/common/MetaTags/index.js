@@ -139,12 +139,12 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   const productSchema = {
     ...product,
-    ...(path === "/naprawa-telewizorow/" && { ...getReview("telewizor") }),
-    ...(path === "/naprawa-ekspresow/" && { ...getReview("ekspres") }),
-    ...(path === "/naprawa-pralek/" && { ...getReview("pralka") }),
-    ...(path === "/naprawa-suszarek/" && { ...getReview("suszarka") }),
-    ...(path === "/naprawa-zmywarek/" && { ...getReview("zmywarka") }),
-    ...(path === "/" && { ...getReviews() }),
+    ...(path === "/naprawa-telewizorow/" && getReview("telewizor")),
+    ...(path === "/naprawa-ekspresow/" && getReview("ekspres")),
+    ...(path === "/naprawa-pralek/" && getReview("pralka")),
+    ...(path === "/naprawa-suszarek/" && getReview("suszarka")),
+    ...(path === "/naprawa-zmywarek/" && getReview("zmywarka")),
+    ...(path === "/" && getReviews()),
 
 
     // "aggregateRating": {
@@ -167,7 +167,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   const localBusinessSchema = {
     ...localBusiness,
-    ...getReviews(1),
+    // ...getReviews(1),
 
   };
 
@@ -209,11 +209,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               }}
             /> */}
 
-          {/* <script type="application/ld+json"   // dodane 16.05.2025
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(breadcrumbList)
-              }}
-            /> */}
+          <script type="application/ld+json"   // dodane 16.05.2025
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(breadcrumbList)
+            }}
+          />
 
 
           {/* <script type="application/ld+json"
@@ -252,11 +252,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(localBusinessSchema)
             }}
           />
-          <script type="application/ld+json"
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
             }}
-          />
+          /> */}
           {/* <script type="application/ld+json"     // wyłączone 14.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(organization)
@@ -284,11 +284,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           />    */}
         </>
       )}
-      {/* <script type="application/ld+json"   // wyłączone 15.05.2025
+      <script type="application/ld+json"   // wyłączone 15.05.2025
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbList)
         }}
-      /> */}
+      />
     </Head>
   );
 };

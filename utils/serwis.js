@@ -1,7 +1,8 @@
 export const serwis = {
   url: {
     facebook: "https://www.facebook.com/100063811592941",
-    google: "https://g.co/kgs/XdcEw7o",
+    // google: "https://g.co/kgs/XdcEw7o",
+    google: "https://www.google.com/search?sa=X&sca_esv=abe1c9b2def561d9&rlz=1C1GCEU_plPL1160PL1161&cs=1&hl=pl&tbm=lcl&sxsrf=AHTn8zqTCrCvzpxP5br2IT0kYal-KQ-nYQ:1747634260820&q=Naprawa%20pralek%20i%20sprz%C4%99tu%20RTV%20-%20naprawa%20ekspres%C3%B3w%20do%20kawy%2C%20naprawa%20telewizor%C3%B3w%2C%20naprawa%20zmywarki%2C%20serwis%20agd%2C%20Opinie&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxtDA0NzUzNjM3MTWyMDA2NTExN9jAyPiKscwvsaAosTxRAUjmpGYrZCoUFxRVHZlZUqoQFBKmoKuQB5VPzQZKpBYf3lyukJKvkJ1YXqkDlytJzUktz6zKLwLKIkSrcivLE4uyM3UUilOLyjOLFRLTU3QU_Asy8zJTF7EOkMUAMd-hQA0BAAA&rldimm=18175636745280354470&ved=0CIsCEOX6C2oXChMI4NqL--yujQMVAAAAAB0AAAAAEBY&biw=3127&bih=1197&dpr=1.1#lkt=LocalPoiReviews&arid=ChZDSUhNMG9nS0VQYUNfLS0tNnNUWUZREAE",
     mapaGoogle: "https://maps.google.com/?cid=18175636745280354470",
     addTestimonial: "https://search.google.com/local/writereview?placeid=ChIJrWDpGyR_O0cRpvj4OFLVPPw",
   },

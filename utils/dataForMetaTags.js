@@ -21,15 +21,15 @@ export const geo = {
 export const openingHours = "Mo, Tu, We, Th, Fr, 09:30-17:00";
 
 const breadcrumbList = {
-  // "@context": "https://schema.org",    // wyłączone 15.05.2025
+  "@context": "https://schema.org",    // wyłączone 15.05.2025
   "@type": "BreadcrumbList",
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Strona główna – " + shortName,
+      "name": "Strona główna",
       "item": {
-        "@id": appUrls.home,
+        "@id": appUrls.home + "#business",
         "name": "Strona główna – " + shortName,
       }
     }
@@ -424,8 +424,11 @@ export const dataForMetaTags = {
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Naprawa pralek",
-            "item": appUrls.naprawa_pralek
+            "name": "Naprawa pralek Przemyśl",
+            "item": {
+              "@id": appUrls.naprawa_pralek + "#product",
+              "name": "Naprawa pralek Przemyśl – " + shortName,
+            }
           }
         ]
       },
@@ -573,8 +576,11 @@ export const dataForMetaTags = {
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Naprawa suszarek",
-            "item": appUrls.naprawa_suszarek,
+            "name": "Naprawa suszarek Przemyśl",
+            "item": {
+              "@id": appUrls.naprawa_suszarek + "#product",
+              "name": "Naprawa suszarek Przemyśl – " + shortName,
+            }
           }
         ]
       },
@@ -723,8 +729,11 @@ export const dataForMetaTags = {
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Naprawa zmywarek",
-            "item": appUrls.naprawa_zmywarek,
+            "name": "Naprawa zmywarek Przemyśl",
+            "item": {
+              "@id": appUrls.naprawa_zmywarek + "#product",
+              "name": "Naprawa zmywarek Przemyśl – " + shortName,
+            }
           }
         ]
       },
@@ -873,8 +882,11 @@ export const dataForMetaTags = {
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Naprawa ekspresów do kawy",
-            "item": appUrls.naprawa_ekspresow,
+            "name": "Naprawa ekspresów do kawy Przemyśl",
+            "item": {
+              "@id": appUrls.naprawa_ekspresow + "#product",
+              "name": "Naprawa ekspresów do kawy Przemyśl – " + shortName,
+            }
           }
         ]
       },
@@ -1065,8 +1077,11 @@ export const dataForMetaTags = {
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Naprawa telewizorów",
-            "item": appUrls.naprawa_telewizorow,
+            "name": "Naprawa telewizorów Przemyśl",
+            "item": {
+              "@id": appUrls.naprawa_telewizorow + "#product",
+              "name": "Naprawa telewizorów Przemyśl – " + shortName,
+            }
           }
         ]
       },

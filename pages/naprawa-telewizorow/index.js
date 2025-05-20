@@ -20,7 +20,7 @@ const TelevisionService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
   return (
-    <Section>
+    <Section id="product">
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_telewizorow}
@@ -34,7 +34,7 @@ const TelevisionService = ({ rating, ratingsTotal, reviews }) => {
           <Emoticon>
             <Image
               src={imageUrls.logo}
-              alt="Serwis RTV i AGD NaprawaPrzemyśl, naprawa telewizorów"
+              alt="Serwis RTV i AGD logo"
               loading="lazy"
               fill
             />
@@ -52,10 +52,10 @@ const TelevisionService = ({ rating, ratingsTotal, reviews }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                title="Naprawa telewizorów w Przemyślu"
+                title="Naprawa telewizorów Przemyśl"
                 src={imageUrls.telewizor}
                 alt="Naprawa telewizorów - serwis telewizorów w Przemyślu"
-                loading='lazy'
+                // loading='lazy'
                 fill
                 // srcSet={`${imageUrls.telewizor_300} 500w,
                 // ${imageUrls.telewizor} 1000w`}

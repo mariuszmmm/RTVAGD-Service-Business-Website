@@ -20,7 +20,7 @@ const CoffeeMachineService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
   return (
-    <Section>
+    <Section id="product">
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_ekspresow}
@@ -34,7 +34,7 @@ const CoffeeMachineService = ({ rating, ratingsTotal, reviews }) => {
           <Emoticon>
             <Image
               src={imageUrls.logo}
-              alt="Serwis RTV i AGD NaprawaPrzemyśl, naprawa ekspresów"
+              alt="Serwis RTV i AGD logo"
               loading="lazy"
               fill
             />
@@ -52,10 +52,10 @@ const CoffeeMachineService = ({ rating, ratingsTotal, reviews }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                title="Naprawa ekspresów w Przemyślu"
+                title="Naprawa ekspresów Przemyśl"
                 src={imageUrls.ekspres}
                 alt="Naprawa ekspresów do kawy - profesjonalny serwis ekspresów w Przemyślu"
-                loading='lazy'
+                // loading='lazy'
                 fill
                 // srcSet={`${imageUrls.ekspres_300} 500w,
                 // ${imageUrls.ekspres} 1000w`}

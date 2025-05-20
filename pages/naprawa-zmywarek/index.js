@@ -20,7 +20,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
   return (
-    <Section>
+    <Section id="product">
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_zmywarek}
@@ -34,7 +34,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           <Emoticon>
             <Image
               src={imageUrls.logo}
-              alt="Serwis RTV i AGD NaprawaPrzemyśl, naprawa zmywarek"
+              alt="Serwis RTV i AGD logo"
               loading="lazy"
               fill
             />
@@ -52,10 +52,10 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                title="Naprawa zmywarek w Przemyślu"
+                title="Naprawa zmywarek Przemyśl"
                 src={imageUrls.zmywarka}
                 alt="Naprawa zmywarek - serwis zmywarek w Przemyślu"
-                loading='lazy'
+                // loading='lazy'
                 fill
                 // srcSet={`${imageUrls.zmywarka_300} 500w,
                 // ${imageUrls.zmywarka} 1000w`}

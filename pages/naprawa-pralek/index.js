@@ -20,7 +20,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
   return (
-    <Section>
+    <Section id="product">
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_pralek}
@@ -34,7 +34,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
           <Emoticon>
             <Image
               src={imageUrls.logo}
-              alt="Serwis RTV i AGD NaprawaPrzemyśl, naprawa pralek"
+              alt="Serwis RTV i AGD logo"
               loading="lazy"
               fill
             />
@@ -52,10 +52,10 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                title="Naprawa pralek w Przemyślu"
+                title="Naprawa pralek Przemyśl"
                 src={imageUrls.pralka}
                 alt="Naprawa pralek - serwis pralek w Przemyślu"
-                loading='lazy'
+                // loading='lazy'
                 fill
                 // srcSet={`${imageUrls.pralka_300} 500w,
                 // ${imageUrls.pralka} 1000w`}

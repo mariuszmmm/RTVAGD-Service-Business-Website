@@ -20,7 +20,7 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
   return (
-    <Section>
+    <Section id="product">
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_suszarek}
@@ -34,7 +34,7 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
           <Emoticon>
             <Image
               src={imageUrls.logo}
-              alt="Serwis RTV i AGD NaprawaPrzemyśl, naprawa suszarek"
+              alt="Serwis RTV i AGD logo"
               loading="lazy"
               fill
             />
@@ -52,10 +52,10 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
           <ServiceOffer>
             <StyledPhoto>
               <Image
-                title="Naprawa szuszarek w Przemyślu"
+                title="Naprawa szuszarek Przemyśl"
                 src={imageUrls.suszarka}
                 alt="Naprawa szuszarek - serwis suszarek w Przemyślu"
-                loading='lazy'
+                // loading='lazy'
                 fill
                 // srcSet={`${imageUrls.suszarka_300} 500w,
                 // ${imageUrls.suszarka} 1000w`}

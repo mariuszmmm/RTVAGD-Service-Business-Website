@@ -85,7 +85,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
   }, [hold, isPortrait]);
 
   return (
-    <Hero>
+    <Hero id="business">
       <MetaTags
         path={path}
         page={dataForMetaTags.home}
@@ -101,7 +101,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
           fill
         />
       </BackgroundImage> */}
-      <HeroContainer id="business">
+      <HeroContainer >
         <HeroTitle
           lang="pl"
           aria-label="Profesjonalna naprawa pralek, suszarek, zmywarek, telewizorów i ekspresów do kawy w Przemyślu"
