@@ -38,7 +38,7 @@ const About = ({ rating, ratingsTotal }) => {
           </Text>
           <Team>
             <Image
-              src={imageUrls.serwis}
+              src={imageUrls.serwis_1}
               alt="serwis"
               loading='lazy'
               fill

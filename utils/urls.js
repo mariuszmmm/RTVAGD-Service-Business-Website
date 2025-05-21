@@ -23,6 +23,7 @@ export const cloudinaryImageUrls = {
 
 export const imageUrls = {
   serwis: "https://naprawaprzemysl.pl/images/serwis.webp",
+  serwis_1: "https://naprawaprzemysl.pl/images/serwis.jpg",
   telewizor: "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.webp",
   telewizor_300: "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora_300.webp",
   ekspres: "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.webp",

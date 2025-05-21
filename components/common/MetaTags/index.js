@@ -209,11 +209,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               }}
             /> */}
 
-          <script type="application/ld+json"   // dodane 16.05.2025
+          {/* <script type="application/ld+json"   // dodane 16.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(breadcrumbList)
             }}
-          />
+          /> */}
 
 
           {/* <script type="application/ld+json"
@@ -247,11 +247,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(website)
             }}
           /> */}
-          <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
+          {/* <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(localBusinessSchema)
             }}
-          />
+          /> */}
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
@@ -284,11 +284,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           />    */}
         </>
       )}
-      <script type="application/ld+json"   // wyłączone 15.05.2025
+      {/* <script type="application/ld+json"   // wyłączone 15.05.2025
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbList)
         }}
-      />
+      /> */}
     </Head>
   );
 };

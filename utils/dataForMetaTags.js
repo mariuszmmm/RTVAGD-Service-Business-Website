@@ -590,7 +590,7 @@ export const dataForMetaTags = {
     metaTags: {
       title: "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612",
       canonical: appUrls.naprawa_zmywarek,
-      description: "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
+      description: "Profesjonalna i szybka naprawa zmywarek w Przemyślu i okolicach. Diagnostyka na miejscu, oryginalne części i gwarancja – zadzwoń już dziś!",
       siteName: `${shortName} - naprawa zmywarek`,
       keywords: "naprawa zmywarek, serwis zmywarek Przemyśl, naprawa zmywarki Przemyśl, naprawa zmywarki w Przemyślu, naprawa zmywarek Przemyśl, awaria zmywarki",
       appleMobileWebAppTitle: `${shortName} - naprawa zmywarek`,
@@ -609,7 +609,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Naprawa Zmywarek - " + serwis.name,  //   "name": "Naprawa Zmywarek",
-        "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
+        "description": "Profesjonalna i szybka naprawa zmywarek w Przemyślu i okolicach. Diagnostyka na miejscu, oryginalne części i gwarancja – zadzwoń już dziś!",
         "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png",
         "areaServed": {
           "@type": "Place",
@@ -637,7 +637,7 @@ export const dataForMetaTags = {
         "@id": appUrls.naprawa_zmywarek + "#product",
         "name": "Naprawa zmywarek Przemyśl",
         "image": ["https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png"],
-        "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
+        "description": "Profesjonalna i szybka naprawa zmywarek w Przemyślu i okolicach. Diagnostyka na miejscu, oryginalne części i gwarancja – zadzwoń już dziś!",
         "url": appUrls.naprawa_zmywarek,
         "offers": {
           "@type": "Offer",
@@ -696,7 +696,7 @@ export const dataForMetaTags = {
         "mainEntity": {
           "@type": "Service",
           "name": "Naprawa zmywarek",
-          "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
+          "description": "Profesjonalna i szybka naprawa zmywarek w Przemyślu i okolicach. Diagnostyka na miejscu, oryginalne części i gwarancja – zadzwoń już dziś!",
           "provider": {
             "@type": "LocalBusiness",
             "name": serwis.name,

@@ -18,7 +18,7 @@ export const ButtonLink = styled(Button).attrs({ as: "a" })`
     font-weight: 600;
     margin: 15px 0;
     opacity: 1;
-    transition:  opacity 0.2s ease;
+    transition:  opacity 0.1s ease;
   
     ${({ $hidden }) => $hidden && css`
         opacity: 0;

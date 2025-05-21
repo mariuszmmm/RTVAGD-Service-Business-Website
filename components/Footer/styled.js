@@ -63,6 +63,8 @@ export const FooterCopy = styled.p`
 const styledIcon = css`
   width: 2vw;
   height: 2vw;
+  max-width: 2rem;
+  max-height: 2rem;
 `;
 
 export const EmailIcon = styled(Envelope)`
