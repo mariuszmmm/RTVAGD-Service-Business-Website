@@ -159,6 +159,8 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     //   "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
     //   // ...(path === "/" && { "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString() }),
     // }
+
+    // test
   };
 
   const serviceSchema = {
