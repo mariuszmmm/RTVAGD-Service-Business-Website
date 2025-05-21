@@ -76,25 +76,26 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   const getReview = (reveiwFor) => {
     const rewiwes = serwis.reviews
+    if (!rewiwes) return null;
+
     const reviewSelected = () => {
       switch (reveiwFor) {
         case "telewizor":
-          return rewiwes.find((review) => review.reveiwFor.includes("telewizor"));
+          return rewiwes.find((review) => review.reveiwFor.includes("naprawa telewizora"));
         case "ekspres":
-          return rewiwes.find((review) => review.reveiwFor.includes("ekspres"));
+          return rewiwes.find((review) => review.reveiwFor.includes("naprawa ekspresu"));
         case "pralka":
-          return rewiwes.find((review) => review.reveiwFor.includes("pralka"));
+          return rewiwes.find((review) => review.reveiwFor.includes("naprawa pralki"));
         case "suszarka":
-          return rewiwes.find((review) => review.reveiwFor.includes("suszarka"));
+          return rewiwes.find((review) => review.reveiwFor.includes("naprawa suszarki"));
         case "zmywarka":
-          return rewiwes.find((review) => review.reveiwFor.includes("zmywarka"));
+          return rewiwes.find((review) => review.reveiwFor.includes("naprawa zmywarki"));
         default:
           return rewiwes[5];
       }
     }
-    const review = reviewSelected()
 
-    if (!reveiwFor) return null;
+    const review = reveiwFor ? reviewSelected(reveiwFor) : rewiwes[5];
 
     const reviewsArray = [
       {
@@ -113,8 +114,8 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           "worstRating": "1",
         },
         "itemReviewed": {
-          "@type": "Service",
-          "name": "Naprawa sprzętu RTV i AGD",
+          // "@type": "Service",
+          "name": "Serwis RTV i AGD" + (reveiwFor ? ` - ${reveiwFor}` : ""),
           // "serviceType": "Naprawa sprzętu RTV i AGD",
           // "address": {
           //   "@type": "PostalAddress",
@@ -132,6 +133,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         "@type": "AggregateRating",
         "ratingValue": (rating || serwis.rating).toString(),
         "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+        "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+        "itemReviewed": {
+          // "@type": "Service",
+          "name": "Serwis RTV i AGD" + (reveiwFor ? ` - ${reveiwFor}` : ""),
+        },
       },
 
     }
@@ -139,12 +145,12 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   const productSchema = {
     ...product,
-    ...(path === "/naprawa-telewizorow/" && getReview("telewizor")),
-    ...(path === "/naprawa-ekspresow/" && getReview("ekspres")),
-    ...(path === "/naprawa-pralek/" && getReview("pralka")),
-    ...(path === "/naprawa-suszarek/" && getReview("suszarka")),
-    ...(path === "/naprawa-zmywarek/" && getReview("zmywarka")),
-    ...(path === "/" && getReviews()),
+    ...(path === "/naprawa-telewizorow/" && getReview("naprawa telewizora")),
+    ...(path === "/naprawa-ekspresow/" && getReview("naprawa ekspresu")),
+    ...(path === "/naprawa-pralek/" && getReview("naprawa pralki")),
+    ...(path === "/naprawa-suszarek/" && getReview("naprawa suszarki")),
+    ...(path === "/naprawa-zmywarek/" && getReview("naprawa zmywarki")),
+    ...(path === "/" && getReview()),
 
 
     // "aggregateRating": {
@@ -277,11 +283,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(imageObject)
             }}
           /> */}
-          {/* <script type="application/ld+json"     // wyłączone 15.05.2025
+          <script type="application/ld+json"     // wyłączone 15.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
             }}
-          />    */}
+          />
         </>
       )}
       {/* <script type="application/ld+json"   // wyłączone 15.05.2025

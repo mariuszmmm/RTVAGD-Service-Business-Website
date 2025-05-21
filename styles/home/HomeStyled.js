@@ -45,7 +45,6 @@ export const HeroTitle = styled.h1`
 `;
 
 export const HeroText = styled.p`
-padding-top: 60px;
   margin-bottom: 36px;
   font-size: clamp(0.8rem, 2.3vw, 1.3rem);
   line-height: 1.5;

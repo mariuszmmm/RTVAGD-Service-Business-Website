@@ -101,6 +101,8 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           <li><h3>Gwarancja na wykonaną pracę</h3>Na każdą naprawę udzielam gwarancji, a&nbsp;stosowane części pochodzą od certyfikowanych producentów.</li>
         </Text>
 
+        <br />
+
         <HeroText>
           <b>Nie pozwól, aby awaria zmywarki zabierała Ci cenny czas i&nbsp;komfort życia. <br />
             Skontaktuj się ze&nbsp;mną, a&nbsp;Twój sprzęt odzyska pełną sprawność.<br /></b>
