@@ -44,7 +44,7 @@ export const localBusiness = {
   "@id": "https://naprawaprzemysl.pl/#localbusiness",  // dodane 17.05.2025
   "url": appUrls.home,
   "telephone": serwis.phone.formatted,
-  "priceRange": "PLN",
+  "priceRange": "$$",
   "address": address,
   // "review": {                   // dodane 17.05.2025
   //   "@type": "Review",
@@ -121,62 +121,103 @@ export const dataForMetaTags = {
         //   "name": "NaprawaPrzemyśl",
         // },
 
-        "offers": {
-          "@type": "Offer",
-          "url": appUrls.home,
-          // "url": appUrls.naprawa_telewizorow,
-          "priceCurrency": "PLN",
-          "price": "150",
-          "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
-          "availability": "https://schema.org/InStock",
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "PLN"
-            },
-            "shippingDestination": [
-              {
-                "@type": "DefinedRegion",
-                "addressCountry": "PL",
-                "addressRegion": ["Podkarpackie"],
-                "name": "Przemyśl"
-              }
-            ],
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 0,
-                "maxValue": 1,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 0,
-                "maxValue": 1,
-                "unitCode": "DAY"
-              },
-            }
-
-          },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "PL",
-            "returnPolicyCountry": "PL",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 14,
-            "returnMethod": "https://schema.org/ReturnInStore",
-            "returnFees": "https://schema.org/FreeReturn"
-          },
-          // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-          // "seller": {
-          //   "@type": "LocalBusiness",  // "@type": "Organization",
-          //   "name": "NaprawaPrzemyśl",
-          // },
-        },
+        /*      "offers": {
+                "@type": "Offer",
+                "url": appUrls.home,
+                // "url": appUrls.naprawa_telewizorow,
+                "priceCurrency": "PLN",
+                "price": "150",
+                "priceValidUntil": "2026-05-16",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "availability": "https://schema.org/InStock",
+                "shippingDetails": {
+                  "@type": "OfferShippingDetails",
+                  "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0",
+                    "currency": "PLN"
+                  },
+                  "shippingDestination": [
+                    {
+                      "@type": "DefinedRegion",
+                      "addressCountry": "PL",
+                      "addressRegion": ["Podkarpackie"],
+                      "name": "Przemyśl"
+                    }
+                  ],
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "unitCode": "DAY"
+                    },
+                    "transitTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "unitCode": "DAY"
+                    },
+                  }
+      
+                },
+                "hasMerchantReturnPolicy": {
+                  "@type": "MerchantReturnPolicy",
+                  "applicableCountry": "PL",
+                  "returnPolicyCountry": "PL",
+                  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                  "merchantReturnDays": 14,
+                  "returnMethod": "https://schema.org/ReturnInStore",
+                  "returnFees": "https://schema.org/FreeReturn"
+                },
+                "shippingDetails": {
+                  "@type": "OfferShippingDetails",
+                  "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0",
+                    "currency": "PLN"
+                  },
+                  "shippingDestination": [
+                    {
+                      "@type": "DefinedRegion",
+                      "addressCountry": "PL",
+                      "addressRegion": ["Podkarpackie"],
+                      "name": "Przemyśl"
+                    }
+                  ],
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "unitCode": "DAY"
+                    },
+                    "transitTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "unitCode": "DAY"
+                    },
+                  }
+      
+                },
+                "hasMerchantReturnPolicy": {
+                  "@type": "MerchantReturnPolicy",
+                  "applicableCountry": "PL",
+                  "returnPolicyCountry": "PL",
+                  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                  "merchantReturnDays": 14,
+                  "returnMethod": "https://schema.org/ReturnInStore",
+                  "returnFees": "https://schema.org/FreeReturn"
+                },
+                // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+                // "seller": {
+                //   "@type": "LocalBusiness",  // "@type": "Organization",
+                //   "name": "NaprawaPrzemyśl",
+                // },
+              },  */
       },
       place: {
         "@context": "https://schema.org",
@@ -198,7 +239,7 @@ export const dataForMetaTags = {
             address,
             "image": imageUrls.serwis,
             "telephone": serwis.phone.formatted,
-            "priceRange": "PLN",
+            "priceRange": "$$",
           },
           "contentLocation": {
             "@type": "Place",
@@ -364,16 +405,57 @@ export const dataForMetaTags = {
         "image": ["https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png"],
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "url": appUrls.naprawa_pralek,
-        "offers": {
-          "@type": "Offer",
-          "url": appUrls.naprawa_pralek,
-          "priceCurrency": "PLN",
-          "price": "150",
-          "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
-          "availability": "https://schema.org/InStock",
-          // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-        },
+        /*       "offers": {
+                 "@type": "Offer",
+                 "url": appUrls.naprawa_pralek,
+                 "priceCurrency": "PLN",
+                 "price": "150",
+                 "priceValidUntil": "2026-05-16",
+                 "itemCondition": "https://schema.org/UsedCondition",
+                 "availability": "https://schema.org/InStock",
+                 "shippingDetails": {
+                   "@type": "OfferShippingDetails",
+                   "shippingRate": {
+                     "@type": "MonetaryAmount",
+                     "value": "0",
+                     "currency": "PLN"
+                   },
+                   "shippingDestination": [
+                     {
+                       "@type": "DefinedRegion",
+                       "addressCountry": "PL",
+                       "addressRegion": ["Podkarpackie"],
+                       "name": "Przemyśl"
+                     }
+                   ],
+                   "deliveryTime": {
+                     "@type": "ShippingDeliveryTime",
+                     "handlingTime": {
+                       "@type": "QuantitativeValue",
+                       "minValue": 0,
+                       "maxValue": 1,
+                       "unitCode": "DAY"
+                     },
+                     "transitTime": {
+                       "@type": "QuantitativeValue",
+                       "minValue": 0,
+                       "maxValue": 1,
+                       "unitCode": "DAY"
+                     },
+                   }
+       
+                 },
+                 "hasMerchantReturnPolicy": {
+                   "@type": "MerchantReturnPolicy",
+                   "applicableCountry": "PL",
+                   "returnPolicyCountry": "PL",
+                   "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                   "merchantReturnDays": 14,
+                   "returnMethod": "https://schema.org/ReturnInStore",
+                   "returnFees": "https://schema.org/FreeReturn"
+                 },
+                 // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+               },   */
       },
       place: {
         "@context": "https://schema.org",
@@ -416,7 +498,7 @@ export const dataForMetaTags = {
           //   address,
           //   "image": imageUrls.serwis,
           //   "telephone": serwis.phone.formatted,
-          //   "priceRange": "PLN",
+          //   "priceRange": "$$",
           // },
           // "contentLocation": {
           //   "@type": "Place",
@@ -528,16 +610,57 @@ export const dataForMetaTags = {
         "image": ["https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png"],
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "url": appUrls.naprawa_suszarek,
-        "offers": {
-          "@type": "Offer",
-          "url": appUrls.naprawa_suszarek,
-          "priceCurrency": "PLN",
-          "price": "150",
-          "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
-          "availability": "https://schema.org/InStock",
-          // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-        },
+        /*       "offers": {
+                 "@type": "Offer",
+                 "url": appUrls.naprawa_suszarek,
+                 "priceCurrency": "PLN",
+                 "price": "150",
+                 "priceValidUntil": "2026-05-16",
+                 "itemCondition": "https://schema.org/UsedCondition",
+                 "availability": "https://schema.org/InStock",
+                 "shippingDetails": {
+                   "@type": "OfferShippingDetails",
+                   "shippingRate": {
+                     "@type": "MonetaryAmount",
+                     "value": "0",
+                     "currency": "PLN"
+                   },
+                   "shippingDestination": [
+                     {
+                       "@type": "DefinedRegion",
+                       "addressCountry": "PL",
+                       "addressRegion": ["Podkarpackie"],
+                       "name": "Przemyśl"
+                     }
+                   ],
+                   "deliveryTime": {
+                     "@type": "ShippingDeliveryTime",
+                     "handlingTime": {
+                       "@type": "QuantitativeValue",
+                       "minValue": 0,
+                       "maxValue": 1,
+                       "unitCode": "DAY"
+                     },
+                     "transitTime": {
+                       "@type": "QuantitativeValue",
+                       "minValue": 0,
+                       "maxValue": 1,
+                       "unitCode": "DAY"
+                     },
+                   }
+       
+                 },
+                 "hasMerchantReturnPolicy": {
+                   "@type": "MerchantReturnPolicy",
+                   "applicableCountry": "PL",
+                   "returnPolicyCountry": "PL",
+                   "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                   "merchantReturnDays": 14,
+                   "returnMethod": "https://schema.org/ReturnInStore",
+                   "returnFees": "https://schema.org/FreeReturn"
+                 },
+                 // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+               },   */
       },
       place: {
         "@context": "https://schema.org",
@@ -572,7 +695,7 @@ export const dataForMetaTags = {
             address,
             "image": imageUrls.serwis,
             "telephone": serwis.phone.formatted,
-            "priceRange": "PLN",
+            "priceRange": "$$",
           },
           "contentLocation": {
             "@type": "Place",
@@ -682,16 +805,57 @@ export const dataForMetaTags = {
         "image": ["https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png"],
         "description": "Profesjonalna i szybka naprawa zmywarek w Przemyślu i okolicach. Diagnostyka na miejscu, oryginalne części i gwarancja – zadzwoń już dziś!",
         "url": appUrls.naprawa_zmywarek,
-        "offers": {
-          "@type": "Offer",
-          "url": appUrls.naprawa_zmywarek,
-          "priceCurrency": "PLN",
-          "price": "130",
-          "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
-          "availability": "https://schema.org/InStock",
-          // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-        },
+        /*      "offers": {
+                "@type": "Offer",
+                "url": appUrls.naprawa_zmywarek,
+                "priceCurrency": "PLN",
+                "price": "130",
+                "priceValidUntil": "2026-05-16",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "availability": "https://schema.org/InStock",
+                "shippingDetails": {
+                  "@type": "OfferShippingDetails",
+                  "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0",
+                    "currency": "PLN"
+                  },
+                  "shippingDestination": [
+                    {
+                      "@type": "DefinedRegion",
+                      "addressCountry": "PL",
+                      "addressRegion": ["Podkarpackie"],
+                      "name": "Przemyśl"
+                    }
+                  ],
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "unitCode": "DAY"
+                    },
+                    "transitTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "unitCode": "DAY"
+                    },
+                  }
+      
+                },
+                "hasMerchantReturnPolicy": {
+                  "@type": "MerchantReturnPolicy",
+                  "applicableCountry": "PL",
+                  "returnPolicyCountry": "PL",
+                  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                  "merchantReturnDays": 14,
+                  "returnMethod": "https://schema.org/ReturnInStore",
+                  "returnFees": "https://schema.org/FreeReturn"
+                },
+                // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+              },  */
       },
       place: {
         "@context": "https://schema.org",
@@ -726,7 +890,7 @@ export const dataForMetaTags = {
             address,
             "image": imageUrls.serwis,
             "telephone": serwis.phone.formatted,
-            "priceRange": "PLN",
+            "priceRange": "$$",
           },
           "contentLocation": {
             "@type": "Place",
@@ -836,16 +1000,57 @@ export const dataForMetaTags = {
         "image": ["https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png"],
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
         "url": appUrls.naprawa_ekspresow,
-        "offers": {
-          "@type": "Offer",
-          "url": appUrls.naprawa_ekspresow,
-          "priceCurrency": "PLN",
-          "price": "120",
-          "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
-          "availability": "https://schema.org/InStock",
-          // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-        },
+        /*       "offers": {
+                 "@type": "Offer",
+                 "url": appUrls.naprawa_ekspresow,
+                 "priceCurrency": "PLN",
+                 "price": "120",
+                 "priceValidUntil": "2026-05-16",
+                 "itemCondition": "https://schema.org/UsedCondition",
+                 "availability": "https://schema.org/InStock",
+                 "shippingDetails": {
+                   "@type": "OfferShippingDetails",
+                   "shippingRate": {
+                     "@type": "MonetaryAmount",
+                     "value": "0",
+                     "currency": "PLN"
+                   },
+                   "shippingDestination": [
+                     {
+                       "@type": "DefinedRegion",
+                       "addressCountry": "PL",
+                       "addressRegion": ["Podkarpackie"],
+                       "name": "Przemyśl"
+                     }
+                   ],
+                   "deliveryTime": {
+                     "@type": "ShippingDeliveryTime",
+                     "handlingTime": {
+                       "@type": "QuantitativeValue",
+                       "minValue": 0,
+                       "maxValue": 1,
+                       "unitCode": "DAY"
+                     },
+                     "transitTime": {
+                       "@type": "QuantitativeValue",
+                       "minValue": 0,
+                       "maxValue": 1,
+                       "unitCode": "DAY"
+                     },
+                   }
+       
+                 },
+                 "hasMerchantReturnPolicy": {
+                   "@type": "MerchantReturnPolicy",
+                   "applicableCountry": "PL",
+                   "returnPolicyCountry": "PL",
+                   "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                   "merchantReturnDays": 14,
+                   "returnMethod": "https://schema.org/ReturnInStore",
+                   "returnFees": "https://schema.org/FreeReturn"
+                 },
+                 // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+               },  */
       },
       place: {
         "@context": "https://schema.org",
@@ -880,7 +1085,7 @@ export const dataForMetaTags = {
             address,
             "image": imageUrls.serwis,
             "telephone": serwis.phone.formatted,
-            "priceRange": "PLN",
+            "priceRange": "$$",
           },
           "contentLocation": {
             "@type": "Place",
@@ -981,7 +1186,7 @@ export const dataForMetaTags = {
           "name": shortName,  // "name": serwis.name,  // "name": "Naprawa Przemyśl",
           "image": [imageUrls.serwis],  // "image": imageUrls.logo,
           "telephone": serwis.phone.formatted,
-          "priceRange": "PLN",
+          "priceRange": "$$",
           "address": address,
         },
         "areaServed": [
@@ -1032,16 +1237,57 @@ export const dataForMetaTags = {
         "image": ["https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
         "url": appUrls.naprawa_telewizorow,
-        "offers": {
-          "@type": "Offer",
-          "url": appUrls.naprawa_telewizorow,
-          "priceCurrency": "PLN",
-          "price": "150",
-          "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/UsedCondition",
-          "availability": "https://schema.org/InStock",
-          // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-        },
+        /*        "offers": {
+                  "@type": "Offer",
+                  "url": appUrls.naprawa_telewizorow,
+                  "priceCurrency": "PLN",
+                  "price": "150",
+                  "priceValidUntil": "2026-05-16",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                      "@type": "MonetaryAmount",
+                      "value": "0",
+                      "currency": "PLN"
+                    },
+                    "shippingDestination": [
+                      {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "PL",
+                        "addressRegion": ["Podkarpackie"],
+                        "name": "Przemyśl"
+                      }
+                    ],
+                    "deliveryTime": {
+                      "@type": "ShippingDeliveryTime",
+                      "handlingTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 0,
+                        "maxValue": 1,
+                        "unitCode": "DAY"
+                      },
+                      "transitTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 0,
+                        "maxValue": 1,
+                        "unitCode": "DAY"
+                      },
+                    }
+        
+                  },
+                  "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "PL",
+                    "returnPolicyCountry": "PL",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 14,
+                    "returnMethod": "https://schema.org/ReturnInStore",
+                    "returnFees": "https://schema.org/FreeReturn"
+                  },
+                  // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+                },   */
       },
       place: {
         "@context": "https://schema.org",
@@ -1076,7 +1322,7 @@ export const dataForMetaTags = {
             address,
             "image": imageUrls.serwis,
             "telephone": serwis.phone.formatted,
-            "priceRange": "PLN",
+            "priceRange": "$$",
           },
           "contentLocation": {
             "@type": "Place",

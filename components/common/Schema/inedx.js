@@ -15,7 +15,7 @@ export const Schema = ({ page }) => {
     "description": "Naprawa sprzętu RTV i AGD w Przemyślu. Serwis pogwarancyjny. Naprawa pralek, zmywarek, suszarek, ekspresów, telewizorów.",
     "telephone": serwis.phone.formatted,
     "email": serwis.email,
-    "priceRange": "PLN",
+    "priceRange": "$$",
     "address": address,
     "geo": geo,
     "hasMap": serwis.url.mapaGoogle,

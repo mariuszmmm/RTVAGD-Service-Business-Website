@@ -129,16 +129,16 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
     return {
       "review": reviewsArray,
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": (rating || serwis.rating).toString(),
-        "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
-        "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString(),
-        "itemReviewed": {
-          // "@type": "Service",
-          "name": "Serwis RTV i AGD" + (reveiwFor ? ` - ${reveiwFor}` : ""),
-        },
-      },
+      // "aggregateRating": {
+      //   "@type": "AggregateRating",
+      //   "ratingValue": (rating || serwis.rating).toString(),
+      //   "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+      //   "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+      //   "itemReviewed": {
+      //     // "@type": "Service",
+      //     "name": "Serwis RTV i AGD" + (reveiwFor ? ` - ${reveiwFor}` : ""),
+      //   },
+      // },
 
     }
   };
@@ -151,12 +151,25 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     // ...(path === "/naprawa-suszarek/" && getReview("naprawa suszarki")),
     // ...(path === "/naprawa-zmywarek/" && getReview("naprawa zmywarki")),
     // ...(path === "/" && getReview()),
-    ...(path === "/naprawa-telewizorow/" && getReviews()),
-    ...(path === "/naprawa-ekspresow/" && getReviews()),
-    ...(path === "/naprawa-pralek/" && getReviews()),
-    ...(path === "/naprawa-suszarek/" && getReviews()),
-    ...(path === "/naprawa-zmywarek/" && getReviews()),
-    ...(path === "/" && getReviews()),
+
+    // ...(path === "/naprawa-telewizorow/" && getReviews()),
+    // ...(path === "/naprawa-ekspresow/" && getReviews()),
+    // ...(path === "/naprawa-pralek/" && getReviews()),
+    // ...(path === "/naprawa-suszarek/" && getReviews()),
+    // ...(path === "/naprawa-zmywarek/" && getReviews()),
+    // ...(path === "/" && getReviews()),
+
+
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": (rating || serwis.rating).toString(),
+      "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+      "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+      "itemReviewed": {
+        // "@type": "Service",
+        "name": "Serwis RTV i AGD Przemyśl",
+      },
+    },
 
 
     // "aggregateRating": {
