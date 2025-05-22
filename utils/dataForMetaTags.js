@@ -29,7 +29,7 @@ const breadcrumbList = {
       "position": 1,
       "name": "Strona główna",
       "item": {
-        "@id": appUrls.home + "#business",
+        "@id": appUrls.home + "#service",
         "name": "Strona główna – " + shortName,
       }
     }
@@ -41,7 +41,7 @@ export const localBusiness = {
   "@type": "LocalBusiness",
   "name": shortName,  // "name": serwis.name,  // "name": "Naprawa Przemyśl",
   "image": [imageUrls.serwis],  // "image": imageUrls.logo,
-  "@id": "https://naprawaprzemysl.pl/#business",  // dodane 17.05.2025
+  "@id": "https://naprawaprzemysl.pl/#localbusiness",  // dodane 17.05.2025
   "url": appUrls.home,
   "telephone": serwis.phone.formatted,
   "priceRange": "PLN",
@@ -109,10 +109,10 @@ export const dataForMetaTags = {
       product: {
         "@context": "https://schema.org",
         "@type": "Product",
-        "@id": appUrls.home + "#service",
+        "@id": appUrls.home + "#product",
         "name": shortName,
-        "image": [imageUrls.logo, imageUrls.serwis, "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png", "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png", "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png", "https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png", "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
-        "description": "Naprawa sprzętu AGD i RTV w Przemyślu.",
+        "image": [imageUrls.serwis],
+        "description": "Profesjonalny serwis i naprawa sprzętu RTV i AGD w Przemyślu. Szybka diagnoza, oryginalne części, gwarancja jakości.",
         "url": appUrls.home,
         // "sku": "SEO",
         // "mpn": "SEO-33",
@@ -128,8 +128,49 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2026-05-16",
-          // "itemCondition": "https://schema.org/UsedCondition",
-          // "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "PLN"
+            },
+            "shippingDestination": [
+              {
+                "@type": "DefinedRegion",
+                "addressCountry": "PL",
+                "addressRegion": ["Podkarpackie"],
+                "name": "Przemyśl"
+              }
+            ],
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 1,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 1,
+                "unitCode": "DAY"
+              },
+            }
+
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "PL",
+            "returnPolicyCountry": "PL",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 14,
+            "returnMethod": "https://schema.org/ReturnInStore",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
           // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
           // "seller": {
           //   "@type": "LocalBusiness",  // "@type": "Organization",
@@ -163,7 +204,7 @@ export const dataForMetaTags = {
             "@type": "Place",
             "name": "Przemyśl"
           },
-          "contentUrl": "https://naprawaprzemysl.pl/images/serwis.webp",
+          "contentUrl": "https://naprawaprzemysl.pl/images/serwis-rtv-i-agd-naprawa-przemysl.webp",
           "datePublished": "2025-05-16",
           "description": "Serwis RTV i AGD w Przemyślu",
           "name": "Strona główna – " + shortName,   //  "name": "Serwis RTV i AGD",
@@ -188,7 +229,7 @@ export const dataForMetaTags = {
           "@type": "Place",
           "name": "Przemyśl"
         },
-        "contentUrl": "https://naprawaprzemysl.pl/images/serwis.webp",
+        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-rtv-i-agd-naprawa-przemysl.webp",
         "datePublished": "2025-05-16",
         "description": "Serwis RTV i AGD w Przemyślu",
         "name": serwis.name,   //  "name": "Serwis RTV i AGD",
@@ -319,7 +360,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "@id": appUrls.naprawa_pralek + "#product",
-        "name": "Naprawa pralek Przemyśl",
+        "name": "Naprawa pralek Przemyśl - " + shortName,
         "image": ["https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png"],
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "url": appUrls.naprawa_pralek,
@@ -329,7 +370,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2026-05-16",
-          // "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
           // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
       },
@@ -482,7 +524,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "@id": appUrls.naprawa_suszarek + "#product",
-        "name": "Naprawa suszarek Przemyśl",
+        "name": "Naprawa suszarek Przemyśl - " + shortName,
         "image": ["https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png"],
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "url": appUrls.naprawa_suszarek,
@@ -492,7 +534,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2026-05-16",
-          // "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
           // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
       },
@@ -635,7 +678,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "@id": appUrls.naprawa_zmywarek + "#product",
-        "name": "Naprawa zmywarek Przemyśl",
+        "name": "Naprawa zmywarek Przemyśl - " + shortName,  // "name": "Naprawa zmywarek Przemyśl",
         "image": ["https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.png"],
         "description": "Profesjonalna i szybka naprawa zmywarek w Przemyślu i okolicach. Diagnostyka na miejscu, oryginalne części i gwarancja – zadzwoń już dziś!",
         "url": appUrls.naprawa_zmywarek,
@@ -645,7 +688,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "130",
           "priceValidUntil": "2026-05-16",
-          // "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
           // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
       },
@@ -788,7 +832,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "@id": appUrls.naprawa_ekspresow + "#product",
-        "name": "Naprawa ekspresów Przemyśl",
+        "name": "Naprawa ekspresów Przemyśl - " + shortName,
         "image": ["https://naprawaprzemysl.pl/images/serwis-ekspresow-przemysl-naprawa-ekspresu.png"],
         "description": "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
         "url": appUrls.naprawa_ekspresow,
@@ -798,7 +842,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "120",
           "priceValidUntil": "2026-05-16",
-          // "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
           // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
       },
@@ -932,7 +977,7 @@ export const dataForMetaTags = {
         // },
         "provider": {
           "@type": "LocalBusiness",
-          "@id": "https://naprawaprzemysl.pl/#business",
+          "@id": "https://naprawaprzemysl.pl/#service",
           "name": shortName,  // "name": serwis.name,  // "name": "Naprawa Przemyśl",
           "image": [imageUrls.serwis],  // "image": imageUrls.logo,
           "telephone": serwis.phone.formatted,
@@ -983,7 +1028,7 @@ export const dataForMetaTags = {
         "@context": "https://schema.org",
         "@type": "Product",
         "@id": appUrls.naprawa_telewizorow + "#product",
-        "name": "Naprawa telewizorów Przemyśl",
+        "name": "Naprawa telewizorów Przemyśl - " + shortName,
         "image": ["https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.png"],
         "description": "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
         "url": appUrls.naprawa_telewizorow,
@@ -993,7 +1038,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2026-05-16",
-          // "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock",
           // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
       },

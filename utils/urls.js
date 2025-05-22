@@ -22,7 +22,7 @@ export const cloudinaryImageUrls = {
 };
 
 export const imageUrls = {
-  serwis: "https://naprawaprzemysl.pl/images/serwis.webp",
+  serwis: "https://naprawaprzemysl.pl/images/serwis-rtv-i-agd-naprawa-przemysl.webp",
   serwis_1: "https://naprawaprzemysl.pl/images/serwis.jpg",
   telewizor: "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora.webp",
   telewizor_300: "https://naprawaprzemysl.pl/images/serwis-telewizorow-przemysl-naprawa-telewizora_300.webp",

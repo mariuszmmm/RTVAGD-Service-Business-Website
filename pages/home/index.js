@@ -85,7 +85,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
   }, [hold, isPortrait]);
 
   return (
-    <Hero id="business">
+    <Hero>
       <MetaTags
         path={path}
         page={dataForMetaTags.home}

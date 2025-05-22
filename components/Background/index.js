@@ -12,7 +12,7 @@ const Background = () => {
       <BackgroundImage>
         <Image
           src={imageUrls.serwis}
-          alt="Serwis RTV i AGD"
+          alt="Serwis RTV i AGD - naprawa Przemyśl"
           loading="lazy"
           fill
         />

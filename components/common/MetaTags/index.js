@@ -145,12 +145,18 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   const productSchema = {
     ...product,
-    ...(path === "/naprawa-telewizorow/" && getReview("naprawa telewizora")),
-    ...(path === "/naprawa-ekspresow/" && getReview("naprawa ekspresu")),
-    ...(path === "/naprawa-pralek/" && getReview("naprawa pralki")),
-    ...(path === "/naprawa-suszarek/" && getReview("naprawa suszarki")),
-    ...(path === "/naprawa-zmywarek/" && getReview("naprawa zmywarki")),
-    ...(path === "/" && getReview()),
+    // ...(path === "/naprawa-telewizorow/" && getReview("naprawa telewizora")),
+    // ...(path === "/naprawa-ekspresow/" && getReview("naprawa ekspresu")),
+    // ...(path === "/naprawa-pralek/" && getReview("naprawa pralki")),
+    // ...(path === "/naprawa-suszarek/" && getReview("naprawa suszarki")),
+    // ...(path === "/naprawa-zmywarek/" && getReview("naprawa zmywarki")),
+    // ...(path === "/" && getReview()),
+    ...(path === "/naprawa-telewizorow/" && getReviews()),
+    ...(path === "/naprawa-ekspresow/" && getReviews()),
+    ...(path === "/naprawa-pralek/" && getReviews()),
+    ...(path === "/naprawa-suszarek/" && getReviews()),
+    ...(path === "/naprawa-zmywarek/" && getReviews()),
+    ...(path === "/" && getReviews()),
 
 
     // "aggregateRating": {
@@ -255,11 +261,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(website)
             }}
           /> */}
-          {/* <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
+          <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(localBusinessSchema)
             }}
-          /> */}
+          />
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)

@@ -20,7 +20,7 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
   return (
-    <Section id="product">
+    <Section>
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_suszarek}
