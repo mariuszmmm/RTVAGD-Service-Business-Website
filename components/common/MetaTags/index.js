@@ -163,7 +163,6 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": (rating || serwis.rating).toString(),
-      "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
       "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString(),
       "itemReviewed": {
         // "@type": "Service",
@@ -210,16 +209,16 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:updated_time" content={ogTime} />
-      <meta property="og:image" content={`${appUrls.home}images/share.webp`} />
-      <meta property="og:image:secure_url" content={`${appUrls.home}images/share.webp`} />
+      <meta property="og:image" content={`${appUrls.home}images/share_1.webp`} />
+      <meta property="og:image:secure_url" content={`${appUrls.home}images/share_1.webp`} />
       <meta property="og:image:width" content="931" />
       <meta property="og:image:height" content="497" />
-      <meta property="og:image:alt" content="Serwis RTV i AGD" />
-      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:alt" content="Serwis RTV i AGD Przemyśl" />
+      <meta property="og:image:type" content="image/webp" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${appUrls.home}images/share.webp`} />
+      <meta name="twitter:image" content={`${appUrls.home}images/share_1.webp`} />
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
 
@@ -236,11 +235,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               }}
             /> */}
 
-          <script type="application/ld+json"   // dodane 16.05.2025
+          {/* <script type="application/ld+json"   // dodane 16.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(breadcrumbList)
             }}
-          />
+          /> */}
 
 
           {/* <script type="application/ld+json"
@@ -250,7 +249,10 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           /> */}
           <script type="application/ld+json"    // wyłączone 15.05.2025
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(productSchema)
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [productSchema, breadcrumbList]
+              })
             }}
           />
           {/* <script type="application/ld+json"
@@ -276,7 +278,10 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           /> */}
           <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(localBusinessSchema)
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [productSchema, localBusinessSchema, breadcrumbList]
+              })
             }}
           />
           {/* <script type="application/ld+json"
@@ -304,23 +309,28 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(imageObject)
             }}
           /> */}
-          <script type="application/ld+json"     // wyłączone 15.05.2025
+          {/* <script type="application/ld+json"     // wyłączone 15.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(productSchema)
             }}
-          />
-          <script type="application/ld+json"
+          /> */}
+          {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(breadcrumbList)
             }}
-          />
+          /> */}
         </>
       )}
-      {/* <script type="application/ld+json"   // wyłączone 15.05.2025
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbList)
-        }}
-      /> */}
+      {(path === "/o-mnie/" || path === "/opinie/" || path === "/kontakt/") && (
+        <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [breadcrumbList]
+            })
+          }}
+        />
+      )}
     </Head>
   );
 };
