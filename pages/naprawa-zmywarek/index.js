@@ -29,7 +29,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         reviews={reviews}
       />
       <Title>
-        Naprawa i&nbsp;serwis zmywarek -&nbsp;Przemyśl;
+        Naprawa i&nbsp;serwis zmywarek 🔧&nbsp;Przemyśl
       </Title>
       <Section>
         <StyledPhoto>
@@ -45,7 +45,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           />
         </StyledPhoto>
         <SubTitle>
-          Szybka i&nbsp;rzetelna naprawa oraz serwis zmywarek wszystkich marek w&nbsp;Przemyślu i&nbsp;w&nbsp;okolicach.
+          Szybka i&nbsp;rzetelna naprawa oraz serwis zmywarek wszystkich marek w&nbsp;Przemyślu i&nbsp;okolicach
         </SubTitle>
         <StyledText>
           Awaria zmywarki może całkowicie zaburzyć porządek w&nbsp;kuchni.
