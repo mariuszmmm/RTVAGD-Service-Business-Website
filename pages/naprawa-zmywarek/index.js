@@ -29,14 +29,14 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         reviews={reviews}
       />
       <Title>
-        Naprawa i&nbsp;serwis zmywarek w&nbsp;Przemyślu&nbsp;
+        Naprawa i&nbsp;serwis zmywarek -&nbsp;Przemyśl;
       </Title>
       <Section>
         <StyledPhoto>
           <Image
             title="Naprawa zmywarek Przemyśl ✔️ Szybko, solidnie i z gwarancją ☎️ 790 258 612"
             src={imageUrls.zmywarka}
-            alt="Zmywarka do naczyń w serwisie"
+            alt="Zmywarka do naczyń. Naprawa i serwis w Przemyślu."
             // loading='lazy'
             fill
             // srcSet={`${imageUrls.zmywarka_300} 500w,
@@ -45,7 +45,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           />
         </StyledPhoto>
         <SubTitle>
-          Szybka i&nbsp;rzetelna naprawa oraz serwis zmywarek wszystkich marek -&nbsp;Przemyśl i&nbsp;okolice.
+          Szybka i&nbsp;rzetelna naprawa oraz serwis zmywarek wszystkich marek w&nbsp;Przemyślu i&nbsp;w&nbsp;okolicach.
         </SubTitle>
         <StyledText>
           Awaria zmywarki może całkowicie zaburzyć porządek w&nbsp;kuchni.
