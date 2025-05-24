@@ -1,4 +1,4 @@
-import { Section } from "../../components/common/Section";
+import { Container } from "../../components/common/Container";
 import { Title } from "../../components/common/Title";
 import { ReviewsContainer } from "../../styles/opinie/OpinieStyled";
 import ReviewsItem from "../../components/ReviewsItem";
@@ -14,7 +14,7 @@ const Reviews = ({ status, reviews, rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
-    <Section>
+    <Container>
       <MetaTags
         path={path}
         page={dataForMetaTags.opinie}
@@ -42,7 +42,7 @@ const Reviews = ({ status, reviews, rating, ratingsTotal }) => {
       {status === "success" && <ButtonLink href={serwis.url.addTestimonial}>
         Wystaw opinię
       </ButtonLink>}
-    </Section>
+    </Container>
   );
 };
 

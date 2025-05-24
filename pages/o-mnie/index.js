@@ -1,5 +1,5 @@
-import { Section } from '../../components/common/Section';
 import { Container } from '../../components/common/Container';
+import { Section } from '../../components/common/Section';
 import { Title } from '../../components/common/Title';
 import { Text } from '../../components/common/Text';
 import { Team, TeamImage } from '../../components/common/TeamImage';
@@ -14,14 +14,14 @@ const About = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
-    <Section >
+    <Container >
       <MetaTags
         path={path}
         page={dataForMetaTags.o_mnie}
         rating={rating}
         ratingsTotal={ratingsTotal}
       />
-      <Container>
+      <Section>
         <Title>Kim jestem</Title>
         <div>
           <Text>
@@ -45,8 +45,8 @@ const About = ({ rating, ratingsTotal }) => {
             />
           </Team>
         </div>
-      </Container>
-    </Section>
+      </Section>
+    </Container>
   );
 };
 

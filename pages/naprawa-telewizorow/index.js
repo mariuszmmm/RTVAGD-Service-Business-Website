@@ -1,5 +1,5 @@
-import { Section } from '../../components/common/Section';
 import { Container } from '../../components/common/Container';
+import { Section } from '../../components/common/Section';
 import { Title } from '../../components/common/Title';
 import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
@@ -20,7 +20,7 @@ const TelevisionService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
   return (
-    <Section>
+    <Container>
       <MetaTags
         path={path}
         page={dataForMetaTags.naprawa_telewizorow}
@@ -28,7 +28,7 @@ const TelevisionService = ({ rating, ratingsTotal, reviews }) => {
         ratingsTotal={ratingsTotal}
         reviews={reviews}
       />
-      <Container>
+      <Section>
         <Title>
           Naprawa telewizorów w&nbsp;Przemyślu
           <Emoticon>
@@ -95,8 +95,8 @@ const TelevisionService = ({ rating, ratingsTotal, reviews }) => {
             Zadzwoń teraz
           </ButtonLink>
         </div>
-      </Container>
-    </Section>
+      </Section>
+    </Container>
   );
 };
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ServiceOffer = styled.div`
   scroll-margin-top: clamp(4rem, 7vw, 5.5rem);
-  margin: 0 0 60px;
+  margin: 0 0 3rem;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas:

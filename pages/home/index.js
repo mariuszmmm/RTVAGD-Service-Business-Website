@@ -1,6 +1,6 @@
 import { Hero, HeroContainer, HeroText, HeroTitle, } from '../../styles/home/HomeStyled';
 import { ButtonLink } from '../../components/common/ButtonLink';
-import { Container } from '../../components/common/Container';
+import { Section } from '../../components/common/Section';
 import { SubTitle } from '../../components/common/SubTitle';
 import { Text } from '../../components/common/Text';
 import { serwis } from '../../utils/serwis';
@@ -182,7 +182,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
         show={activeScene.content[5]}
         setHold={setHold}
       />}
-      <Container>
+      <Section>
         <SubTitle lang="pl">
           Serwisuję wszystkie marki telewizorów, pralek, suszarek, zmywarek i&nbsp;ekspresów&nbsp;do&nbsp;kawy
         </SubTitle>
@@ -258,7 +258,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
         <Text>
           Zaufaj profesjonalnemu serwisowi, który codziennie dba o niezawodność Twoich urządzeń RTV i AGD!
         </Text>
-      </Container>
+      </Section>
 
     </Hero>
   );
