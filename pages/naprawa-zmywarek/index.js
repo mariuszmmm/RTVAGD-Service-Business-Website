@@ -3,6 +3,7 @@ import { Section } from '../../components/common/Section';
 import { Title } from '../../components/common/Title';
 import { SubTitle } from '../../components/common/SubTitle';
 import { StyledPhoto } from '../../components/common/StyledPhoto';
+import { Emoticon } from '../../components/common/Emoticon';
 import { imageUrls } from '../../utils/urls';
 import { getRatingProps } from '../../utils/getRatingProps';
 import { getReviewsProps } from '../../utils/getReviewsProps';
