@@ -30,7 +30,8 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         reviews={reviews}
       />
       <Title>
-        Naprawa i&nbsp;serwis zmywarek           <Emoticon>
+        Naprawa i&nbsp;serwis zmywarek
+<Emoticon>
             <Image
               src={imageUrls.logo}
               alt="Serwis RTV i AGD logo"
