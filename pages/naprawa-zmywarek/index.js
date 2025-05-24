@@ -31,19 +31,19 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
       />
       <Title>
         Naprawa i&nbsp;serwis zmywarek
-<Emoticon>
-            <Image
-              src={imageUrls.logo}
-              alt="Serwis RTV i AGD logo"
-              loading="lazy"
-              fill
-            />
-          </Emoticon>&nbsp;Przemyśl
+        <Emoticon>
+          <Image
+            src={imageUrls.logo}
+            alt="Serwis RTV i AGD logo"
+            loading="lazy"
+            fill
+          />
+        </Emoticon>&nbsp;Przemyśl
       </Title>
       <Section>
         <StyledPhoto>
           <Image
-            title="Naprawa zmywarek Przemyśl ✔️ Szybko, solidnie i z gwarancją ☎️ 790 258 612"
+            title="Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612"
             src={imageUrls.zmywarka}
             alt="Zmywarka do naczyń. Naprawa i serwis w Przemyślu."
             // loading='lazy'
