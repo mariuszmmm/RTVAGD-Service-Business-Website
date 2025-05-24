@@ -52,7 +52,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           Dlatego mój <strong>serwis&nbsp;zmywarek</strong> w Przemyślu oferuje szybką diagnostykę oraz fachową naprawę urządzeń wszystkich marek.<br />
           Korzystam z&nbsp;profesjonalnych narzędzi i&nbsp;oryginalnych części zamiennych,
           aby&nbsp;przywrócić pełną funkcjonalność Twojej zmywarki już podczas pierwszej wizyty.
-          Zapewniam gwarancję na wykonaną naprawę, dzięki czemu masz pewność długotrwałej satysfakcji i&nbsp;bezproblemowego użytkowania sprzętu.
+          Zapewniam gwarancję na wykonaną naprawę, dzięki czemu masz pewność satysfakcji i&nbsp;bezproblemowego użytkowania sprzętu.
           Specjalizuję się w&nbsp;serwisie i&nbsp;naprawie zmywarek marek Bosch, Electrolux, Beko oraz wielu innych, zawsze
           gwarantując najwyższą jakość usług i&nbsp;szybkie terminy realizacji.
         </StyledText>
@@ -92,10 +92,10 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           <li><strong>Elastyczność usług:</strong> Naprawiam zmywarki zarówno w Twoim domu, jak i w moim warsztacie – możesz wybrać dogodną dla siebie opcję.</li>
           <li><strong>Gwarancja na usługę:</strong> Na każdą naprawę udzielam gwarancji, a stosowane części pochodzą od sprawdzonych producentów, co zapewnia niezawodność naprawy.</li>
         </StyledText>
-        <br />
+        <br /><br />
         <HeroText>
           <b>Nie pozwól, aby awaria zmywarki zabierała Ci cenny czas i&nbsp;komfort życia.<br />
-            Skontaktuj się ze&nbsp;mną, a&nbsp;Twój sprzęt odzyska pełną sprawność.<br /></b>
+            Skontaktuj się ze&nbsp;mną, a&nbsp;Twój sprzęt odzyska pełną sprawność.</b>
         </HeroText>
         <ButtonLink href={`tel:${serwis.phone.number}`} >
           Zadzwoń teraz
@@ -106,7 +106,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
 
       <Section>
         <SubTitle>Inne usługi</SubTitle>
-        <StyledText>Oprócz naprawy zmywarek oferuję profesjonalny serwis innych urządzeń AGD.<br />
+        <StyledText>Oprócz naprawy zmywarek oferuję profesjonalny serwis innych urządzeń.<br />
           Zajmuję się także naprawą
           <StyledLink
             href="/naprawa-pralek/" $standardText> pralek</StyledLink>,
