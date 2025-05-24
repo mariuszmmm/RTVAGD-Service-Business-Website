@@ -29,7 +29,14 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         reviews={reviews}
       />
       <Title>
-        Naprawa i&nbsp;serwis zmywarek 🔧&nbsp;Przemyśl
+        Naprawa i&nbsp;serwis zmywarek           <Emoticon>
+            <Image
+              src={imageUrls.logo}
+              alt="Serwis RTV i AGD logo"
+              loading="lazy"
+              fill
+            />
+          </Emoticon>&nbsp;Przemyśl
       </Title>
       <Section>
         <StyledPhoto>
