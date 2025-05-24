@@ -14,8 +14,6 @@ export const Emoticon = styled.span`
     width: clamp(0.8rem, 2.5vw, 1.5rem);
   `}
 
-/*  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
-    display: ${({ $logo }) => $logo ? " block" : "none"};
-  }  */
+ 
 
 `; 
