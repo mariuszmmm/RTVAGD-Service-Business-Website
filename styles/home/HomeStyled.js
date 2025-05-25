@@ -17,7 +17,6 @@ export const HeroHeader = styled.header`
   min-height: 800px;
   margin: 0 auto 100px;
   padding: 20px;
-
   min-height: clamp(500px, 50vw, 800px);  
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {

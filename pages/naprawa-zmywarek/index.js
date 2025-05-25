@@ -31,7 +31,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         reviews={reviews}
       />
       <Title>
-        Naprawa zmywarek
+        Naprawa&nbsp;zmywarek
         <Emoticon>
           <Image
             src={imageUrls.logo}
@@ -39,7 +39,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
             loading="lazy"
             fill
           />
-        </Emoticon>&nbsp;Przemyśl
+        </Emoticon> Przemyśl
       </Title>
       <Section>
         <StyledPhoto>

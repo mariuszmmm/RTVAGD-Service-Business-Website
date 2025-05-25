@@ -4,7 +4,7 @@ export const SubTitle = styled.h2`
   grid-area: header;
   text-align: left;
   /* margin: 20px 0 10px; */
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
   display: flex;
   align-items: center;
   gap: 6px;

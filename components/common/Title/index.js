@@ -4,6 +4,13 @@ export const Title = styled.h1`
   margin: 60px 0 0;
   font-size: clamp(1.5rem, 3vw, 3rem);
   text-align: center;
+  line-height: 1.2;
+  padding: 0 20px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
 
   span {
     color: ${({ theme }) => theme.color.check};
