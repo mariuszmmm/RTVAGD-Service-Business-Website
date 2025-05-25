@@ -749,7 +749,7 @@ export const dataForMetaTags = {
     metaTags: {
       title: "Naprawa zmywarek Przemyśl ✔️ Serwis RTV i AGD | Szybka diagnoza i gwarancja",
       canonical: appUrls.naprawa_zmywarek,
-      description: "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. Dzwoń: +48 790 258 612.",
+      description: "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790258612",
       siteName: `${shortName} - naprawa zmywarek`,
       keywords: "naprawa zmywarek, serwis zmywarek Przemyśl, naprawa zmywarki Przemyśl, naprawa zmywarki w Przemyślu, naprawa zmywarek Przemyśl, awaria zmywarki",
       appleMobileWebAppTitle: `${shortName} - naprawa zmywarek`,
