@@ -20,7 +20,6 @@ import { StyledLink } from '../../components/common/StyledLink';
 const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
-  console.log(dataForMetaTags.naprawa_zmywarek.schema.faqPage.mainEntity)
   return (
     <Container>
       <MetaTags
