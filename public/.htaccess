@@ -1,5 +1,6 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /serwis/
 
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} ^www\. [NC]
