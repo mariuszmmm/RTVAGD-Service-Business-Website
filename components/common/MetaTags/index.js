@@ -21,6 +21,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     organization,
     service,
     product,
+    faqPage,
     place,
     webpage,
     website,
@@ -222,7 +223,53 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
 
-      {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-zmywarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
+      {(path === "/naprawa-zmywarek/") && (
+        <>
+          {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(service)
+              }}
+            /> */}
+          {/* <script type="application/ld+json"    // wyłączone 16.05.2025  // dodane 15.05.2025    
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(webpage)
+              }}
+            /> */}
+
+          {/* <script type="application/ld+json"   // dodane 16.05.2025
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(breadcrumbList)
+            }}
+          /> */}
+
+
+          {/* <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(localBusiness)
+            }}
+          /> */}
+          <script type="application/ld+json"    // wyłączone 15.05.2025
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [productSchema, faqPage, breadcrumbList]
+              })
+            }}
+          />
+          {/* <script type="application/ld+json"
+            dangerouslySetInnerHTML={{ 
+              __html: JSON.stringify(productSchema)
+            }}
+          /> */}
+          {/* <script type="application/ld+json"   // wyłączone 15.05.2025
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(imageObject)
+            }}
+          /> */}
+        </>
+      )}
+
+      {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <>
           {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{

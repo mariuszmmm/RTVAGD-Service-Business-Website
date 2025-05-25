@@ -1,8 +1,7 @@
-import { Hero, HeroContainer, HeroText, HeroTitle, } from '../../styles/home/HomeStyled';
+import { Hero, HeroHeader, HeroText, HeroTitle, } from '../../styles/home/HomeStyled';
 import { ButtonLink } from '../../components/common/ButtonLink';
 import { Section } from '../../components/common/Section';
 import { SubTitle } from '../../components/common/SubTitle';
-import { Text } from '../../components/common/Text';
 import { serwis } from '../../utils/serwis';
 import WashingMachine from './WashingMachine';
 import CoffeeMachine from './CoffeeMachine';
@@ -20,6 +19,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { imageUrls } from '../../utils/urls';
 import { BackgroundImage } from '../../components/common/BackgroundImage';
+import { StyledText } from '../../components/common/Text/styled';
 
 const Home = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
@@ -85,7 +85,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
   }, [hold, isPortrait]);
 
   return (
-    <Hero>
+    <>
       <MetaTags
         path={path}
         page={dataForMetaTags.home}
@@ -93,7 +93,8 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
         ratingsTotal={ratingsTotal}
         reviews={reviews}
       />
-      {/* <BackgroundImage>
+      <Hero>
+        {/* <BackgroundImage>
         <Image
           src={imageUrls.serwis}
           alt="Background image"
@@ -101,166 +102,168 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
           fill
         />
       </BackgroundImage> */}
-      <HeroContainer >
-        <HeroTitle
-          lang="pl"
-          aria-label="Profesjonalna naprawa pralek, suszarek, zmywarek, telewizorów i ekspresów do kawy w Przemyślu"
-        >
-          Profesjonalna naprawa{" "}<br />
-          <StyledLink
-            href="/naprawa-pralek"
-            title='Naprawa pralek w Przemyślu'
-            $standardText
+        <HeroHeader >
+          <HeroTitle
+            lang="pl"
+            aria-label="Profesjonalna naprawa pralek, suszarek, zmywarek, telewizorów i ekspresów do kawy w Przemyślu"
           >
-            pralek
-          </StyledLink>
-          {", "}
-          <StyledLink
-            href="/naprawa-suszarek"
-            title='Naprawa suszarek w Przemyślu'
-            $standardText
-          >
-            suszarek
-          </StyledLink>
-          {", "}
-          <StyledLink
-            href="/naprawa-zmywarek"
-            title='Naprawa zmywarek w Przemyślu'
-            $standardText
-          >
-            zmywarek
-          </StyledLink>
-          {", "}
-          <StyledLink
-            href="/naprawa-telewizorow"
-            title='Naprawa telewizorów w Przemyślu'
-            $standardText
-          >
-            <br />
-            telewizorów
-          </StyledLink>
-          {" i "}
-          <StyledLink
-            href="/naprawa-ekspresow"
-            title='Naprawa ekspresów w Przemyślu'
-            $standardText
-          >
-            ekspresów do&nbsp;kawy
-          </StyledLink>
-          <br />
-          w&nbsp;Przemyślu
-        </HeroTitle>
-        <HeroText> Rzetelnie, szybko i&nbsp;skutecznie!</HeroText>
-        <ButtonLink href={`tel:${serwis.phone.number}`} $hero>
-          Zadzwoń teraz
-        </ButtonLink>
-      </HeroContainer>
-      {!activeScene.reset && <WashingMachine
-        show={activeScene.content[0]}
-        setHold={setHold}
-        left
-      />}
-      {!activeScene.reset && <Television
-        show={activeScene.content[1]}
-        setHold={setHold}
-        left
-      />}
-      {!activeScene.reset && <Dryer
-        show={activeScene.content[2]}
-        setHold={setHold}
-        left
-      />}
-      {!activeScene.reset && <CoffeeMachine
-        show={activeScene.content[3]}
-        setHold={setHold}
-      />}
-      {!activeScene.reset && <Dishwasher
-        show={activeScene.content[4]}
-        setHold={setHold}
-      />}
-      {!activeScene.reset && <CoffeeMachine_2
-        show={activeScene.content[5]}
-        setHold={setHold}
-      />}
-      <Section>
-        <SubTitle lang="pl">
-          Serwisuję wszystkie marki telewizorów, pralek, suszarek, zmywarek i&nbsp;ekspresów&nbsp;do&nbsp;kawy
-        </SubTitle>
-        <Text>
-          Specjalizuję się w naprawie urządzeń RTV i AGD różnych marek, oferując profesjonalną obsługę zarówno dla popularnych, jak i mniej znanych producentów.<br />
-          Naprawiam urządzenia marek takich jak:
-        </Text>
-        <Text as="ul">
-          <li>
+            Profesjonalna naprawa{" "}<br />
             <StyledLink
               href="/naprawa-pralek"
               title='Naprawa pralek w Przemyślu'
+              $standardText
             >
-              <h3>Pralki: </h3>
+              pralek
             </StyledLink>
-            {/* <Schema page={dataForMetaTags.naprawa_pralek} /> */}
-            Bosch, Siemens, LG, Samsung, Whirlpool, Electrolux, Miele, Beko, AEG, Candy
-          </li>
-          <li>
+            {", "}
             <StyledLink
               href="/naprawa-suszarek"
               title='Naprawa suszarek w Przemyślu'
+              $standardText
             >
-              <h3>Suszarki: </h3>
+              suszarek
             </StyledLink>
-            {/* <Schema page={dataForMetaTags.naprawa_suszarek} /> */}
-            Bosch, Siemens, Whirlpool, Electrolux, Beko, Miele, Samsung, AEG, Candy, Amica
-          </li>
-          <li>
+            {", "}
             <StyledLink
               href="/naprawa-zmywarek"
               title='Naprawa zmywarek w Przemyślu'
+              $standardText
             >
-              <h3>Zmywarki: </h3>
+              zmywarek
             </StyledLink>
-            {/* <Schema page={dataForMetaTags.naprawa_zmywarek} /> */}
-            Bosch, Siemens, Whirlpool, Electrolux, Beko, Miele, Samsung, AEG, Candy, Amica
-          </li>
-          <li>
+            {", "}
             <StyledLink
               href="/naprawa-telewizorow"
               title='Naprawa telewizorów w Przemyślu'
+              $standardText
             >
-              <h3>Telewizory: </h3>
+              <br />
+              telewizorów
             </StyledLink>
-            {/* <Schema page={dataForMetaTags.naprawa_telewizorow} /> */}
-            LG, Samsung, Sony, Philips, Panasonic, TCL, Sharp, Hisense, Grundig, JVC
-          </li>
-          <li>
+            {" i "}
             <StyledLink
               href="/naprawa-ekspresow"
-              title='Naprawa ekspresów do kawy w Przemyślu'
+              title='Naprawa ekspresów w Przemyślu'
+              $standardText
             >
-              <h3>Ekspresy do kawy: </h3>
+              ekspresów do&nbsp;kawy
             </StyledLink>
-            {/* <Schema page={dataForMetaTags.naprawa_ekspresow} /> */}
-            De’Longhi, Jura, Siemens, Bosch, Philips, Nivona, Krups, Melitta, Smeg, Miele
-          </li>
-        </Text>
-        <Text>
-          Dzięki doświadczeniu oraz dostępowi do oryginalnych części zamiennych, możesz mieć pewność, że Twoje urządzenie zostanie naprawione szybko i solidnie.
-        </Text>
-        <br />
-        <br />
-        <SubTitle>
-          Naprawy realizuję w&nbsp;Przemyślu i&nbsp;okolicach
-        </SubTitle>
-        <Text>
-          Działam na terenie Przemyśla i oferuję usługi również w pobliskich miejscowościach.
-          Jeśli mieszkasz w jednym z poniższych miejsc lub w ich sąsiedztwie, chętnie przyjadę do Ciebie i naprawię Twoje urządzenie:
-          Przemyśl, Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce, Ostrów, Pikulice, Prałkowce, Wyszatyce, Żurawica.
-        </Text>
-        <Text>
-          Zaufaj profesjonalnemu serwisowi, który codziennie dba o niezawodność Twoich urządzeń RTV i AGD!
-        </Text>
-      </Section>
+            <br />
+            w&nbsp;Przemyślu
+          </HeroTitle>
+          <HeroText> Rzetelnie, szybko i&nbsp;skutecznie!</HeroText>
+          <ButtonLink href={`tel:${serwis.phone.number}`} $hero>
+            Zadzwoń teraz
+          </ButtonLink>
 
-    </Hero>
+
+          {!activeScene.reset && <WashingMachine
+            show={activeScene.content[0]}
+            setHold={setHold}
+            left
+          />}
+          {!activeScene.reset && <Television
+            show={activeScene.content[1]}
+            setHold={setHold}
+            left
+          />}
+          {!activeScene.reset && <Dryer
+            show={activeScene.content[2]}
+            setHold={setHold}
+            left
+          />}
+          {!activeScene.reset && <CoffeeMachine
+            show={activeScene.content[3]}
+            setHold={setHold}
+          />}
+          {!activeScene.reset && <Dishwasher
+            show={activeScene.content[4]}
+            setHold={setHold}
+          />}
+          {!activeScene.reset && <CoffeeMachine_2
+            show={activeScene.content[5]}
+            setHold={setHold}
+          />}
+        </HeroHeader>
+
+        <Section>
+          <SubTitle lang="pl">
+            Serwisuję wszystkie marki telewizorów, pralek, suszarek, zmywarek i&nbsp;ekspresów&nbsp;do&nbsp;kawy
+          </SubTitle>
+          <StyledText>
+            Specjalizuję się w naprawie urządzeń RTV i AGD różnych marek, oferując profesjonalną obsługę zarówno dla popularnych, jak i mniej znanych producentów.<br />
+            Naprawiam urządzenia marek takich jak:
+          </StyledText>
+          <StyledText as="ul">
+            <li>
+              <StyledLink
+                href="/naprawa-pralek"
+                title='Naprawa pralek w Przemyślu'
+              >
+                <h3>Pralki: </h3>
+              </StyledLink>
+              {/* <Schema page={dataForMetaTags.naprawa_pralek} /> */}
+              Bosch, Siemens, LG, Samsung, Whirlpool, Electrolux, Miele, Beko, AEG, Candy
+            </li>
+            <li>
+              <StyledLink
+                href="/naprawa-suszarek"
+                title='Naprawa suszarek w Przemyślu'
+              >
+                <h3>Suszarki: </h3>
+              </StyledLink>
+              {/* <Schema page={dataForMetaTags.naprawa_suszarek} /> */}
+              Bosch, Siemens, Whirlpool, Electrolux, Beko, Miele, Samsung, AEG, Candy, Amica
+            </li>
+            <li>
+              <StyledLink
+                href="/naprawa-zmywarek"
+                title='Naprawa zmywarek w Przemyślu'
+              >
+                <h3>Zmywarki: </h3>
+              </StyledLink>
+              {/* <Schema page={dataForMetaTags.naprawa_zmywarek} /> */}
+              Bosch, Siemens, Whirlpool, Electrolux, Beko, Miele, Samsung, AEG, Candy, Amica
+            </li>
+            <li>
+              <StyledLink
+                href="/naprawa-telewizorow"
+                title='Naprawa telewizorów w Przemyślu'
+              >
+                <h3>Telewizory: </h3>
+              </StyledLink>
+              {/* <Schema page={dataForMetaTags.naprawa_telewizorow} /> */}
+              LG, Samsung, Sony, Philips, Panasonic, TCL, Sharp, Hisense, Grundig, JVC
+            </li>
+            <li>
+              <StyledLink
+                href="/naprawa-ekspresow"
+                title='Naprawa ekspresów do kawy w Przemyślu'
+              >
+                <h3>Ekspresy do kawy: </h3>
+              </StyledLink>
+              {/* <Schema page={dataForMetaTags.naprawa_ekspresow} /> */}
+              De’Longhi, Jura, Siemens, Bosch, Philips, Nivona, Krups, Melitta, Smeg, Miele
+            </li>
+          </StyledText>
+          <StyledText>
+            Dzięki doświadczeniu oraz dostępowi do oryginalnych części zamiennych, możesz mieć pewność, że Twoje urządzenie zostanie naprawione szybko i solidnie.
+          </StyledText>
+        </Section>
+
+        <Section>
+          <SubTitle>Naprawy realizuję w&nbsp;Przemyślu i&nbsp;okolicach</SubTitle>
+          <StyledText>
+            Działam na terenie Przemyśla i oferuję usługi również w pobliskich miejscowościach. Jeśli mieszkasz w jednym z poniższych miejsc lub w ich sąsiedztwie, chętnie przyjadę do Ciebie i naprawię Twoje urządzenie: Przemyśl, Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce, Ostrów, Pikulice, Prałkowce, Wyszatyce, Żurawica.
+          </StyledText>
+        </Section>
+
+        <Section>
+          <HeroText><b>Zaufaj profesjonalnemu serwisowi, który codziennie dba o niezawodność Twoich urządzeń.</b></HeroText>
+        </Section>
+
+      </Hero>
+    </>
   );
 };
 

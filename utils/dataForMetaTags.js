@@ -747,7 +747,7 @@ export const dataForMetaTags = {
   },
   naprawa_zmywarek: {
     metaTags: {
-      title: "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612",
+      title: "Naprawa zmywarek Przemyśl ✔️ Serwis RTV i AGD | Szybka diagnoza i gwarancja",
       canonical: appUrls.naprawa_zmywarek,
       description: "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. Dzwoń: +48 790 258 612.",
       siteName: `${shortName} - naprawa zmywarek`,
@@ -791,7 +791,6 @@ export const dataForMetaTags = {
         },
       },
       product: {
-
         "@type": "Product",
         "@id": appUrls.naprawa_zmywarek + "#product",
         "name": "Naprawa zmywarek Przemyśl - " + shortName,  // "name": "Naprawa zmywarek Przemyśl",
@@ -849,6 +848,34 @@ export const dataForMetaTags = {
           },
           // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
         },
+      },
+      faqPage: {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Co może być przyczyną problemu, gdy zmywarka nie pobiera wody?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Najczęściej jest to uszkodzenie zaworu dopływu wody, zatkany filtr lub awaria czujnika. Serwis diagnozuje przyczynę usterki i wymienia uszkodzone elementy szybko i profesjonalnie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy serwis naprawia zmywarki wszystkich marek, np. Bosch, Electrolux, Beko?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak, posiadam duże doświadczenie w serwisowaniu zmywarek popularnych marek takich jak Bosch, Electrolux, Beko oraz innych. Gwarantuję fachową naprawę niezależnie od modelu urządzenia."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy seriws udziela gwarancji na naprawę zmywarki??",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Na każdą wykonaną naprawę udzielana jest gwarancja. Używam oryginalnych lub wysokiej jakości zamienników części, dzięki czemu usługi są niezawodne i objęte gwarancją."
+            }
+          }]
       },
       place: {
 

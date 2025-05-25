@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 
-export const Hero = styled.section`
+export const Hero = styled.main`
   text-align: center;
   padding: 100px 0 9vh;
-  min-height: 100vh;
+  min-height: 100vh;  
   position: relative;
   overflow: hidden;
 
@@ -12,7 +12,7 @@ export const Hero = styled.section`
   }
 `;
 
-export const HeroContainer = styled.header`
+export const HeroHeader = styled.header`
   max-width: 1200px;
   min-height: 800px;
   margin: 0 auto 100px;
@@ -30,7 +30,7 @@ export const HeroContainer = styled.header`
 `;
 
 export const HeroTitle = styled.h1`
-  margin: 50px 0;
+  margin: 60px 0 0;
   font-size: clamp(1.5rem, 3vw, 3rem);
   line-height: 1.2;
 

@@ -3,11 +3,13 @@ import { Button } from "../Button";
 
 export const ButtonLink = styled(Button).attrs({ as: "a" })`
   display: inline-block;
-  margin: 60px 0 0;
+  /* margin: 60px 0 0; */
 
-  ${({ $hero, $submit }) => ($hero || $submit) && css`
+  margin: 0;
+
+  /* ${({ $hero, $submit }) => ($hero || $submit) && css`
     margin: 0;
-  `};
+  `}; */
 
   ${({ $opinia }) => $opinia && css`
     position: absolute;

@@ -20,6 +20,7 @@ import { StyledLink } from '../../components/common/StyledLink';
 const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
 
+  console.log(dataForMetaTags.naprawa_zmywarek.schema.faqPage.mainEntity)
   return (
     <Container>
       <MetaTags
@@ -30,7 +31,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         reviews={reviews}
       />
       <Title>
-        Naprawa i&nbsp;serwis zmywarek
+        Naprawa zmywarek
         <Emoticon>
           <Image
             src={imageUrls.logo}
@@ -43,7 +44,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
       <Section>
         <StyledPhoto>
           <Image
-            title="Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612"
+            title="Naprawa zmywarek Przemyśl ✔️ Serwis RTV i AGD | Szybka diagnoza i gwarancja"
             src={imageUrls.zmywarka}
             alt="Zmywarka do naczyń. Naprawa i serwis w Przemyślu."
             // loading='lazy'
@@ -57,13 +58,8 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           Szybka i&nbsp;rzetelna naprawa oraz serwis zmywarek wszystkich marek w&nbsp;Przemyślu i&nbsp;okolicach
         </SubTitle>
         <StyledText>
-          Awaria zmywarki może całkowicie zaburzyć porządek w&nbsp;kuchni.
-          Dlatego mój <strong>serwis&nbsp;zmywarek</strong> w Przemyślu oferuje szybką diagnostykę oraz fachową naprawę urządzeń wszystkich marek.<br />
-          Korzystam z&nbsp;profesjonalnych narzędzi i&nbsp;oryginalnych części zamiennych,
-          aby&nbsp;przywrócić pełną funkcjonalność Twojej zmywarki już podczas pierwszej wizyty.
-          Zapewniam gwarancję na wykonaną naprawę, dzięki czemu masz pewność satysfakcji i&nbsp;bezproblemowego użytkowania sprzętu.
-          Specjalizuję się w&nbsp;serwisie i&nbsp;naprawie zmywarek marek Bosch, Electrolux, Beko oraz wielu innych, zawsze
-          gwarantując najwyższą jakość usług i&nbsp;szybkie terminy realizacji.
+          Awaria zmywarki może całkowicie zaburzyć porządek w&nbsp;kuchni. Dlatego mój <strong>serwis&nbsp;zmywarek</strong> w Przemyślu oferuje szybką diagnostykę oraz fachową naprawę urządzeń wszystkich marek.<br />
+          Korzystam z&nbsp;profesjonalnych narzędzi i&nbsp;oryginalnych części zamiennych, aby&nbsp;przywrócić pełną funkcjonalność Twojej zmywarki już podczas pierwszej wizyty. Zapewniam gwarancję na wykonaną naprawę, dzięki czemu masz pewność satysfakcji i&nbsp;bezproblemowego użytkowania sprzętu. Specjalizuję się w&nbsp;serwisie i&nbsp;naprawie zmywarek marek Bosch, Electrolux, Beko oraz wielu innych, zawsze gwarantując najwyższą jakość usług i&nbsp;szybkie terminy realizacji.
         </StyledText>
       </Section>
       <Section>
@@ -101,7 +97,10 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           <li><strong>Elastyczność usług:</strong> Naprawiam zmywarki zarówno w Twoim domu, jak i w moim warsztacie – możesz wybrać dogodną dla siebie opcję.</li>
           <li><strong>Gwarancja na usługę:</strong> Na każdą naprawę udzielam gwarancji, a stosowane części pochodzą od sprawdzonych producentów, co zapewnia niezawodność naprawy.</li>
         </StyledText>
-        <br /><br />
+        <br />
+      </Section>
+
+      <Section>
         <HeroText>
           <b>Nie pozwól, aby awaria zmywarki zabierała Ci cenny czas i&nbsp;komfort życia.<br />
             Skontaktuj się ze&nbsp;mną, a&nbsp;Twój sprzęt odzyska pełną sprawność.</b>
@@ -111,7 +110,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         </ButtonLink>
       </Section>
 
-      <br /><br /><br />
+      <br /><br />
 
       <Section>
         <SubTitle>Inne usługi</SubTitle>
@@ -125,32 +124,17 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           <StyledLink href="/naprawa-telewizorow/" $standardText> telewizorów</StyledLink>.</StyledText>
       </Section>
 
-      {/* <Section>
-        <SubTitle>Czy naprawa zmywarki jest objęta gwarancją?</SubTitle>
-        <StyledText as="ul" $check>
-          <li>Tak. Na każdą wykonaną naprawę udzielam gwarancji. Możesz być spokojny o&nbsp;jakość usługi i&nbsp;trwałość wprowadzonych
-            napraw. Korzystam z&nbsp;oryginalnych lub certyfikowanych części zamiennych, co dodatkowo zapewnia solidność wykonanych
-            prac. Podejmuję się również napraw po zakończeniu gwarancji producenta.</li>
-        </StyledText>
-        <br />
-
-        <SubTitle as="h3">Ile kosztuje naprawa zmywarki w Przemyślu?</SubTitle>
-        <StyledText as="ul" $check>
-          <li>Koszt naprawy zmywarki zależy od rodzaju usterki i&nbsp;potrzebnych części. Po wstępnej diagnozie serwisant może
-            przedstawić orientacyjny kosztorys. Zapewniam konkurencyjne ceny i&nbsp;pełną transparentność –&nbsp;zawsze informuję
-            klienta o&nbsp;przewidywanych kosztach przed rozpoczęciem naprawy.</li>
-        </StyledText>
-        <br />
-
-        <SubTitle as="h3">Jak umówić wizytę serwisową?</SubTitle>
-        <StyledText as="ul" $check>
-          <li>Aby umówić wizytę, wystarczy zadzwonić pod numer +48&nbsp;790&nbsp;258&nbsp;612 lub napisać na adres email piotrek_serwis@wp.pl.
-            Ustalimy dogodny termin i&nbsp;omówimy wstępny zakres naprawy. Działam elastycznie –&nbsp;często diagnozę przeprowadzam
-            podczas pierwszej wizyty.</li>
-        </StyledText>
-      </Section> */}
-
-
+      <Section>
+        <SubTitle>FAQ – najczęściej zadawane pytania</SubTitle>
+        <StyledText as="ul">
+          {dataForMetaTags.naprawa_zmywarek.schema.faqPage.mainEntity.map((item, index) => (
+            <li key={index}>
+              <h3>{item.name}</h3>
+              <p>{item.acceptedAnswer.text}</p>
+            </li>
+          ))}
+        </StyledText >
+      </Section>
     </Container>
   );
 };

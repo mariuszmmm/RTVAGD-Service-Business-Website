@@ -34,10 +34,6 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:200,400,400italic,600&display=swap" as="style" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:200,400,400italic,600&display=swap" media="all" />
           <link rel="icon" type="image/png" href="https://naprawaprzemysl.pl/images/favicon-96x96.png" sizes="96x96" />
           <link rel="icon" type="image/svg+xml" href="https://naprawaprzemysl.pl/images/favicon.svg" />
           <link rel="shortcut icon" href="https://naprawaprzemysl.pl/images/favicon.ico" />
@@ -52,6 +48,7 @@ export default class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P52JLLB7');`,
             }}
+            strategy="lazyOnload"
           />
         </Head>
         <body>

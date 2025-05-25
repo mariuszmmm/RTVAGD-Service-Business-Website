@@ -1,5 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 import { rgba } from "polished";
+import { Lato } from 'next/font/google';
+
+const lato = Lato({ subsets: ['latin'], weight: '400' });
+
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -29,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   };
 
   body {
-    font-family: "Lato", sans-serif;
+    font-family: ${lato.style.fontFamily}, sans-serif;
     margin: 0;
     padding: 0;
     /* user-select: none; */
