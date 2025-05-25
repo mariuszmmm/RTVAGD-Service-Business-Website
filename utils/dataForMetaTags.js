@@ -870,7 +870,7 @@ export const dataForMetaTags = {
           },
           {
             "@type": "Question",
-            "name": "Czy seriws udziela gwarancji na naprawę zmywarki??",
+            "name": "Czy seriws udziela gwarancji na naprawę zmywarki?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Na każdą wykonaną naprawę udzielana jest gwarancja. Używam oryginalnych lub wysokiej jakości zamienników części, dzięki czemu usługi są niezawodne i objęte gwarancją."
