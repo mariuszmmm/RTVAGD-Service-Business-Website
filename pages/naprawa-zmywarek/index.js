@@ -34,7 +34,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         <Emoticon>
           <Image
             src={imageUrls.logo}
-            alt="Serwis RTV i AGD logo"
+            alt="Logo serwisu w Przemyślu"
             loading="lazy"
             fill
           />
