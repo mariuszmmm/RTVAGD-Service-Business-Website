@@ -768,7 +768,7 @@ export const dataForMetaTags = {
 
         "@type": "Service",
         "name": "Naprawa Zmywarek - " + serwis.name,  //   "name": "Naprawa Zmywarek",
-        "description": "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. Dzwoń: +48 790 258 612.",
+        "description": "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎️ 790-258-612",
         "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
         "areaServed": {
           "@type": "Place",
@@ -795,7 +795,7 @@ export const dataForMetaTags = {
         "@id": appUrls.naprawa_zmywarek + "#product",
         "name": "Naprawa zmywarek Przemyśl - " + shortName,  // "name": "Naprawa zmywarek Przemyśl",
         "image": ["https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp"],
-        "description": "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. Dzwoń: +48 790 258 612.",
+        "description": "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎️ 790-258-612",
         "url": appUrls.naprawa_zmywarek,
         "offers": {
           "@type": "Offer",
@@ -924,7 +924,7 @@ export const dataForMetaTags = {
         "mainEntity": {
           "@type": "Service",
           "name": "Naprawa zmywarek",
-          "description": "Profesjonalna i szybka naprawa zmywarek w Przemyślu i okolicach. DiagnosProfesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. Dzwoń: +48 790 258 612.",
+          "description": "Profesjonalna i szybka naprawa zmywarek w Przemyślu i okolicach. DiagnosProfesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎️ 790-258-612",
           "provider": {
             "@type": "LocalBusiness",
             "name": serwis.name,
