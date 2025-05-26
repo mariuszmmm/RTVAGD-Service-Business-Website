@@ -18,9 +18,9 @@ const Background = () => {
         />
       </BackgroundImage>
       <Rotating>
-        <Circle $top={"0"} $left={"0"}></Circle>
-        <Circle $top={"-80%"} $left={"30%"}></Circle>
-        <Circle $top={"-20%"} $left={"70%"}></Circle>
+        <Circle $top={"0%"} $left={"40%"}></Circle>
+        <Circle $top={"-70%"} $left={"10%"}></Circle>
+        <Circle $top={"0%"} $left={"-30%"}></Circle>
       </Rotating>
     </BackgroundWrapper>
   );

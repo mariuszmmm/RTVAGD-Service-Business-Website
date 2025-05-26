@@ -17,7 +17,15 @@ export const ImageWrapper = styled.div`
   `};
 
   @media(orientation: portrait) {
-    top: clamp(400px, 59vw, 600px);
+    top: clamp(550px, 50vw, 600px);
     transform: translateX(-50%);
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
+      top: clamp(420px,65vw, 550px);
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
+      top: 350px;
+    }
   }
 `;

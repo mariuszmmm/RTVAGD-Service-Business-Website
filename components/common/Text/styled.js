@@ -5,11 +5,12 @@ export const StyledText = styled.p`
   line-height: 1.8;
   margin-bottom: 20px;
   font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-  margin: 1rem 0;
+  margin: 0 0 1rem;
   text-align: justify;
   text-justify: inter-word;
+  
 
-  ${({ $check, $cross }) => ($check || $cross) && css`
+  ${({ $check, $cross, $list }) => ($check || $cross || $list) && css`
     list-style: none;  
     padding-left: 12px;
     
@@ -37,11 +38,19 @@ export const StyledText = styled.p`
         font-size: 1em; 
         color: ${({ theme }) => theme.color.cross};
      `};
+
+      ${({ $list }) => $list && css`
+        content: "-";
+        top: 4px;
+        left: 5px;
+        font-size: 1em; 
+     `};
     }
   `};
   
   ${({ $forReviews }) => $forReviews && css`
     font-style: italic;
+    margin: 1rem 0;
   `}
 
   h3 {

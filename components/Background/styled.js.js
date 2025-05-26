@@ -37,12 +37,12 @@ export const Circle = styled.div`
   position: absolute;
   top: ${({ $top }) => $top};
   left: ${({ $left }) => $left};
-  width: 60vw;
-  height: 60vw;
+  width: 100vw;
+  height: 100vw;
   background: radial-gradient(
     circle,
     #eb5c20 0%,
-    rgba(235, 92, 32, 0) 70%
+    rgba(235, 92, 32, 0) 60%
   );
   filter: blur(30px);
 `;

@@ -1,20 +1,24 @@
 import styled from "styled-components";
 
-export const ContactSection = styled.section`
+export const ContactContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0 0;
+  padding: 120px 0 0;
   text-align: left;
   min-height: calc(100vh - 5vh);
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
+    padding: 80px 0 0;
+  }
 `;
 
-export const ContactContainer = styled.div`
+export const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 900px;
-  padding: 20px;
+  max-width: 900px;  
+  padding: 0 20px 20px;
 `;
 
 export const ContactInfo = styled.div`

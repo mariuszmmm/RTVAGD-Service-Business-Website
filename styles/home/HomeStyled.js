@@ -2,13 +2,13 @@ import styled, { css } from "styled-components";
 
 export const Hero = styled.main`
   text-align: center;
-  padding: 100px 0 9vh;
+  padding: 120px 0 9vh;
   min-height: 100vh;  
   position: relative;
   overflow: hidden;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
-    padding: 100px 0 6vh;
+    padding: 80px 0 6vh;
   }
 `;
 
@@ -16,11 +16,11 @@ export const HeroHeader = styled.header`
   max-width: 1200px;
   min-height: 800px;
   margin: 0 auto 100px;
-  padding: 20px;
+  padding: 0 20px;
   min-height: clamp(500px, 50vw, 800px);  
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
-    padding: 10px;
+    padding: 0 10px;
   }
 
   @media (orientation: portrait) {
@@ -34,27 +34,27 @@ export const HeroTitle = styled.h1`
   line-height: 1.2;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
-    margin-bottom: 10px;
+  margin: 30px 0 0;
     font-size: 1.3rem;
   }
 
-  @media (orientation: portrait) {
-    margin-bottom: 20px;
-  }
+  /* @media (orientation: portrait) {
+     margin: 20px 0 0;
+  } */
 `;
 
 export const HeroText = styled.p`
-  margin-bottom: 36px;
+  margin: 36px 0;
   font-size: clamp(0.8rem, 2.3vw, 1.3rem);
   line-height: 1.5;
   font-weight: 400;
   font-style: italic;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
-    margin-bottom: 16px;
+    margin: 16px 0;
   }
 `;

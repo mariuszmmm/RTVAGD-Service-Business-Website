@@ -14,39 +14,43 @@ const About = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
-    <Container >
+
+    <>
       <MetaTags
         path={path}
         page={dataForMetaTags.o_mnie}
         rating={rating}
         ratingsTotal={ratingsTotal}
       />
-      <Section>
-        <Title>Kim jestem</Title>
-        <div>
-          <Text>
-            Jestem specjalistą z wieloletnim doświadczeniem w naprawie pralek, suszarek, zmywarek, telewizorów oraz ekspresów do kawy.
-            Każda naprawa to dla mnie nie tylko techniczne zadanie, ale również okazja do budowanie zaufania i dobrych relacji z klientami.
-            Wykonuję swoją pracę z pełnym zaangażowaniem i pasją, dążąc do tego, aby każdy klient był w pełni zadowolony z jakości usług.
-          </Text>
-          <Text>
-            Stawiam na indywidualne podejście, co pozwala mi dostosować naprawę do specyficznych potrzeb każdego urządzenia oraz oczekiwań klienta.
-            W mojej pracy gwarantuję rzetelność, terminowość oraz uczciwość.
-          </Text>
-          <Text>
-            Skorzystaj z moich usług, a Twoje urządzenia odzyskają swoją sprawność!
-          </Text>
-          <Team>
-            <Image
-              src={imageUrls.serwis_1}
-              alt="serwis"
-              loading='lazy'
-              fill
-            />
-          </Team>
-        </div>
-      </Section>
-    </Container>
+      <Container >
+
+        <Section>
+          <Title>Kim jestem</Title>
+          <div>
+            <Text>
+              Jestem specjalistą z wieloletnim doświadczeniem w naprawie pralek, suszarek, zmywarek, telewizorów oraz ekspresów do kawy.
+              Każda naprawa to dla mnie nie tylko techniczne zadanie, ale również okazja do budowanie zaufania i dobrych relacji z klientami.
+              Wykonuję swoją pracę z pełnym zaangażowaniem i pasją, dążąc do tego, aby każdy klient był w pełni zadowolony z jakości usług.
+            </Text>
+            <Text>
+              Stawiam na indywidualne podejście, co pozwala mi dostosować naprawę do specyficznych potrzeb każdego urządzenia oraz oczekiwań klienta.
+              W mojej pracy gwarantuję rzetelność, terminowość oraz uczciwość.
+            </Text>
+            <Text>
+              Skorzystaj z moich usług, a Twoje urządzenia odzyskają swoją sprawność!
+            </Text>
+            <Team>
+              <Image
+                src={imageUrls.serwis_1}
+                alt="serwis"
+                loading='lazy'
+                fill
+              />
+            </Team>
+          </div>
+        </Section>
+      </Container>
+    </>
   );
 };
 

@@ -14,7 +14,7 @@ const Reviews = ({ status, reviews, rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
-    <Container>
+    <>
       <MetaTags
         path={path}
         page={dataForMetaTags.opinie}
@@ -22,27 +22,30 @@ const Reviews = ({ status, reviews, rating, ratingsTotal }) => {
         ratingsTotal={ratingsTotal}
         reviews={reviews}
       />
-      <ReviewsContainer>
-        <Title>Opinie Klientów</Title>
-        {status === "loading" && <p>Ładowanie opinii z google...</p>}
-        {status === "success" && reviews.map((item, index) => (
-          <ReviewsItem
-            item={item}
-            key={item.time}
-            reviewIndex={index + 1}
-          />
-        ))}
-        {status === "error" &&
-          <>
-            <p>Wystąpił błąd podczas ładowania opinii.</p>
-            <p> Proszę spróbować ponownie później.</p>
-          </>
-        }
-      </ReviewsContainer>
-      {status === "success" && <ButtonLink href={serwis.url.addTestimonial}>
-        Wystaw opinię
-      </ButtonLink>}
-    </Container>
+      <Container>
+
+        <ReviewsContainer>
+          <Title>Opinie Klientów</Title>
+          {status === "loading" && <p>Ładowanie opinii z google...</p>}
+          {status === "success" && reviews.map((item, index) => (
+            <ReviewsItem
+              item={item}
+              key={item.time}
+              reviewIndex={index + 1}
+            />
+          ))}
+          {status === "error" &&
+            <>
+              <p>Wystąpił błąd podczas ładowania opinii.</p>
+              <p> Proszę spróbować ponownie później.</p>
+            </>
+          }
+        </ReviewsContainer>
+        {status === "success" && <ButtonLink href={serwis.url.addTestimonial}>
+          Wystaw opinię
+        </ButtonLink>}
+      </Container>
+    </>
   );
 };
 

@@ -18,7 +18,7 @@ const Contact = ({ rating, ratingsTotal }) => {
   const path = useRouter().asPath;
 
   return (
-    <ContactSection>
+    <>
       <MetaTags
         path={path}
         page={dataForMetaTags.kontakt}
@@ -27,35 +27,38 @@ const Contact = ({ rating, ratingsTotal }) => {
       />
       <ContactContainer>
         <Title>Kontakt</Title>
-        <ContactForm />
-        <ContactInfo>
-          <SubTitle><StyledLink href="/" title={serwis.subName}>{serwis.subName}</StyledLink>
-          </SubTitle>
-          <ContactText>
-            adres:{"  "}
-            <StyledLink href={serwis.url.mapaGoogle} title={serwis.adres}>{serwis.adres}</StyledLink>
-          </ContactText>
-          <ContactText>
-            e-mail:{" "}
-            <StyledLink href={`mailto:${serwis.email}`} title={serwis.email}>{serwis.email}</StyledLink>
-          </ContactText>
-          <ContactText>
-            telefon:{" "}
-            <StyledLink href={`tel:${serwis.phone.number}`} title={(serwis.phone.formatted).replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3')}>{serwis.phone.formatted}</StyledLink>
-          </ContactText>
-          <br />
-          <ContactText>NIP: 7952257951</ContactText>
-          <br />
-          <ContactText>Zapraszamy od poniedziałku do piątku</ContactText>
-          <ContactText>
-            w godzinach 9.30-17.00
-          </ContactText>
-          <ImageContainer>
-            <Iframe />
-          </ImageContainer>
-        </ContactInfo>
+        <ContactSection>
+          <ContactForm />
+          <ContactInfo>
+            <SubTitle><StyledLink href="/" title={serwis.subName}>{serwis.subName}</StyledLink>
+            </SubTitle>
+            <ContactText>
+              adres:{"  "}
+              <StyledLink href={serwis.url.mapaGoogle} title={serwis.adres}>{serwis.adres}</StyledLink>
+            </ContactText>
+            <ContactText>
+              e-mail:{" "}
+              <StyledLink href={`mailto:${serwis.email}`} title={serwis.email}>{serwis.email}</StyledLink>
+            </ContactText>
+            <ContactText>
+              telefon:{" "}
+              <StyledLink href={`tel:${serwis.phone.number}`} title={(serwis.phone.formatted).replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3')}>{serwis.phone.formatted}</StyledLink>
+            </ContactText>
+            <br />
+            <ContactText>NIP: 7952257951</ContactText>
+            <br />
+            <ContactText>Zapraszamy od poniedziałku do piątku</ContactText>
+            <ContactText>
+              w godzinach 9.30-17.00
+            </ContactText>
+            <ImageContainer>
+              <Iframe />
+            </ImageContainer>
+          </ContactInfo>
+
+        </ContactSection>
       </ContactContainer>
-    </ContactSection>
+    </>
   );
 };
 
