@@ -449,24 +449,8 @@ export const dataForMetaTags = {
 
         "@type": "Product",
         "@id": appUrls.naprawa_pralek + "#product",
-        "name": "Naprawa pralek w Przemyślu",
-        "brand": {
-          "@type": "Brand",
-          "name": "Serwis RTV i AGD"
-        },
-        // "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
-        "image": [
-          {
-            "@type": "ImageObject",
-            "url": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
-            "caption": "Pralka przed naprawą"
-          },
-          {
-            "@type": "ImageObject",
-            "url": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
-            "caption": "Pralka po naprawie"
-          }
-        ],
+        "name": "Naprawa pralek Przemyśl - " + shortName,
+        "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         "url": appUrls.naprawa_pralek,
         "offers": {
@@ -886,25 +870,8 @@ export const dataForMetaTags = {
       product: {
         "@type": "Product",
         "@id": appUrls.naprawa_zmywarek + "#product",
-        "name": "Naprawa zmywarek w Przemyślu",  // "name": "Naprawa zmywarek Przemyśl",
-        "brand": {
-          "@type": "Brand",
-          "name": "Serwis RTV i AGD"
-        },
-        // "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
-        "image": [
-          {
-            "@type": "ImageObject",
-            "url": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
-            "caption": "Pralka przed naprawą"
-          },
-          {
-            "@type": "ImageObject",
-            "url": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
-            "caption": "Pralka po naprawie"
-          }
-        ],
-
+        "name": "Naprawa zmywarek Przemyśl - " + shortName,  // "name": "Naprawa zmywarek Przemyśl",
+        "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
         "description": "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790 258 612",
         "url": appUrls.naprawa_zmywarek,
         "offers": {
