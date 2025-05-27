@@ -44,7 +44,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         <Section>
           <StyledPhoto>
             <Image
-              title="Naprawa zmywarek Przemyśl ✔️ Serwis RTV i AGD | Szybka diagnoza i gwarancja"
+              title="Naprawa zmywarek Przemyśl ✔️ Serwis AGD | Szybka diagnoza i gwarancja"
               src={imageUrls.zmywarka}
               alt="Zmywarka do naczyń. Naprawa i serwis w Przemyślu."
               // loading='lazy'
@@ -110,6 +110,18 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         </Section>
 
         <Section>
+          <SubTitle>FAQ – najczęściej zadawane pytania</SubTitle>
+          <StyledText as="ul" $list>
+            {dataForMetaTags.naprawa_zmywarek.schema.faqPage.mainEntity.map((item, index) => (
+              <li key={index}>
+                <h3>{item.name}</h3>
+                <StyledText>{item.acceptedAnswer.text}</StyledText>
+              </li>
+            ))}
+          </StyledText >
+        </Section>
+
+        <Section>
           <SubTitle>Inne usługi</SubTitle>
           <StyledText>Oprócz naprawy zmywarek oferuję profesjonalny serwis innych urządzeń.<br />
             Zajmuję się także naprawą
@@ -121,17 +133,6 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
             <StyledLink href="/naprawa-telewizorow/" $standardText> telewizorów</StyledLink>.</StyledText>
         </Section>
 
-        <Section>
-          <SubTitle>FAQ – najczęściej zadawane pytania</SubTitle>
-          <StyledText as="ul" $list>
-            {dataForMetaTags.naprawa_zmywarek.schema.faqPage.mainEntity.map((item, index) => (
-              <li key={index}>
-                <h3>{item.name}</h3>
-                <StyledText>{item.acceptedAnswer.text}</StyledText>
-              </li>
-            ))}
-          </StyledText >
-        </Section>
       </Container>
     </>
   );

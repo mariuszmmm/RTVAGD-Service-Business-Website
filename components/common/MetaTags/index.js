@@ -4,7 +4,7 @@ import { getCurrentDateTimeISOWithOffset } from '../../../utils/formatDateToISOW
 import { useState } from 'react';
 import { appUrls } from '../../../utils/urls';
 import { serwis } from '../../../utils/serwis';
-import { localBusiness } from '../../../utils/dataForMetaTags';
+import { localBusiness, siteNavigationElements } from '../../../utils/dataForMetaTags';
 
 const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   const [ogTime, setOgTime] = useState(getCurrentDateTimeISOWithOffset());
@@ -26,7 +26,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     webpage,
     website,
     imageObject,
-    breadcrumbList
+    breadcrumbList,
   } = page.schema;
 
   // const selectedReviews = reviews?.filter((review, index) => index < 2);
@@ -165,10 +165,10 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       "@type": "AggregateRating",
       "ratingValue": (rating || serwis.rating).toString(),
       "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString(),
-      "itemReviewed": {
-        // "@type": "Service",
-        "name": "Serwis RTV i AGD Przemyśl",
-      },
+      // "itemReviewed": {
+      //   // "@type": "Service",
+      //   "name": "Serwis RTV i AGD Przemyśl",
+      // },
     },
 
 
@@ -198,6 +198,8 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   };
 
+  console.log("siteNavigationElements", siteNavigationElements)
+
   return (
     <Head>
       <title>{title}</title>
@@ -223,7 +225,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
 
-      {(path === "/naprawa-zmywarek/") && (
+      {(path === "/naprawa-pralek/" || path === "/naprawa-zmywarek/") && (
         <>
           {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{
@@ -252,7 +254,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [productSchema, faqPage, breadcrumbList]
+                "@graph": [breadcrumbList, ...siteNavigationElements, productSchema, faqPage]
               })
             }}
           />
@@ -269,7 +271,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         </>
       )}
 
-      {(path === "/naprawa-pralek/" || path === "/naprawa-suszarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
+      {(path === "/naprawa-suszarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <>
           {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{
@@ -298,7 +300,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [productSchema, breadcrumbList]
+                "@graph": [breadcrumbList, ...siteNavigationElements, productSchema]
               })
             }}
           />
@@ -327,7 +329,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [productSchema, localBusinessSchema, breadcrumbList]
+                "@graph": [breadcrumbList, ...siteNavigationElements, localBusinessSchema, productSchema]
               })
             }}
           />
@@ -373,7 +375,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@graph": [breadcrumbList]
+              "@graph": [breadcrumbList, ...siteNavigationElements]
             })
           }}
         />

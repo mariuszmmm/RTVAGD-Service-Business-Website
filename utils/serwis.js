@@ -12,7 +12,7 @@ export const serwis = {
   phone: {
     number: "+48790258612",
     formatted: "+48 790 258 612",
-  }, adres: "Generała Józefa Sowińskiego 2, 37-700 Przemyśl",
+  }, adres: "ul. Generała Józefa Sowińskiego 2, 37-700 Przemyśl",
   reviews: [
     {
       "reveiwFor": "telewizor",
