@@ -102,17 +102,6 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
         </Section>
 
         <Section>
-          <HeroText>
-            <b>Nie trać czasu na pranie ręczne!<br />
-              Skontaktuj się ze&nbsp;mną, a&nbsp;Twój sprzęt odzyska pełną sprawność.
-            </b>
-          </HeroText>
-          <ButtonLink href={`tel:${serwis.phone.number}`} >
-            Zadzwoń teraz
-          </ButtonLink>
-        </Section>
-
-        <Section>
           <SubTitle>FAQ – najczęściej zadawane pytania</SubTitle>
           <StyledText as="ul" $list>
             {dataForMetaTags.naprawa_pralek.schema.faqPage.mainEntity.map((item, index) => (
@@ -123,16 +112,35 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             ))}
           </StyledText >
         </Section>
+
+        <Section>
+          <HeroText>
+            <b>Nie trać czasu na pranie ręczne!<br />
+              Skontaktuj się ze&nbsp;mną, a&nbsp;Twój sprzęt odzyska pełną sprawność.
+            </b>
+          </HeroText>
+          <ButtonLink href={`tel:${serwis.phone.number}`} title='Naprawa pralek w Przemyślu' >
+            Zadzwoń teraz
+          </ButtonLink>
+        </Section>
+
+        <Section>
+          <SubTitle>Naprawiam pralki dla mieszkańców Przemyśla i&nbsp;okolic.</SubTitle>
+          <StyledText>
+            Usługę wykonam w Przemyślu, Bolestraszycach, Duńkowiczkach, Krównikach, Nehrybce, Orzechowcach, Ostrowie, Pikulicach, Prałkowcach, Wyszatycach i&nbsp;Żurawicy. Przyjadę z&nbsp;niezbędnymi częściami, by Twoja pralka znów pracowała jak nowa.
+          </StyledText>
+        </Section>
+
         <Section>
           <SubTitle>Inne usługi</SubTitle>
           <StyledText>
             Oprócz naprawy pralek oferuję kompleksowy serwis:<br />
             <StyledLink
-              href="/naprawa-zmywarek/" $standardText>zmywarek</StyledLink>,
-            <StyledLink href="/naprawa-suszarek/" $standardText> suszarek</StyledLink>,
+              href="/naprawa-zmywarek/" title='Naprawa zmywarek' $standardText>zmywarek</StyledLink>,
+            <StyledLink href="/naprawa-suszarek/" title='Naprawa suszarek' $standardText> suszarek</StyledLink>,
             <StyledLink
-              href="/naprawa-ekspresow/" $standardText> ekspresów do kawy</StyledLink> oraz
-            <StyledLink href="/naprawa-telewizorow/" $standardText> telewizorów</StyledLink>.
+              href="/naprawa-ekspresow/" title='Naprawa ekspresów do kawy' $standardText> ekspresów do kawy</StyledLink> oraz
+            <StyledLink href="/naprawa-telewizorow/" title='Naprawa telewizorów' $standardText> telewizorów</StyledLink>.
           </StyledText>
         </Section>
       </Container>

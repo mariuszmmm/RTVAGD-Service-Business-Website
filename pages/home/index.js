@@ -152,7 +152,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
             w&nbsp;Przemyślu
           </HeroTitle>
           <HeroText> Rzetelnie, szybko i&nbsp;skutecznie!</HeroText>
-          <ButtonLink href={`tel:${serwis.phone.number}`} $hero>
+          <ButtonLink href={`tel:${serwis.phone.number}`} title='Serwis RTV i AGD w Przemyślu' $hero>
             Zadzwoń teraz
           </ButtonLink>
 

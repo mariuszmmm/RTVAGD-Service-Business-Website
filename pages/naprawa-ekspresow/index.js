@@ -94,7 +94,7 @@ const CoffeeMachineService = ({ rating, ratingsTotal, reviews }) => {
               <b>Nie pozwól, aby awaria ekspresu popsuła Twój dzień! </b>
               Skontaktuj się ze mną, a sprawnie przywrócę pełną funkcjonalność Twojego urządzenia, abyś mógł cieszyć się ulubioną kawą każdego dnia.
             </Text>
-            <ButtonLink href={`tel:${serwis.phone.number}`} >
+            <ButtonLink href={`tel:${serwis.phone.number}`} title='Naprawa ekspresów do kawy w Przemyślu'>
               Zadzwoń teraz
             </ButtonLink>
           </div>

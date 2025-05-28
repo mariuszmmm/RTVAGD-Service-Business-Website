@@ -184,12 +184,13 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
 
   const serviceSchema = {
     ...service,
-    "aggregateRating": {
-      ...(service?.["aggregateRating"]),
-      "ratingValue": (rating || serwis.rating).toString(),
-      "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
-      // ...(path === "/" && { "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString() }),
-    }
+    // "aggregateRating": {
+    //   // ...(service?.["aggregateRating"]),
+    //   "@type": "AggregateRating",
+    //   "ratingValue": (rating || serwis.rating).toString(),
+    //   "reviewCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+    //   // ...(path === "/" && { "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString() }),
+    // }
   };
 
   const localBusinessSchema = {
@@ -197,8 +198,6 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     // ...getReviews(1),
 
   };
-
-  console.log("siteNavigationElements", siteNavigationElements)
 
   return (
     <Head>
@@ -254,7 +253,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [breadcrumbList, ...siteNavigationElements, productSchema, faqPage]
+                "@graph": [breadcrumbList, ...siteNavigationElements, productSchema, faqPage, serviceSchema]
               })
             }}
           />

@@ -30,7 +30,7 @@ const Contact = ({ rating, ratingsTotal }) => {
         <ContactSection>
           <ContactForm />
           <ContactInfo>
-            <SubTitle><StyledLink href="/" title={serwis.subName}>{serwis.subName}</StyledLink>
+            <SubTitle><StyledLink href="/" title={serwis.subName}>{serwis.name}</StyledLink>
             </SubTitle>
             <ContactText>
               adres:{"  "}

@@ -91,7 +91,7 @@ const TelevisionService = ({ rating, ratingsTotal, reviews }) => {
               <b>Nie pozwól, aby usterka telewizora popsuła Twój czas wolny! </b>
               Skontaktuj się ze mną już dziś, a sprawnie przywrócę Twój telewizor do pełnej funkcjonalności, byś mógł znów cieszyć się ulubionymi programami i filmami.
             </Text>
-            <ButtonLink href={`tel:${serwis.phone.number}`} >
+            <ButtonLink href={`tel:${serwis.phone.number}`} title='Naprawa telewizorów w Przemyślu' >
               Zadzwoń teraz
             </ButtonLink>
           </div>

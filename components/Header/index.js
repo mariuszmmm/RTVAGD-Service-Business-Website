@@ -42,11 +42,11 @@ const Header = ({ rating }) => {
   return (
     <HeaderWrapper>
       <HeaderContainer>
-        <Logo href="/">
+        <Logo href="/" title="naprawaprzemysl.pl">
           <Emoticon $logo>
             <Image
               src={imageUrls.logo}
-              alt="Serwis RTV i AGD logo"
+              alt="Serwis RTV i AGD logo | naprawaprzemysl.pl"
               loading="lazy"
               fill
             />
@@ -89,7 +89,7 @@ const Header = ({ rating }) => {
             </ListItem>
           </NavList>
         </nav>
-        <ButtonLink href={serwis.url.addTestimonial} $opinia $hidden={scrolled}>
+        <ButtonLink href={serwis.url.addTestimonial} $opinia $hidden={scrolled} title="Wystaw opinię">
           Wystaw opinię
         </ButtonLink>
         {rating && <GoogleRating rating={rating} hidden={scrolled} />}

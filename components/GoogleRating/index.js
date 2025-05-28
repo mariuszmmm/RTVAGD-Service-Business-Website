@@ -9,9 +9,8 @@ export const GoogleRating = ({ rating, hidden }) => (
       <Wrpper
         $hidden={hidden}
         id="rating"
-        title="Poznaj opinie naszych zadowolonych klientów! ⭐⭐⭐⭐⭐"
       >
-        <StyledLink href="/opinie/">
+        <StyledLink href="/opinie/" title="Poznaj opinie zadowolonych klientów! ⭐⭐⭐⭐⭐">
           <ImageWrapper>
             <Image
               src={imageUrls.logoGoogle}

@@ -5,7 +5,7 @@ const shortName = "Serwis RTV i AGD Przemyśl";
 
 export const address = {
   "@type": "PostalAddress",
-  "streetAddress": "ul. Generała Józefa Sowińskiego 2",
+  "streetAddress": "ul. Józefa Sowińskiego 2",
   "addressLocality": "Przemyśl",
   "addressRegion": "Podkarpackie",
   "postalCode": "37-700",
@@ -36,11 +36,12 @@ const breadcrumbList = {
 export const localBusiness = {
 
   "@type": "LocalBusiness",
-  "name": shortName,  // "name": serwis.name,  // "name": "Naprawa Przemyśl",
+  // "name": shortName,  // "name": serwis.name,  // "name": "Naprawa Przemyśl",
+  "name": "Piotr Matusiewicz Sklep-Komis Serwis RTV i AGD",   // zgodny z CEIDG
+  "alternateName": "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",  // zgodny z google maps
   "logo": imageUrls.logo,
-
   "image": [imageUrls.logo, imageUrls.serwis],  // "image": imageUrls.logo,
-  "@id": "https://naprawaprzemysl.pl/#localbusiness",  // dodane 17.05.2025
+  "@id": "https://naprawaprzemysl.pl/#business",  // dodane 17.05.2025
   "url": appUrls.home,
   "telephone": serwis.phone.formatted,
   "priceRange": "PLN",
@@ -136,7 +137,7 @@ export const siteNavigationElements = [
 export const dataForMetaTags = {
   home: {
     metaTags: {
-      title: "Naprawa RTV i AGD ✔️ Serwis w Przemyślu ☎️ 790-258-612",
+      title: "Naprawa RTV i AGD ✔️ Serwis w Przemyślu ☎️ 790258612",
       canonical: appUrls.home,
       description: "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
       siteName: shortName,
@@ -306,6 +307,8 @@ export const dataForMetaTags = {
         "name": serwis.name,  //   "name": "Serwis RTV i AGD NaprawaPrzemyśl",
         "alternateName": "Serwis RTV i AGD w Przemyślu",
         "url": appUrls.home,
+        "@id": appUrls.home + "#website",
+        "sameAs": [serwis.url.mapaGoogle, serwis.url.facebook]
       },
       imageObject: {
 
@@ -338,6 +341,7 @@ export const dataForMetaTags = {
     schema: {
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.kontakt + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -362,6 +366,7 @@ export const dataForMetaTags = {
     schema: {
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.o_mnie + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -387,6 +392,7 @@ export const dataForMetaTags = {
     schema: {
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.opinie + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -401,9 +407,9 @@ export const dataForMetaTags = {
   },
   naprawa_pralek: {
     metaTags: {
-      title: "Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790 258 612",
+      title: "Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790 258 612 | naprawaprzemysl.pl",
       canonical: appUrls.naprawa_pralek,
-      description: "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
+      description: "Kompleksowa naprawa pralek w Przemyślu – awarie pralek wszystkich marek, szybki dojazd do klienta, części oryginalne i gwarancja. Zadzwoń i umów wizytę!",
       siteName: `${shortName} - naprawa pralek`,
       keywords: "naprawa pralek, serwis pralek Przemyśl, naprawa pralek w Przemyślu, naprawa pralki Przemyśl, naprawa pralek Przemyśl, awaria pralki",
       appleMobileWebAppTitle: `${shortName} - naprawa pralek`,
@@ -419,15 +425,33 @@ export const dataForMetaTags = {
         "sameAs": [],
       },
       service: {
-
         "@type": "Service",
+        "@id": appUrls.naprawa_pralek + "#service",
         "name": "Naprawa Pralek",  //  "name": "Naprawa Pralek",
+        "serviceType": "Naprawa pralek wszystkich marek",
         "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
         // "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
-        "areaServed": {
-          "@type": "Place",
-          // "address": address,
-          "name": "Przemyśl",
+        "image": [
+          {
+            "@type": "ImageObject",
+            "url": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
+            "caption": "Pralka przed naprawą"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
+            "caption": "Pralka po naprawie"
+          }
+        ],
+        // "areaServed": {
+        //   "@type": "Place",
+        //   // "address": address,
+        //   "name": "Przemyśl",
+        // },
+        "areaServed": ["Przemyśl", "Bolestraszyce", "Duńkowiczki", "Krówniki", "Nehrybka", "Orzechowce", "Ostrów", "Pikulice", "Prałkowce", "Wyszatyce", "Żurawica"],
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "klienci indywidualni"
         },
         // "aggregateRating": {
         //   "@type": "AggregateRating",
@@ -436,13 +460,16 @@ export const dataForMetaTags = {
         //     "name": "Naprawa Pralek"
         //   }
         // },
-        "provider": {                           // dodane 14.05.2025
-          "@type": "LocalBusiness",
-          "name": serwis.name,
-          "url": appUrls.home,
-          "telephone": serwis.phone.formatted,
-          "address": address,
-          //  "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
+        // "provider": {                           // dodane 14.05.2025
+        //   "@type": "LocalBusiness",
+        //   "name": serwis.name,
+        //   "url": appUrls.home,
+        //   "telephone": serwis.phone.formatted,
+        //   "address": address,
+        //   //  "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
+        // },
+        "provider": {
+          "@id": "https://twojadomena.pl/#business"
         },
       },
       product: {
@@ -455,6 +482,22 @@ export const dataForMetaTags = {
         "url": appUrls.naprawa_pralek,
         "offers": {
           "@type": "Offer",
+
+
+
+          "itemOffered": {          /// dodane PROBNIE  -->
+            "@id": appUrls.naprawa_pralek + "#service"
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "120.00",
+            "priceCurrency": "PLN"
+          },
+          "validFrom": "2025-01-01",   /// dodane PROBNIE   <---
+
+
+
+
           "url": appUrls.naprawa_pralek,
           "priceCurrency": "PLN",
           "price": "150",
@@ -540,12 +583,11 @@ export const dataForMetaTags = {
         "name": serwis.name,   // "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
       webpage: {
-
         "@type": "WebPage",
         "name": "Naprawa Pralek - " + shortName, // "name": "Naprawa Pralek",
         "alternateName": "Naprawa pralek automatycznych w Przemyślu",
         "url": appUrls.naprawa_pralek,
-        "@id": appUrls.naprawa_pralek,
+        "@id": appUrls.naprawa_pralek + "#page",
         "isPartOf": {
           "@id": "https://naprawaprzemysl.pl/#website"
         },
@@ -619,6 +661,7 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_pralek + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -633,9 +676,9 @@ export const dataForMetaTags = {
   },
   naprawa_suszarek: {
     metaTags: {
-      title: "Naprawa suszarek ✔️ Serwis Przemyśl ☎️ 790 258 612",
+      title: "Naprawa suszarek ✔️ Serwis Przemyśl ☎️ 790 258 612 | naprawaprzemysl.pl",
       canonical: appUrls.naprawa_suszarek,
-      description: "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
+      description: "Specjalistyczny serwis suszarek w Przemyślu – szybka diagnoza i naprawa u klienta lub w warsztacie. Dojazd w cenie, oryginalne części i gwarancja. Umów wizytę!",
       siteName: `${shortName} - naprawa suszarek`,
       keywords: "naprawa suszarek, serwis suszarek Przemyśl, naprawa suszarek w Przemyślu, naprawa suszarki Przemyśl, naprawa suszarek Przemyśl, awaria suszarki",
       appleMobileWebAppTitle: `${shortName} - naprawa suszarek`,
@@ -810,6 +853,7 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_suszarek + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -824,9 +868,15 @@ export const dataForMetaTags = {
   },
   naprawa_zmywarek: {
     metaTags: {
-      title: "Naprawa zmywarek Przemyśl ✔️ Serwis RTV i AGD | Szybka diagnoza i gwarancja",
+      // title: "Naprawa zmywarek Przemyśl ✔️ Serwis RTV i AGD | Szybka diagnoza i gwarancja",
+      // canonical: appUrls.naprawa_zmywarek,
+      // description: "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790 258 612",
+      // siteName: `${shortName} - naprawa zmywarek`,
+      // keywords: "naprawa zmywarek, serwis zmywarek Przemyśl, naprawa zmywarki Przemyśl, naprawa zmywarki w Przemyślu, naprawa zmywarek Przemyśl, awaria zmywarki",
+      // appleMobileWebAppTitle: `${shortName} - naprawa zmywarek`,
+      title: "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612 | naprawaprzemysl.pl",
       canonical: appUrls.naprawa_zmywarek,
-      description: "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790 258 612",
+      description: "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
       siteName: `${shortName} - naprawa zmywarek`,
       keywords: "naprawa zmywarek, serwis zmywarek Przemyśl, naprawa zmywarki Przemyśl, naprawa zmywarki w Przemyślu, naprawa zmywarek Przemyśl, awaria zmywarki",
       appleMobileWebAppTitle: `${shortName} - naprawa zmywarek`,
@@ -842,29 +892,45 @@ export const dataForMetaTags = {
         "sameAs": [],
       },
       service: {
-
         "@type": "Service",
-        "name": "Naprawa Zmywarek - " + serwis.name,  //   "name": "Naprawa Zmywarek",
-        "description": "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790 258 612",
-        "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
-        "areaServed": {
-          "@type": "Place",
-          "address": address,
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "itemReviewed": {
-            "@type": "Service",
-            "name": "Naprawa Zmywarek"
+        // "name": "Naprawa Zmywarek - " + serwis.name,  //   "name": "Naprawa Zmywarek",
+        "@id": appUrls.naprawa_zmywarek + "#service",
+        "name": "Naprawa Zmywarek",
+        "serviceType": "Naprawa zmywarek wszystkich marek",
+
+        "description": "Profesjonalna naprawa zmywarek w Przemyślu – serwis u klienta lub w warsztacie, szybki dojazd, oryginalne części i gwarancja. Skontaktuj się i zamów usługę!",
+        // "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
+        "image": [
+          {
+            "@type": "ImageObject",
+            "url": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
+            "caption": "Pralka przed naprawą"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
+            "caption": "Pralka po naprawie"
           }
+        ],
+        // "areaServed": {
+        //   "@type": "Place",
+        //   "address": address,
+        // },
+        "areaServed": ["Przemyśl", "Bolestraszyce", "Duńkowiczki", "Krówniki", "Nehrybka", "Orzechowce", "Ostrów", "Pikulice", "Prałkowce", "Wyszatyce", "Żurawica"],
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "klienci indywidualni"
         },
-        "provider": {                           // dodane 14.05.2025
-          "@type": "LocalBusiness",
-          "name": serwis.name,
-          "url": appUrls.home,
-          "telephone": serwis.phone.formatted,
-          "address": address,
-          //  "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
+        // "provider": {                           // dodane 14.05.2025
+        //   "@type": "LocalBusiness",
+        //   "name": serwis.name,
+        //   "url": appUrls.home,
+        //   "telephone": serwis.phone.formatted,
+        //   "address": address,
+        //   //  "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
+        // },
+        "provider": {
+          "@id": "https://twojadomena.pl/#business"
         },
       },
       product: {
@@ -1029,6 +1095,7 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_zmywarek + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -1221,6 +1288,7 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_ekspresow + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -1455,6 +1523,7 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_telewizorow + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {

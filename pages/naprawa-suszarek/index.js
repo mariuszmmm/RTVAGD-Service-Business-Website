@@ -52,9 +52,9 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
             <ServiceOffer>
               <StyledPhoto>
                 <Image
-                  title="Naprawa szuszarek Przemyśl"
+                  title="Naprawa suszarek Przemyśl"
                   src={imageUrls.suszarka}
-                  alt="Naprawa szuszarek - serwis suszarek w Przemyślu"
+                  alt="Naprawa suszarek - serwis suszarek w Przemyślu"
                   // loading='lazy'
                   fill
                   // srcSet={`${imageUrls.suszarka_300} 500w,
@@ -90,7 +90,7 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
               <b>Nie pozwól, aby awaria suszarki wpłynęła na Twoją codzienność! </b>
               Zadzwoń lub napisz już dziś, a szybko przywrócę Twoje urządzenie do pełnej sprawności. Gwarantuję rzetelność, profesjonalizm i satysfakcję z wykonanej usługi.
             </Text>
-            <ButtonLink href={`tel:${serwis.phone.number}`} >
+            <ButtonLink href={`tel:${serwis.phone.number}`} title='Naprawa suszarek Przemyśl' >
               Zadzwoń teraz
             </ButtonLink>
           </div>

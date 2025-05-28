@@ -6,13 +6,16 @@ export const serwis = {
     mapaGoogle: "https://maps.google.com/?cid=18175636745280354470",
     addTestimonial: "https://search.google.com/local/writereview?placeid=ChIJrWDpGyR_O0cRpvj4OFLVPPw",
   },
-  name: "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
-  subName: "Serwis RTV i AGD",
+  // name: "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
+  // subName: "Serwis RTV i AGD",
+  name: "Piotr Matusiewicz Sklep-Komis Serwis RTV i AGD",
+  subName: "Naprawa pralek i sprzętu RTV - naprawa ekspresów do kawy, naprawa telewizorów, naprawa zmywarki, serwis agd,",
   email: "piotrek_serwis@wp.pl",
   phone: {
     number: "+48790258612",
     formatted: "+48 790 258 612",
-  }, adres: "ul. Generała Józefa Sowińskiego 2, 37-700 Przemyśl",
+  },
+  adres: "ul. Józefa Sowińskiego 2, 37-700 Przemyśl",
   reviews: [
     {
       "reveiwFor": "telewizor",
