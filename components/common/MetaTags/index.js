@@ -232,7 +232,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [breadcrumbList, ...siteNavigationElements, faqPage, webpage]
+                "@graph": [breadcrumbList, productSchema, faqPage, webpage]
               })
             }}
           />
@@ -268,7 +268,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [breadcrumbList, ...siteNavigationElements, productSchema, faqPage]
+                "@graph": [breadcrumbList, productSchema, faqPage]
               })
             }}
           />
@@ -314,7 +314,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [breadcrumbList, ...siteNavigationElements, productSchema]
+                "@graph": [breadcrumbList, productSchema]
               })
             }}
           />
@@ -343,7 +343,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [breadcrumbList, ...siteNavigationElements, localBusinessSchema, productSchema]
+                "@graph": [breadcrumbList, localBusinessSchema, productSchema]
               })
             }}
           />
@@ -389,7 +389,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@graph": [breadcrumbList, ...siteNavigationElements]
+              "@graph": [breadcrumbList]
             })
           }}
         />
