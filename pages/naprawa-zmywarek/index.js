@@ -16,6 +16,7 @@ import Image from 'next/image';
 import { HeroText } from '../../styles/home/HomeStyled';
 import { StyledText } from '../../components/common/Text/styled';
 import { StyledLink } from '../../components/common/StyledLink';
+import { Break } from '../../components/Break';
 
 const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
@@ -35,7 +36,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           <Emoticon>
             <Image
               src={imageUrls.logo}
-              alt="Logo serwisu w Przemyślu"
+              alt="Logo naprawy zmywarek"
               loading="lazy"
               fill
             />
@@ -44,9 +45,9 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         <Section>
           <StyledPhoto>
             <Image
-              title="Naprawa zmywarek Przemyśl ✔️ Serwis AGD | Szybka diagnoza i gwarancja"
+              title="Naprawa zmywarek ✔️ Serwis Przemyśl"
               src={imageUrls.zmywarka}
-              alt="Zmywarka do naczyń. Naprawa i serwis w Przemyślu."
+              alt="Naprawa zmywarek w Przemyślu. Zmywarka do naczyń."
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.zmywarka_300} 500w,
@@ -113,7 +114,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
 
         <Section>
           <HeroText>
-            <b>Nie pozwól, aby awaria zmywarki zabierała Ci cenny czas i&nbsp;komfort życia.<br />
+            <b>Nie pozwól, aby awaria zmywarki zabierała Ci cenny czas. <Break />
               Skontaktuj się ze&nbsp;mną, a&nbsp;Twój sprzęt odzyska pełną sprawność.</b>
           </HeroText>
           <ButtonLink href={`tel:${serwis.phone.number}`} title='Naprawa zmywarek w Przemyślu' >
@@ -124,7 +125,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         <Section>
           <SubTitle>Świadczę usługi naprawy zmywarek w&nbsp;Przemyślu oraz pobliskich miejscowościach.</SubTitle>
           <StyledText>
-            Jeśli Twoja zmywarka zepsuła się w Przemyślu, Bolestraszycach, Duńkowiczkach, Krównikach, Nehrybce, Orzechowcach, Ostrowie, Pikulicach, Prałkowcach, Wyszatycach lub Żurawicy, bez obaw – dojadę do Ciebie i&nbsp;szybko usunę usterkę.
+            Naprawiam zmywarki w Przemyślu i&nbsp;okolicach. Jeśli jesteś z&nbsp;miejscowości takich jak Przemyśl, Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce, Ostrów, Pikulice, Prałkowce, Wyszatyce czy Żurawica – chętnie do Ciebie przyjadę i&nbsp;usunę usterkę szybko i&nbsp;skutecznie.
           </StyledText>
         </Section>
 

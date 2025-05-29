@@ -177,8 +177,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
+          //   "itemCondition": "https://schema.org/NewCondition",
+          //       "availability": "https://schema.org/InStock",
           "shippingDetails": {
             "@type": "OfferShippingDetails",
             "shippingRate": {
@@ -384,7 +384,7 @@ export const dataForMetaTags = {
     metaTags: {
       title: "Poznaj opinie klientów ✔️ Serwis RTV AGD w Przemyślu",
       canonical: appUrls.opinie,
-      description: "Sprawdź opinie klientów o naprawach sprzętu RTV i AGD w Przemyślu. Dowiedz się, dlaczego tak wielu poleca moje usługi.",
+      description: "Sprawdź opinie klientów serwisu RTV i AGD w Przemyślu. Dowiedz się, dlaczego tak wielu poleca moje usługi.",
       siteName: `${shortName} - opinie`,
       keywords: "opinie naprawa AGD, opinie serwis RTV, recenzje naprawy pralek, opinie naprawa zmywarek, opinie naprawa ekspresów, doświadczenia z naprawą AGD, opinie naprawa telewizorów",
       appleMobileWebAppTitle: `${shortName} - opinie`,
@@ -502,8 +502,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
+          //   "itemCondition": "https://schema.org/NewCondition",
+          //       "availability": "https://schema.org/InStock",
           "shippingDetails": {
             "@type": "OfferShippingDetails",
             "shippingRate": {
@@ -732,8 +732,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "150",
           "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
+          //   "itemCondition": "https://schema.org/NewCondition",
+          //       "availability": "https://schema.org/InStock",
           "shippingDetails": {
             "@type": "OfferShippingDetails",
             "shippingRate": {
@@ -874,7 +874,7 @@ export const dataForMetaTags = {
       // siteName: `${shortName} - naprawa zmywarek`,
       // keywords: "naprawa zmywarek, serwis zmywarek Przemyśl, naprawa zmywarki Przemyśl, naprawa zmywarki w Przemyślu, naprawa zmywarek Przemyśl, awaria zmywarki",
       // appleMobileWebAppTitle: `${shortName} - naprawa zmywarek`,
-      title: "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612 | naprawaprzemysl.pl",
+      title: "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612",
       canonical: appUrls.naprawa_zmywarek,
       description: "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
       siteName: `${shortName} - naprawa zmywarek`,
@@ -935,62 +935,62 @@ export const dataForMetaTags = {
       },
       product: {
         "@type": "Product",
-        "@id": appUrls.naprawa_zmywarek + "#product",
-        "name": "Naprawa zmywarek Przemyśl - " + shortName,  // "name": "Naprawa zmywarek Przemyśl",
-        "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
-        "description": "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790 258 612",
-        "url": appUrls.naprawa_zmywarek,
-        "offers": {
-          "@type": "Offer",
-          "url": appUrls.naprawa_zmywarek,
-          "priceCurrency": "PLN",
-          "price": "130",
-          "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "PLN"
-            },
-            "shippingDestination": [
-              {
-                "@type": "DefinedRegion",
-                "addressCountry": "PL",
-                "addressRegion": ["Podkarpackie"],
-                "name": "Przemyśl"
-              }
-            ],
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 0,
-                "maxValue": 1,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 0,
-                "maxValue": 1,
-                "unitCode": "DAY"
-              },
-            }
+        // "@id": appUrls.naprawa_zmywarek + "#product",
+        "name": "Naprawa zmywarek",  // "name": "Naprawa zmywarek Przemyśl",
+        // "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
+        // "description": "Naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790 258 612",
+        // "url": appUrls.naprawa_zmywarek,
+        // "offers": {
+        //   "@type": "Offer",
+        //   "url": appUrls.naprawa_zmywarek,
+        //   "priceCurrency": "PLN",
+        //   "price": 130,
+        //   "priceValidUntil": "2026-05-16",
+        //   //   "itemCondition": "https://schema.org/NewCondition",
+        //   //       "availability": "https://schema.org/InStock",
+        //   // "shippingDetails": {
+        //   //   "@type": "OfferShippingDetails",
+        //   //   "shippingRate": {
+        //   //     "@type": "MonetaryAmount",
+        //   //     "value": "0",
+        //   //     "currency": "PLN"
+        //   //   },
+        //   //   "shippingDestination": [
+        //   //     {
+        //   //       "@type": "DefinedRegion",
+        //   //       "addressCountry": "PL",
+        //   //       "addressRegion": ["Podkarpackie"],
+        //   //       "name": "Przemyśl"
+        //   //     }
+        //   //   ],
+        //   //   "deliveryTime": {
+        //   //     "@type": "ShippingDeliveryTime",
+        //   //     "handlingTime": {
+        //   //       "@type": "QuantitativeValue",
+        //   //       "minValue": 0,
+        //   //       "maxValue": 1,
+        //   //       "unitCode": "DAY"
+        //   //     },
+        //   //     "transitTime": {
+        //   //       "@type": "QuantitativeValue",
+        //   //       "minValue": 0,
+        //   //       "maxValue": 1,
+        //   //       "unitCode": "DAY"
+        //   //     },
+        //   //   }
 
-          },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "PL",
-            "returnPolicyCountry": "PL",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 14,
-            "returnMethod": "https://schema.org/ReturnInStore",
-            "returnFees": "https://schema.org/FreeReturn"
-          },
-          // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-        },
+        //   // },
+        //   // "hasMerchantReturnPolicy": {
+        //   //   "@type": "MerchantReturnPolicy",
+        //   //   "applicableCountry": "PL",
+        //   //   "returnPolicyCountry": "PL",
+        //   //   "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        //   //   "merchantReturnDays": 14,
+        //   //   "returnMethod": "https://schema.org/ReturnInStore",
+        //   //   "returnFees": "https://schema.org/FreeReturn"
+        //   // },
+        //   // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+        // },
       },
       faqPage: {
         "@type": "FAQPage",
@@ -1027,11 +1027,43 @@ export const dataForMetaTags = {
         "name": serwis.name,   // "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
       webpage: {
-
         "@type": "WebPage",
-        "name": "Naprawa Zmywarek - " + shortName,   // "name": "Naprawa Zmywarek",
-        "alternateName": "Naprawa zmywarek w Przemyślu",
+        "id": appUrls.naprawa_zmywarek + "#webpage",
         "url": appUrls.naprawa_zmywarek,
+        "inLanguage": "pl-PL",
+        "name": "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612",   // "name": "Naprawa Zmywarek",
+        "datePublished": new Date("2024-07-03").toISOString(),
+        "dateModified": new Date().toISOString(),
+        "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://naprawaprzemysl.pl/#website",
+          "url": appUrls.home,
+          "name": serwis.shortName,
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": appUrls.home + "?s={search_term_string}"
+            },
+            "query-input": {
+              "@type": "PropertyValueSpecification",
+              "valueRequired": "http://schema.org/True",
+              "valueName": "search_term_string"
+            }
+          },
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "id": imageUrls.zmywarka + "#primaryImage",
+          "url": imageUrls.zmywarka,
+        },
+
+
+        // "alternateName": "Naprawa zmywarek w Przemyślu",
+
+        // "name": "Naprawa zmywarek w Przemyślu",
+
         // "breadcrumb": {
         //   ...breadcrumbList,
         //   "itemListElement": [
@@ -1044,39 +1076,40 @@ export const dataForMetaTags = {
         //     }
         //   ]
         // },
-        "image": {
-          // 
-          "@type": "ImageObject",
-          "author": {
-            "@type": "LocalBusiness",  // "@type": "Organization",
-            "name": serwis.name,   //  "name": "Serwis RTV i AGD NaprawaPrzemyśl"
-            address,
-            "image": imageUrls.serwis,
-            "telephone": serwis.phone.formatted,
-            "priceRange": "$$",
-          },
-          "contentLocation": {
-            "@type": "Place",
-            "name": "Przemyśl"
-          },
-          "contentUrl": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
-          "datePublished": "2025-05-16",
-          "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części.",
-          "name": "Naprawa Zmywarek - " + shortName,  //   "name": "Naprawa zmywarek w Przemyślu",
-        },
-        "mainEntity": {
-          "@type": "Service",
-          "name": "Naprawa zmywarek",
-          "description": "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790 258 612",
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": serwis.name,
-            "url": appUrls.home,
-            "telephone": serwis.phone.formatted,
-            address,
-          }
-        }
+        // "image": {
+        //   // 
+        //   "@type": "ImageObject",
+        //   "author": {
+        //     "@type": "LocalBusiness",  // "@type": "Organization",
+        //     "name": serwis.name,   //  "name": "Serwis RTV i AGD NaprawaPrzemyśl"
+        //     address,
+        //     "image": imageUrls.serwis,
+        //     "telephone": serwis.phone.formatted,
+        //     "priceRange": "$$",
+        //   },
+        //   "contentLocation": {
+        //     "@type": "Place",
+        //     "name": "Przemyśl"
+        //   },
+        //   "contentUrl": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
+        //   "datePublished": "2025-05-16",
+        //   "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części.",
+        //   "name": "Naprawa Zmywarek - " + shortName,  //   "name": "Naprawa zmywarek w Przemyślu",
+        // },
+        // "mainEntity": {
+        //   "@type": "Service",
+        //   "name": "Naprawa zmywarek",
+        //   "description": "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790 258 612",
+        //   "provider": {
+        //     "@type": "LocalBusiness",
+        //     "name": serwis.name,
+        //     "url": appUrls.home,
+        //     "telephone": serwis.phone.formatted,
+        //     address,
+        //   }
+        // }
       },
+
       imageObject: {
 
         "@type": "ImageObject",
@@ -1167,8 +1200,8 @@ export const dataForMetaTags = {
           "priceCurrency": "PLN",
           "price": "120",
           "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
+          //   "itemCondition": "https://schema.org/NewCondition",
+          //       "availability": "https://schema.org/InStock",
           "shippingDetails": {
             "@type": "OfferShippingDetails",
             "shippingRate": {
@@ -1400,10 +1433,10 @@ export const dataForMetaTags = {
           "@type": "Offer",
           "url": appUrls.naprawa_telewizorow,
           "priceCurrency": "PLN",
-          "price": "150",
+          "price": 150,
           "priceValidUntil": "2026-05-16",
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock",
+          //   "itemCondition": "https://schema.org/NewCondition",
+          //       "availability": "https://schema.org/InStock",
           "shippingDetails": {
             "@type": "OfferShippingDetails",
             "shippingRate": {

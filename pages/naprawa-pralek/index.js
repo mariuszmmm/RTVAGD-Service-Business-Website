@@ -18,6 +18,7 @@ import { StyledPhoto } from '../../components/common/StyledPhoto';
 import { StyledText } from '../../components/common/Text/styled';
 import { HeroText } from '../../styles/home/HomeStyled';
 import { StyledLink } from '../../components/common/StyledLink';
+import { Break } from '../../components/Break';
 
 const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
   const path = useRouter().asPath;
@@ -115,7 +116,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
 
         <Section>
           <HeroText>
-            <b>Nie trać czasu na pranie ręczne!<br />
+            <b>Nie trać czasu na pranie ręczne! <Break />
               Skontaktuj się ze&nbsp;mną, a&nbsp;Twój sprzęt odzyska pełną sprawność.
             </b>
           </HeroText>
@@ -127,7 +128,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
         <Section>
           <SubTitle>Naprawiam pralki dla mieszkańców Przemyśla i&nbsp;okolic.</SubTitle>
           <StyledText>
-            Usługę wykonam w Przemyślu, Bolestraszycach, Duńkowiczkach, Krównikach, Nehrybce, Orzechowcach, Ostrowie, Pikulicach, Prałkowcach, Wyszatycach i&nbsp;Żurawicy. Przyjadę z&nbsp;niezbędnymi częściami, by Twoja pralka znów pracowała jak nowa.
+            Potrzebna Ci naprawa pralki w Przemyślu lub w jednej z pobliskich miejscowości? Obsługuję miejscowości Przemyśl, Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce, Ostrów, Pikulice, Prałkowce, Wyszatyce i Żurawica – wystarczy telefon, a przyjadę pomóc.
           </StyledText>
         </Section>
 

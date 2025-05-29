@@ -165,6 +165,8 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       "@type": "AggregateRating",
       "ratingValue": (rating || serwis.rating).toString(),
       "ratingCount": (ratingsTotal || serwis.ratingsTotal).toString(),
+      "bestRating": "5",
+      "worstRating": "1",
       // "itemReviewed": {
       //   // "@type": "Service",
       //   "name": "Serwis RTV i AGD Przemyśl",
@@ -224,7 +226,20 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
 
-      {(path === "/naprawa-pralek/" || path === "/naprawa-zmywarek/") && (
+      {(path === "/naprawa-zmywarek/") && (
+        <>
+          <script type="application/ld+json"    // wyłączone 15.05.2025
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [breadcrumbList, ...siteNavigationElements, productSchema, faqPage, webpage]
+              })
+            }}
+          />
+        </>
+      )}
+
+      {(path === "/naprawa-pralek/") && (
         <>
           {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{
@@ -253,7 +268,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [breadcrumbList, ...siteNavigationElements, productSchema, faqPage, serviceSchema]
+                "@graph": [breadcrumbList, ...siteNavigationElements, productSchema, faqPage]
               })
             }}
           />
