@@ -226,20 +226,8 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta name="keywords" content={keywords} />
       <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
 
-      {(path === "/naprawa-zmywarek/") && (
-        <>
-          <script type="application/ld+json"    // wyłączone 15.05.2025
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@graph": [breadcrumbList, productSchema, faqPage, webpage]
-              })
-            }}
-          />
-        </>
-      )}
 
-      {(path === "/naprawa-pralek/") && (
+      {(path === "/naprawa-pralek/" || path === "/naprawa-zmywarek/") && (
         <>
           {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{
@@ -268,7 +256,9 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [breadcrumbList, productSchema, faqPage]
+                "@graph": [webpage, productSchema, faqPage
+                  // breadcrumbList,  
+                ]
               })
             }}
           />
@@ -314,7 +304,9 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [breadcrumbList, productSchema]
+                "@graph": [
+                  // breadcrumbList, 
+                  productSchema]
               })
             }}
           />
@@ -343,7 +335,9 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [breadcrumbList, localBusinessSchema, productSchema]
+                "@graph": [webpage
+                  // breadcrumbList, localBusinessSchema, productSchema
+                ]
               })
             }}
           />
@@ -384,7 +378,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           /> */}
         </>
       )}
-      {(path === "/o-mnie/" || path === "/opinie/" || path === "/kontakt/") && (
+      {/* {(path === "/o-mnie/" || path === "/opinie/" || path === "/kontakt/") && (
         <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -393,7 +387,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             })
           }}
         />
-      )}
+      )} */}
     </Head>
   );
 };

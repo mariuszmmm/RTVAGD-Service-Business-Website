@@ -34,11 +34,11 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
       />
       <Container>
         <Title>
-          Naprawa&nbsp;pralek
+          Naprawa pralek
           <Emoticon>
             <Image
               src={imageUrls.logo}
-              alt="Logo serwisu w Przemyślu"
+              alt=""
               loading="lazy"
               fill
             />
@@ -49,7 +49,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             <Image
               title="Naprawa pralek Przemyśl ✔️ Serwis RTV i AGD | Szybka naprawa i gwarancja"
               src={imageUrls.pralka}
-              alt="Pralka automatyczna. Serwis i naprawa pralek w Przemyślu."
+              alt="Naprawa pralek w Przemyślu. Pralka."
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.pralka_300} 500w,
