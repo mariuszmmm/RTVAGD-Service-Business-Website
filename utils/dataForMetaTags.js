@@ -2,8 +2,8 @@ import { serwis } from './serwis';
 import { appUrls, imageUrls } from './urls';
 
 const shortName = "Serwis RTV i AGD Przemyśl";
-const datePublished = datePublished;
-const dateModified = dateModified;
+const datePublished = new Date("2024-07-03").toISOString();
+const dateModified = new Date().toISOString();
 
 export const address = {
   "@type": "PostalAddress",
@@ -283,49 +283,25 @@ export const dataForMetaTags = {
         "url": appUrls.home,
         "inLanguage": "pl-PL",
         "name": "Naprawa RTV i AGD ✔️ Serwis w Przemyślu ☎️ 790258612" + " - " + "NaprawaPrzemysl",
+        "isPartOf": { "@id": appUrls.home + "#website" },
+        "primaryImageOfPage": { "id": appUrls.home + "#primaryimage" },
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
-        "isPartOf": {
-          "@type": "WebSite",
-          "@id": appUrls.home + "#website",
-          "url": appUrls.home,
-          "name": "NaprawaPrzemysl",
-        },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "id": appUrls.home + "#primaryimage",
-          "url": imageUrls.serwis,
-        },
       },
-
-
-
       website: {
-
         "@type": "WebSite",
-        "name": serwis.name,  //   "name": "Serwis RTV i AGD NaprawaPrzemyśl",
-        "alternateName": "Serwis RTV i AGD w Przemyślu",
+        "id": appUrls.home + "#website",
         "url": appUrls.home,
-        "@id": appUrls.home + "#website",
-        "sameAs": [serwis.url.mapaGoogle, serwis.url.facebook]
+        "name": "NaprawaPrzemysl",
       },
       imageObject: {
-
         "@type": "ImageObject",
-        "author": {
-          "@type": "LocalBusiness",   // "@type": "Organization",
-          "name": serwis.name,  //   "name": "Serwis RTV i AGD NaprawaPrzemyśl"
-        },
-        "contentLocation": {
-          "@type": "Place",
-          "name": "Przemyśl"
-        },
-        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-rtv-i-agd-naprawa-przemysl.webp",
-        "datePublished": "2025-05-16",
-        "description": "Serwis RTV i AGD w Przemyślu",
-        "name": serwis.name,   //  "name": "Serwis RTV i AGD",
+        "id": appUrls.home + "#primaryimage",
+        "url": imageUrls.serwis,
       },
+
+
       breadcrumbList,
     }
   },
