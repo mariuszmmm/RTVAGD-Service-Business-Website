@@ -2,6 +2,8 @@ import { serwis } from './serwis';
 import { appUrls, imageUrls } from './urls';
 
 const shortName = "Serwis RTV i AGD Przemyśl";
+const datePublished = datePublished;
+const dateModified = dateModified;
 
 export const address = {
   "@type": "PostalAddress",
@@ -281,8 +283,8 @@ export const dataForMetaTags = {
         "url": appUrls.home,
         "inLanguage": "pl-PL",
         "name": "Naprawa RTV i AGD ✔️ Serwis w Przemyślu ☎️ 790258612" + " - " + "NaprawaPrzemysl",
-        "datePublished": new Date("2024-07-03").toISOString(),
-        "dateModified": new Date().toISOString(),
+        "datePublished": datePublished,
+        "dateModified": dateModified,
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
         "isPartOf": {
           "@type": "WebSite",
@@ -587,8 +589,8 @@ export const dataForMetaTags = {
         "url": appUrls.naprawa_pralek,
         "inLanguage": "pl-PL",
         "name": "Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790 258 612" + " | " + "NaprawaPrzemysl",
-        "datePublished": new Date("2024-07-03").toISOString(),
-        "dateModified": new Date().toISOString(),
+        "datePublished": datePublished,
+        "dateModified": dateModified,
         "description": "Kompleksowa naprawa pralek w Przemyślu – awarie pralek wszystkich marek, szybki dojazd do klienta, części oryginalne i gwarancja. Zadzwoń i umów wizytę!",
         "isPartOf": {
           "@type": "WebSite",
@@ -993,8 +995,8 @@ export const dataForMetaTags = {
         "url": appUrls.naprawa_zmywarek,
         "inLanguage": "pl-PL",
         "name": "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612" + " | " + "NaprawaPrzemysl",
-        "datePublished": new Date("2024-07-03").toISOString(),
-        "dateModified": new Date().toISOString(),
+        "datePublished": datePublished,
+        "dateModified": dateModified,
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
         "isPartOf": {
           "@type": "WebSite",
