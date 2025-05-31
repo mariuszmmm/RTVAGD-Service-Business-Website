@@ -392,16 +392,16 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           /> */}
         </>
       )}
-      {/* {(path === "/o-mnie/" || path === "/opinie/" || path === "/kontakt/") && (
+      {(path === "/kontakt/") && (
         <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@graph": [breadcrumbList]
+              "@graph": [website, webpage]
             })
           }}
         />
-      )} */}
+      )}
     </Head>
   );
 };

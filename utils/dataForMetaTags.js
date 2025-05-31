@@ -3,7 +3,7 @@ import { appUrls, imageUrls } from './urls';
 
 const shortName = "Serwis RTV i AGD Przemyśl";
 const datePublished = new Date("2024-07-03").toISOString();
-const dateModified = new Date("2025-05-31").toISOString();
+const dateModified = new Date("2025-05-31T14:27:53+02:00");
 
 export const address = {
   "@type": "PostalAddress",
@@ -315,6 +315,26 @@ export const dataForMetaTags = {
       appleMobileWebAppTitle: `${shortName} - kontakt`,
     },
     schema: {
+
+      website: {
+        "@type": "WebSite",
+        "id": appUrls.home + "#website",
+        "url": appUrls.home,
+        "name": "NaprawaPrzemysl",
+      },
+      webpage: {
+        "@type": "WebPage",
+        "id": appUrls.kontakt + "#webpage",
+        "url": appUrls.kontakt,
+        "inLanguage": "pl-PL",
+        "name": "Kontakt ✔️ Serwis RTV AGD w Przemyślu ☎️ 790 258 612" + " | " + "NaprawaPrzemysl",
+        "isPartOf": { "@id": appUrls.home + "#website" },
+        "datePublished": datePublished,
+        "dateModified": dateModified,
+        "description": "Skontaktuj się pod numerem 790 258 612 lub odwiedź nas w Przemyślu, ul. Generała Sowińskiego 2. Szybkie, fachowe usługi naprawy sprzętu RTV i AGD.",
+      },
+
+
       breadcrumbList: {
         ...breadcrumbList,
         "@id": appUrls.kontakt + "#breadcrumblist",
@@ -939,7 +959,7 @@ export const dataForMetaTags = {
           },
           {
             "@type": "Question",
-            "name": "Czy seriws udziela gwarancji na naprawę zmywarki?",
+            "name": "Czy serwis udziela gwarancji na naprawę zmywarki?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Na każdą wykonaną naprawę udzielana jest gwarancja. Używam oryginalnych lub wysokiej jakości zamienników części, dzięki czemu usługi są niezawodne i objęte gwarancją."
