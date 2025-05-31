@@ -85,7 +85,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             title="Naprawa pralek Przemyśl ✔️ Serwis RTV i AGD | Szybka naprawa i gwarancja"
             src={imageUrls.pralka}
             alt="Naprawa pralek w Przemyślu. Pralka."
-            // loading='lazy'
+            loading='lazy'
             fill
             // srcSet={`${imageUrls.pralka_300} 500w,
             // ${imageUrls.pralka} 1000w`}
