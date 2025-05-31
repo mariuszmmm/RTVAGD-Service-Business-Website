@@ -2,8 +2,8 @@ import { serwis } from './serwis';
 import { appUrls, imageUrls } from './urls';
 
 const shortName = "Serwis RTV i AGD Przemyśl";
-const datePublished = new Date("2024-07-03").toISOString();
-const dateModified = new Date().toISOString();
+const datePublished = new Date("2024-07-03").toISOString().replace('Z', '+00:00');;
+const dateModified = new Date().toISOString().replace('Z', '+00:00');;
 
 export const address = {
   "@type": "PostalAddress",
