@@ -44,26 +44,15 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             />
           </Emoticon> Przemyśl
         </Title>
-        <Section>
-          <StyledPhoto>
-            <Image
-              title="Naprawa pralek Przemyśl ✔️ Serwis RTV i AGD | Szybka naprawa i gwarancja"
-              src={imageUrls.pralka}
-              alt="Naprawa pralek w Przemyślu. Pralka."
-              // loading='lazy'
-              fill
-              // srcSet={`${imageUrls.pralka_300} 500w,
-              // ${imageUrls.pralka} 1000w`}
-              sizes="(max-width: 500px) 500px, 1000px"
-            />
-          </StyledPhoto>
 
+        <Section>
           <SubTitle>Szybka i&nbsp;rzetelna naprawa oraz serwis pralek wszystkich marek w Przemyślu i&nbsp;okolicach</SubTitle>
           <StyledText>
             Awaria pralki może utrudnić codzienne obowiązki domowe. Dlatego mój <strong>serwis pralek</strong> w&nbsp;Przemyślu oferuje szybką diagnostykę oraz fachową naprawę urządzeń wszystkich marek.<br />
             Korzystam z&nbsp;profesjonalnych narzędzi i&nbsp;oryginalnych części zamiennych, aby przywrócić pełną funkcjonalność Twojej pralki już podczas pierwszej wizyty. Zapewniam gwarancję na wykonaną naprawę, dzięki czemu masz pewność satysfakcji i&nbsp;bezproblemowego użytkowania sprzętu. Specjalizuję się w serwisie i&nbsp;naprawie pralek marek Bosch, Electrolux, Samsung, Whirlpool oraz wielu innych, zawsze gwarantując najwyższą jakość usług i&nbsp;szybkie terminy realizacji.
           </StyledText>
         </Section>
+
         <Section>
           <SubTitle>
             Najczęstsze usterki pralek
@@ -77,12 +66,12 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             <li><b>Nieprawidłowe dozowanie detergentu</b> – najczęściej wynika z nadmiernego użycia środka piorącego, co prowadzi do powstawania nadmiernej piany i niedokładnego wypłukania ubrań.</li>
           </StyledText>
         </Section>
+
         <Section>
           <SubTitle>
             Proces naprawy pralki krok po kroku
           </SubTitle>
           <StyledText as="ol" >
-
             <li><strong>Kontakt i konsultacja:</strong> Opowiedz o usterce przez telefon, ustalimy dogodne terminy i zakres usługi.</li>
             <li><strong>Diagnostyka na miejscu:</strong> Dokonuję precyzyjnej diagnostyki urządzenia przy użyciu profesjonalnych narzędzi pomiarowych, identyfikując przyczynę awarii.</li>
             <li><strong>Naprawa lub wymiana części:</strong> Natychmiast usuwam usterkę; w razie potrzeby montuję oryginalne części zamienne.</li>
@@ -90,6 +79,20 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             <li><strong>Gwarancja i porady:</strong> Udzielam gwarancji na wykonaną usługę i doradzam, jak dbać o pralkę, by uniknąć podobnych problemów.</li>
           </StyledText>
         </Section>
+
+        <StyledPhoto>
+          <Image
+            title="Naprawa pralek Przemyśl ✔️ Serwis RTV i AGD | Szybka naprawa i gwarancja"
+            src={imageUrls.pralka}
+            alt="Naprawa pralek w Przemyślu. Pralka."
+            loading='lazy'
+            fill
+            // srcSet={`${imageUrls.pralka_300} 500w,
+            // ${imageUrls.pralka} 1000w`}
+            sizes="(max-width: 500px) 500px, 1000px"
+          />
+        </StyledPhoto>
+
         <Section>
           <SubTitle>
             Dlaczego warto wybrać mój serwis?
