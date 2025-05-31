@@ -4,8 +4,12 @@ import { appUrls, imageUrls } from './urls';
 const shortName = "Serwis RTV i AGD Przemyśl";
 const datePublished = new Date("2024-07-03").toISOString();
 // const dateModified = new Date("2025-05-31T14:27:53+02:00");
-// const dateModified = process.env.NEXT_PUBLIC_BUILD_DATE || new Date("2025-05-30T14:27:53+02:00").toISOString();
-const dateModified = dateModified || new Date().toISOString();
+const date = new Date().toISOString().slice(0, 10); // format ISO 8601 bez milisekund
+
+// const dateModified = process.env.NEXT_PUBLIC_BUILD_DATE || date;
+const dateModified = date;
+
+
 
 
 export const address = {
