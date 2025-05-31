@@ -1,18 +1,11 @@
 import { serwis } from './serwis';
 import { appUrls, imageUrls } from './urls';
 
-const shortName = "Serwis RTV i AGD Przemyśl";
 const datePublished = new Date("2024-07-03").toISOString();
-// const dateModified = new Date("2025-05-31T14:27:53+02:00");
-const date = new Date().toISOString().slice(0, 10); // format ISO 8601 bez milisekund
-const test = new Date()
-// const dateModified = process.env.NEXT_PUBLIC_BUILD_DATE || date;
-const dateModified = new Date(date).toISOString(); // format ISO 8601 bez milisekund
+const date = new Date().toISOString().slice(0, 10);
+const dateModified = process.env.NEXT_PUBLIC_BUILD_DATE || new Date(date).toISOString();
 
-
-console.log("date", date, test);
-console.log("test", test);
-
+const shortName = "Serwis RTV i AGD Przemyśl";
 
 export const address = {
   "@type": "PostalAddress",
