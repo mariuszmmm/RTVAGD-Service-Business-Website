@@ -450,7 +450,7 @@ export const dataForMetaTags = {
       },
       product: {
 
-        "@type": "Product",
+        // "@type": "Product",
         // "@id": appUrls.naprawa_pralek + "#product",
         "name": "Naprawa pralek",
         // "image": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
@@ -525,7 +525,7 @@ export const dataForMetaTags = {
         // },
       },
       faqPage: {
-        "@type": "FAQPage",
+        // "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
@@ -559,44 +559,32 @@ export const dataForMetaTags = {
         "name": serwis.name,   // "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
 
+
+      website: {
+        "@type": "WebSite",
+        "id": appUrls.home + "#website",
+        "url": appUrls.home,
+        "name": "NaprawaPrzemysl",
+      },
+      imageObject: {
+        "@type": "ImageObject",
+        "id": appUrls.naprawa_pralek + "#primaryimage",
+        "url": imageUrls.pralka,
+      },
       webpage: {
         "@type": "WebPage",
         "id": appUrls.naprawa_pralek + "#webpage",
         "url": appUrls.naprawa_pralek,
         "inLanguage": "pl-PL",
         "name": "Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790 258 612" + " | " + "NaprawaPrzemysl",
+        "isPartOf": { "@id": appUrls.home + "#website" },
+        "primaryImageOfPage": { "id": appUrls.naprawa_pralek + "#primaryimage" },
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Kompleksowa naprawa pralek w Przemyślu – awarie pralek wszystkich marek, szybki dojazd do klienta, części oryginalne i gwarancja. Zadzwoń i umów wizytę!",
-        "isPartOf": {
-          "@type": "WebSite",
-          "@id": appUrls.home + "#website",
-          "url": appUrls.home,
-          "name": "NaprawaPrzemysl",
-        },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "id": appUrls.naprawa_pralek + "#primaryimage",
-          "url": imageUrls.pralka,
-        },
       },
 
 
-      imageObject: {
-        "@type": "ImageObject",
-        "author": {
-          "@type": "LocalBusiness",  // "@type": "Organization",
-          "name": serwis.name,   // "name": "Serwis RTV i AGD NaprawaPrzemyśl"
-        },
-        "contentLocation": {
-          "@type": "Place",
-          "name": "Przemyśl"
-        },
-        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-pralek-przemysl-naprawa-pralki.png",
-        "datePublished": "2025-05-16",
-        "description": "Profesjonalna naprawa pralek automatycznych w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
-        "name": "Naprawa Pralek - " + serwis.name,  // "name": "Naprawa pralek w Przemyślu",
-      },
       breadcrumbList: {
         ...breadcrumbList,
         "@id": appUrls.naprawa_pralek + "#breadcrumblist",
@@ -872,7 +860,7 @@ export const dataForMetaTags = {
         },
       },
       product: {
-        "@type": "Product",
+        // "@type": "Product",
         // "@id": appUrls.naprawa_zmywarek + "#product",
         "name": "Naprawa zmywarek",  // "name": "Naprawa zmywarek Przemyśl",
         // "image": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
@@ -931,7 +919,7 @@ export const dataForMetaTags = {
         // },
       },
       faqPage: {
-        "@type": "FAQPage",
+        // "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
@@ -965,44 +953,31 @@ export const dataForMetaTags = {
         "name": serwis.name,   // "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
 
+
+      website: {
+        "@type": "WebSite",
+        "id": appUrls.home + "#website",
+        "url": appUrls.home,
+        "name": "NaprawaPrzemysl",
+      },
+      imageObject: {
+        "@type": "ImageObject",
+        "id": appUrls.naprawa_zmywarek + "#primaryimage",
+        "url": imageUrls.zmywarka,
+      },
       webpage: {
         "@type": "WebPage",
         "id": appUrls.naprawa_zmywarek + "#webpage",
         "url": appUrls.naprawa_zmywarek,
         "inLanguage": "pl-PL",
         "name": "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612" + " | " + "NaprawaPrzemysl",
+        "isPartOf": { "@id": appUrls.home + "#website" },
+        "primaryImageOfPage": { "id": appUrls.naprawa_zmywarek + "#primaryimage" },
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
-        "isPartOf": {
-          "@type": "WebSite",
-          "@id": appUrls.home + "#website",
-          "url": appUrls.home,
-          "name": "NaprawaPrzemysl",
-        },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "id": appUrls.naprawa_zmywarek + "#primaryimage",
-          "url": imageUrls.zmywarka,
-        },
       },
 
-
-      imageObject: {
-        "@type": "ImageObject",
-        "author": {
-          "@type": "LocalBusiness",  // "@type": "Organization",
-          "name": serwis.name,   //  "name": "Serwis RTV i AGD NaprawaPrzemyśl"
-        },
-        "contentLocation": {
-          "@type": "Place",
-          "name": "Przemyśl"
-        },
-        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-zmywarek-przemysl-naprawa-zmywarki.webp",
-        "datePublished": "2025-05-16",
-        "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części.",
-        "name": "Naprawa Zmywarek - " + serwis.name,   //   "name": "Naprawa zmywarek w Przemyślu",
-      },
       breadcrumbList: {
         ...breadcrumbList,
         "@id": appUrls.naprawa_zmywarek + "#breadcrumblist",

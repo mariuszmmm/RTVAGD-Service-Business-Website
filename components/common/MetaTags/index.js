@@ -145,6 +145,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
   };
 
   const productSchema = {
+
     ...product,
     // ...(path === "/naprawa-telewizorow/" && getReview("naprawa telewizora")),
     // ...(path === "/naprawa-ekspresow/" && getReview("naprawa ekspresu")),
@@ -256,17 +257,30 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [webpage, productSchema, faqPage
+                "@graph": [website, imageObject, webpage
                   // breadcrumbList,  
                 ]
               })
             }}
           />
-          {/* <script type="application/ld+json"
-            dangerouslySetInnerHTML={{ 
-              __html: JSON.stringify(productSchema)
+          <script type="application/ld+json"    // wyłączone 15.05.2025
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                ...faqPage
+              })
             }}
-          /> */}
+          />
+          <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org/",
+                "@type": "Product",
+                ...productSchema
+              })
+            }}
+          />
           {/* <script type="application/ld+json"   // wyłączone 15.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(imageObject)
@@ -335,7 +349,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [webpage, website, imageObject
+                "@graph": [website, imageObject, webpage
                   // breadcrumbList, localBusinessSchema, productSchema
                 ]
               })
