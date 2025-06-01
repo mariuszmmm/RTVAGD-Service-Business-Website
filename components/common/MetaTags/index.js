@@ -404,6 +404,11 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           }}
         />
       )}
+      <script type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbList)
+        }}
+      />
     </Head>
   );
 };
