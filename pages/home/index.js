@@ -105,9 +105,9 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
         <HeroHeader >
           <HeroTitle
             lang="pl"
-            aria-label="Profesjonalna naprawa pralek, suszarek, zmywarek, telewizorów i ekspresów do kawy w Przemyślu"
+          // aria-label="Naprawa i serwis pralek, suszarek, zmywarek, telewizorów i ekspresów do kawy w Przemyślu"
           >
-            Profesjonalna naprawa{" "}<br />
+            Naprawa i serwis<br />
             <StyledLink
               href="/naprawa-pralek"
               title='Naprawa pralek w Przemyślu'
@@ -131,13 +131,12 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
             >
               zmywarek
             </StyledLink>
-            {", "}
+            {", "}<br />
             <StyledLink
               href="/naprawa-telewizorow"
               title='Naprawa telewizorów w Przemyślu'
               $standardText
             >
-              <br />
               telewizorów
             </StyledLink>
             {" i "}
@@ -147,8 +146,7 @@ const Home = ({ rating, ratingsTotal, reviews }) => {
               $standardText
             >
               ekspresów do&nbsp;kawy
-            </StyledLink>
-            <br />
+            </StyledLink><br />
             w&nbsp;Przemyślu
           </HeroTitle>
           <HeroText> Rzetelnie, szybko i&nbsp;skutecznie!</HeroText>

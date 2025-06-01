@@ -7,7 +7,7 @@ import { serwis } from '../../../utils/serwis';
 import { localBusiness, siteNavigationElements } from '../../../utils/dataForMetaTags';
 
 const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
-  const [ogTime, setOgTime] = useState(getCurrentDateTimeISOWithOffset());
+  // const [ogTime, setOgTime] = useState(getCurrentDateTimeISOWithOffset());
   const {
     title,
     canonical,
@@ -15,6 +15,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     siteName,
     keywords,
     appleMobileWebAppTitle,
+    type,
   } = page.metaTags;
   const {
     localBusiness,
@@ -28,6 +29,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     imageObject,
     breadcrumbList,
   } = page.schema;
+
 
   // const selectedReviews = reviews?.filter((review, index) => index < 2);
   const getReviews = (selectedReviewNumber) => {
@@ -208,24 +210,24 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <link rel="canonical" href={canonical} />
       <meta name="description" content={description} />
       <meta property="og:locale" content="pl_PL" />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:updated_time" content={ogTime} />
+      {/* <meta property="og:updated_time" content={ogTime} /> */}
       <meta property="og:image" content={`${appUrls.home}images/share_1.webp`} />
-      <meta property="og:image:secure_url" content={`${appUrls.home}images/share_1.webp`} />
-      <meta property="og:image:width" content="931" />
-      <meta property="og:image:height" content="497" />
-      <meta property="og:image:alt" content="Serwis RTV i AGD Przemyśl" />
-      <meta property="og:image:type" content="image/webp" />
+      {/* <meta property="og:image:secure_url" content={`${appUrls.home}images/share_1.webp`} /> */}
+      {/* <meta property="og:image:width" content="931" />
+      <meta property="og:image:height" content="497" /> */}
+      {/* <meta property="og:image:alt" content="Serwis RTV i AGD Przemyśl" />
+      <meta property="og:image:type" content="image/webp" /> */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${appUrls.home}images/share_1.webp`} />
-      <meta name="keywords" content={keywords} />
-      <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} />
+      {/* <meta name="keywords" content={keywords} /> */}
+      {/* <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} /> */}
 
 
       {(path === "/naprawa-pralek/" || path === "/naprawa-zmywarek/") && (

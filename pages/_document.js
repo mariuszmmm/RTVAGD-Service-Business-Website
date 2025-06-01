@@ -39,7 +39,9 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="https://naprawaprzemysl.pl/images/favicon.ico" />
           <link rel="apple-touch-icon" sizes="180x180" href="https://naprawaprzemysl.pl/images/apple-touch-icon.png" />
           <link rel="manifest" href="https://naprawaprzemysl.pl/site.webmanifest" />
-          <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+          {/* <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" /> */}
+          <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
           <meta property="fb:app_id" content="100063811592941" />
           <meta httpEquiv="Content-Language" content="pl" />
 

@@ -5,6 +5,13 @@ const datePublished = new Date("2024-07-03").toISOString();
 const date = new Date().toISOString().slice(0, 10);
 const dateModified = process.env.NEXT_PUBLIC_BUILD_DATE || new Date(date).toISOString();
 
+// const test = "Naprawa suszarek ✔️ Serwis Przemyśl ☎️ 790 258 612 | naprawaprzemysl.pl";
+
+
+// const test = "Serwis i naprawa pralek w Przemyślu ✔️ | naprawaprzemysl.pl";
+// console.log(test, test?.length);
+
+
 const shortName = "Serwis RTV i AGD Przemyśl";
 
 export const address = {
@@ -141,10 +148,11 @@ export const siteNavigationElements = [
 export const dataForMetaTags = {
   home: {
     metaTags: {
-      title: "Naprawa RTV i AGD ✔️ Serwis w Przemyślu ☎️ 790258612",
+      title: "Naprawa RTV i AGD ✔️ Serwis w Przemyślu - naprawaprzemysl.pl",
       canonical: appUrls.home,
       description: "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
-      siteName: shortName,
+      type: "website",
+      siteName: "naprawaprzemysl.pl",
       keywords: "naprawa AGD, serwis sprzętu RTV, Przemyśl, naprawa sprzętu, serwis Przemyśl, naprawa urządzeń domowych, serwis AGD, serwis RTV, naprawa sprzętu AGD",
       appleMobileWebAppTitle: shortName,
     },
@@ -284,7 +292,7 @@ export const dataForMetaTags = {
         "id": appUrls.home + "#webpage",
         "url": appUrls.home,
         "inLanguage": "pl-PL",
-        "name": "Naprawa RTV i AGD ✔️ Serwis w Przemyślu ☎️ 790258612" + " - " + "NaprawaPrzemysl",
+        "name": "Naprawa RTV i AGD ✔️ Serwis w Przemyślu ☎️ 790258612" + " - " + "naprawaprzemysl.pl",
         "isPartOf": { "@id": appUrls.home + "#website" },
         "primaryImageOfPage": { "id": appUrls.home + "#primaryimage" },
         "datePublished": datePublished,
@@ -295,7 +303,7 @@ export const dataForMetaTags = {
         "@type": "WebSite",
         "id": appUrls.home + "#website",
         "url": appUrls.home,
-        "name": "NaprawaPrzemysl",
+        "name": "naprawaprzemysl.pl",
       },
       imageObject: {
         "@type": "ImageObject",
@@ -312,7 +320,8 @@ export const dataForMetaTags = {
       title: "Kontakt ✔️ Serwis RTV AGD w Przemyślu ☎️ 790 258 612",
       canonical: appUrls.kontakt,
       description: "Skontaktuj się pod numerem 790 258 612 lub odwiedź nas w Przemyślu, ul. Generała Sowińskiego 2. Szybkie, fachowe usługi naprawy sprzętu RTV i AGD.",
-      siteName: `${shortName} - kontakt`,
+      type: "article",
+      siteName: "naprawaprzemysl.pl",
       keywords: "kontakt naprawa AGD, kontakt serwis Przemyśl, naprawa sprzętu AGD kontakt, naprawa pralek kontakt, naprawa RTV kontakt, naprawa ekspresów kontakt, kontakt serwis RTV AGD",
       appleMobileWebAppTitle: `${shortName} - kontakt`,
     },
@@ -322,14 +331,14 @@ export const dataForMetaTags = {
         "@type": "WebSite",
         "id": appUrls.home + "#website",
         "url": appUrls.home,
-        "name": "NaprawaPrzemysl",
+        "name": "naprawaprzemysl.pl",
       },
       webpage: {
         "@type": "WebPage",
         "id": appUrls.kontakt + "#webpage",
         "url": appUrls.kontakt,
         "inLanguage": "pl-PL",
-        "name": "Kontakt ✔️ Serwis RTV AGD w Przemyślu ☎️ 790 258 612" + " | " + "NaprawaPrzemysl",
+        "name": "Kontakt ✔️ Serwis RTV AGD w Przemyślu ☎️ 790 258 612" + " | " + "naprawaprzemysl.pl",
         "isPartOf": { "@id": appUrls.home + "#website" },
         "datePublished": datePublished,
         "dateModified": dateModified,
@@ -357,7 +366,8 @@ export const dataForMetaTags = {
       title: "Informacje o serwisie RTV i AGD w Przemyślu, ul.Sowińskiego 2.",
       canonical: appUrls.o_mnie,
       description: "Dowiedz się o moim doświadczeniu w naprawie sprzętu RTV i AGD oraz zaangażowaniu w najwyższej jakości usługi serwisowe w Przemyślu.",
-      siteName: `${shortName} - o mnie`,
+      type: "article",
+      siteName: "naprawaprzemysl.pl",
       keywords: "naprawa AGD Przemyśl, serwis sprzętu RTV, doświadczenie w naprawie AGD, profesjonalna naprawa pralek, naprawa suszarek, naprawa urządzeń domowych, naprawa sprzętu RTV, serwis pralek Przemyśl, naprawa telewizorów Przemyśl, serwis ekspresów do kawy",
       appleMobileWebAppTitle: `${shortName} - o mnie`,
     },
@@ -383,7 +393,8 @@ export const dataForMetaTags = {
       title: "Poznaj opinie klientów ✔️ Serwis RTV AGD w Przemyślu",
       canonical: appUrls.opinie,
       description: "Sprawdź opinie klientów serwisu RTV i AGD w Przemyślu. Dowiedz się, dlaczego tak wielu poleca moje usługi.",
-      siteName: `${shortName} - opinie`,
+      type: "article",
+      siteName: "naprawaprzemysl.pl",
       keywords: "opinie naprawa AGD, opinie serwis RTV, recenzje naprawy pralek, opinie naprawa zmywarek, opinie naprawa ekspresów, doświadczenia z naprawą AGD, opinie naprawa telewizorów",
       appleMobileWebAppTitle: `${shortName} - opinie`,
     },
@@ -405,10 +416,11 @@ export const dataForMetaTags = {
   },
   naprawa_pralek: {
     metaTags: {
-      title: "Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790 258 612",
+      title: "Serwis i naprawa pralek w Przemyślu ✔️ | naprawaprzemysl.pl",
       canonical: appUrls.naprawa_pralek,
       description: "Kompleksowa naprawa pralek w Przemyślu – awarie pralek wszystkich marek, szybki dojazd do klienta, części oryginalne i gwarancja. Zadzwoń i umów wizytę!",
-      siteName: `${shortName} - naprawa pralek`,
+      type: "article",
+      siteName: "naprawaprzemysl.pl",
       keywords: "naprawa pralek, serwis pralek Przemyśl, naprawa pralek w Przemyślu, naprawa pralki Przemyśl, naprawa pralek Przemyśl, awaria pralki",
       appleMobileWebAppTitle: `${shortName} - naprawa pralek`,
     },
@@ -586,7 +598,7 @@ export const dataForMetaTags = {
         "@type": "WebSite",
         "id": appUrls.home + "#website",
         "url": appUrls.home,
-        "name": "NaprawaPrzemysl",
+        "name": "naprawaprzemysl.pl",
       },
       imageObject: {
         "@type": "ImageObject",
@@ -598,7 +610,7 @@ export const dataForMetaTags = {
         "id": appUrls.naprawa_pralek + "#webpage",
         "url": appUrls.naprawa_pralek,
         "inLanguage": "pl-PL",
-        "name": "Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790 258 612" + " | " + "NaprawaPrzemysl",
+        "name": "Naprawa pralek ✔️ Serwis Przemyśl ☎️ 790 258 612" + " | " + "naprawaprzemysl.pl",
         "isPartOf": { "@id": appUrls.home + "#website" },
         "primaryImageOfPage": { "id": appUrls.naprawa_pralek + "#primaryimage" },
         "datePublished": datePublished,
@@ -627,7 +639,8 @@ export const dataForMetaTags = {
       title: "Naprawa suszarek ✔️ Serwis Przemyśl ☎️ 790 258 612 | naprawaprzemysl.pl",
       canonical: appUrls.naprawa_suszarek,
       description: "Specjalistyczny serwis suszarek w Przemyślu – szybka diagnoza i naprawa u klienta lub w warsztacie. Dojazd w cenie, oryginalne części i gwarancja. Umów wizytę!",
-      siteName: `${shortName} - naprawa suszarek`,
+      type: "article",
+      siteName: "naprawaprzemysl.pl",
       keywords: "naprawa suszarek, serwis suszarek Przemyśl, naprawa suszarek w Przemyślu, naprawa suszarki Przemyśl, naprawa suszarek Przemyśl, awaria suszarki",
       appleMobileWebAppTitle: `${shortName} - naprawa suszarek`,
     },
@@ -819,13 +832,14 @@ export const dataForMetaTags = {
       // title: "Naprawa zmywarek Przemyśl ✔️ Serwis RTV i AGD | Szybka diagnoza i gwarancja",
       // canonical: appUrls.naprawa_zmywarek,
       // description: "Profesjonalny serwis i naprawa zmywarek w Przemyślu i okolicach. Szybka diagnostyka, naprawa z dojazdem, gwarancja. Bosch, Electrolux, Beko. ☎ 790 258 612",
-      // siteName: `${shortName} - naprawa zmywarek`,
+      // type: "article",
       // keywords: "naprawa zmywarek, serwis zmywarek Przemyśl, naprawa zmywarki Przemyśl, naprawa zmywarki w Przemyślu, naprawa zmywarek Przemyśl, awaria zmywarki",
       // appleMobileWebAppTitle: `${shortName} - naprawa zmywarek`,
-      title: "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612",
+      title: "Serwis i naprawa zmywarek Przemyśl | naprawaprzemysl.pl",
       canonical: appUrls.naprawa_zmywarek,
-      description: "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
-      siteName: `${shortName} - naprawa zmywarek`,
+      description: "Profesjonalny serwis i naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
+      type: "article",
+      siteName: "naprawaprzemysl.pl",
       keywords: "naprawa zmywarek, serwis zmywarek Przemyśl, naprawa zmywarki Przemyśl, naprawa zmywarki w Przemyślu, naprawa zmywarek Przemyśl, awaria zmywarki",
       appleMobileWebAppTitle: `${shortName} - naprawa zmywarek`,
     },
@@ -980,7 +994,7 @@ export const dataForMetaTags = {
         "@type": "WebSite",
         "id": appUrls.home + "#website",
         "url": appUrls.home,
-        "name": "NaprawaPrzemysl",
+        "name": "naprawaprzemysl.pl",
       },
       imageObject: {
         "@type": "ImageObject",
@@ -992,7 +1006,7 @@ export const dataForMetaTags = {
         "id": appUrls.naprawa_zmywarek + "#webpage",
         "url": appUrls.naprawa_zmywarek,
         "inLanguage": "pl-PL",
-        "name": "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612" + " | " + "NaprawaPrzemysl",
+        "name": "Naprawa zmywarek ✔️ Serwis Przemyśl ☎️ 790 258 612" + " | " + "naprawaprzemysl.pl",
         "isPartOf": { "@id": appUrls.home + "#website" },
         "primaryImageOfPage": { "id": appUrls.naprawa_zmywarek + "#primaryimage" },
         "datePublished": datePublished,
@@ -1020,7 +1034,8 @@ export const dataForMetaTags = {
       title: "Naprawa ekspresów ✔️ Serwis Przemyśl ☎️ 790 258 612",
       canonical: appUrls.naprawa_ekspresow,
       description: "Profesjonalna naprawa ekspresów do kawy w Przemyślu. Szybka pomoc, najnowsze technologie i oryginalne części. Skontaktuj się ze mną już dziś.",
-      siteName: `${shortName} - naprawa ekspresów`,
+      type: "article",
+      siteName: "naprawaprzemysl.pl",
       keywords: "naprawa ekspresów do kawy, serwis ekspresów Przemyśl, naprawa ekspresu do kawy Przemyśl, naprawa ekspresów w Przemyślu, naprawa ekspresu Przemyśl, awaria ekspresu do kawy",
       appleMobileWebAppTitle: `${shortName} - naprawa ekspresów`,
     },
@@ -1213,7 +1228,8 @@ export const dataForMetaTags = {
       title: "Naprawa telewizorów ✔️ Serwis Przemyśl ☎️ 790 258 612",
       canonical: appUrls.naprawa_telewizorow,
       description: "Profesjonalna naprawa telewizorów w Przemyślu. Szybka pomoc, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś!",
-      siteName: `${shortName} - naprawa telewizorów`,
+      type: "article",
+      siteName: "naprawaprzemysl.pl",
       keywords: "naprawa telewizorów, serwis telewizorów Przemyśl, naprawa telewizora w Przemyślu, naprawa telewizorów LCD, naprawa telewizorów LED, serwis telewizora Przemyśl",
       appleMobileWebAppTitle: `${shortName} - naprawa telewizorów`,
     },
@@ -1444,3 +1460,5 @@ export const dataForMetaTags = {
     }
   },
 };
+
+
