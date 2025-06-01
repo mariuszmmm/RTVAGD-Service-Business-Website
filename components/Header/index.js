@@ -42,16 +42,16 @@ const Header = ({ rating }) => {
   return (
     <HeaderWrapper>
       <HeaderContainer>
-        <Logo href="/" title="naprawaprzemysl.pl">
+        <Logo href="/" >
           <Emoticon $logo>
             <Image
               src={imageUrls.logo}
-              alt="Serwis RTV i AGD logo | naprawaprzemysl.pl"
+              alt="logo | naprawaprzemysl.pl"
               loading="lazy"
               fill
             />
           </Emoticon>
-          Serwis RTV&nbsp;i&nbsp;AGD</Logo>
+          naprawaprzemysl.pl</Logo>
         <nav>
           <NavList>
             <ListItem>
