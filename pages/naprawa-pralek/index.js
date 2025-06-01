@@ -34,7 +34,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
       />
       <Container>
         <Title>
-          Naprawa pralek
+          Naprawa pralek Przemyśl
           <Emoticon>
             <Image
               src={imageUrls.logo}
@@ -42,7 +42,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
               loading="lazy"
               fill
             />
-          </Emoticon> Przemyśl
+          </Emoticon>
         </Title>
 
         <Section>

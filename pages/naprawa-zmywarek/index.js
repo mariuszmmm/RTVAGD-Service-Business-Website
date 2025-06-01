@@ -32,7 +32,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
       />
       <Container>
         <Title>
-          Naprawa zmywarek
+          Naprawa zmywarek Przemyśl
           <Emoticon>
             <Image
               src={imageUrls.logo}
@@ -40,7 +40,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
               loading="lazy"
               fill
             />
-          </Emoticon> Przemyśl
+          </Emoticon>
         </Title>
         <Section>
           <StyledPhoto>
