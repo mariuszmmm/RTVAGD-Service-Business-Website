@@ -348,7 +348,6 @@ export const dataForMetaTags = {
 
       breadcrumbList: {
         ...breadcrumbList,
-        "@id": appUrls.kontakt + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -374,7 +373,6 @@ export const dataForMetaTags = {
     schema: {
       breadcrumbList: {
         ...breadcrumbList,
-        "@id": appUrls.o_mnie + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -401,7 +399,6 @@ export const dataForMetaTags = {
     schema: {
       breadcrumbList: {
         ...breadcrumbList,
-        "@id": appUrls.opinie + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -621,7 +618,6 @@ export const dataForMetaTags = {
 
       breadcrumbList: {
         ...breadcrumbList,
-        "@id": appUrls.naprawa_pralek + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -814,7 +810,6 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
-        "@id": appUrls.naprawa_suszarek + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -1016,7 +1011,6 @@ export const dataForMetaTags = {
 
       breadcrumbList: {
         ...breadcrumbList,
-        "@id": appUrls.naprawa_zmywarek + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -1210,7 +1204,6 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
-        "@id": appUrls.naprawa_ekspresow + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -1446,7 +1439,6 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
-        "@id": appUrls.naprawa_telewizorow + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
