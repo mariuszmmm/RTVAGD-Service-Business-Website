@@ -45,9 +45,9 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
         <Section>
           <StyledPhoto>
             <Image
-              title="Naprawa zmywarek ✔️ Serwis RTV i AGD | Szybka naprawa i gwarancja"
+              title="Naprawa zmywarek Przemyśl"
               src={imageUrls.zmywarka}
-              alt="Naprawa zmywarek w Przemyślu. Zmywarka do naczyń."
+              alt="naprawa zmywarek"
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.zmywarka_300} 500w,
