@@ -322,7 +322,7 @@ export const dataForMetaTags = {
 
 
 
-      // breadcrumbList,
+      breadcrumbList,
     }
   },
   kontakt: {
