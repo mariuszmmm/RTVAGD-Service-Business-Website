@@ -303,7 +303,6 @@ export const dataForMetaTags = {
         "dateModified": dateModified,
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
 
-        "breadcrumb": { "@id": appUrls.home + "#breadcrumb" },
       },
       website: {
         "@type": "WebSite",
