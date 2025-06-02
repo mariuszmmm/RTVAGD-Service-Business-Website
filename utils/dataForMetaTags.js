@@ -34,6 +34,7 @@ export const openingHours = "Mo, Tu, We, Th, Fr, 09:30-17:00";
 const breadcrumbList = {
   // wyłączone 15.05.2025
   "@type": "BreadcrumbList",
+  "@id": appUrls.home + "#breadcrumb",
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -289,15 +290,20 @@ export const dataForMetaTags = {
 
       webpage: {
         "@type": "WebPage",
-        "id": appUrls.home + "#webpage",
+        "id": appUrls.home,
         "url": appUrls.home,
         "inLanguage": "pl-PL",
         "name": "Naprawa RTV i AGD ✔️ Serwis w Przemyślu - naprawaprzemysl.pl",
         "isPartOf": { "@id": appUrls.home + "#website" },
         "primaryImageOfPage": { "id": appUrls.home + "#primaryimage" },
+        "image": { "@id": appUrls.home + "#primaryimage" },
+        "thumbnailUrl": imageUrls.serwis,
+
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
+
+        "breadcrumb": { "@id": appUrls.home + "#breadcrumb" },
       },
       website: {
         "@type": "WebSite",
@@ -312,7 +318,11 @@ export const dataForMetaTags = {
       },
 
 
-      breadcrumbList,
+
+
+
+
+      // breadcrumbList,
     }
   },
   kontakt: {
@@ -335,7 +345,7 @@ export const dataForMetaTags = {
       },
       webpage: {
         "@type": "WebPage",
-        "id": appUrls.kontakt + "#webpage",
+        "id": appUrls.kontakt,
         "url": appUrls.kontakt,
         "inLanguage": "pl-PL",
         "name": "Kontakt ✔️ Serwis RTV AGD w Przemyślu ☎️ 790 258 612 | naprawaprzemysl.pl",
@@ -348,6 +358,7 @@ export const dataForMetaTags = {
 
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.kontakt + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -373,6 +384,7 @@ export const dataForMetaTags = {
     schema: {
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.o_mnie + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -399,6 +411,7 @@ export const dataForMetaTags = {
     schema: {
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.opinie + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -604,7 +617,7 @@ export const dataForMetaTags = {
       },
       webpage: {
         "@type": "WebPage",
-        "id": appUrls.naprawa_pralek + "#webpage",
+        "id": appUrls.naprawa_pralek,
         "url": appUrls.naprawa_pralek,
         "inLanguage": "pl-PL",
         "name": "Serwis i naprawa pralek w Przemyślu ✔️ | naprawaprzemysl.pl",
@@ -618,6 +631,7 @@ export const dataForMetaTags = {
 
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_pralek + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -810,6 +824,7 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_suszarek + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -995,22 +1010,31 @@ export const dataForMetaTags = {
         "@type": "ImageObject",
         "id": appUrls.naprawa_zmywarek + "#primaryimage",
         "url": imageUrls.zmywarka,
+        "inLanguage": "pl-PL",
+        "contentUrl": imageUrls.zmywarka,
+        "caption": "naprawa zmywarek"
       },
       webpage: {
         "@type": "WebPage",
-        "id": appUrls.naprawa_zmywarek + "#webpage",
+        "id": appUrls.naprawa_zmywarek,
         "url": appUrls.naprawa_zmywarek,
         "inLanguage": "pl-PL",
         "name": "Serwis i naprawa zmywarek Przemyśl | naprawaprzemysl.pl",
         "isPartOf": { "@id": appUrls.home + "#website" },
         "primaryImageOfPage": { "id": appUrls.naprawa_zmywarek + "#primaryimage" },
+        "image": { "@id": appUrls.naprawa_zmywarek + "#primaryimage" }, "thumbnailUrl": imageUrls.zmywarka,
+
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
+        "breadcrumb": { "@id": appUrls.naprawa_zmywarek + "#breadcrumblist" },
       },
+
+
 
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_zmywarek + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -1204,6 +1228,7 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_ekspresow + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
@@ -1439,6 +1464,7 @@ export const dataForMetaTags = {
       },
       breadcrumbList: {
         ...breadcrumbList,
+        "@id": appUrls.naprawa_telewizorow + "#breadcrumblist",
         "itemListElement": [
           ...breadcrumbList["itemListElement"],
           {
