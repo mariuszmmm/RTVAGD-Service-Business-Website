@@ -17,6 +17,19 @@ export const serwis = {
     formatted: "+48 790 258 612",
   },
   adres: "ul. Józefa Sowińskiego 2, 37-700 Przemyśl",
+  area: [
+    "Przemyśl",
+    "Bolestraszyce",
+    "Duńkowiczki",
+    "Krówniki",
+    "Nehrybka",
+    "Orzechowce",
+    "Ostrów",
+    "Pikulice",
+    "Prałkowce",
+    "Wyszatyce",
+    "Żurawica"
+  ],
   reviews: [
     {
       "reveiwFor": "telewizor",

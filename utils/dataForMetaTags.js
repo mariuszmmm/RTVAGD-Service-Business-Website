@@ -795,6 +795,51 @@ export const dataForMetaTags = {
         "geo": geo,
         "name": serwis.name,  // "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
+      faqPage: {
+        // "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Dlaczego suszarka nie pobiera powietrza lub wydłuża się czas suszenia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Najczęściej jest to efekt zatkanego filtra kłaczków lub niedrożnego kanału wentylacyjnego. W modelach kondensacyjnych problemem może być zabrudzony skraplacz lub przepełniony zbiornik na wodę. Pełna diagnostyka pozwala szybko zlokalizować przyczynę."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy serwisujemy suszarki z pompą ciepła oraz elektryczne grzałkowe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Posiadam doświadczenie zarówno w naprawie suszarek kondensacyjnych, z pompą ciepła, jak i tradycyjnych z grzałką elektryczną. Każdy rodzaj wymaga innego podejścia, ale dysponuję zestawem części dla obu technologii."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ile kosztuje przeciętna naprawa suszarki?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Koszt naprawy zależy od rodzaju usterki, ceny części zamiennych i czasu pracy. Orientacyjnie: Proste czynności serwisowe (np. wymiana filtra, czyszczenie skraplacza) zaczynają się od ~100–150 zł. Wymiana grzałki lub silnika może kosztować od 300–500 zł w górę (w zależności od modelu). Dokładną wycenę przedstawiam po wstępnej diagnozie na miejscu"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy gwarantujecie jakość wykonania usługi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. Na każdą naprawę udzielana jest pisemna gwarancja, a używane części pochodzą od renomowanych dostawców – gwarantuje to trwałość wykonanej usługi i bezawaryjne działanie urządzenia."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy serwis dojeżdża do klienta poza Przemyśl",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oczywiście. Obsługuję także okoliczne miejscowości: Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce, Ostrów, Pikulice, Prałkowce, Wyszatyce oraz Żurawica. W razie dalszych lokalizacji proszę o kontakt – ustalimy dogodny termin wizyty."
+            }
+          }]
+      },
+
       webpage: {
 
         "@type": "WebPage",

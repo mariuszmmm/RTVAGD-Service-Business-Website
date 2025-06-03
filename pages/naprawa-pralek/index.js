@@ -124,7 +124,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             </b>
           </HeroText>
           <ButtonLink href={`tel:${serwis.phone.number}`} title='Naprawa pralek w Przemyślu' >
-            Zadzwoń teraz
+            Zleć naprawę pralki
           </ButtonLink>
         </Section>
 
