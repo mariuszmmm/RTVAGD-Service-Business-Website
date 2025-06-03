@@ -230,7 +230,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       {/* <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} /> */}
 
 
-      {(path === "/naprawa-pralek/" || path === "/naprawa-zmywarek/") && (
+      {(path === "/naprawa-suszarek/" || path === "/naprawa-pralek/" || path === "/naprawa-zmywarek/") && (
         <>
           {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{
@@ -291,7 +291,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
         </>
       )}
 
-      {(path === "/naprawa-suszarek/" || path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
+      {(path === "/naprawa-ekspresow/" || path === "/naprawa-telewizorow/") && (
         <>
           {/* <script type="application/ld+json"           // wyłączone 15.05.2025      // dodane 14.05.2025
               dangerouslySetInnerHTML={{

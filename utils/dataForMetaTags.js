@@ -731,63 +731,63 @@ export const dataForMetaTags = {
       },
       product: {
 
-        "@type": "Product",
-        "@id": appUrls.naprawa_suszarek + "#product",
-        "name": "Naprawa suszarek Przemyśl - " + shortName,
-        "image": ["https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png"],
-        "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-        "url": appUrls.naprawa_suszarek,
-        "offers": {
-          "@type": "Offer",
-          "url": appUrls.naprawa_suszarek,
-          "priceCurrency": "PLN",
-          "price": "150",
-          "priceValidUntil": "2026-05-16",
-          //   "itemCondition": "https://schema.org/NewCondition",
-          //       "availability": "https://schema.org/InStock",
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "PLN"
-            },
-            "shippingDestination": [
-              {
-                "@type": "DefinedRegion",
-                "addressCountry": "PL",
-                "addressRegion": ["Podkarpackie"],
-                "name": "Przemyśl"
-              }
-            ],
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 0,
-                "maxValue": 1,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 0,
-                "maxValue": 1,
-                "unitCode": "DAY"
-              },
-            }
+        // "@type": "Product",
+        // "@id": appUrls.naprawa_suszarek + "#product",
+        "name": "Naprawa suszarek Przemyśl",
+        // "image": ["https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png"],
+        // "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
+        // "url": appUrls.naprawa_suszarek,
+        // "offers": {
+        //   "@type": "Offer",
+        //   "url": appUrls.naprawa_suszarek,
+        //   "priceCurrency": "PLN",
+        //   "price": "150",
+        //   "priceValidUntil": "2026-05-16",
+        //   //   "itemCondition": "https://schema.org/NewCondition",
+        //   //       "availability": "https://schema.org/InStock",
+        //   "shippingDetails": {
+        //     "@type": "OfferShippingDetails",
+        //     "shippingRate": {
+        //       "@type": "MonetaryAmount",
+        //       "value": "0",
+        //       "currency": "PLN"
+        //     },
+        //     "shippingDestination": [
+        //       {
+        //         "@type": "DefinedRegion",
+        //         "addressCountry": "PL",
+        //         "addressRegion": ["Podkarpackie"],
+        //         "name": "Przemyśl"
+        //       }
+        //     ],
+        //     "deliveryTime": {
+        //       "@type": "ShippingDeliveryTime",
+        //       "handlingTime": {
+        //         "@type": "QuantitativeValue",
+        //         "minValue": 0,
+        //         "maxValue": 1,
+        //         "unitCode": "DAY"
+        //       },
+        //       "transitTime": {
+        //         "@type": "QuantitativeValue",
+        //         "minValue": 0,
+        //         "maxValue": 1,
+        //         "unitCode": "DAY"
+        //       },
+        //     }
 
-          },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "PL",
-            "returnPolicyCountry": "PL",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 14,
-            "returnMethod": "https://schema.org/ReturnInStore",
-            "returnFees": "https://schema.org/FreeReturn"
-          },
-          // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
-        },
+        //   },
+        //   "hasMerchantReturnPolicy": {
+        //     "@type": "MerchantReturnPolicy",
+        //     "applicableCountry": "PL",
+        //     "returnPolicyCountry": "PL",
+        //     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        //     "merchantReturnDays": 14,
+        //     "returnMethod": "https://schema.org/ReturnInStore",
+        //     "returnFees": "https://schema.org/FreeReturn"
+        //   },
+        //   // "businessFunction": "http://purl.org/goodrelations/v1#Repair",
+        // },
       },
       place: {
 
@@ -840,72 +840,42 @@ export const dataForMetaTags = {
           }]
       },
 
-      webpage: {
 
-        "@type": "WebPage",
-        "name": "Naprawa Suszarek - " + shortName,  // "name": "Naprawa Suszarek",
-        "alternateName": "Naprawa suszarek do ubrań w Przemyślu",
-        "url": appUrls.naprawa_suszarek,
-        // "breadcrumb": {
-        //   ...breadcrumbList,
-        //   "itemListElement": [
-        //     ...breadcrumbList["itemListElement"],
-        //     {
-        //       "@type": "ListItem",
-        //       "position": 2,
-        //       "name": "Naprawa Suszarek - " + shortName,
-        //       "item": appUrls.naprawa_suszarek,
-        //     }
-        //   ]
-        // },
-        "image": {
-          // 
-          "@type": "ImageObject",
-          "author": {
-            "@type": "LocalBusiness",  // "@type": "Organization",
-            "name": serwis.name,  // "name": "Serwis RTV i AGD NaprawaPrzemyśl"
-            address,
-            "image": imageUrls.serwis,
-            "telephone": serwis.phone.formatted,
-            "priceRange": "$$",
-          },
-          "contentLocation": {
-            "@type": "Place",
-            "name": "Przemyśl"
-          },
-          "contentUrl": "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png",
-          "datePublished": "2025-05-16",
-          "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
-          "name": "Naprawa Suszarek - " + shortName, //  "name": "Naprawa suszarek w Przemyślu",
-        },
-        "mainEntity": {
-          "@type": "Service",
-          "name": "Naprawa suszarek",
-          "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części. Skontaktuj się już dziś.",
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": serwis.name,
-            "url": appUrls.home,
-            "telephone": serwis.phone.formatted,
-            address,
-          }
-        }
+      website: {
+        "@type": "WebSite",
+        "id": appUrls.home + "#website",
+        "url": appUrls.home,
+        "name": "naprawaprzemysl.pl",
+        "description": "Profesjonalny serwis i naprawa sprzętu RTV i AGD.",
+        "inLanguage": "pl-PL"
       },
       imageObject: {
-
         "@type": "ImageObject",
-        "author": {
-          "@type": "LocalBusiness",  // "@type": "Organization",
-          "name": serwis.name,  // "name": "Serwis RTV i AGD NaprawaPrzemyśl"
-        },
-        "contentLocation": {
-          "@type": "Place",
-          "name": "Przemyśl"
-        },
-        "contentUrl": "https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png",
-        "datePublished": "2025-05-16",
-        "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu. Szybka diagnoza, nowoczesne technologie i oryginalne części.",
-        "name": "Naprawa Suszarek - " + serwis.name,  //  "name": "Naprawa suszarek w Przemyślu",
+        "id": appUrls.naprawa_suszarek + "#primaryimage",
+        "url": imageUrls.suszarka,
+        "inLanguage": "pl-PL",
+        "contentUrl": imageUrls.suszarka,
+        "width": 700,
+        "height": 700,
+        "caption": "naprawa suszarek",
+
+      },
+      webpage: {
+        "@type": "WebPage",
+        "id": appUrls.naprawa_suszarek,
+        "url": appUrls.naprawa_suszarek,
+        "inLanguage": "pl-PL",
+        "name": "Serwis i naprawa suszarek w Przemyślu | naprawaprzemysl.pl",
+        "isPartOf": { "@id": appUrls.home + "#website" },
+        "primaryImageOfPage": { "id": appUrls.naprawa_suszarek + "#primaryimage" },
+        "image": { "@id": appUrls.naprawa_suszarek + "#primaryimage" },
+
+        "thumbnailUrl": imageUrls.suszarka,
+
+        "datePublished": datePublished,
+        "dateModified": dateModified,
+        "description": "Kompleksowa naprawa suszarek w Przemyślu – awarie suszarek wszystkich marek, szybki dojazd do klienta, części oryginalne i gwarancja. Zadzwoń i umów wizytę!",
+        "breadcrumb": { "@id": appUrls.naprawa_suszarek + "#breadcrumb" },
       },
       breadcrumbList: {
         "@type": "BreadcrumbList",
@@ -924,6 +894,7 @@ export const dataForMetaTags = {
           }
         ]
       },
+
     },
   },
   naprawa_zmywarek: {
