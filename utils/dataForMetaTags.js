@@ -287,19 +287,7 @@ export const dataForMetaTags = {
         "geo": geo,
         "name": serwis.name,  // "name": "Naprawa sprzętu RTV i AGD NaprawaPrzemyśl",
       },
-      breadcrumbList: {
-        "@type": "BreadcrumbList",
-        "@id": appUrls.home + "#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Strona Główna",
-            "item": appUrls.home,
-          },
 
-        ]
-      },
       webpage: {
         "@type": "WebPage",
         "id": appUrls.home,
@@ -332,7 +320,19 @@ export const dataForMetaTags = {
         "height": 700,
         "caption": "naprawa RTV i AGD Przemyśl",
       },
+      breadcrumbList: {
+        "@type": "BreadcrumbList",
+        "@id": appUrls.home + "#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            // "item": appUrls.home,
+          },
 
+        ]
+      },
 
 
     }
