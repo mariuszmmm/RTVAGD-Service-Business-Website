@@ -662,7 +662,7 @@ export const dataForMetaTags = {
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Kompleksowa naprawa pralek w Przemyślu – awarie pralek wszystkich marek, szybki dojazd do klienta, części oryginalne i gwarancja. Zadzwoń i umów wizytę!",
-        "breadcrumb": { "@id": appUrls.naprawa_pralek + "#breadcrumblist" },
+        "breadcrumb": { "@id": appUrls.naprawa_pralek + "##breadcrumb" },
       },
       breadcrumbList: {
         "@type": "BreadcrumbList",
@@ -1077,7 +1077,7 @@ export const dataForMetaTags = {
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
-        "breadcrumb": { "@id": appUrls.naprawa_zmywarek + "#breadcrumblist" },
+        "breadcrumb": { "@id": appUrls.naprawa_zmywarek + "##breadcrumb" },
       },
       breadcrumbList: {
         "@type": "BreadcrumbList",
