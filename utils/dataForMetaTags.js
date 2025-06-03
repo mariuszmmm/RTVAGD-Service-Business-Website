@@ -31,19 +31,19 @@ export const geo = {
 
 export const openingHours = "Mo, Tu, We, Th, Fr, 09:30-17:00";
 
-const breadcrumbList = {
-  // wyłączone 15.05.2025
-  "@type": "BreadcrumbList",
-  "@id": appUrls.home + "#breadcrumb",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Strona Główna",
-      "item": appUrls.home,
-    }
-  ]
-};
+// const breadcrumbList = {
+//   // wyłączone 15.05.2025
+//   "@type": "BreadcrumbList",
+//   "@id": appUrls.home + "#breadcrumb",
+//   "itemListElement": [
+//     {
+//       "@type": "ListItem",
+//       "position": 1,
+//       "name": "Strona Główna",
+//       // "item": appUrls.home,
+//     }
+//   ]
+// };
 
 export const localBusiness = {
 
@@ -302,7 +302,7 @@ export const dataForMetaTags = {
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Kompleksowy serwis telewizorów, pralek, suszarek, zmywarek i ekspresów do kawy w Przemyślu. Szybka pomoc, fachowa obsługa, niezawodne naprawy.",
-
+        "breadcrumb": { "@id": appUrls.home + "#breadcrumb" },
       },
       website: {
         "@type": "WebSite",
@@ -314,14 +314,26 @@ export const dataForMetaTags = {
         "@type": "ImageObject",
         "id": appUrls.home + "#primaryimage",
         "url": imageUrls.serwis,
+        "inLanguage": "pl-PL",
+        "contentUrl": imageUrls.serwis,
+        "width": 700,
+        "height": 700,
+        "caption": "naprawa RTV i AGD Przemyśl",
       },
 
 
+      breadcrumbList: {
+        "@type": "BreadcrumbList",
+        "@id": appUrls.home + "#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+          },
 
-
-
-
-      breadcrumbList,
+        ]
+      },
     }
   },
   kontakt: {
@@ -356,15 +368,19 @@ export const dataForMetaTags = {
 
 
       breadcrumbList: {
-        ...breadcrumbList,
-        "@id": appUrls.kontakt + "#breadcrumblist",
+        "@type": "BreadcrumbList",
+        "@id": appUrls.home + "#breadcrumb",
         "itemListElement": [
-          ...breadcrumbList["itemListElement"],
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": appUrls.home,
+          },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Kontakt",
-            "item": appUrls.kontakt
           }
         ]
       },
@@ -382,15 +398,19 @@ export const dataForMetaTags = {
     },
     schema: {
       breadcrumbList: {
-        ...breadcrumbList,
-        "@id": appUrls.o_mnie + "#breadcrumblist",
+        "@type": "BreadcrumbList",
+        "@id": appUrls.o_mnie + "#breadcrumb",
         "itemListElement": [
-          ...breadcrumbList["itemListElement"],
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": appUrls.home,
+          },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "O mnie",
-            "item": appUrls.o_mnie
           }
         ]
       },
@@ -409,15 +429,19 @@ export const dataForMetaTags = {
     },
     schema: {
       breadcrumbList: {
-        ...breadcrumbList,
-        "@id": appUrls.opinie + "#breadcrumblist",
+        "@type": "BreadcrumbList",
+        "@id": appUrls.opinie + "#breadcrumb",
         "itemListElement": [
-          ...breadcrumbList["itemListElement"],
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": appUrls.home,
+          },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Opinie",
-            "item": appUrls.opinie
           }
         ]
       },
@@ -425,7 +449,7 @@ export const dataForMetaTags = {
   },
   naprawa_pralek: {
     metaTags: {
-      title: "Serwis i naprawa pralek w Przemyślu ✔️ | naprawaprzemysl.pl",
+      title: "Serwis i naprawa pralek w Przemyślu | naprawaprzemysl.pl",
       canonical: appUrls.naprawa_pralek,
       description: "Kompleksowa naprawa pralek w Przemyślu – awarie pralek wszystkich marek, szybki dojazd do klienta, części oryginalne i gwarancja. Zadzwoń i umów wizytę!",
       type: "article",
@@ -608,39 +632,55 @@ export const dataForMetaTags = {
         "id": appUrls.home + "#website",
         "url": appUrls.home,
         "name": "naprawaprzemysl.pl",
+        "description": "Profesjonalny serwis i naprawa sprzętu RTV i AGD.",
+        "inLanguage": "pl-PL"
       },
       imageObject: {
         "@type": "ImageObject",
         "id": appUrls.naprawa_pralek + "#primaryimage",
         "url": imageUrls.pralka,
+        "inLanguage": "pl-PL",
+        "contentUrl": imageUrls.pralka,
+        "width": 700,
+        "height": 700,
+        "caption": "naprawa pralek",
+
       },
       webpage: {
         "@type": "WebPage",
         "id": appUrls.naprawa_pralek,
         "url": appUrls.naprawa_pralek,
         "inLanguage": "pl-PL",
-        "name": "Serwis i naprawa pralek w Przemyślu ✔️ | naprawaprzemysl.pl",
+        "name": "Serwis i naprawa pralek w Przemyślu | naprawaprzemysl.pl",
         "isPartOf": { "@id": appUrls.home + "#website" },
         "primaryImageOfPage": { "id": appUrls.naprawa_pralek + "#primaryimage" },
+        "image": { "@id": appUrls.naprawa_pralek + "#primaryimage" },
+
+        "thumbnailUrl": imageUrls.pralka,
+
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Kompleksowa naprawa pralek w Przemyślu – awarie pralek wszystkich marek, szybki dojazd do klienta, części oryginalne i gwarancja. Zadzwoń i umów wizytę!",
+        "breadcrumb": { "@id": appUrls.naprawa_pralek + "#breadcrumblist" },
       },
-
-
       breadcrumbList: {
-        ...breadcrumbList,
-        "@id": appUrls.naprawa_pralek + "#breadcrumblist",
+        "@type": "BreadcrumbList",
+        "@id": appUrls.naprawa_pralek + "#breadcrumb",
         "itemListElement": [
-          ...breadcrumbList["itemListElement"],
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": appUrls.home,
+          },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa pralek",
-            "item": appUrls.naprawa_pralek,
           }
         ]
       },
+
     }
   },
   naprawa_suszarek: {
@@ -822,15 +862,19 @@ export const dataForMetaTags = {
         "name": "Naprawa Suszarek - " + serwis.name,  //  "name": "Naprawa suszarek w Przemyślu",
       },
       breadcrumbList: {
-        ...breadcrumbList,
-        "@id": appUrls.naprawa_suszarek + "#breadcrumblist",
+        "@type": "BreadcrumbList",
+        "@id": appUrls.naprawa_suszarek + "#breadcrumb",
         "itemListElement": [
-          ...breadcrumbList["itemListElement"],
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": appUrls.home,
+          },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa suszarek",
-            "item": appUrls.naprawa_suszarek
           }
         ]
       },
@@ -1004,6 +1048,9 @@ export const dataForMetaTags = {
         "id": appUrls.home + "#website",
         "url": appUrls.home,
         "name": "naprawaprzemysl.pl",
+        "inLanguage": "pl-PL",
+        "description": "Profesjonalny serwis i naprawa sprzętu RTV i AGD.",
+        "inLanguage": "pl-PL"
       },
       imageObject: {
         "@type": "ImageObject",
@@ -1011,6 +1058,8 @@ export const dataForMetaTags = {
         "url": imageUrls.zmywarka,
         "inLanguage": "pl-PL",
         "contentUrl": imageUrls.zmywarka,
+        "width": 700,
+        "height": 700,
         "caption": "naprawa zmywarek"
       },
       webpage: {
@@ -1021,26 +1070,28 @@ export const dataForMetaTags = {
         "name": "Serwis i naprawa zmywarek Przemyśl | naprawaprzemysl.pl",
         "isPartOf": { "@id": appUrls.home + "#website" },
         "primaryImageOfPage": { "id": appUrls.naprawa_zmywarek + "#primaryimage" },
-        "image": { "@id": appUrls.naprawa_zmywarek + "#primaryimage" }, "thumbnailUrl": imageUrls.zmywarka,
+        "image": { "@id": appUrls.naprawa_zmywarek + "#primaryimage" },
+        "thumbnailUrl": imageUrls.zmywarka,
 
         "datePublished": datePublished,
         "dateModified": dateModified,
         "description": "Profesjonalna naprawa zmywarek w Przemyślu. Szybka pomoc, nowoczesne technologie, oryginalne części. Skontaktuj się już dziś!",
         "breadcrumb": { "@id": appUrls.naprawa_zmywarek + "#breadcrumblist" },
       },
-
-
-
       breadcrumbList: {
-        ...breadcrumbList,
-        "@id": appUrls.naprawa_zmywarek + "#breadcrumblist",
+        "@type": "BreadcrumbList",
+        "@id": appUrls.naprawa_zmywarek + "#breadcrumb",
         "itemListElement": [
-          ...breadcrumbList["itemListElement"],
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": appUrls.home,
+          },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa zmywarek",
-            "item": appUrls.naprawa_zmywarek,
           }
         ]
       },
@@ -1226,15 +1277,19 @@ export const dataForMetaTags = {
         "name": "Naprawa Ekspresów - " + serwis.name,    //   "name": "Naprawa ekspresów w Przemyślu",
       },
       breadcrumbList: {
-        ...breadcrumbList,
-        "@id": appUrls.naprawa_ekspresow + "#breadcrumblist",
+        "@type": "BreadcrumbList",
+        "@id": appUrls.naprawa_ekspresow + "#breadcrumb",
         "itemListElement": [
-          ...breadcrumbList["itemListElement"],
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": appUrls.home,
+          },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa ekspresów",
-            "item": appUrls.naprawa_ekspresow,
           }
         ]
       },
@@ -1462,15 +1517,19 @@ export const dataForMetaTags = {
         "name": "Naprawa Telewizorów - " + serwis.name,    // "name": "Naprawa telewizorów w Przemyślu",
       },
       breadcrumbList: {
-        ...breadcrumbList,
-        "@id": appUrls.naprawa_telewizorow + "#breadcrumblist",
+        "@type": "BreadcrumbList",
+        "@id": appUrls.naprawa_telewizorow + "#breadcrumb",
         "itemListElement": [
-          ...breadcrumbList["itemListElement"],
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": appUrls.home,
+          },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Naprawa telewizorów",
-            "item": appUrls.naprawa_telewizorow,
           }
         ]
       },

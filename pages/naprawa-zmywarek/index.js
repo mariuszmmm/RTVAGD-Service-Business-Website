@@ -42,6 +42,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
             />
           </Emoticon>
         </Title>
+
         <Section>
           <StyledPhoto>
             <Image
@@ -55,6 +56,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
               sizes="(max-width: 500px) 500px, 1000px"
             />
           </StyledPhoto>
+
           <SubTitle>
             Szybka i&nbsp;rzetelna naprawa oraz serwis zmywarek wszystkich marek w&nbsp;Przemyślu i&nbsp;okolicach
           </SubTitle>
@@ -63,6 +65,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
             Korzystam z&nbsp;profesjonalnych narzędzi i&nbsp;oryginalnych części zamiennych, aby&nbsp;przywrócić pełną funkcjonalność Twojej zmywarki już podczas pierwszej wizyty. Zapewniam gwarancję na wykonaną naprawę, dzięki czemu masz pewność satysfakcji i&nbsp;bezproblemowego użytkowania sprzętu. Specjalizuję się w&nbsp;serwisie i&nbsp;naprawie zmywarek marek Bosch, Electrolux, Beko oraz wielu innych, zawsze gwarantując najwyższą jakość usług i&nbsp;szybkie terminy realizacji.
           </StyledText>
         </Section>
+
         <Section>
           <SubTitle>
             Najczęstsze usterki zmywarek
@@ -76,6 +79,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
             <li><b>Brudne naczynia po zakończeniu cyklu</b> –&nbsp;efekt zatkanych dysz spryskujących, zabrudzonego filtra lub zużytych ramion spryskujących.</li>
           </StyledText>
         </Section>
+
         <Section>
           <SubTitle>
             Proces naprawy zmywarki krok po kroku
@@ -88,6 +92,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
             <li><strong>Gwarancja i porady:</strong> Udzielam gwarancji na wykonaną usługę i&nbsp;przekazuję wskazówki eksploatacyjne, by uniknąć podobnych usterek w przyszłości.</li>
           </StyledText>
         </Section>
+
         <Section>
           <SubTitle>
             Dlaczego warto wybrać mój serwis?

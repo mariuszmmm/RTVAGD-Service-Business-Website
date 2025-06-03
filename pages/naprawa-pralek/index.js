@@ -46,10 +46,23 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
         </Title>
 
         <Section>
-          <SubTitle>Szybka i&nbsp;rzetelna naprawa oraz serwis pralek wszystkich marek w Przemyślu i&nbsp;okolicach</SubTitle>
+          <StyledPhoto>
+            <Image
+              title="Naprawa pralek Przemyśl"
+              src={imageUrls.pralka}
+              alt="naprawa pralek"
+              // loading='lazy'
+              fill
+              // srcSet={`${imageUrls.pralka_300} 500w,
+              // ${imageUrls.pralka} 1000w`}
+              sizes="(max-width: 500px) 500px, 1000px"
+            />
+          </StyledPhoto>
+
+          <SubTitle>Szybka i rzetelna naprawa oraz serwis pralek wszystkich marek w Przemyślu i okolicach</SubTitle>
           <StyledText>
-            Awaria pralki może utrudnić codzienne obowiązki domowe. Dlatego mój <strong>serwis pralek</strong> w&nbsp;Przemyślu oferuje szybką diagnostykę oraz fachową naprawę urządzeń wszystkich marek.<br />
-            Korzystam z&nbsp;profesjonalnych narzędzi i&nbsp;oryginalnych części zamiennych, aby przywrócić pełną funkcjonalność Twojej pralki już podczas pierwszej wizyty. Zapewniam gwarancję na wykonaną naprawę, dzięki czemu masz pewność satysfakcji i&nbsp;bezproblemowego użytkowania sprzętu. Specjalizuję się w serwisie i&nbsp;naprawie pralek marek Bosch, Electrolux, Samsung, Whirlpool oraz wielu innych, zawsze gwarantując najwyższą jakość usług i&nbsp;szybkie terminy realizacji.
+            Awaria pralki może utrudnić codzienne obowiązki domowe. Dlatego mój <strong>serwis pralek</strong> w Przemyślu oferuje szybką diagnostykę oraz fachową naprawę urządzeń wszystkich marek.<br />
+            Korzystam z profesjonalnych narzędzi i oryginalnych części zamiennych, aby przywrócić pełną funkcjonalność Twojej pralki już podczas pierwszej wizyty. Zapewniam gwarancję na wykonaną naprawę, dzięki czemu masz pewność satysfakcji i bezproblemowego użytkowania sprzętu. Specjalizuję się w serwisie i naprawie pralek marek Bosch, Electrolux, Samsung, Whirlpool oraz wielu innych, zawsze gwarantując najwyższą jakość usług i szybkie terminy realizacji.
           </StyledText>
         </Section>
 
@@ -80,19 +93,6 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
           </StyledText>
         </Section>
 
-        <StyledPhoto>
-          <Image
-            title="Naprawa pralek Przemyśl"
-            src={imageUrls.pralka}
-            alt="naprawa pralek"
-            // loading='lazy'
-            fill
-            // srcSet={`${imageUrls.pralka_300} 500w,
-            // ${imageUrls.pralka} 1000w`}
-            sizes="(max-width: 500px) 500px, 1000px"
-          />
-        </StyledPhoto>
-
         <Section>
           <SubTitle>
             Dlaczego warto wybrać mój serwis?
@@ -120,7 +120,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
         <Section>
           <HeroText>
             <b>Nie trać czasu na pranie ręczne! <Break />
-              Skontaktuj się ze&nbsp;mną, a&nbsp;Twój sprzęt odzyska pełną sprawność.
+              Skontaktuj się ze mną, a Twój sprzęt odzyska pełną sprawność.
             </b>
           </HeroText>
           <ButtonLink href={`tel:${serwis.phone.number}`} title='Naprawa pralek w Przemyślu' >
@@ -129,7 +129,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
         </Section>
 
         <Section>
-          <SubTitle>Naprawiam pralki dla mieszkańców Przemyśla i&nbsp;okolic.</SubTitle>
+          <SubTitle>Naprawiam pralki dla mieszkańców Przemyśla i okolic.</SubTitle>
           <StyledText>
             Potrzebna Ci naprawa pralki w Przemyślu lub w jednej z pobliskich miejscowości? Obsługuję miejscowości Przemyśl, Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce, Ostrów, Pikulice, Prałkowce, Wyszatyce i Żurawica – wystarczy telefon, a przyjadę pomóc.
           </StyledText>
@@ -147,6 +147,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             <StyledLink href="/naprawa-telewizorow/" title='Naprawa telewizorów' $standardText> telewizorów</StyledLink>.
           </StyledText>
         </Section>
+
       </Container>
     </>
   );
