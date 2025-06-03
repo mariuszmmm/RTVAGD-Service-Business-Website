@@ -19,13 +19,13 @@ const Footer = () => (
       <FooterInfo>
         <StyledLink
           href={`tel:${serwis.phone.number}`}
-          title="Zadzwoń i zgłoś sprzęt do naprawy">
+          title="Telefon">
           <PhoneIcon />
           <FooterText>{serwis.phone.formatted} </FooterText>
         </StyledLink>
         <StyledLink
           href={`mailto:${serwis.email}`}
-          title="Napisz z jakim sprzętem masz problem">
+          title="E-mail">
           <EmailIcon />
           <FooterText>{serwis.email} </FooterText>
         </StyledLink>
@@ -33,12 +33,12 @@ const Footer = () => (
           href={serwis.url.facebook}
           title="Facebook">
           <FacebookIcon />
-          <FooterText>facebook</FooterText>
+          <FooterText>Facebook</FooterText>
         </StyledLink>
         <StyledLink
           $link
           href="/"
-          title="Link do strony naprawaprzemysl.pl"
+          title="naprawaprzemysl.pl"
         >
           <LinkIcon />
           <FooterText>{"naprawaprzemysl.pl"} </FooterText>
@@ -48,11 +48,11 @@ const Footer = () => (
           title="Google"
         >
           <GoogleIcon />
-          <FooterText>google</FooterText>
+          <FooterText>Google</FooterText>
         </StyledLink>
       </FooterInfo>
       <FooterCopy>
-        &copy; 2024 Serwis RTV i AGD. Wszelkie prawa zastrzeżone.
+        © 2025 Serwis RTV i AGD w Przemyślu. Wszelkie prawa zastrzeżone.
       </FooterCopy>
     </FooterContainer>
   </FooterWrapper>
