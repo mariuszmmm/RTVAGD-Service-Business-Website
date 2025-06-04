@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // skrypty/update_reviews.js
 const fs = require('fs');
 const path = require('path');
@@ -31,7 +33,7 @@ async function fetchData() {
   reviews = json.result.reviews;
   rating = json.result.rating || 0;
   user_ratings_total = json.result.user_ratings_total || 0;
-  update_time = Math.floor(Date.now() / 1000);
+  const update_time = new Date().toISOString().replace('T', ' ').substring(0, 19);
 
   // Przerabiamy tablicę recenzji do pożądanego formatu
   // Google zwraca pole „reviews” z tablicą obiektów
