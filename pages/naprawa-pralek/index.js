@@ -50,7 +50,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             <Image
               title="Naprawa pralek Przemyśl"
               src={imageUrls.pralka}
-              alt="naprawa pralek"
+              alt="Pralka marki Bosch – profesjonalna naprawa pralek Przemyśl"
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.pralka_300} 500w,
@@ -59,7 +59,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             />
           </StyledPhoto>
 
-          <SubTitle>Szybka i rzetelna naprawa oraz serwis pralek wszystkich marek w Przemyślu i okolicach</SubTitle>
+          <SubTitle>Szybka i rzetelna naprawa pralek w Przemyślu i okolicach</SubTitle>
           <StyledText>
             Awaria pralki może utrudnić codzienne obowiązki domowe. Dlatego mój <strong>serwis pralek</strong> w Przemyślu oferuje szybką diagnostykę oraz fachową naprawę urządzeń wszystkich marek.<br />
             Korzystam z profesjonalnych narzędzi i oryginalnych części zamiennych, aby przywrócić pełną funkcjonalność Twojej pralki już podczas pierwszej wizyty. Zapewniam gwarancję na wykonaną naprawę, dzięki czemu masz pewność satysfakcji i bezproblemowego użytkowania sprzętu. Specjalizuję się w serwisie i naprawie pralek marek Bosch, Electrolux, Samsung, Whirlpool oraz wielu innych, zawsze gwarantując najwyższą jakość usług i szybkie terminy realizacji.
@@ -68,7 +68,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
 
         <Section>
           <SubTitle>
-            Najczęstsze usterki pralek
+            Najczęstsze usterki pralek – sprawdź, czy też tak masz
           </SubTitle>
           <StyledText as="ul" $cross>
             <li><b>Pralka nie pobiera wody</b> – może to być spowodowane uszkodzonym elektrozaworem, zatkanym filtrem wody, zgiętym wężem doprowadzającym wodę lub awarią hydrostatu, który odpowiada za kontrolę poziomu wody.</li>
@@ -82,7 +82,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
 
         <Section>
           <SubTitle>
-            Proces naprawy pralki krok po kroku
+            Proces naprawy pralki - krok po kroku
           </SubTitle>
           <StyledText as="ol" >
             <li><strong>Kontakt i konsultacja:</strong> Opowiedz o usterce przez telefon, ustalimy dogodne terminy i zakres usługi.</li>
@@ -106,7 +106,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
         </Section>
 
         <Section>
-          <SubTitle>FAQ – najczęściej zadawane pytania</SubTitle>
+          <SubTitle>FAQ</SubTitle>
           <StyledText as="ul" $list>
             {dataForMetaTags.naprawa_pralek.schema.faqPage.mainEntity.map((item, index) => (
               <li key={index}>

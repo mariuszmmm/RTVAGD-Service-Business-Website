@@ -50,7 +50,7 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
             <Image
               title="Naprawa suszarek Przemyśl"
               src={imageUrls.suszarka}
-              alt="naprawa suszarek"
+              alt="Suszarka bębnowa – naprawa suszarek Przemyśl"
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.suszarka_300} 500w,
@@ -60,7 +60,7 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
           </StyledPhoto>
 
           <SubTitle>
-            Szybka i&nbsp;rzetelna naprawa oraz serwis suszarek wszystkich marek w&nbsp;Przemyślu i&nbsp;okolicach
+            Szybka i skuteczna naprawa suszarek wszystkich marek w Przemyślu i okolicach
           </SubTitle>
           <StyledText>
             Awaria suszarki może znacząco utrudnić codzienne prace domowe, zwłaszcza gdy zależy nam na szybkim wysuszeniu ubrań w sezonie jesienno-zimowym. Dlatego oferuję <strong>kompleksową diagnostykę</strong> i&nbsp;fachową naprawę suszarek wszystkich typów i&nbsp;marek w Przemyślu oraz pobliskich miejscowościach. Korzystam z&nbsp;profesjonalnych narzędzi diagnostycznych oraz oryginalnych części zamiennych, aby już podczas pierwszej wizyty przywrócić pełną funkcjonalność Twojego sprzętu. Zapewniam gwarancję na wykonaną usługę, co daje pewność satysfakcji i&nbsp;nieprzerwanej eksploatacji urządzenia. Specjalizuję się w naprawie suszarek marek takich jak: Bosch, Siemens, Electrolux, Whirlpool, Samsung, Beko, Amica, AEG, Candy, Miele, Hotpoint-Ariston, LG, Indesit, Zanussi.
@@ -70,7 +70,7 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
 
         <Section>
           <SubTitle>
-            Najczęstsze usterki suszarek
+            Najczęstsze problemy z suszarkami
           </SubTitle>
           <StyledText as="ul" $cross>
             <li><b>Suszarka nie obraca bębna</b> -&nbsp;może być spowodowane zerwanym paskiem napędowym, uszkodzonym silnikiem lub zużytymi łożyskami.</li>
@@ -96,7 +96,7 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
 
         <Section>
           <SubTitle>
-            Dlaczego warto wybrać mój serwis suszarek?
+            Dlaczego warto skorzystać z moich usług
           </SubTitle>
           <StyledText as="ul" $check>
             <li><strong>Szybka reakcja i krótkie terminy realizacji:</strong> Często mogę pojawić się u Ciebie jeszcze tego samego dnia, w jakim otrzymam zgłoszenie.</li>
@@ -128,14 +128,9 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
         </Section>
 
         <Section>
-          <SubTitle>Obszar działania</SubTitle>
-          <StyledText as="ul" $list>
-            {serwis.area.map((item, index) => (
-              <li key={index}>
-                {/* <h3>{item.name}</h3> */}
-                <StyledText>{item}</StyledText>
-              </li>
-            ))}
+          <SubTitle>Naprawiam suszarki w Przemyślu i okolicach</SubTitle>
+          <StyledText>
+            Oferuję serwis suszarek w Przemyślu oraz dojeżdżamy do sąsiednich miejscowości: Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce,Ostrów, Pikulice, Prałkowce, Wyszatyce, Żurawica. Jeśli potrzebujesz szybkiej i fachowej naprawy suszarki, wystarczy jeden telefon, a przyjadę do Ciebie w dogodnym terminie.
           </StyledText>
         </Section>
 

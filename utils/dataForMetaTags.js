@@ -450,9 +450,9 @@ export const dataForMetaTags = {
   },
   naprawa_pralek: {
     metaTags: {
-      title: "Serwis i naprawa pralek w Przemyślu | naprawaprzemysl.pl",
+      title: "Naprawa pralek Przemyśl – Serwis pralek AGD z dojazdem",
       canonical: appUrls.naprawa_pralek,
-      description: "Kompleksowa naprawa pralek w Przemyślu – awarie pralek wszystkich marek, szybki dojazd do klienta, części oryginalne i gwarancja. Zadzwoń i umów wizytę!",
+      description: "Masz problem z pralką w Przemyślu lub okolicach? (Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce, Ostrów, Pikulice, Prałkowce, Wyszatyce, Żurawica) Pomogę! Fachowa naprawa pralek, oryginalne części i gwarancja na wykonane usługi.",
       type: "article",
       siteName: "naprawaprzemysl.pl",
       keywords: "naprawa pralek, serwis pralek Przemyśl, naprawa pralek w Przemyślu, naprawa pralki Przemyśl, naprawa pralek Przemyśl, awaria pralki",
@@ -605,7 +605,7 @@ export const dataForMetaTags = {
           },
           {
             "@type": "Question",
-            "name": "Czy naprawiacie pralki wszystkich marek, np. Bosch, Electrolux, Samsung?",
+            "name": "Czy naprawiane są pralki wszystkich marek, np. Bosch, Electrolux, Samsung?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Tak – mam doświadczenie w serwisowaniu pralek wszystkich popularnych producentów i modeli."
@@ -613,7 +613,7 @@ export const dataForMetaTags = {
           },
           {
             "@type": "Question",
-            "name": "Czy otrzymam gwarancję po naprawie?",
+            "name": "Czy po naprawie pralki udzielana jest gwarancja?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Oczywiście – na wszystkie wykonane usługi udzielam gwarancji, a używane części pochodzą od renomowanych dostawców."
@@ -686,9 +686,9 @@ export const dataForMetaTags = {
   },
   naprawa_suszarek: {
     metaTags: {
-      title: "Naprawa suszarek ✔️ Serwis Przemyśl ☎️ 790 258 612 | naprawaprzemysl.pl",
+      title: "Naprawa suszarek Przemyśl – Serwis suszarek AGD z dojazdem",
       canonical: appUrls.naprawa_suszarek,
-      description: "Specjalistyczny serwis suszarek w Przemyślu – szybka diagnoza i naprawa u klienta lub w warsztacie. Dojazd w cenie, oryginalne części i gwarancja. Umów wizytę!",
+      description: "Suszarka odmówiła posłuszeństwa? Działam w Przemyślu i okolicznych miejscowościach (Bolestraszyce, Duńkowiczki, Krówniki, Nehrybka, Orzechowce, Ostrów, Pikulice, Prałkowce, Wyszatyce, Żurawica). Ekspresowa naprawa suszarek – przyjedę do Ciebie!",
       type: "article",
       siteName: "naprawaprzemysl.pl",
       keywords: "naprawa suszarek, serwis suszarek Przemyśl, naprawa suszarek w Przemyślu, naprawa suszarki Przemyśl, naprawa suszarek Przemyśl, awaria suszarki",
@@ -1067,7 +1067,6 @@ export const dataForMetaTags = {
         "name": "naprawaprzemysl.pl",
         "inLanguage": "pl-PL",
         "description": "Profesjonalny serwis i naprawa sprzętu RTV i AGD.",
-        "inLanguage": "pl-PL"
       },
       imageObject: {
         "@type": "ImageObject",
