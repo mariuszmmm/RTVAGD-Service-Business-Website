@@ -3,7 +3,7 @@ name: Aktualizuj opinie z Google
 # Uruchamiaj co godzinę (UTC). Jeśli chcesz inny interwał, zmodyfikuj cron.
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch: # umożliwia ręczne uruchomienie
 
 jobs:
