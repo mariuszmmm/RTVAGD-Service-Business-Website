@@ -16,6 +16,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
     keywords,
     appleMobileWebAppTitle,
     type,
+    image
   } = page.metaTags;
   const {
     localBusiness,
@@ -216,16 +217,16 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={siteName} />
       {/* <meta property="og:updated_time" content={ogTime} /> */}
-      <meta property="og:image" content={`${appUrls.home}images/share_1.webp`} />
+      <meta property="og:image" content={image} />
       {/* <meta property="og:image:secure_url" content={`${appUrls.home}images/share_1.webp`} /> */}
       {/* <meta property="og:image:width" content="931" />
       <meta property="og:image:height" content="497" /> */}
-      {/* <meta property="og:image:alt" content="Serwis RTV i AGD Przemyśl" />
-      <meta property="og:image:type" content="image/webp" /> */}
+      {/* <meta property="og:image:alt" content="Serwis RTV i AGD Przemyśl" /> */}
+      <meta property="og:image:type" content="image/webp" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${appUrls.home}images/share_1.webp`} />
+      <meta name="twitter:image" content={image} />
       {/* <meta name="keywords" content={keywords} /> */}
       {/* <meta name="apple-mobile-web-app-title" content={appleMobileWebAppTitle} /> */}
 
@@ -316,7 +317,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
               __html: JSON.stringify(localBusiness)
             }}
           /> */}
-          <script type="application/ld+json"    // wyłączone 15.05.2025
+          {/* <script type="application/ld+json"    // wyłączone 15.05.2025
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
@@ -325,7 +326,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
                   productSchema]
               })
             }}
-          />
+          /> */}
           {/* <script type="application/ld+json"
             dangerouslySetInnerHTML={{ 
               __html: JSON.stringify(productSchema)
@@ -351,8 +352,8 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@graph": [imageObject, webpage,
-                  breadcrumbList, website,
+                "@graph": [webpage, imageObject, breadcrumbList,
+                  website
                   //  localBusinessSchema, productSchema
                 ]
               })
@@ -395,7 +396,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
           /> */}
         </>
       )}
-      {(path === "/kontakt/") && (
+      {/* {(path === "/kontakt/") && (
         <script type="application/ld+json"    // wyłączone 16.05.2025   // dodane 14.05.2025
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -404,7 +405,7 @@ const MetaTags = ({ path, page, rating, ratingsTotal, reviews }) => {
             })
           }}
         />
-      )}
+      )} */}
       {/* <script type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbList)

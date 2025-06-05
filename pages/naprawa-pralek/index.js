@@ -48,9 +48,9 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
         <Section>
           <StyledPhoto>
             <Image
-              title="Naprawa pralek Przemyśl"
+              title="Pralka"
               src={imageUrls.pralka}
-              alt="Pralka marki Bosch – profesjonalna naprawa pralek Przemyśl"
+              alt="pralka"
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.pralka_300} 500w,
@@ -106,7 +106,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
         </Section>
 
         <Section>
-          <SubTitle>FAQ</SubTitle>
+          <SubTitle>FAQ – najczęściej zadawane pytania</SubTitle>
           <StyledText as="ul" $list>
             {dataForMetaTags.naprawa_pralek.schema.faqPage.mainEntity.map((item, index) => (
               <li key={index}>

@@ -48,9 +48,9 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
         <Section>
           <StyledPhoto>
             <Image
-              title="Naprawa suszarek Przemyśl"
+              title="Suszarka"
               src={imageUrls.suszarka}
-              alt="Suszarka bębnowa – naprawa suszarek Przemyśl"
+              alt="suszarka"
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.suszarka_300} 500w,
