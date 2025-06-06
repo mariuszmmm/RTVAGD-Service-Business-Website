@@ -50,7 +50,7 @@ const WashingMachineService = ({ rating, ratingsTotal, reviews }) => {
             <Image
               title="Pralka"
               src={imageUrls.pralka}
-              alt="Naprawa pralek Przemyśl"
+              alt="Naprawa pralek Przemyśl - Pralka w trakcie naprawy"
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.pralka_300} 500w,

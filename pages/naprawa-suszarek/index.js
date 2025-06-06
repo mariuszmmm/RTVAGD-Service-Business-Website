@@ -50,7 +50,7 @@ const DryerService = ({ rating, ratingsTotal, reviews }) => {
             <Image
               title="Suszarka"
               src={imageUrls.suszarka}
-              alt="Naprawa suszarek Przemyśl"
+              alt="Naprawa suszarek Przemyśl - Suszarka po naprawie w serwisie"
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.suszarka_300} 500w,
