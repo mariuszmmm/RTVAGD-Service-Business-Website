@@ -3,7 +3,10 @@ name: Aktualizuj opinie z Google
 # Uruchamiaj co godzinę (UTC). Jeśli chcesz inny interwał, zmodyfikuj cron.
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    # - cron: "0 */12 * * *"  # co 12 godzin
+    # - cron: "0 */1 * * *"  # co 1 godzin
+    - cron: "0 */10 * * *" # co 10 min
+
   workflow_dispatch: # umożliwia ręczne uruchomienie
 
 jobs:
@@ -35,6 +38,13 @@ jobs:
       # 5. Uruchomienie skryptu Node.js (aktualizacja opinie.json)
       - name: Uruchom update_data.js
         run: npm run update-data
+
+      - name: Debug – sprawdź czy plik data.json istnieje
+        run: |
+          echo "Pliki w repo:"
+          ls -la
+          echo "Zawartość data.json:"
+          cat data.json || echo "data.json nie istnieje"
 
       # 6. Commit i push zmian w opinie.json (jeśli zaszły)
       - name: Commit i Push zmian w data.json

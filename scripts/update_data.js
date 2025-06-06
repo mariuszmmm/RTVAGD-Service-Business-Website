@@ -27,6 +27,7 @@ async function fetchData() {
 
   const json = await res.json();
   if (!json.result || !Array.isArray(json.result.reviews)) {
+    console.error('Nieprawidłowa odpowiedź Google API:', JSON.stringify(json, null, 2));
     throw new Error('Brak danych „reviews” w odpowiedzi Google.');
   }
 
