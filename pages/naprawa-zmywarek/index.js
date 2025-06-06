@@ -59,7 +59,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
           </StyledPhoto>
 
           <SubTitle>
-            Szybka i&nbsp;rzetelna naprawa oraz serwis zmywarek wszystkich marek w&nbsp;Przemyślu i&nbsp;okolicach
+            Szybka i&nbsp;rzetelna naprawa zmywarek wszystkich marek w&nbsp;Przemyślu i&nbsp;okolicach
           </SubTitle>
           <StyledText>
             Awaria zmywarki może całkowicie zaburzyć porządek w&nbsp;kuchni. Dlatego mój <strong>serwis&nbsp;zmywarek</strong> w Przemyślu oferuje szybką diagnostykę oraz fachową naprawę urządzeń wszystkich marek.<br />

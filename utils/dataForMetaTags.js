@@ -695,7 +695,7 @@ export const dataForMetaTags = {
   },
   naprawa_suszarek: {
     metaTags: {
-      title: "? Kompleksowa naprawa suszarek w Przemyślu" + " | " + serwis.shortName,
+      title: "Kompleksowa naprawa suszarek w Przemyślu" + " | " + serwis.shortName,
       canonical: appUrls.naprawa_suszarek,
       description: "Zajmuję się naprawą suszarek. Gwarantuję wysoką skuteczność naprawy przy konkurencyjnej cenie. Realizuję naprawy wszystkich marek.",
       type: "article",
@@ -743,7 +743,7 @@ export const dataForMetaTags = {
 
         // "@type": "Product",
         // "@id": appUrls.naprawa_suszarek + "#product",
-        "name": "Naprawa suszarek",
+        "name": "Naprawa suszarek Przemyśl",
         "description": "Profesjonalna naprawa suszarek do ubrań w Przemyślu.",
         "image": imageUrls.suszarka,
         // "image": ["https://naprawaprzemysl.pl/images/serwis-suszarek-przemysl-naprawa-suszarki.png"],
@@ -914,7 +914,7 @@ export const dataForMetaTags = {
       // type: "article",
       // keywords: "naprawa zmywarek, serwis zmywarek Przemyśl, naprawa zmywarki Przemyśl, naprawa zmywarki w Przemyślu, naprawa zmywarek Przemyśl, awaria zmywarki",
       // appleMobileWebAppTitle: `${shortName} - naprawa zmywarek`,
-      title: "Serwis i naprawa zmywarek Przemyśl" + " | " + serwis.shortName,
+      title: "Naprawa zmywarek Przemyśl" + " | " + serwis.shortName,
       canonical: appUrls.naprawa_zmywarek,
       description: serwis.shortName + " to profejsonalny serwis zmywarek. Oferuje kompleksową diagnostykę zmywarek dla każdego klienta oraz fachową naprawę zmywarki każdego modelu.",
       type: "article",
