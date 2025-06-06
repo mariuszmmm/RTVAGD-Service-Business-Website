@@ -49,7 +49,7 @@ const DishwasherService = ({ rating, ratingsTotal, reviews }) => {
             <Image
               title="Zmywarka"
               src={imageUrls.zmywarka}
-              alt="zmywarka"
+              alt="Naprawa zmywarek Przemyśl"
               // loading='lazy'
               fill
               // srcSet={`${imageUrls.zmywarka_300} 500w,

@@ -9,6 +9,9 @@ on:
 
   workflow_dispatch: # umożliwia ręczne uruchomienie
 
+permissions:
+  contents: write
+
 jobs:
   update-opinie:
     runs-on: ubuntu-latest
